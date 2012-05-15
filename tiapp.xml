@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <property name="acs-oauth-secret-production" type="string">iMwrxyAMSdGdkad3tp1YPa1yp33aWLW3</property>
+    <property name="acs-oauth-key-production" type="string">FKHbSarL7UotD94UehnSYMh9FmnzBh5p</property>
+    <property name="acs-api-key-production" type="string">32SLtJU2qWPi2y3PLiIFNP0S6caurXnp</property>
+    <property name="acs-oauth-secret-development" type="string">jQA3V4n9C0ak5I4EoM7uF168997Fveoh</property>
+    <property name="acs-oauth-key-development" type="string">rP4TbrYxuxa5Yn4xNorP62SxVCqc09Qi</property>
+    <property name="acs-api-key-development" type="string">m5CAI8omUqUmm3Sw1Z8AtPpjzGr07Rww</property>
+    <deployment-targets>
+        <target device="mobileweb">false</target>
+        <target device="iphone">true</target>
+        <target device="ipad">true</target>
+        <target device="android">true</target>
+        <target device="blackberry">false</target>
+    </deployment-targets>
+    <sdk-version>2.1.0.v20120409161847</sdk-version>
+    <id>com.bradyhigginbotham.r3</id>
+    <name>AITP R3</name>
+    <version>1.0</version>
+    <publisher>Stick</publisher>
+    <url>http://bradyhigginbotham.com</url>
+    <description>not specified</description>
+    <copyright>2012 by Stick</copyright>
+    <icon>appicon.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>d1c871ca-0773-4aa8-8f01-214267aff0fc</guid>
+    <property name="ti.ui.defaultunit">system</property>
+    <iphone>
+        <orientations device="iphone">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+        </orientations>
+        <orientations device="ipad">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+            <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
+        </orientations>
+    </iphone>
+    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="commonjs" version="2.0.1">ti.cloud</module>
+    </modules>
+</ti:app>
