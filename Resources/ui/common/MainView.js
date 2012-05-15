@@ -1,12 +1,12 @@
-//FirstView Component Constructor
-function FirstView() {
+//MainView Component Constructor
+function MainView() {
 	//create object instance, a parasitic subclass of Observable
 	var self = Ti.UI.createView();
 	
 	//label using localization-ready strings from <app dir>/i18n/en/strings.xml
 	var label = Ti.UI.createLabel({
 		color:'#000000',
-		text:String.format(L('welcome'),'Titanium'),
+		text:"Cajuns!",
 		height:'auto',
 		width:'auto'
 	});
@@ -20,4 +20,4 @@ function FirstView() {
 	return self;
 }
 
-module.exports = FirstView;
+module.exports = MainView;
