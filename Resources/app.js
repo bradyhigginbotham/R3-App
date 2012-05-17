@@ -41,5 +41,6 @@ if (Ti.version < 1.8 ) {
 		}
 	}
 	
+	//Ti.Database.install('main.sqlite', 'main');
 	new Window().open();
 })();

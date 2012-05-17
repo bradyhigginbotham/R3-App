@@ -3,8 +3,8 @@ function ListView() {
 		backgroundColor:'white'
 	});
 	
-	Titanium.Database.install('main.sqlite','main');
-	var db = Ti.Database.open('main');
+	var db = Titanium.Database.install('main.sqlite','main');
+
 	var results = [];
 
     //Get colleges from database
