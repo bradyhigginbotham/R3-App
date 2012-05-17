@@ -5,18 +5,19 @@ function ListView() {
 	
 	var db = Titanium.Database.install('db/r3.sqlite','r3');
 
-	var results = [];
+	var results = [], count = 0;
 
     //Get colleges from database
-    var resultSet = db.execute('SELECT * FROM colleges ORDER BY name ASC');
+    var resultSet = db.execute('SELECT * FROM colleges WHERE state = "Arkansas"');
     while (resultSet.isValidRow()) {
 		results.push({
 		    id: resultSet.fieldByName('id'),
-			title: resultSet.fieldByName('name'),
+			title: count+resultSet.fieldByName('name'),
 			//state: resultSet.fieldByName('state'),
 			hasChild: true
 		});
     	resultSet.next();
+    	count += count;
     }
     resultSet.close();
 	
