@@ -37,8 +37,9 @@ if (Ti.version < 1.8 ) {
 			Window = require('ui/handheld/android/ApplicationWindow');
 		}
 		else {
-			Window = require('ui/handheld/ApplicationWindow');
+			Window = require('ui/handheld/Home');
 		}
 	}
+	
 	new Window().open();
 })();
