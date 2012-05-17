@@ -3,16 +3,16 @@ function ListView() {
 		backgroundColor:'white'
 	});
 	
-	var db = Titanium.Database.install('weather.sqlite','weather');
+	var db = Titanium.Database.install('db/r3.sqlite','r3');
 
 	var results = [];
 
     //Get colleges from database
-    var resultSet = db.execute('SELECT * FROM cities');
+    var resultSet = db.execute('SELECT * FROM colleges ORDER BY name ASC');
     while (resultSet.isValidRow()) {
 		results.push({
 		    id: resultSet.fieldByName('id'),
-			title: resultSet.fieldByName('city'),
+			title: resultSet.fieldByName('name'),
 			//state: resultSet.fieldByName('state'),
 			hasChild: true
 		});
