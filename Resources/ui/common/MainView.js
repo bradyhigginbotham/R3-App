@@ -4,17 +4,17 @@ function MainView() {
 	var self = Ti.UI.createView();
 	
 	//label using localization-ready strings from <app dir>/i18n/en/strings.xml
-	var label = Ti.UI.createLabel({
-		color:'#000000',
-		text:"Cajuns!",
-		height:'auto',
-		width:'auto'
+	var button = Ti.UI.createButton({
+		text:"Colleges!",
+		height: 50,
+		width: 100
 	});
-	self.add(label);
+	self.add(button);
 	
 	//Add behavior for UI
-	label.addEventListener('click', function(e) {
-		alert(e.source.text);
+	button.addEventListener('click', function(e) {
+		var MasterView = require('ui/common/MasterView');
+		new MasterView().open({animated:true});
 	});
 	
 	return self;

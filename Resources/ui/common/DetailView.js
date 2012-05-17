@@ -10,7 +10,7 @@ function DetailView() {
 	self.add(lbl);
 	
 	self.addEventListener('itemSelected', function(e) {
-		lbl.text = e.name+': $'+e.price;
+		lbl.text = e.name+', '+e.state;
 	});
 	
 	return self;
