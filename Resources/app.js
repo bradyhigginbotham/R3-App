@@ -41,6 +41,6 @@ if (Ti.version < 1.8 ) {
 		}
 	}
 	
-	//Ti.Database.install('main.sqlite', 'main');
+	Titanium.UI.iPhone.appBadge = 2;
 	new Window().open();
 })();
