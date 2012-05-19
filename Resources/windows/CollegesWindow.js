@@ -6,7 +6,9 @@ function CollegesWindow() {
 		
 	//create object instance
 	var self = Ti.UI.createWindow({
-		backgroundColor:'#ffffff'
+		backgroundColor:'#ffffff',
+		title: 'Colleges',
+		navBarHidden: false
 	});
 		
 	//construct UI
@@ -26,10 +28,11 @@ function CollegesWindow() {
 	detailContainerWindow.add(detailView);
 	
 	//createiOS specific NavGroup UI
-	var navGroup = Ti.UI.iPhone.createNavigationGroup({
+/*	var navGroup = Ti.UI.iPhone.createNavigationGroup({
 		window:listContainerWindow
 	});
 	self.add(navGroup);
+*/
 	
 	//add behavior for master view
 	listView.addEventListener('itemSelected', function(e) {
