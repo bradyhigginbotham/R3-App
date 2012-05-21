@@ -17,14 +17,16 @@ function ListView() {
 				title: resultSet.fieldByName('name'),
 				state: resultSet.fieldByName('state'),
 				hasChild: true,
-				header: header
+				header: header,
+				height: 40
 			});
 		} else{
 			results.push({
 			    id: resultSet.fieldByName('id'),
 				title: resultSet.fieldByName('name'),
 				state: resultSet.fieldByName('state'),
-				hasChild: true
+				hasChild: true,
+				height: 40
 			});			
 		}
     	resultSet.next();
@@ -32,7 +34,7 @@ function ListView() {
     resultSet.close();
 	
 	var table = Ti.UI.createTableView({
-		data:results
+		data: results
 	});
 	
 	self.add(table);

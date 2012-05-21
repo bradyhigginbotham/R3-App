@@ -1,5 +1,7 @@
 function DetailView() {
-	var self = Ti.UI.createView();
+	var self = Ti.UI.createView({
+		backgroundColor:'white'
+	});
 	
 	var lbl = Ti.UI.createLabel({
 		text:'Please select an item',

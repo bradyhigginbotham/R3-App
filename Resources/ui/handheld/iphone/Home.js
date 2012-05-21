@@ -1,29 +1,21 @@
 //Home Window Component Constructor
 function HomeWindow() {
 	//load component dependencies
-	var MainView = require('ui/common/MainView');
+	var MainView = require('ui/common/MainView'), navGroup = undefined;
 		
 	//create component instance
-	var self = Ti.UI.createWindow({
-		backgroundColor:'#ffffff'
-	});
-	
+	var self = Ti.UI.createWindow();
 	var mainNavWindow = Ti.UI.createWindow({
 		backgroundColor:'#ffffff',
 		title: 'Home',
 		navBarHidden: true
-	})
+	});
 
 /*		
 	//construct UI
 	var main = new MainView();
 	self.add(main);
 */
-
-	var navGroup = Ti.UI.iPhone.createNavigationGroup({
-		window: mainNavWindow
-	})
-	self.add(navGroup);
 
 	var collegesButton = Ti.UI.createButton({
 		title: "Colleges",
@@ -32,9 +24,29 @@ function HomeWindow() {
 	})
 	mainNavWindow.add(collegesButton);
 	
-	collegesButton.addEventListener('click', function(e){
+    // handle cross-platform navigation
+    if (Ti.Platform.osname == 'android') {
+        navGroup = {
+            open: function (win, obj) {
+                win.open(obj);
+            },
+            close: function (win, obj) {
+                win.close(obj);
+            }
+        };
+        self = mainNavWindow;
+        self.exitOnClose = true;
+        mainNavWindow = null;
+    } else {
+		navGroup = Ti.UI.iPhone.createNavigationGroup({
+			window: mainNavWindow
+		});
+		self.add(navGroup);
+    }
+    
+   	collegesButton.addEventListener('click', function(e){
 		var CollegesWindow = require('windows/CollegesWindow');
-		var collegesWindow = new CollegesWindow();
+		var collegesWindow = new CollegesWindow(navGroup);
 		navGroup.open(collegesWindow, {animated:true});
 	})
 	

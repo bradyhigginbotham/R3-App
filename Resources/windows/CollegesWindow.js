@@ -1,5 +1,5 @@
 //Colleges Window Component Constructor
-function CollegesWindow() {
+function CollegesWindow(navGroup) {
 	//load component dependencies
 	var ListView = require('ui/common/ListView'),
 		DetailView = require('ui/common/DetailView');
@@ -19,7 +19,7 @@ function CollegesWindow() {
 	var listContainerWindow = Ti.UI.createWindow({
 		title:'Colleges'
 	});
-	listContainerWindow.add(listView);
+	self.add(listView);
 	
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({
@@ -27,19 +27,12 @@ function CollegesWindow() {
 	});
 	detailContainerWindow.add(detailView);
 	
-	//createiOS specific NavGroup UI
-/*	var navGroup = Ti.UI.iPhone.createNavigationGroup({
-		window:listContainerWindow
-	});
-	self.add(navGroup);
-*/
-	
 	//add behavior for master view
 	listView.addEventListener('itemSelected', function(e) {
 		detailView.fireEvent('itemSelected',e);
 		navGroup.open(detailContainerWindow);
 	});
-
+	
 	return self;
 }
 
