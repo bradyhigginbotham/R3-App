@@ -17,6 +17,7 @@ function HomeWindow() {
 	self.add(main);
 */
 
+	/*---- Home Icons ----*/
 	var collegesButton = Ti.UI.createButton({
 		title: "Colleges",
 		height: 50,
@@ -24,11 +25,13 @@ function HomeWindow() {
 	})
 	mainNavWindow.add(collegesButton);
 	
-	collegesButton.addEventListener('click', function(e){
-		var CollegesWindow = require('windows/CollegesWindow');
-		var collegesWindow = new CollegesWindow(navGroup);
-		navGroup.open(collegesWindow, {animated:true});
-	});
+	var schedulesButton = Ti.UI.createButton({
+		title: "Schedule",
+		height: 50,
+		width: 100,
+		top: 20
+	})
+	mainNavWindow.add(schedulesButton);
 	
 	var mapsButton = Ti.UI.createButton({
 		title: "Maps",
@@ -38,8 +41,22 @@ function HomeWindow() {
 	})
 	mainNavWindow.add(mapsButton);
 	
+	
+	/*---- Icon EventListeners ----*/
+	collegesButton.addEventListener('click', function(e){
+		var CollegesWindow = require('ui/common/colleges/CollegesWindow');
+		var collegesWindow = new CollegesWindow(navGroup);
+		navGroup.open(collegesWindow, {animated:true});
+	});
+	
+	schedulesButton.addEventListener('click', function(e){
+		var SchedulesWindow = require('ui/common/schedules/SchedulesWindow');
+		var schedulesWindow = new SchedulesWindow(navGroup);
+		navGroup.open(schedulesWindow, {animated:true});
+	});
+	
 	mapsButton.addEventListener('click', function(e){
-		var MapsWindow = require('windows/MapsWindow');
+		var MapsWindow = require('ui/common/maps/MapsWindow');
 		var mapsWindow = new MapsWindow();
 		navGroup.open(mapsWindow, {animated:true});
 	});
