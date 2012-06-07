@@ -207,8 +207,8 @@
 			return [scrollWrappers objectAtIndex:index];
 		}
 	}
-	//Adding the view to a scrollable view is invalid.
-	return nil;
+	//TODO: Generate the view?
+	return [super parentViewForChild:child];
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration

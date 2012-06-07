@@ -1,1 +1,1 @@
-/Users/Stick/Documents/Titanium Studio Workspace/R3-App/Resources/app.js
+/Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/app.js

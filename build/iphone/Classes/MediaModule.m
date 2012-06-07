@@ -319,7 +319,7 @@ static NSDictionary* TI_filterableItemProperties;
 	}
 	
 	RELEASE_TO_NIL(popover);
-	[self destroyPicker];
+	[self sendPickerCancel];
 	//Unregister for interface change notification 
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillChangeStatusBarOrientationNotification object:nil];
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];

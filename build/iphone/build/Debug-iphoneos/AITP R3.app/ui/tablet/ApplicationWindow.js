@@ -1,1 +1,1 @@
-/Users/Stick/Documents/Titanium Studio Workspace/R3-App/Resources/ui/tablet/ApplicationWindow.js
+/Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/tablet/ApplicationWindow.js

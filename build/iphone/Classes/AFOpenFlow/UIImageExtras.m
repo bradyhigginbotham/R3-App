@@ -29,7 +29,7 @@
 
 - (UIImage *)rescaleImageToSize:(CGSize)size {
 	CGRect rect = CGRectMake(0.0, 0.0, size.width, size.height);
-	UIGraphicsBeginImageContextWithOptions(rect.size, NO, self.scale);
+	UIGraphicsBeginImageContext(rect.size);
 	[self drawInRect:rect];  // scales image to rect
 	UIImage *resImage = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
@@ -38,7 +38,7 @@
 
 - (UIImage *)cropImageToRect:(CGRect)cropRect {
 	// Begin the drawing (again)
-	UIGraphicsBeginImageContextWithOptions(cropRect.size, NO, self.scale);
+	UIGraphicsBeginImageContext(cropRect.size);
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
 	// Tanslate and scale upside-down to compensate for Quartz's inverted coordinate system

@@ -38,6 +38,16 @@
     return [contentOffset autorelease];
 }
 
+-(void)windowWillOpen
+{
+    [super windowWillOpen];
+    //Since layout children is overridden in scrollview need to make sure that 
+    //a full layout occurs atleast once if view is attached
+    if ([self viewAttached]) {
+        [self contentsWillChange];
+    }
+}
+
 -(void)contentsWillChange
 {
 	if ([self viewAttached])
@@ -64,12 +74,10 @@
 		return;
 	}
 
-	[(TiUIScrollView *)[self view] handleContentSizeIfNeeded];
-}
-
--(void)layoutChildrenAfterContentSize:(BOOL)optimize
-{
-	[super layoutChildren:optimize];	
+	if (![(TiUIScrollView *)[self view] handleContentSizeIfNeeded])
+	{
+		[super layoutChildren:optimize];
+	}
 }
 
 -(CGFloat)autoHeightForSize:(CGSize)size

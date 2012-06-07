@@ -45,22 +45,15 @@ DEFINE_DEF_BOOL_PROP(suppressReturn,YES);
 }
 
 
--(NSNumber*)hasText:(id)unused
+-(BOOL)hasText
 {
-    if ([self viewAttached]) {
-        __block BOOL viewHasText = NO;
-        TiThreadPerformOnMainThread(^{
-            viewHasText = [(TiUITextWidget*)[self view] hasText];
-        }, YES);
-        return [NSNumber numberWithBool:viewHasText];
-    }
-    else {
-        NSString *value = [self valueForKey:@"value"];
-        BOOL viewHasText = value!=nil && [value length] > 0;
-        return [NSNumber numberWithBool:viewHasText];
-    }
+	if ([self viewAttached])
+	{
+		return [(TiUITextWidget*)[self view] hasText];
+	}
+	NSString *value = [self valueForKey:@"value"];
+	return value!=nil && [value length] > 0;
 }
-
 
 -(void)blur:(id)args
 {

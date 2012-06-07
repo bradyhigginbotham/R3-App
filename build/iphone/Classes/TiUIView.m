@@ -190,7 +190,8 @@ DEFINE_EXCEPTIONS
 	[doubleTapRecognizer release];
 	[twoFingerTapRecognizer release];
 	[pinchRecognizer release];
-	[swipeRecognizer release];
+	[leftSwipeRecognizer release];
+	[rightSwipeRecognizer release];
 	[longPressRecognizer release];
 	proxy = nil;
 	touchDelegate = nil;
@@ -766,13 +767,12 @@ DEFINE_EXCEPTIONS
 {
 	if (singleTapRecognizer == nil) {
 		singleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(recognizedTap:)];
-		[singleTapRecognizer setCancelsTouchesInView:NO];
+		[self configureGestureRecognizer:singleTapRecognizer];
 		[self addGestureRecognizer:singleTapRecognizer];
 
 		if (doubleTapRecognizer != nil) {
 			[singleTapRecognizer requireGestureRecognizerToFail:doubleTapRecognizer];
 		}
-		//If there are more gesture recognizer relationships, add it here.
 	}
 	return singleTapRecognizer;
 }
@@ -782,14 +782,12 @@ DEFINE_EXCEPTIONS
 	if (doubleTapRecognizer == nil) {
 		doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(recognizedTap:)];
 		[doubleTapRecognizer setNumberOfTapsRequired:2];
-		[doubleTapRecognizer setDelaysTouchesBegan:NO];
-		[doubleTapRecognizer setCancelsTouchesInView:NO];
+		[self configureGestureRecognizer:doubleTapRecognizer];
 		[self addGestureRecognizer:doubleTapRecognizer];
 		
 		if (singleTapRecognizer != nil) {
 			[singleTapRecognizer requireGestureRecognizerToFail:doubleTapRecognizer];
 		}		
-		//If there are more gesture recognizer relationships, add it here.
 	}
 	return doubleTapRecognizer;
 }
@@ -799,10 +797,8 @@ DEFINE_EXCEPTIONS
 	if (twoFingerTapRecognizer == nil) {
 		twoFingerTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(recognizedTap:)];
 		[twoFingerTapRecognizer setNumberOfTouchesRequired:2];
-		[twoFingerTapRecognizer setCancelsTouchesInView:NO];
+		[self configureGestureRecognizer:twoFingerTapRecognizer];
 		[self addGestureRecognizer:twoFingerTapRecognizer];
-		
-		//If there are more gesture recognizer relationships, add it here.
 	}
 	return twoFingerTapRecognizer;
 }
@@ -811,35 +807,40 @@ DEFINE_EXCEPTIONS
 {
 	if (pinchRecognizer == nil) {
 		pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(recognizedPinch:)];
-		[pinchRecognizer setCancelsTouchesInView:NO];
+		[self configureGestureRecognizer:pinchRecognizer];
 		[self addGestureRecognizer:pinchRecognizer];
-		
-		//If there are more gesture recognizer relationships, add it here.		
 	}
 	return pinchRecognizer;
 }
 
--(UISwipeGestureRecognizer*)swipeRecognizer;
+-(UISwipeGestureRecognizer*)leftSwipeRecognizer;
 {
-	if (swipeRecognizer == nil) {
-		swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(recognizedSwipe:)];
-		[swipeRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft|UISwipeGestureRecognizerDirectionRight];
-		[swipeRecognizer setCancelsTouchesInView:NO];
-		[self addGestureRecognizer:swipeRecognizer];
-	   
-	   //If there are more gesture recognizer relationships, add it here.		
+	if (leftSwipeRecognizer == nil) {
+		leftSwipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(recognizedSwipe:)];
+		[leftSwipeRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
+		[self configureGestureRecognizer:leftSwipeRecognizer];
+		[self addGestureRecognizer:leftSwipeRecognizer];
 	}
-	return swipeRecognizer;
+	return leftSwipeRecognizer;
+}
+
+-(UISwipeGestureRecognizer*)rightSwipeRecognizer;
+{
+	if (rightSwipeRecognizer == nil) {
+		rightSwipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(recognizedSwipe:)];
+		[rightSwipeRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
+		[self configureGestureRecognizer:rightSwipeRecognizer];
+		[self addGestureRecognizer:rightSwipeRecognizer];
+	}
+	return rightSwipeRecognizer;
 }
 
 -(UILongPressGestureRecognizer*)longPressRecognizer;
 {
 	if (longPressRecognizer == nil) {
 		longPressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(recognizedLongPress:)];
-		[longPressRecognizer setCancelsTouchesInView:NO];
+		[self configureGestureRecognizer:longPressRecognizer];
 		[self addGestureRecognizer:longPressRecognizer];
-		
-		//If there are more gesture recognizer relationships, add it here.				
 	}
 	return longPressRecognizer;
 }
@@ -1132,25 +1133,35 @@ DEFINE_EXCEPTIONS
     }
 }
 
-- (UIGestureRecognizer *)gestureRecognizerForEvent:(NSString *)event
+-(void)configureGestureRecognizer:(UIGestureRecognizer*)gestureRecognizer
 {
-	if ([event isEqualToString:@"singletap"]) {
-		return [self singleTapRecognizer];
+    [gestureRecognizer setDelaysTouchesBegan:NO];
+    [gestureRecognizer setDelaysTouchesEnded:NO];
+    [gestureRecognizer setCancelsTouchesInView:NO];
+}
+
+-(UIGestureRecognizer *)gestureRecognizerForEvent:(NSString *)event
+{
+    if ([event isEqualToString:@"singletap"]) {
+        return [self singleTapRecognizer];
     }
-	if ([event isEqualToString:@"doubletap"]) {
-		return [self doubleTapRecognizer];
+    if ([event isEqualToString:@"doubletap"]) {
+        return [self doubleTapRecognizer];
     }
-	if ([event isEqualToString:@"twofingertap"]) {
-		return [self twoFingerTapRecognizer];
+    if ([event isEqualToString:@"twofingertap"]) {
+        return [self twoFingerTapRecognizer];
     }
-	if ([event isEqualToString:@"swipe"]) {
-		return [self swipeRecognizer];
+    if ([event isEqualToString:@"lswipe"]) {
+        return [self leftSwipeRecognizer];
+    }
+    if ([event isEqualToString:@"rswipe"]) {
+        return [self rightSwipeRecognizer];
     }
     if ([event isEqualToString:@"pinch"]) {
-		return [self pinchRecognizer];
+        return [self pinchRecognizer];
     }
-	if ([event isEqualToString:@"longpress"]) {
-		return [self longPressRecognizer];
+    if ([event isEqualToString:@"longpress"]) {
+        return [self longPressRecognizer];
     }
     return nil;
 }
@@ -1159,7 +1170,13 @@ DEFINE_EXCEPTIONS
 {
 	ENSURE_UI_THREAD_1_ARG(event);
     [self updateTouchHandling];
-    [[self gestureRecognizerForEvent:event] setEnabled:YES];
+    if ([event isEqualToString:@"swipe"]) {
+        [[self gestureRecognizerForEvent:@"rswipe"] setEnabled:YES];
+        [[self gestureRecognizerForEvent:@"lswipe"] setEnabled:YES];
+    }
+    else {
+        [[self gestureRecognizerForEvent:event] setEnabled:YES];
+    }
 }
 
 -(void)handleListenerRemovedWithEvent:(NSString *)event
@@ -1169,7 +1186,13 @@ DEFINE_EXCEPTIONS
 	// since we might be removing one but we still have others
 
 	[self updateTouchHandling];
-    [[self gestureRecognizerForEvent:event] setEnabled:NO];
+    if ([event isEqualToString:@"swipe"]) {
+        [[self gestureRecognizerForEvent:@"rswipe"] setEnabled:NO];
+        [[self gestureRecognizerForEvent:@"lswipe"] setEnabled:NO];
+    }
+    else {
+        [[self gestureRecognizerForEvent:event] setEnabled:NO];
+    }
 }
 
 -(void)listenerAdded:(NSString*)event count:(int)count

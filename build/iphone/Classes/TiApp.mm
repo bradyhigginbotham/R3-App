@@ -204,7 +204,7 @@ TI_INLINE void waitForMemoryPanicCleared();   //WARNING: This must never be run 
 
 - (void)boot
 {
-	NSLog(@"[INFO] %@/%@ (%s.482a378)",TI_APPLICATION_NAME,TI_APPLICATION_VERSION,TI_VERSION_STR);
+	NSLog(@"[INFO] %@/%@ (%s.2ff31a3)",TI_APPLICATION_NAME,TI_APPLICATION_VERSION,TI_VERSION_STR);
 	
 	sessionId = [[TiUtils createUUID] retain];
 	TITANIUM_VERSION = [[NSString stringWithCString:TI_VERSION_STR encoding:NSUTF8StringEncoding] retain];
@@ -418,6 +418,7 @@ TI_INLINE void waitForMemoryPanicCleared();   //WARNING: This must never be run 
 {
 	[TiUtils queueAnalytics:@"ti.background" name:@"ti.background" data:nil];
 
+	
 	if (backgroundServices==nil)
 	{
 		return;
@@ -450,13 +451,10 @@ TI_INLINE void waitForMemoryPanicCleared();   //WARNING: This must never be run 
     [sessionId release];
     sessionId = [[TiUtils createUUID] retain];
     
-    //TIMOB-3432. Ensure url is cleared when resume event is fired.
-    [launchOptions removeObjectForKey:@"url"];
-
 	[[NSNotificationCenter defaultCenter] postNotificationName:kTiResumeNotification object:self];
 	
 	[TiUtils queueAnalytics:@"ti.foreground" name:@"ti.foreground" data:nil];
-    
+	
 	if (backgroundServices==nil)
 	{
 		return;

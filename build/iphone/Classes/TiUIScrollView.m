@@ -140,9 +140,6 @@
 
 -(void)handleContentSize
 {
-	if (!needsHandleContentSize) {
-		return;
-	}
 	CGSize newContentSize = [self bounds].size;
 	CGFloat scale = [scrollView zoomScale];
 
@@ -188,7 +185,7 @@
 	wrapperBounds.size = newContentSize;
 	[wrapperView setFrame:wrapperBounds];
 	needsHandleContentSize = NO;
-	[(TiUIScrollViewProxy *)[self proxy] layoutChildrenAfterContentSize:NO];
+	[(TiViewProxy *)[self proxy] layoutChildren:NO];
 }
 
 -(void)frameSizeChanged:(CGRect)frame bounds:(CGRect)visibleBounds

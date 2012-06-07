@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/R3-App/build/iphone/Classes/KrollMethodDelegate.m \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/R3-App/build/iphone/Classes/KrollMethodDelegate.h
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/KrollMethodDelegate.m \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/KrollMethodDelegate.h

@@ -28,6 +28,7 @@
 }
 
 -(void)_refreshBackButton;
+-(void)_updateTitleView;
 -(void)boot:(BOOL)timeout args:(id)args;
 
 @end

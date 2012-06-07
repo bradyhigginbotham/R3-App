@@ -892,6 +892,11 @@ LAYOUTPROPERTIES_SETTER(setMinHeight,minimumHeight,TiFixedValueRuleFromObject,[s
 	[TiUtils setView:barButtonView positionRect:barBounds];
 	[barButtonView setAutoresizingMask:UIViewAutoresizingNone];
 	
+    //Ensure all the child views are laid out as well
+    [self windowWillOpen];
+    [self setParentVisible:YES];
+    [self layoutChildren:NO];
+
 	return barButtonView;
 }
 
@@ -1933,9 +1938,19 @@ if(OSAtomicTestAndSetBarrier(flagBit, &dirtyflags))	\
 	int childZindex = [childProxy vzIndex];
 	BOOL earlierSibling = YES;
 	UIView * ourView = [self parentViewForChild:childProxy];
-
+	
+	// Have to loop through the view first to find non-Ti views, and consider them
+	// to be on the "bottom" of the view drawing stack, so Ti-everything draws atop them
+	// TODO: This is probably slow - can we reliably cache this value?
+	for (UIView* subview in [ourView subviews]) 
+	{
+		if (![subview isKindOfClass:[TiUIView class]]) {
+			result++;
+		}
+	}
+	
 	pthread_rwlock_rdlock(&childrenLock);
-	for (TiViewProxy * thisChildProxy in children)
+	for (TiViewProxy * thisChildProxy in self.children)
 	{
 		if(thisChildProxy == childProxy)
 		{
@@ -2459,7 +2474,13 @@ if(OSAtomicTestAndSetBarrier(flagBit, &dirtyflags))	\
 			int childProxyIndex = [children indexOfObject:child];
 
 			for (TiUIView * thisView in [ourView subviews])
-			{				
+			{
+				if (![thisView isKindOfClass:[TiUIView class]])
+				{
+					insertPosition ++;
+					continue;
+				}
+				
 				int thisZIndex=[(TiViewProxy *)[thisView proxy] vzIndex];
 				if (childZIndex < thisZIndex) //We've found our stop!
 				{

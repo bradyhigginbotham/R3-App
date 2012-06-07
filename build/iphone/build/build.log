@@ -5,37 +5,37 @@ reporting an issue to help us understand your environment, build settings
 and aid in debugging. Please attach this log to any issue that you report.
 ================================================================================
 
-Starting build at 05/22/12 21:06
+Starting build at 06/07/12 15:43
 
 Build details:
 
-   timestamp=04/09/12 16:18
+   timestamp=05/30/12 10:21
    module_apiversion=2
-   version=2.1.0
-   githash=482a378
+   version=2.0.2
+   githash=2ff31a3
 
 
 Script arguments:
-   /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.0.v20120409161847/iphone/builder.py
+   /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.0.2.GA/iphone/builder.py
    simulator
    5.0
-   /Users/Stick/Documents/Titanium Studio Workspace/R3-App
+   /Users/Stick/Documents/Titanium Studio Workspace/AITP R3
    com.bradyhigginbotham.r3
    AITP R3
    universal
    iphone
    
 
-Building from: /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.0.v20120409161847/iphone
+Building from: /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.0.2.GA/iphone
 Platform: Darwin Kernel Version 11.3.0: Thu Jan 12 18:47:41 PST 2012; root:xnu-1699.24.23~1/RELEASE_X86_64
 
 Xcode path is: /Developer
 
 
-githash=482a378, existing_git_hash=482a378
-writing contents of /Users/Stick/Documents/Titanium Studio Workspace/R3-App/build/iphone/project.xcconfig:
+githash=2ff31a3, existing_git_hash=2ff31a3
+writing contents of /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/iphone/project.xcconfig:
 
-TI_VERSION=2.1.0.v20120409161847
+TI_VERSION=2.0.2.GA
 TI_SDK_DIR=/Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/$(TI_VERSION)/iphone
 TI_APPID=com.bradyhigginbotham.r3
 OTHER_LDFLAGS[sdk=iphoneos*]=$(inherited) -weak_framework iAd

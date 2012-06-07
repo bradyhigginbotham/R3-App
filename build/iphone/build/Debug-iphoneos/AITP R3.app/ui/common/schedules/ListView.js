@@ -1,1 +1,1 @@
-/Users/Stick/Documents/Titanium Studio Workspace/R3-App/Resources/ui/common/schedules/ListView.js
+/Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/schedules/ListView.js

@@ -16,6 +16,8 @@
 
 @implementation TiUIWebViewProxy
 
+static NSArray* webKeySequence;
+
 #ifdef DEBUG_MEMORY
 -(void)dealloc
 {
@@ -32,6 +34,16 @@
 	[super release];
 }
 #endif
+
+-(NSArray *)keySequence
+{
+    if (webKeySequence == nil)
+    {
+        //URL has to be processed first since the spinner depends on URL being remote
+        webKeySequence = [[NSArray arrayWithObjects:@"url",nil] retain];
+    }
+    return webKeySequence;
+}
 
 -(BOOL)shouldDetachViewForSpace
 {
