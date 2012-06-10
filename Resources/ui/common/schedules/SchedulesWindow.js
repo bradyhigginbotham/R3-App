@@ -23,7 +23,8 @@ function SchedulesWindow(navGroup) {
 	
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({
-		title:'Schedule Details'
+		title:'Schedule Details',
+		layout: 'vertical'
 	});
 	detailContainerWindow.add(detailView);
 	
