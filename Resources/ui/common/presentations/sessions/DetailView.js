@@ -4,7 +4,7 @@ function DetailView() {
 	});
 	
 	var lbl = Ti.UI.createLabel({
-		text:'College',
+		text:'Session',
 		height:'auto',
 		width:'auto',
 		color:'#000'
@@ -12,7 +12,7 @@ function DetailView() {
 	self.add(lbl);
 	
 	self.addEventListener('itemSelected', function(e) {
-		lbl.text = e.name + ', ' + e.state;
+		lbl.text = e.title + '\n' + e.time;
 	});
 	
 	return self;

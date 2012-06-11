@@ -21,7 +21,8 @@ function HomeWindow() {
 	var collegesButton = Ti.UI.createButton({
 		title: "Colleges",
 		height: 50,
-		width: 100
+		width: 100,
+		top: 10
 	})
 	mainNavWindow.add(collegesButton);
 	
@@ -29,7 +30,7 @@ function HomeWindow() {
 		title: "Schedule",
 		height: 50,
 		width: 100,
-		top: 20
+		top: 60
 	})
 	mainNavWindow.add(schedulesButton);
 	
@@ -37,10 +38,17 @@ function HomeWindow() {
 		title: "Maps",
 		height: 50,
 		width: 100,
-		bottom: 20
+		top: 110
 	})
 	mainNavWindow.add(mapsButton);
 	
+	var presentationsButton = Ti.UI.createButton({
+		title: "Presentations",
+		height: 50,
+		width: 100,
+		top: 160
+	})
+	mainNavWindow.add(presentationsButton);
 	
 	/*---- Icon EventListeners ----*/
 	collegesButton.addEventListener('click', function(e){
@@ -59,6 +67,12 @@ function HomeWindow() {
 		var MapsWindow = require('ui/common/maps/MapsWindow');
 		var mapsWindow = new MapsWindow();
 		navGroup.open(mapsWindow, {animated:true});
+	});
+	
+	presentationsButton.addEventListener('click', function(e){
+		var TabGroup = require('ui/common/presentations/TabGroup');
+		var tabGroup = new TabGroup(navGroup);
+		navGroup.open(tabGroup);
 	});
 	
     // handle cross-platform navigation
