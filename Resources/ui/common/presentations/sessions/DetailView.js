@@ -12,7 +12,13 @@ function DetailView() {
 	self.add(lbl);
 	
 	self.addEventListener('itemSelected', function(e) {
-		lbl.text = e.title + '\n' + e.time;
+ 		var dateArray = e.time.split(' ');
+        var year = dateArray[0].split('-');
+        var time = dateArray[1].split(':');
+
+        var date = new Date(year[0], year[1], year[2], time[0], time[1], time[2]);
+		lbl.text = e.title + '\n' + date.getHours() + ":" + date.getMinutes();
+
 	});
 	
 	return self;
