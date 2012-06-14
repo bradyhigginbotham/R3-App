@@ -4,7 +4,7 @@ function DetailView() {
 	});
 	
 	var lbl = Ti.UI.createLabel({
-		text:'Please select an item',
+		text:'College',
 		height:'auto',
 		width:'auto',
 		color:'#000'
