@@ -15,12 +15,6 @@ function CollegesWindow(navGroup) {
 	var listView = new ListView(),
 		detailView = new DetailView();
 	
-	//create list view container
-	var listContainerWindow = Ti.UI.createWindow({
-		title:'Colleges'
-	});
-	self.add(listView);
-	
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({
 		title:'College Details'
@@ -32,6 +26,8 @@ function CollegesWindow(navGroup) {
 		detailView.fireEvent('itemSelected',e);
 		navGroup.open(detailContainerWindow);
 	});
+	
+	self.add(listView);
 	
 	return self;
 }
