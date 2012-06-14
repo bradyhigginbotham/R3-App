@@ -17,10 +17,25 @@ function CertificationsWindow(navgroup)
 	var listView = new ListView,
 		detailView = new DetailView;
 		
-	//Create list view container
-	var listContainerWindow = Ti.UI.createWindow
+	//create detail view container
+	var detailContainerWindow = Ti.UI.createWindow({
+		title:'College Details'
+	});
+	detailContainerWindow.add(detailView);
 	
+	//add behavior for master view
+	listView.addEventListener('itemSelected', function(e)
+	{
+		detailView.fireEvent('itemSelected', e);
+		navGroup.open(detailContainerWindow);
+	});
 	
+	self.add(listView);
 	
-	
+	return self;
+
 }
+
+//make constructor function the public component interface
+module.exports = CertificationsWindow;
+
