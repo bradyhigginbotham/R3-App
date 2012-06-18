@@ -56,7 +56,7 @@ function HomeWindow() {
 	/*---- Home Icons ----*/
 	var iconsContainer = Ti.UI.createView({
 		backgroundColor: '#E5EAEF',
-		top: 220,
+		top: 0,
 		height: 150,
 		layout: 'horizontal'
 	})
@@ -120,7 +120,32 @@ function HomeWindow() {
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
 	});
+    	
+	var tab = Ti.UI.createButton({
+		title: 'Resources',
+		bottom: 10,
+		left: 150
+	});
+	mainNavWindow.add(tab);
 	
+	var view2 = Ti.UI.createView({ backgroundColor:'#246' });
+	var label = Ti.UI.createLabel({text: 'View 2'});
+	view2.add(label);
+	
+	var scrollableView = Ti.UI.createScrollableView({
+	  views:[iconsContainer,view2],
+	  showPagingControl: true,
+	  top: 220,
+	  height: 150
+	});
+	
+	tab.addEventListener('click', function(){
+		scrollableView.scrollToView(view2);
+	});
+	
+	mainNavWindow.add(scrollableView);
+    mainNavWindow.add(announcements);
+    
     // handle cross-platform navigation
     if (Ti.Platform.osname == 'android') {
         navGroup = {
@@ -140,11 +165,9 @@ function HomeWindow() {
 		});
 		self.add(navGroup);
     }
-    
-    mainNavWindow.add(iconsContainer);
-    mainNavWindow.add(announcements);
-	
+
 	return self;
+
 }
 
 //make constructor function the public component interface
