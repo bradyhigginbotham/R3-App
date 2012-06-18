@@ -2,11 +2,14 @@
 function HomeWindow() {
 	//load component dependencies
 	var MainView = require('ui/common/MainView'), navGroup = undefined;
+	
+	// constants
+	var iconHeight = 50, iconWidth = 100, iconTop = 10, iconLeft = 10;
 		
 	//create component instance
 	var self = Ti.UI.createWindow();
 	var mainNavWindow = Ti.UI.createWindow({
-		backgroundColor:'#ffffff',
+		backgroundImage:'images/home_frame.png',
 		title: 'Home',
 		navBarHidden: true
 	});
@@ -17,38 +20,81 @@ function HomeWindow() {
 	self.add(main);
 */
 
+	// Announcements view
+	var announcementRow = Ti.UI.createTableViewRow({
+		background: 'transparent',
+		hasChild: true,
+		height: 60
+	});
+	
+	var header = Ti.UI.createLabel({
+		text: 'Announcements',
+		color: '#7C0606',
+		font: {fontSize: 24, fontWeight: 'bold'},
+		top: 5,
+		left: 10,
+		height: 25
+	});
+	var subtitle = Ti.UI.createLabel({
+		text: 'LATEST: Most recent announcement.',
+		color: '#6A737D',
+		font: {fontSize: 12},
+		top: 25,
+		left: 10,
+		height: 25
+	});
+	announcementRow.add(header);
+	announcementRow.add(subtitle);
+	
+	var announcements = Ti.UI.createTableView({
+		top: 150,
+		height: 60,
+		className: 'announcements'
+	});
+	announcements.appendRow(announcementRow);
+
 	/*---- Home Icons ----*/
+	var iconsContainer = Ti.UI.createView({
+		backgroundColor: '#E5EAEF',
+		top: 220,
+		height: 150,
+		layout: 'horizontal'
+	})
 	var collegesButton = Ti.UI.createButton({
 		title: "Colleges",
-		height: 50,
-		width: 100,
-		top: 10
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
 	})
-	mainNavWindow.add(collegesButton);
+	iconsContainer.add(collegesButton);
 	
 	var schedulesButton = Ti.UI.createButton({
 		title: "Schedule",
-		height: 50,
-		width: 100,
-		top: 60
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
 	})
-	mainNavWindow.add(schedulesButton);
+	iconsContainer.add(schedulesButton);
 	
 	var mapsButton = Ti.UI.createButton({
 		title: "Maps",
-		height: 50,
-		width: 100,
-		top: 110
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
 	})
-	mainNavWindow.add(mapsButton);
+	iconsContainer.add(mapsButton);
 	
 	var presentationsButton = Ti.UI.createButton({
 		title: "Presentations",
-		height: 50,
-		width: 100,
-		top: 160
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
 	})
-	mainNavWindow.add(presentationsButton);
+	iconsContainer.add(presentationsButton);
 	
 	/*---- Icon EventListeners ----*/
 	collegesButton.addEventListener('click', function(e){
@@ -94,6 +140,9 @@ function HomeWindow() {
 		});
 		self.add(navGroup);
     }
+    
+    mainNavWindow.add(iconsContainer);
+    mainNavWindow.add(announcements);
 	
 	return self;
 }

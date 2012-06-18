@@ -39,5 +39,5 @@ if (Ti.version < 1.8 ) {
 	// lengthen splash screen display time
 	setTimeout(function(){
 		new MainWindow().open();	
-	}, 4000);
+	}, 1000);
 })();
