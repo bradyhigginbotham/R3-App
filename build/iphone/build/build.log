@@ -5,7 +5,7 @@ reporting an issue to help us understand your environment, build settings
 and aid in debugging. Please attach this log to any issue that you report.
 ================================================================================
 
-Starting build at 06/10/12 22:39
+Starting build at 06/18/12 18:03
 
 Build details:
 
@@ -27,7 +27,7 @@ Script arguments:
    
 
 Building from: /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.0.2.GA/iphone
-Platform: Darwin Kernel Version 11.3.0: Thu Jan 12 18:47:41 PST 2012; root:xnu-1699.24.23~1/RELEASE_X86_64
+Platform: Darwin Kernel Version 11.4.0: Mon Apr  9 19:32:15 PDT 2012; root:xnu-1699.26.8~1/RELEASE_X86_64
 
 Xcode path is: /Developer
 
@@ -78,3 +78,15 @@ Generated the following stylecode code:
 	</dict>
 </plist>
 Finishing build
+
+Exception detected in script:
+Traceback (most recent call last):
+  File "/Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.0.2.GA/iphone/builder.py", line 1420, in main
+    os.waitpid(sim.pid,0)
+  File "/Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.0.2.GA/iphone/builder.py", line 1355, in handler
+    kill_simulator()
+  File "/Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.0.2.GA/iphone/builder.py", line 77, in kill_simulator
+    run.run(['/usr/bin/killall',"iPhone Simulator"],True)
+  File "/Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.0.2.GA/iphone/run.py", line 8, in run
+    sys.stdout.flush()
+IOError: [Errno 32] Broken pipe

@@ -35,5 +35,9 @@ if (Ti.version < 1.8 ) {
 	}
 	
 	Titanium.UI.iPhone.appBadge = 2;
-	new MainWindow().open();
+	
+	// lengthen splash screen display time
+	setTimeout(function(){
+		new MainWindow().open();	
+	}, 1000);
 })();
