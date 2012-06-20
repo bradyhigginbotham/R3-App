@@ -1,4 +1,4 @@
-functin DetailView()
+function DetailView()
 {
 	var self = Ti.UI.createWindow
 	({
