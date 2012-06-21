@@ -2,8 +2,8 @@
 function CertificationsWindow(navgroup) 
 {
 	//load component dependencies
-	var ListView = require('ui/common/certifications/ListView.js'),
-		DetailView = require('ui/common/certifications/DetailView.js');
+	var ListView = require('ui/common/certifications/ListView'),
+		DetailView = require('ui/common/certifications/DetailView');
 		
 	//Create object instance
 	var self = Ti.UI.createWindow

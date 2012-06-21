@@ -4,3 +4,46 @@ function ListView() {
 	});
 	
 	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
+	var results = [], header = '';
+	
+    //Get certifications from database
+    var resultSet = db.execute('SELECT * FROM certifications ORDER BY date ASC');
+    while (resultSet.isValidRow())
+    {
+    	results.push
+    	({
+    		id: resultSet.fieldByName('id'),
+    		cert: resultSet.fieldByName('name'),
+    		date: resultSet.fieldByName('date'),
+    		descr: resultSet.fieldByName('description'),
+    		hasChild: true,
+    		height: 40
+        });
+    	
+    	resultSet.next();
+    	
+    };
+    
+	resultSet.close();
+
+	var table = Ti.UI.createTableView
+	({
+		data: results
+	});
+	
+	self.add(table);
+	
+	
+	//add event listener
+	table.addEventListener('click', function(e) 
+	{
+		self.fireEvent('itemSelected',
+		{
+			name: e.rowData.title				
+		});
+	});
+	
+	return self;
+};
+
+module.exports = ListView;
