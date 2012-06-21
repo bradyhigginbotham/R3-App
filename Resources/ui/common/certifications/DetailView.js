@@ -2,7 +2,7 @@ function DetailView()
 {
 	var self = Ti.UI.createWindow
 	({
-		backgroundColor: white
+		backgroundColor: 'white'
 	});
 	
 	var lbl = Ti.UI.createLabel
@@ -17,13 +17,9 @@ function DetailView()
 	
 	self.addEventListener('itemSelected',function(e)
 	{
-		
-	}
+		lbl.text = e.name;
+	});
 	
-	
-	
-	
-	
-	
-	
-}
+};
+
+module.exports = DetailView;
