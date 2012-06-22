@@ -4,19 +4,27 @@ Logfile initialized
 [INFO] Building AITP R3 for Android ... one moment
 [INFO] Titanium SDK version: 2.0.2 (05/30/12 10:21 2ff31a3)
 [DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 20 seconds)
-[DEBUG] waited 20.083000 seconds on emulator to get ready
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 65 seconds)
+[DEBUG] waited 65.440000 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
 [DEBUG] com.bradyhigginbotham.r3 installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\ui\common\certifications\CertificationsWindow.js => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\ui\common\certifications\CertificationsWindow.js
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
 [DEBUG] found drawable-long-land-hdpi splash screen at C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\android\images\res-long-land-hdpi\default.png
