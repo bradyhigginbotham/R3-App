@@ -18,6 +18,7 @@ function ListView() {
 				day: resultSet.fieldByName('day'),
 				date: resultSet.fieldByName('date'),
 				description: resultSet.fieldByName('description'),
+				schedule_id: resultSet.fieldByName('schedule_id'),
 				hasChild: true,
 				header: header,
 				height: 40
@@ -47,8 +48,8 @@ function ListView() {
 	//add behavior
 	table.addEventListener('click', function(e) {
 		self.fireEvent('itemSelected', {
-			name:e.rowData.title,
-			state:e.rowData.state
+			data: e.rowData
+		//	schedule_id: e.rowData.schedule_id
 		});
 	});
 	

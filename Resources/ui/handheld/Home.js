@@ -163,7 +163,7 @@ function HomeWindow() {
 	
 	var scrollableView = Ti.UI.createScrollableView({
 	  views:[iconsContainer,view2],
-	  showPagingControl: true,
+	  showPagingControl: false,
 	  top: 220,
 	  height: 150
 	});

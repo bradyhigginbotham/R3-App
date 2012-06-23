@@ -1,1 +1,2 @@
-diubfdasiogb
+SELECT * FROM schedules, competitions
+WHERE 
