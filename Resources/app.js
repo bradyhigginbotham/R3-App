@@ -31,7 +31,12 @@ if (Ti.version < 1.8 ) {
 		MainWindow = require('ui/tablet/ApplicationWindow');
 	}
 	else {
-		MainWindow = require('ui/handheld/Home');
+		if (osname === 'android') {
+			MainWindow = require('ui/handheld/android/Home');
+		}
+		else {
+			MainWindow = require('ui/handheld/iphone/Home');
+		}	
 	}
 	
 	Titanium.UI.iPhone.appBadge = 2;
