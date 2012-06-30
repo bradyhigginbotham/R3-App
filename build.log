@@ -5,6 +5,9 @@ Logfile initialized
 [INFO] Titanium SDK version: 2.0.2 (05/30/12 10:21 2ff31a3)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 0 devices/emulators
+[DEBUG] C:\Program Files (x86)\Android\android-sdk\tools\emulator.exe -avd titanium_2_WVGA854 -port 5560 -sdcard "C:\Users\Dustin\.titanium\titanium_2_WVGA854.sdcard" -logcat *:d,* -no-boot-anim -partition-size 128
+[DEBUG] signal caught: 3
+[DEBUG] calling emulator kill on 10228
 [TRACE] adb devices returned 0 devices/emulators
 [TRACE] adb devices returned 0 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
@@ -17,14 +20,18 @@ Logfile initialized
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
-[TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 65 seconds)
-[DEBUG] waited 65.440000 seconds on emulator to get ready
+[DEBUG] Device connected... (waited 60 seconds)
+[DEBUG] waited 60.937000 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
 [DEBUG] com.bradyhigginbotham.r3 installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
+[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\db\r3.sqlite => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\db\r3.sqlite
+[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\test.txt => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\test.txt
+[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\ui\common\competitions\DetailView.js => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\ui\common\competitions\DetailView.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\ui\common\competitions\ListView.js => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\ui\common\competitions\ListView.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\ui\handheld\Home.js => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\ui\handheld\Home.js
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
 [DEBUG] found drawable-long-land-hdpi splash screen at C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\android\images\res-long-land-hdpi\default.png
