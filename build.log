@@ -1,3 +1,56 @@
+<<<<<<< HEAD
+Logfile initialized
+[INFO] logfile = C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build.log
+[DEBUG] C:\Users\Dustin\AppData\Roaming\Titanium\mobilesdk\win32\2.0.2.GA\android\builder.py simulator AITP R3 C:\Program Files (x86)\Android\android-sdk C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3 com.bradyhigginbotham.r3 2 WVGA854
+[INFO] Building AITP R3 for Android ... one moment
+[INFO] Titanium SDK version: 2.0.2 (05/30/12 10:21 2ff31a3)
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 0 devices/emulators
+[DEBUG] C:\Program Files (x86)\Android\android-sdk\tools\emulator.exe -avd titanium_2_WVGA854 -port 5560 -sdcard "C:\Users\Dustin\.titanium\titanium_2_WVGA854.sdcard" -logcat *:d,* -no-boot-anim -partition-size 128
+[DEBUG] signal caught: 3
+[DEBUG] calling emulator kill on 10228
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 60 seconds)
+[DEBUG] waited 60.937000 seconds on emulator to get ready
+[INFO] Waiting for the Android Emulator to become available
+[DEBUG] com.bradyhigginbotham.r3 installed? True
+[INFO] Fastdev server running, deploying in Fastdev mode
+[INFO] Copying CommonJS modules...
+[INFO] Copying project resources..
+[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\db\r3.sqlite => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\db\r3.sqlite
+[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\test.txt => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\test.txt
+[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\ui\common\competitions\DetailView.js => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\ui\common\competitions\DetailView.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\ui\common\competitions\ListView.js => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\ui\common\competitions\ListView.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\ui\handheld\Home.js => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\ui\handheld\Home.js
+[INFO] Tiapp.xml unchanged, skipping class generation
+[DEBUG] Processing Android resource drawables
+[DEBUG] found drawable-long-land-hdpi splash screen at C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\android\images\res-long-land-hdpi\default.png
+[DEBUG] found drawable-long-land-ldpi splash screen at C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\android\images\res-long-land-ldpi\default.png
+[DEBUG] found drawable-long-port-hdpi splash screen at C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\android\images\res-long-port-hdpi\default.png
+[DEBUG] found drawable-long-port-ldpi splash screen at C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\android\images\res-long-port-ldpi\default.png
+[DEBUG] found drawable-notlong-land-hdpi splash screen at C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\android\images\res-notlong-land-hdpi\default.png
+[DEBUG] found drawable-notlong-land-ldpi splash screen at C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\android\images\res-notlong-land-ldpi\default.png
+[DEBUG] found drawable-notlong-land-mdpi splash screen at C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\android\images\res-notlong-land-mdpi\default.png
+[DEBUG] found drawable-notlong-port-hdpi splash screen at C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\android\images\res-notlong-port-hdpi\default.png
+[DEBUG] found drawable-notlong-port-ldpi splash screen at C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\android\images\res-notlong-port-ldpi\default.png
+[DEBUG] found drawable-notlong-port-mdpi splash screen at C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\android\images\res-notlong-port-mdpi\default.png
+[INFO] Waiting for SDCard to become available..
+[INFO] Re-launching application ... AITP R3
+[INFO] Launching application ... AITP R3
+[TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.bradyhigginbotham.r3/.AitpR3Activity }
+
+=======
 Logfile initialized
 [INFO] logfile = /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build.log
 [DEBUG] /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.0.2.GA/android/builder.py simulator AITP R3 /Android/android-sdk-macosx /Users/Stick/Documents/Titanium Studio Workspace/AITP R3 com.bradyhigginbotham.r3 6 WVGA800 
@@ -190,3 +243,4 @@ Logfile initialized
 
 [INFO] Deployed AITP R3 ... Application should be running.
 [INFO] Android Emulator has exited
+>>>>>>> cb6ec9c4063a481842da45f49a63b70ba9ca9536
