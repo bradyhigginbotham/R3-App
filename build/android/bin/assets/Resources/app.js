@@ -46,4 +46,3 @@ if (Ti.version < 1.8 ) {
 		new MainWindow().open();	
 	}, 1000);
 })();
-s
