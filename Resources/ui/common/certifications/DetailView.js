@@ -17,7 +17,7 @@ function DetailView()
 	
 	self.addEventListener('itemSelected',function(e)
 	{
-		lbl.text = e.cert;
+		lbl.text = e.name;
 	});
 	
 };

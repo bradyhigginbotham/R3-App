@@ -25,14 +25,13 @@ function CertificationsWindow(navgroup)
 	
 	//add behavior for master view
 	listView.addEventListener('itemSelected', function(e) {
-		detailView.fireEvent('itemSelected', e);
+		detailView.fireEvent('itemSelected',e);
 		navGroup.open(detailContainerWindow);
 	});
 	
 	self.add(listView);
 	
 	return self;
-
 }
 
 //make constructor function the public component interface

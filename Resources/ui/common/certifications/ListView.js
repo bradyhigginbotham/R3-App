@@ -7,7 +7,7 @@ function ListView() {
 	var results = [], header = '';
 	
     //Get certifications from database
-    var resultSet = db.execute('SELECT * FROM certifications ORDER BY schedule_id ASC');
+    var resultSet = db.execute('SELECT * FROM certifications ORDER BY name ASC');
     while (resultSet.isValidRow())
     {
     	results.push
