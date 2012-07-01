@@ -136,14 +136,14 @@ function HomeWindow() {
 	});
 	
 	competitionsButton.addEventListener('click', function(e){
-		var TabGroup = require('ui/common/competitions/CompetitionsWindow');
-		var tabGroup = new TabGroup(navGroup);
-		navGroup.open(tabGroup);
+		var CompetitionsWindow = require('ui/common/competitions/CompetitionsWindow');
+		var competitionsWindow = new CompetitionsWindow(navGroup);
+		navGroup.open(competitionsWindow);
 	});	
 	certificationsButton.addEventListener('click', function(e){
-		var TabGroup = require('ui/common/certifications/CertificationsWindow');
-		var tabGroup = new TabGroup(navGroup);
-		navGroup.open(tabGroup);
+		var CertificationsWindow = require('ui/common/certifications/CertificationsWindow');
+		var certificationsWindow = new CertificationsWindow(navGroup);
+		navGroup.open(certificationsWindow);
 	})
     	
     	// tabs

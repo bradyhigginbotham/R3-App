@@ -36,7 +36,7 @@ if (Ti.version < 1.8 ) {
 		}
 		else {
 			MainWindow = require('ui/handheld/iphone/Home');
-		}	
+		}
 	}
 	
 	Titanium.UI.iPhone.appBadge = 2;
