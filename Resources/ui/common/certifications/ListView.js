@@ -7,15 +7,15 @@ function ListView() {
 	var results = [], header = '';
 	
     //Get certifications from database
-    var resultSet = db.execute('SELECT * FROM certifications ORDER BY date ASC');
+    var resultSet = db.execute('SELECT * FROM certifications ORDER BY schedule_id ASC');
     while (resultSet.isValidRow())
     {
     	results.push
     	({
     		id: resultSet.fieldByName('id'),
     		cert: resultSet.fieldByName('name'),
-    		date: resultSet.fieldByName('date'),
-    		descr: resultSet.fieldByName('description'),
+    		description: resultSet.fieldByName('description'),
+    		room_num: resultSet.fieldByName('room_num'),
     		hasChild: true,
     		height: 40
         });
