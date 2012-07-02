@@ -1,6 +1,6 @@
 function DetailView()
 {
-	var self = Ti.UI.createWindow
+	var self = Ti.UI.createView
 	({
 		backgroundColor: 'white'
 	});

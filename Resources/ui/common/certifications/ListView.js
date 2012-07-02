@@ -4,7 +4,7 @@ function ListView() {
 	});
 	
 	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
-	var results = [], header = '';
+	var results = [];
 	
     //Get certifications from database
     var resultSet = db.execute('SELECT * FROM certifications ORDER BY name ASC');
