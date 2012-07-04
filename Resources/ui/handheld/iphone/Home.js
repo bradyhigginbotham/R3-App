@@ -16,6 +16,9 @@ function HomeWindow() {
 	});
 
 	// Announcements view
+	//var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
+    //var resultSet = db.execute('SELECT * FROM announcements LIMIT 1 ORDER BY id DESC');
+
 	var announcementRow = Ti.UI.createTableViewRow({
 		backgroundColor: 'transparent',
 		hasChild: true,
@@ -50,20 +53,38 @@ function HomeWindow() {
 	});
 	announcements.appendRow(announcementRow);
 
-	/*---- Home Icons ----*/
+	/*---- Icon Views ----*/
 	var eventIcons = Ti.UI.createView({
 		backgroundImage: 'NONE',
 		top: 0,
 		height: 150,
 		layout: 'horizontal'
-	})
+	});
+	
+	var resourceIcons = Ti.UI.createView({
+		backgroundImage: 'NONE',
+		top: 0,
+		height: 150,
+		layout: 'horizontal'
+	});	
+	
+	var imageUploadButton = Ti.UI.createButton({
+		title: "Images",
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
+	});
+	resourceIcons.add(imageUploadButton);
+
+	/*---- Home Icons ----*/
 	var collegesButton = Ti.UI.createButton({
 		title: "Colleges",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
 		left: iconLeft
-	})
+	});
 	eventIcons.add(collegesButton);
 	
 	var schedulesButton = Ti.UI.createButton({
@@ -72,7 +93,7 @@ function HomeWindow() {
 		width: iconWidth,
 		top: iconTop,
 		left: iconLeft
-	})
+	});
 	eventIcons.add(schedulesButton);
 	
 	var mapsButton = Ti.UI.createButton({
@@ -81,7 +102,7 @@ function HomeWindow() {
 		width: iconWidth,
 		top: iconTop,
 		left: iconLeft
-	})
+	});
 	eventIcons.add(mapsButton);
 	
 	var presentationsButton = Ti.UI.createButton({
@@ -90,7 +111,7 @@ function HomeWindow() {
 		width: iconWidth,
 		top: iconTop,
 		left: iconLeft
-	})
+	});
 	eventIcons.add(presentationsButton);
 	
 	var competitionsButton = Ti.UI.createButton({
@@ -99,7 +120,7 @@ function HomeWindow() {
 		width: iconWidth,
 		top: iconTop,
 		left: iconLeft
-	})
+	});
 	eventIcons.add(competitionsButton);
 	
 	var certificationsButton = Ti.UI.createButton({
@@ -108,7 +129,7 @@ function HomeWindow() {
 		width: iconWidth,
 		top: iconTop,
 		left: iconLeft
-	})
+	});
 	eventIcons.add(certificationsButton);
 	
 	/*---- Icon EventListeners ----*/
@@ -170,10 +191,6 @@ function HomeWindow() {
 		width: tabWidth
 	});
 	mainNavWindow.add(resourcesTab);
-	
-	var resourceIcons = Ti.UI.createView({ backgroundImage:'NONE' });
-	var label = Ti.UI.createLabel({text: 'Resources'});
-	resourceIcons.add(label);
 	
 	var scrollableView = Ti.UI.createScrollableView({
 	  views:[eventIcons,resourceIcons],
