@@ -13,15 +13,15 @@ function ListView() {
     	results.push
     	({
     		id: resultSet.fieldByName('id'),
-    		cert: resultSet.fieldByName('name'),
+    		title: resultSet.fieldByName('name'), // must be 'title' for certification name to appear in list
     		description: resultSet.fieldByName('description'),
     		room_num: resultSet.fieldByName('room_num'),
+   			schedule_id: resultSet.fieldByName('schedule_id'),
     		hasChild: true,
     		height: 40
         });
     	
-    	resultSet.next();
-    	
+    	resultSet.next();	
     };
     
 	resultSet.close();
@@ -37,7 +37,7 @@ function ListView() {
 	//add event listener
 	table.addEventListener('click', function(e) {
 		self.fireEvent('itemSelected', {
-			name:e.rowData.cert				
+			data:e.rowData				
 		});
 	});
 	

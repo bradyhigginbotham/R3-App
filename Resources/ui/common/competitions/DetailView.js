@@ -3,17 +3,33 @@ function DetailView() {
 		backgroundColor:'white'
 	});
 	
-	var resultSet = db.execute('SELECT * FROM schedules WHERE id = ?', e.data.schedule_id);
-	var lbl = Ti.UI.createLabel({
-		text: e.data.competition,
+	var certification = Ti.UI.createLabel({
+		text: 'Certification Title',
 		height:'auto',
 		width:'auto',
-		color:'#000'
+		top: 10
 	});
-	self.add(lbl);
+	self.add(certification);
+	
+	var date = Ti.UI.createLabel({
+		text: 'Certification Date',
+		height: 'auto',
+		width: 'auto',
+		top: 30
+	});
+	self.add(date);	
 	
 	self.addEventListener('itemSelected', function(e) {
-		lbl.text = e.name + ', ' + e.state;
+		certification.text = e.data.title;
+		
+		var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
+	
+		var resultSet = db.execute('SELECT * FROM schedules WHERE id = ?', e.data.schedule_id);
+	    while (resultSet.isValidRow()) {
+			date.text = resultSet.fieldByName('day') + ', ' + resultSet.fieldByName('date');
+	    	resultSet.next();
+	    }
+	    resultSet.close();
 	});
 	
 	return self;

@@ -1,5 +1,5 @@
 //Certification Window Component Constructor
-function CertificationsWindow(navgroup) 
+function CertificationsWindow(navGroup) 
 {
 	//load component dependencies
 	var ListView = require('ui/common/certifications/ListView'),
@@ -14,12 +14,12 @@ function CertificationsWindow(navgroup)
 	})
 	
 	//Construct UI
-	var listView = new ListView,
-		detailView = new DetailView;
+	var listView = new ListView(),
+		detailView = new DetailView();
 		
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({
-		title:'College Details'
+		title:'Certification Details'
 	});
 	detailContainerWindow.add(detailView);
 	

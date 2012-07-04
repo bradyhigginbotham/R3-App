@@ -16,6 +16,9 @@ function HomeWindow() {
 	});
 
 	// Announcements view
+	//var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
+    //var resultSet = db.execute('SELECT * FROM announcements LIMIT 1 ORDER BY id DESC');
+
 	var announcementRow = Ti.UI.createTableViewRow({
 		backgroundColor: 'transparent',
 		hasChild: true,

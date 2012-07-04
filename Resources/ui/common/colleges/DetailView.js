@@ -17,5 +17,4 @@ function DetailView() {
 	
 	return self;
 };
-
 module.exports = DetailView;

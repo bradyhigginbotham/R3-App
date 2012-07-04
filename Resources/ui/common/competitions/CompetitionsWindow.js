@@ -1,5 +1,5 @@
 //Competitions Window Component Constructor
-function CompetitionsWindow(navgroup) {
+function CompetitionsWindow(navGroup) {
 	//load component dependencies 
 	var ListView = require('ui/common/competitions/ListView'),
 		DetailView = require('ui/common/competitions/DetailView');
@@ -23,7 +23,7 @@ function CompetitionsWindow(navgroup) {
 	
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({
-		title:'Competitions Details'
+		title:'Competition Details'
 	});
 	detailContainerWindow.add(detailView);	
 	

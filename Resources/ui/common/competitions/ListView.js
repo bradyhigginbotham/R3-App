@@ -5,15 +5,15 @@ function ListView() {
 	
 	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
 
-	var results = [], header = '';
+	var results = [];
 
     //Get competitions from database
-    var resultSet = db.execute('SELECT * FROM competitions ORDER BY date ASC');
+    var resultSet = db.execute('SELECT * FROM competitions ORDER BY competition ASC');
     while (resultSet.isValidRow()) {
 		results.push({
-            id: resultSet.fieldByName('id'),
-			competition: resultSet.fieldByName('competition'),
-			description: resultSet.fieldByName('description'),
+            // id: resultSet.fieldByName('rowid'),
+			title: resultSet.fieldByName('competition'), // must be 'title' for competition name to show in list
+			details: resultSet.fieldByName('details'),
 			schedule_id: resultSet.fieldByName('schedule_id'),
 			hasChild: true,
 			height: 40
