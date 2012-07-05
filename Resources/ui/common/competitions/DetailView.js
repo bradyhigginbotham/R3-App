@@ -1,18 +1,19 @@
-function DetailView() {
+function DetailView()
+{
 	var self = Ti.UI.createView({
 		backgroundColor:'white'
 	});
 	
-	var certification = Ti.UI.createLabel({
-		text: 'Certification Title',
+	var competition = Ti.UI.createLabel({
+		text: 'Competition Title',
 		height:'auto',
 		width:'auto',
 		top: 10
 	});
-	self.add(certification);
+	self.add(competition);
 	
 	var date = Ti.UI.createLabel({
-		text: 'Certification Date',
+		text: 'Competition Date',
 		height: 'auto',
 		width: 'auto',
 		top: 30
@@ -20,7 +21,7 @@ function DetailView() {
 	self.add(date);	
 	
 	self.addEventListener('itemSelected', function(e) {
-		certification.text = e.data.title;
+		competition.text = e.data.title;
 		
 		var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
 	
@@ -33,7 +34,5 @@ function DetailView() {
 	});
 	
 	return self;
-	
 };
-
 module.exports = DetailView;
