@@ -8,13 +8,12 @@ function ListView() {
 	var results = [];
 
     //Get colleges from database
-    var resultSet = db.execute('SELECT * FROM announcements LIMIT 10 ORDER BY updated_at ASC');
+    var resultSet = db.execute('SELECT * FROM announcements ORDER BY updated_at DESC LIMIT 10');
     while (resultSet.isValidRow()) {
 		results.push({
 		    id: resultSet.fieldByName('id'),
 			title: resultSet.fieldByName('announcement'),
-			state: resultSet.fieldByName('description'),
-			hasChild: false,
+			hasChild: true,
 			height: 40
 		});
     	resultSet.next();
@@ -26,6 +25,13 @@ function ListView() {
 	});
 	
 	self.add(table);
+	
+	//add behavior
+	table.addEventListener('click', function(e) {
+		self.fireEvent('itemSelected', {
+			data:e.rowData
+		});
+	});
 	
 	return self;
 };

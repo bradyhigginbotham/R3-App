@@ -16,9 +16,9 @@ function HomeWindow() {
 	});
 
 	// Announcements view
-	//var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
-    //var resultSet = db.execute('SELECT * FROM announcements LIMIT 1 ORDER BY id DESC');
-
+	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
+    var resultSet = db.execute('SELECT * FROM announcements ORDER BY id DESC LIMIT 1');
+	
 	var announcementRow = Ti.UI.createTableViewRow({
 		backgroundColor: 'transparent',
 		hasChild: true,
@@ -34,7 +34,7 @@ function HomeWindow() {
 		height: 25
 	});
 	var subtitle = Ti.UI.createLabel({
-		text: 'LATEST: Most recent announcement.',
+		text: 'LATEST: ' + resultSet.fieldByName('announcement'),
 		color: '#6A737D',
 		font: {fontSize: 12},
 		top: 25,
@@ -52,6 +52,12 @@ function HomeWindow() {
 		className: 'announcements'
 	});
 	announcements.appendRow(announcementRow);
+	
+	announcements.addEventListener('click', function(){
+		var AnnouncementsWindow = require('ui/common/announcements/AnnouncementsWindow');
+		var announcementsWindow = new AnnouncementsWindow(navGroup);
+		navGroup.open(announcementsWindow, {animated:true});
+	});
 
 	/*---- Icon Views ----*/
 	var eventIcons = Ti.UI.createView({
@@ -67,15 +73,6 @@ function HomeWindow() {
 		height: 150,
 		layout: 'horizontal'
 	});	
-	
-	var imageUploadButton = Ti.UI.createButton({
-		title: "Images",
-		height: iconHeight,
-		width: iconWidth,
-		top: iconTop,
-		left: iconLeft
-	});
-	resourceIcons.add(imageUploadButton);
 
 	/*---- Home Icons ----*/
 	var collegesButton = Ti.UI.createButton({
@@ -132,6 +129,15 @@ function HomeWindow() {
 	});
 	eventIcons.add(certificationsButton);
 	
+	var photosButton = Ti.UI.createButton({
+		title: "Photos",
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
+	});
+	resourceIcons.add(photosButton);
+	
 	/*---- Icon EventListeners ----*/
 	collegesButton.addEventListener('click', function(e){
 		var CollegesWindow = require('ui/common/colleges/CollegesWindow');
@@ -166,7 +172,12 @@ function HomeWindow() {
 		var TabGroup = require('ui/common/certifications/CertificationsWindow');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
-	})
+	});
+	photosButton.addEventListener('click', function(e){
+		var PhotosWindow = require('ui/common/photos/PhotosWindow');
+		var photosWindow = new PhotosWindow();
+		navGroup.open(photosWindow, {animated:true});
+	});
     	
     	// tabs
 	var eventsTab = Ti.UI.createButton({

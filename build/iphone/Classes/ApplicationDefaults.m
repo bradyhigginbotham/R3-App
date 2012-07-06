@@ -17,9 +17,9 @@
     [_property setObject:[TiUtils stringValue:@"fhXiiDeGaMuWgvSrOM7w6LcphhlLCnhr"] forKey:@"acs-oauth-secret-production"];
     [_property setObject:[TiUtils stringValue:@"R2NOlc559hX65pQxRNzA6KiZ7VBpBKHn"] forKey:@"acs-oauth-key-production"];
     [_property setObject:[TiUtils stringValue:@"UYYt4A2Tiw9DUjOxzJYQwIna2F325YTo"] forKey:@"acs-api-key-production"];
-    [_property setObject:[TiUtils stringValue:@"Czt63UgBOj5psLyACWYFtLcEnueRbiwh"] forKey:@"acs-oauth-secret-development"];
-    [_property setObject:[TiUtils stringValue:@"tZwr3LxhZzOlAW6TODRIjqyvX41DKohq"] forKey:@"acs-oauth-key-development"];
-    [_property setObject:[TiUtils stringValue:@"OCGTUmTKqVBMz0HYy0I88SQOt8RTaTFA"] forKey:@"acs-api-key-development"];
+    [_property setObject:[TiUtils stringValue:@"jQA3V4n9C0ak5I4EoM7uF168997Fveoh"] forKey:@"acs-oauth-secret-development"];
+    [_property setObject:[TiUtils stringValue:@"rP4TbrYxuxa5Yn4xNorP62SxVCqc09Qi"] forKey:@"acs-oauth-key-development"];
+    [_property setObject:[TiUtils stringValue:@"m5CAI8omUqUmm3Sw1Z8AtPpjzGr07Rww"] forKey:@"acs-api-key-development"];
     [_property setObject:[TiUtils stringValue:@"system"] forKey:@"ti.ui.defaultunit"];
 
     return _property;
