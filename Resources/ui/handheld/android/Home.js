@@ -149,6 +149,42 @@ function HomeWindow() {
 		navGroup.open(certificationsWindow);
 	})
     	
+    	
+    	
+    	
+/* Dustin stuff   */	
+
+	/*---- Resource Icons ----*/
+	var resourceIcons = Ti.UI.createView({
+		backgroundImage:'NONE',
+		top: 0,
+		height: 150,
+		layout: 'horizontal'
+	})
+	
+	var aboutButton = Ti.UI.createButton({
+		title: "About",
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
+	})
+	resourceIcons.add(aboutButton);
+	
+
+	/*---- Icon EventListeners ----*/
+	aboutButton.addEventListener('click', function(e){
+		var TabGroup = require('ui/common/about/TabGroup');
+		var tabGroup = new TabGroup(navGroup);
+		navGroup.open(tabGroup);
+	});
+
+
+/* end Dustin stuff */    	
+
+
+
+   	
     	// tabs
 	var eventsTab = Ti.UI.createButton({
 		backgroundImage: 'NONE',
@@ -173,9 +209,12 @@ function HomeWindow() {
 	});
 	mainNavWindow.add(resourcesTab);
 	
+/* Moved this to top of Dustin's stuff
+	
 	var resourceIcons = Ti.UI.createView({ backgroundImage:'NONE' });
 	var label = Ti.UI.createLabel({text: 'Resources'});
 	resourceIcons.add(label);
+*/
 	
 	var scrollableView = Ti.UI.createScrollableView({
 	  views:[eventIcons,resourceIcons],
