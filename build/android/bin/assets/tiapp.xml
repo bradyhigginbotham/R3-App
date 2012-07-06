@@ -2,9 +2,9 @@
     <property name="acs-oauth-secret-production" type="string">fhXiiDeGaMuWgvSrOM7w6LcphhlLCnhr</property>
     <property name="acs-oauth-key-production" type="string">R2NOlc559hX65pQxRNzA6KiZ7VBpBKHn</property>
     <property name="acs-api-key-production" type="string">UYYt4A2Tiw9DUjOxzJYQwIna2F325YTo</property>
-    <property name="acs-oauth-secret-development" type="string">Czt63UgBOj5psLyACWYFtLcEnueRbiwh</property>
-    <property name="acs-oauth-key-development" type="string">tZwr3LxhZzOlAW6TODRIjqyvX41DKohq</property>
-    <property name="acs-api-key-development" type="string">OCGTUmTKqVBMz0HYy0I88SQOt8RTaTFA</property>
+    <property name="acs-oauth-secret-development" type="string">jQA3V4n9C0ak5I4EoM7uF168997Fveoh</property>
+    <property name="acs-oauth-key-development" type="string">rP4TbrYxuxa5Yn4xNorP62SxVCqc09Qi</property>
+    <property name="acs-api-key-development" type="string">m5CAI8omUqUmm3Sw1Z8AtPpjzGr07Rww</property>
     <deployment-targets>
         <target device="mobileweb">false</target>
         <target device="iphone">true</target>
@@ -51,6 +51,6 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-        <module platform="commonjs" version="2.0.1">ti.cloud</module>
+        <module platform="commonjs">ti.cloud</module>
     </modules>
 <property name="ti.deploytype">development</property></ti:app>

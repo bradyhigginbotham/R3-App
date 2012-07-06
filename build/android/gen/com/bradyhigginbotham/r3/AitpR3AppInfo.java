@@ -20,11 +20,11 @@ public final class AitpR3AppInfo implements ITiAppInfo
 					properties.setString("acs-api-key-production", "UYYt4A2Tiw9DUjOxzJYQwIna2F325YTo");
 					appProperties.setString("acs-api-key-production", "UYYt4A2Tiw9DUjOxzJYQwIna2F325YTo");
 					
-					properties.setString("acs-api-key-development", "OCGTUmTKqVBMz0HYy0I88SQOt8RTaTFA");
-					appProperties.setString("acs-api-key-development", "OCGTUmTKqVBMz0HYy0I88SQOt8RTaTFA");
+					properties.setString("acs-api-key-development", "m5CAI8omUqUmm3Sw1Z8AtPpjzGr07Rww");
+					appProperties.setString("acs-api-key-development", "m5CAI8omUqUmm3Sw1Z8AtPpjzGr07Rww");
 					
-					properties.setString("acs-oauth-secret-development", "Czt63UgBOj5psLyACWYFtLcEnueRbiwh");
-					appProperties.setString("acs-oauth-secret-development", "Czt63UgBOj5psLyACWYFtLcEnueRbiwh");
+					properties.setString("acs-oauth-secret-development", "jQA3V4n9C0ak5I4EoM7uF168997Fveoh");
+					appProperties.setString("acs-oauth-secret-development", "jQA3V4n9C0ak5I4EoM7uF168997Fveoh");
 					
 					properties.setString("ti.deploytype", "development");
 					appProperties.setString("ti.deploytype", "development");
@@ -35,8 +35,8 @@ public final class AitpR3AppInfo implements ITiAppInfo
 					properties.setString("acs-oauth-secret-production", "fhXiiDeGaMuWgvSrOM7w6LcphhlLCnhr");
 					appProperties.setString("acs-oauth-secret-production", "fhXiiDeGaMuWgvSrOM7w6LcphhlLCnhr");
 					
-					properties.setString("acs-oauth-key-development", "tZwr3LxhZzOlAW6TODRIjqyvX41DKohq");
-					appProperties.setString("acs-oauth-key-development", "tZwr3LxhZzOlAW6TODRIjqyvX41DKohq");
+					properties.setString("acs-oauth-key-development", "rP4TbrYxuxa5Yn4xNorP62SxVCqc09Qi");
+					appProperties.setString("acs-oauth-key-development", "rP4TbrYxuxa5Yn4xNorP62SxVCqc09Qi");
 					
 					properties.setString("acs-oauth-key-production", "R2NOlc559hX65pQxRNzA6KiZ7VBpBKHn");
 					appProperties.setString("acs-oauth-key-production", "R2NOlc559hX65pQxRNzA6KiZ7VBpBKHn");
