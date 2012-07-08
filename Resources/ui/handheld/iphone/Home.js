@@ -138,6 +138,15 @@ function HomeWindow() {
 	});
 	resourceIcons.add(photosButton);
 	
+	var aboutButton = Ti.UI.createButton({
+		title: "About",
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
+	})
+	resourceIcons.add(aboutButton);
+	
 	/*---- Icon EventListeners ----*/
 	collegesButton.addEventListener('click', function(e){
 		var CollegesWindow = require('ui/common/colleges/CollegesWindow');
@@ -177,6 +186,11 @@ function HomeWindow() {
 		var PhotosWindow = require('ui/common/photos/PhotosWindow');
 		var photosWindow = new PhotosWindow();
 		navGroup.open(photosWindow, {animated:true});
+	});
+	aboutButton.addEventListener('click', function(e){
+		var TabGroup = require('ui/common/about/TabGroup');
+		var tabGroup = new TabGroup(navGroup);
+		navGroup.open(tabGroup);
 	});
     	
     	// tabs

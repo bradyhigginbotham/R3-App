@@ -10,7 +10,7 @@ function HomeWindow() {
 	//create component instance
 	var self = Ti.UI.createWindow();
 	var mainNavWindow = Ti.UI.createWindow({
-		backgroundImage:'images/main.png',
+		backgroundImage:'/images/main.png',
 		title: 'Home',
 		navBarHidden: true
 	});
@@ -161,6 +161,15 @@ function HomeWindow() {
 		height: 150,
 		layout: 'horizontal'
 	})
+
+	var photosButton = Ti.UI.createButton({
+		title: "Photos",
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
+	})
+	resourceIcons.add(photosButton);
 	
 	var aboutButton = Ti.UI.createButton({
 		title: "About",
@@ -173,6 +182,11 @@ function HomeWindow() {
 	
 
 	/*---- Icon EventListeners ----*/
+	photosButton.addEventListener('click', function(e){
+		var PhotosWindow = require('ui/common/photos/PhotosWindow');
+		var photosWindow = new PhotosWindow();
+		navGroup.open(photosWindow, {animated:true});
+	});
 	aboutButton.addEventListener('click', function(e){
 		var TabGroup = require('ui/common/about/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
@@ -181,9 +195,6 @@ function HomeWindow() {
 
 
 /* end Dustin stuff */    	
-
-
-
    	
     	// tabs
 	var eventsTab = Ti.UI.createButton({
@@ -208,13 +219,6 @@ function HomeWindow() {
 		width: tabWidth
 	});
 	mainNavWindow.add(resourcesTab);
-	
-/* Moved this to top of Dustin's stuff
-	
-	var resourceIcons = Ti.UI.createView({ backgroundImage:'NONE' });
-	var label = Ti.UI.createLabel({text: 'Resources'});
-	resourceIcons.add(label);
-*/
 	
 	var scrollableView = Ti.UI.createScrollableView({
 	  views:[eventIcons,resourceIcons],
