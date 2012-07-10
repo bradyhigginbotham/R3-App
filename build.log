@@ -1,20 +1,18 @@
 Logfile initialized
 [INFO] logfile = /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build.log
-[DEBUG] /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.0.2.GA/android/builder.py simulator AITP R3 /Android/android-sdk-macosx /Users/Stick/Documents/Titanium Studio Workspace/AITP R3 com.bradyhigginbotham.r3 6 HVGA 
+[DEBUG] /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.0.2.GA/android/builder.py simulator AITP R3 /Android/android-sdk-macosx /Users/Stick/Documents/Titanium Studio Workspace/AITP R3 com.bradyhigginbotham.r3 6 WVGA800 
 [INFO] Building AITP R3 for Android ... one moment
 [INFO] Titanium SDK version: 2.0.2 (05/30/12 10:21 2ff31a3)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 10 seconds)
-[DEBUG] waited 10.134866 seconds on emulator to get ready
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 25 seconds)
+[DEBUG] waited 25.272811 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
-[INFO] Launching application ... AITP R3
-[TRACE] Launch output: Error type 2
-android.util.AndroidException: Can't connect to activity manager; is the system running?
-
-[INFO] Deployed AITP R3 ... Application should be running.
 [DEBUG] com.bradyhigginbotham.r3 installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
@@ -70,12 +68,19 @@ android.util.AndroidException: Can't connect to activity manager; is the system 
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-hdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-land-hdpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-land-hdpi/main_6d5dd0e3ac.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-ldpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-land-ldpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-ldpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-land-ldpi/main_6d5dd0e3ac.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-hdpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-hdpi/main_6d5dd0e3ac.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-ldpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-ldpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-ldpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-ldpi/main_6d5dd0e3ac.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-hdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-hdpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-hdpi/main_6d5dd0e3ac.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-ldpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-ldpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-ldpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-ldpi/main_6d5dd0e3ac.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-mdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-mdpi/default_d44e27d97b.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-mdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-mdpi/main_6d5dd0e3ac.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/default_d44e27d97b.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/main_6d5dd0e3ac.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/splash@3x.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/splash_3x_0993289b19.png
@@ -186,18 +191,25 @@ android.util.AndroidException: Can't connect to activity manager; is the system 
 [DEBUG] from resource zip => res/drawable-ldpi/close.png
 [DEBUG] from resource zip => res/drawable-long-land-hdpi/background.png
 [DEBUG] from resource zip => res/drawable-long-land-hdpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-long-land-hdpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-long-land-ldpi/background.png
 [DEBUG] from resource zip => res/drawable-long-land-ldpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-long-land-ldpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-long-port-hdpi/background.png
 [DEBUG] from resource zip => res/drawable-long-port-hdpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-long-port-hdpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-long-port-ldpi/background.png
 [DEBUG] from resource zip => res/drawable-long-port-ldpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-long-port-ldpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-notlong-land-hdpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-land-hdpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-notlong-land-hdpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-notlong-land-ldpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-land-ldpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-notlong-land-ldpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-notlong-land-mdpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-land-mdpi/default_d44e27d97b.png
+[DEBUG] from resource zip => res/drawable-notlong-land-mdpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-notlong-port-hdpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-port-hdpi/default_d44e27d97b.png
 [DEBUG] from resource zip => res/drawable-notlong-port-hdpi/main_6d5dd0e3ac.png
@@ -234,7 +246,7 @@ android.util.AndroidException: Can't connect to activity manager; is the system 
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.035237 seconds on emulator to get ready
+[DEBUG] waited 0.036588 seconds on emulator to get ready
 [INFO] Installing application on emulator
 [INFO] Launching application ... AITP R3
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.bradyhigginbotham.r3/.AitpR3Activity }
