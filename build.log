@@ -4,17 +4,28 @@ Logfile initialized
 [INFO] Building AITP R3 for Android ... one moment
 [INFO] Titanium SDK version: 2.0.2 (05/30/12 10:21 2ff31a3)
 [DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 0 devices/emulators
+[DEBUG] C:\Program Files (x86)\Android\android-sdk\tools\emulator.exe -avd titanium_2_HVGA -port 5560 -sdcard "C:\Users\Dustin\.titanium\titanium_2_HVGA.sdcard" -logcat *:d,* -no-boot-anim -partition-size 128
+[DEBUG] signal caught: 3
+[DEBUG] calling emulator kill on 3428
+[TRACE] adb devices returned 0 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 15 seconds)
-[DEBUG] waited 15.061000 seconds on emulator to get ready
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 50 seconds)
+[DEBUG] waited 50.281000 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
 [DEBUG] com.bradyhigginbotham.r3 installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
+[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\ui\common\certifications\DetailView.js => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\ui\common\certifications\DetailView.js
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
 [DEBUG] found drawable-long-land-hdpi splash screen at C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\android\images\res-long-land-hdpi\default.png

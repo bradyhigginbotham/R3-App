@@ -20,7 +20,7 @@ function DetailView() {
 	self.add(date);	
 	
 	self.addEventListener('itemSelected', function(e) {
-		certification.text = e.data.title;
+		certification.text = e.data.description;
 		
 		var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
 	
