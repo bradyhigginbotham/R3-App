@@ -22,10 +22,9 @@ public final class R {
         public static final int facebook_login_wide_down=0x7f020008;
         public static final int facebook_logout=0x7f020009;
         public static final int facebook_logout_down=0x7f02000a;
-        public static final int main_2x_9714d7eb76=0x7f02000b;
-        public static final int main_6d5dd0e3ac=0x7f02000c;
-        public static final int splash_3x_0993289b19=0x7f02000d;
-        public static final int splash_b1acfddea4=0x7f02000e;
+        public static final int main_6d5dd0e3ac=0x7f02000b;
+        public static final int splash_3x_0993289b19=0x7f02000c;
+        public static final int splash_b1acfddea4=0x7f02000d;
     }
     public static final class layout {
         public static final int titanium_tabgroup=0x7f030000;

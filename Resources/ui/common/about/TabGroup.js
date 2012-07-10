@@ -1,5 +1,5 @@
 //About Window Component Constructor
-function AboutWindow(navGroup)
+function TabGroup(navGroup) // changed from 'AboutWindow' to 'TabGroup'
 {
 	var AppWindow = require('ui/common/about/app/AppWindow'),
 		ConferenceWindow = require('ui/common/about/conference/ConferenceWindow'),
