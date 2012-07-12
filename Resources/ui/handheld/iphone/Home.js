@@ -267,7 +267,7 @@ function HomeWindow() {
 		scrollableView.scrollToView(eventIcons);
 	});
 	
-	resourcesTab.addEventListener('click', function(){
+	resourcesTab.addEventListener('click', function(e){
 		scrollableView.scrollToView(resourceIcons);
 	});
 	
