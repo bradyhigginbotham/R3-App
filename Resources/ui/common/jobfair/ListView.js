@@ -11,7 +11,7 @@ function ListView(exhibitor) {
     var resultSet = db.execute('SELECT * FROM sponsors where exhibitor = ? ORDER BY name ASC', exhibitor);
     while (resultSet.isValidRow()) {
 		results.push({
-		    id: resultSet.fieldByName('rowid'),
+		    //id: resultSet.fieldByName('rowid'),
 			title: resultSet.fieldByName('name'),
 			details: resultSet.fieldByName('details'),
 			hasChild: true,
