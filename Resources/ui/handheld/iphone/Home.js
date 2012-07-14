@@ -37,9 +37,9 @@ function HomeWindow() {
 		text: 'LATEST: ' + resultSet.fieldByName('announcement'),
 		color: '#6A737D',
 		font: {fontSize: 12},
-		top: 25,
+		top: 28,
 		left: 10,
-		height: 25
+		height: 40
 	});
 	announcementRow.add(header);
 	announcementRow.add(subtitle);
@@ -229,6 +229,11 @@ function HomeWindow() {
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
 	});
+	jobFairIcon.addEventListener('click', function(e){
+		var TabGroup = require('ui/common/jobfair/TabGroup');
+		var tabGroup = new TabGroup(navGroup);
+		navGroup.open(tabGroup);
+	});
     	
     // tabs
 	var eventsTab = Ti.UI.createButton({
@@ -267,7 +272,7 @@ function HomeWindow() {
 		scrollableView.scrollToView(eventIcons);
 	});
 	
-	resourcesTab.addEventListener('click', function(){
+	resourcesTab.addEventListener('click', function(e){
 		scrollableView.scrollToView(resourceIcons);
 	});
 	

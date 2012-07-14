@@ -30,7 +30,7 @@ function SessionsWindow(navGroup) {
 	//add behavior for master view
 	listView.addEventListener('itemSelected', function(e) {
 		detailView.fireEvent('itemSelected',e);
-		navGroup.open(detailContainerWindow);
+		self.parentTab.open(detailContainerWindow);
 	});
 	
 	var homeButton = Ti.UI.createButton({

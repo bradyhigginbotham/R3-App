@@ -14,7 +14,7 @@ function ListView() {
     	({
     		id: resultSet.fieldByName('id'),
     		title: resultSet.fieldByName('name'), // must be 'title' for certification name to appear in list
-    		description: resultSet.fieldByName('description'),
+    		desc: resultSet.fieldByName('description'),
     		room_num: resultSet.fieldByName('room_num'),
    			schedule_id: resultSet.fieldByName('schedule_id'),
     		hasChild: true,

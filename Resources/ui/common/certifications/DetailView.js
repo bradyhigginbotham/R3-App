@@ -15,12 +15,12 @@ function DetailView() {
 		text: 'Certification Date',
 		height: 'auto',
 		width: 'auto',
-		top: 30
+		top: 60
 	});
 	self.add(date);	
 	
 	self.addEventListener('itemSelected', function(e) {
-		certification.text = e.data.description;
+		certification.text = e.data.desc;
 		
 		var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
 	
