@@ -31,6 +31,31 @@ function MapsWindow() {
 	});
 	self.rightNavButton = refreshButton;
 	
+	
+	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
+
+	var annotations = [];
+
+    //Get annotations from database
+    var annotationsSet = db.execute('SELECT * FROM annotations ORDER BY time ASC');
+    while (annotationsSet.isValidRow()) {
+		results.push(
+			Ti.Map.createAnnotation({
+		    	latitude: resultSet.fieldByName('latitude'),
+		    	longitude: resultSet.fieldByName('longitude'),
+				title: resultSet.fieldByName('title'),
+				subtitle: resultSet.fieldByName('subtitle'),
+				pincolor: resultSet.fieldByName('pincolor'),
+				className: 'annotation',
+			})	
+		);
+    	annotationsSet.next();
+    }
+    annotationsSet.close();
+	
+	
+	
+/*	
 	// map annotations
 	var annotations = [
 	    Ti.Map.createAnnotation({
@@ -83,7 +108,7 @@ function MapsWindow() {
 	        animate: true,
 	        pincolor: Ti.Map.ANNOTATION_PURPLE
 		})
-	];
+	];*/
 	
 	var mapview = Titanium.Map.createView({
 	    mapType: Titanium.Map.STANDARD_TYPE,

@@ -1,4 +1,4 @@
-//Sessions Window Component Constructor
+//Floor Plans Window Component Constructor
 function SessionsWindow(navGroup) {
 	//load component dependencies
 	var ListView = require('ui/common/maps/floorPlans/ListView'),
