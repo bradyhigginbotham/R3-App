@@ -1,3 +1,50 @@
+<<<<<<< HEAD
+Logfile initialized
+[INFO] logfile = /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/build.log
+[DEBUG] /Users/Brady/Library/Application Support/Titanium/mobilesdk/osx/2.1.0.GA/android/builder.py simulator AITP R3 /Applications/android-sdk-macosx /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3 com.bradyhigginbotham.r3 6 HVGA 
+[INFO] Building AITP R3 for Android ... one moment
+[INFO] Titanium SDK version: 2.1.0 (06/28/12 12:16 6e3cab6)
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 30 seconds)
+[DEBUG] waited 30.888883 seconds on emulator to get ready
+[INFO] Waiting for the Android Emulator to become available
+[DEBUG] com.bradyhigginbotham.r3 installed? True
+[INFO] Fastdev server running, deploying in Fastdev mode
+[INFO] Copying CommonJS modules...
+[INFO] Copying project resources..
+[TRACE] COPYING MODIFIED FILE: /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/db/r3.sqlite => /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/build/android/bin/assets/Resources/db/r3.sqlite
+[TRACE] COPYING MODIFIED FILE: /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/ui/common/maps/campusMap/MapsWindow.js => /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/maps/campusMap/MapsWindow.js
+[TRACE] COPYING MODIFIED FILE: /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/ui/common/maps/floorPlans/FloorPlansWindow.js => /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/maps/floorPlans/FloorPlansWindow.js
+[TRACE] COPYING CREATED FILE: /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/ui/common/twitter/example/TwitterDetailView.js => /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/twitter/example/TwitterDetailView.js
+[TRACE] COPYING CREATED FILE: /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/ui/common/twitter/example/TwitterWindow.js => /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/twitter/example/TwitterWindow.js
+[TRACE] COPYING MODIFIED FILE: /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/ui/common/twitter/TabGroup.js => /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/twitter/TabGroup.js
+[INFO] Tiapp.xml unchanged, skipping class generation
+[DEBUG] Processing Android resource drawables
+[DEBUG] found drawable-long-land-hdpi splash screen at /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/android/images/res-long-land-hdpi/default.png
+[DEBUG] found drawable-long-land-ldpi splash screen at /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/android/images/res-long-land-ldpi/default.png
+[DEBUG] found drawable-long-port-hdpi splash screen at /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/default.png
+[DEBUG] found drawable-long-port-ldpi splash screen at /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/android/images/res-long-port-ldpi/default.png
+[DEBUG] found drawable-notlong-land-hdpi splash screen at /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/android/images/res-notlong-land-hdpi/default.png
+[DEBUG] found drawable-notlong-land-ldpi splash screen at /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/android/images/res-notlong-land-ldpi/default.png
+[DEBUG] found drawable-notlong-land-mdpi splash screen at /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/android/images/res-notlong-land-mdpi/default.png
+[DEBUG] found drawable-notlong-port-hdpi splash screen at /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/default.png
+[DEBUG] found drawable-notlong-port-ldpi splash screen at /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/android/images/res-notlong-port-ldpi/default.png
+[DEBUG] found drawable-notlong-port-mdpi splash screen at /Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/android/images/res-notlong-port-mdpi/default.png
+[INFO] Waiting for SDCard to become available..
+[INFO] Re-launching application ... AITP R3
+[INFO] Launching application ... AITP R3
+[TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.bradyhigginbotham.r3/.AitpR3Activity }
+
+[INFO] Relaunched AITP R3 ... Application should be running.
+[INFO] Android Emulator has exited
+=======
 Logfile initialized
 <<<<<<< HEAD
 [INFO] logfile = C:\Users\Joe\Desktop\R3-App\build.log
