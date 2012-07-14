@@ -12,7 +12,7 @@ function SponsorsWindow(navGroup) {
 	});
 		
 	//construct UI
-	var listView = new ListView(),
+	var listView = new ListView(false),
 		detailView = new DetailView();
 	
 	//create list view container
