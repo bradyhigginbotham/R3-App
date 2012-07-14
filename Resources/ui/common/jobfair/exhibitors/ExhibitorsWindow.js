@@ -12,7 +12,7 @@ function ExhibitorsWindow(navGroup) {
 	});
 		
 	//construct UI
-	var listView = new ListView(true),
+	var listView = new ListView(1),
 		detailView = new DetailView();
 	
 	//create list view container

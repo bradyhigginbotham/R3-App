@@ -9,12 +9,13 @@ Logfile initialized
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 15 seconds)
-[DEBUG] waited 15.063000 seconds on emulator to get ready
+[DEBUG] waited 15.061000 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
 [DEBUG] com.bradyhigginbotham.r3 installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\jobfair\DetailView.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\jobfair\DetailView.js
 [TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\jobfair\ListView.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\jobfair\ListView.js
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
