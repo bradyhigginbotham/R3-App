@@ -5,12 +5,11 @@ Logfile initialized
 [INFO] Titanium SDK version: 2.0.2 (05/30/12 10:21 2ff31a3)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 0 devices/emulators
-<<<<<<< HEAD
+[DEBUG] signal caught: 3
+[DEBUG] calling emulator kill on 5968
 [TRACE] adb devices returned 0 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
-=======
->>>>>>> 83dc03b4d5399af2bc36227a93239f058b32178a
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
@@ -18,29 +17,31 @@ Logfile initialized
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
-<<<<<<< HEAD
 [DEBUG] Device connected... (waited 50 seconds)
-[DEBUG] waited 50.245000 seconds on emulator to get ready
-=======
-[DEBUG] Device connected... (waited 35 seconds)
-[DEBUG] waited 35.144000 seconds on emulator to get ready
->>>>>>> 83dc03b4d5399af2bc36227a93239f058b32178a
+[DEBUG] waited 50.221000 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
 [DEBUG] com.bradyhigginbotham.r3 installed? True
 [WARN] Fastdev enabled, but server isn't running, deploying normally
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-<<<<<<< HEAD
-[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\ui\common\about\app\AppWindow.js => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\ui\common\about\app\AppWindow.js
-[TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\ui\common\about\app\ListView.js => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\ui\common\about\app\ListView.js
-[INFO] Tiapp.xml unchanged, skipping class generation
-=======
-[TRACE] COPYING CREATED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\jobfair\DetailView.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\jobfair\DetailView.js
-[TRACE] COPYING CREATED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\jobfair\exhibitors\ExhibitorsWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\jobfair\exhibitors\ExhibitorsWindow.js
-[TRACE] COPYING CREATED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\jobfair\sponsors\SponsorsWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\jobfair\sponsors\SponsorsWindow.js
-[TRACE] COPYING CREATED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\jobfair\TabGroup.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\jobfair\TabGroup.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\db\r3.sqlite => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\db\r3.sqlite
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\about\app\AppWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\about\app\AppWindow.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\about\app\ListView.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\about\app\ListView.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\about\conference\ConferenceWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\about\conference\ConferenceWindow.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\about\conference\ListView.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\about\conference\ListView.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\about\contact\ContactWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\about\contact\ContactWindow.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\about\contact\ListView.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\about\contact\ListView.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\about\TabGroup.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\about\TabGroup.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\about\ull\ListView.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\about\ull\ListView.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\about\ull\UllWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\about\ull\UllWindow.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\jobfair\DetailView.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\jobfair\DetailView.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\jobfair\exhibitors\ExhibitorsWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\jobfair\exhibitors\ExhibitorsWindow.js
+[TRACE] COPYING CREATED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\jobfair\ListView.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\jobfair\ListView.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\jobfair\sponsors\SponsorsWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\jobfair\sponsors\SponsorsWindow.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\jobfair\TabGroup.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\jobfair\TabGroup.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\handheld\android\Home.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\handheld\android\Home.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\handheld\iphone\Home.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\handheld\iphone\Home.js
 [TRACE] Generating Java Classes
->>>>>>> 83dc03b4d5399af2bc36227a93239f058b32178a
 [DEBUG] Processing Android resource drawables
 [TRACE] COPYING FILE: C:\Users\Joe\Desktop\R3-App\Resources\android\images\res-long-land-hdpi\main.png => C:\Users\Joe\Desktop\R3-App\build\android\res\drawable-long-land-hdpi\main_6d5dd0e3ac.png
 [TRACE] COPYING FILE: C:\Users\Joe\Desktop\R3-App\Resources\android\images\res-long-land-ldpi\main.png => C:\Users\Joe\Desktop\R3-App\build\android\res\drawable-long-land-ldpi\main_6d5dd0e3ac.png
@@ -91,15 +92,11 @@ Logfile initialized
 [DEBUG] creating unsigned apk: C:\Users\Joe\Desktop\R3-App\build\android\bin\app-unsigned.apk
 [DEBUG] from resource zip => assets/Resources/db/r3.sqlite
 [DEBUG] from resource zip => assets/Resources/ui/common/about/app/AppWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/about/app/DetailView.js
 [DEBUG] from resource zip => assets/Resources/ui/common/about/app/ListView.js
 [DEBUG] from resource zip => assets/Resources/ui/common/about/conference/ConferenceWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/about/conference/DetailView.js
 [DEBUG] from resource zip => assets/Resources/ui/common/about/conference/ListView.js
 [DEBUG] from resource zip => assets/Resources/ui/common/about/contact/ContactWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/about/contact/DetailView.js
 [DEBUG] from resource zip => assets/Resources/ui/common/about/contact/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/about/ull/DetailView.js
 [DEBUG] from resource zip => assets/Resources/ui/common/about/ull/ListView.js
 [DEBUG] from resource zip => assets/Resources/ui/common/about/ull/UllWindow.js
 [DEBUG] from resource zip => assets/Resources/ui/common/about/TabGroup.js
@@ -118,6 +115,7 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/ui/common/jobfair/exhibitors/ExhibitorsWindow.js
 [DEBUG] from resource zip => assets/Resources/ui/common/jobfair/sponsors/SponsorsWindow.js
 [DEBUG] from resource zip => assets/Resources/ui/common/jobfair/DetailView.js
+[DEBUG] from resource zip => assets/Resources/ui/common/jobfair/ListView.js
 [DEBUG] from resource zip => assets/Resources/ui/common/jobfair/TabGroup.js
 [DEBUG] from resource zip => assets/Resources/ui/common/maps/MapsWindow.js
 [DEBUG] from resource zip => assets/Resources/ui/common/photos/PhotosWindow.js
@@ -197,12 +195,9 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.015000 seconds on emulator to get ready
+[DEBUG] waited 0.016000 seconds on emulator to get ready
 [INFO] Installing application on emulator
 [INFO] Launching application ... AITP R3
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.bradyhigginbotham.r3/.AitpR3Activity }
 
-<<<<<<< HEAD
-=======
 [INFO] Deployed AITP R3 ... Application should be running.
->>>>>>> 83dc03b4d5399af2bc36227a93239f058b32178a
