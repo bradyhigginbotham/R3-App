@@ -38,6 +38,8 @@ public final class AitpR3Application extends TiApplication
 		V8Runtime runtime = new V8Runtime();
 
 
+		
+		runtime.addExternalModule("ti.cloudpush", ti.cloudpush.CloudpushBootstrap.class);
 
 
 		KrollRuntime.init(this, runtime);
@@ -48,8 +50,22 @@ public final class AitpR3Application extends TiApplication
 
 		
 
-		 		 		 		 		 		 		 		 		 		 		 		 		 		 
+		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 
+		// Custom modules
+		KrollModuleInfo moduleInfo;
 
+		 
+		
+
+
+		moduleInfo = new KrollModuleInfo(
+			"cloudpush", "ti.cloudpush", "2d542783-c83c-4597-bd61-1073aa16ece2", "2.0.5",
+			"ACS Push notifications for Android via the MQTT protocol", "Dawson Toth and Jeff English", "Appcelerator Commercial License",
+			"Copyright (c) 2012 by Appcelerator, Inc.");
+
+
+
+		KrollModule.addCustomModuleInfo(moduleInfo);
 	}
 
 	@Override
