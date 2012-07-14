@@ -1,5 +1,5 @@
 //Sponsors Window Component Constructor
-function SessionsWindow(navGroup) {
+function SponsorsWindow(navGroup) {
 	//load component dependencies
 	var ListView = require('ui/common/jobfair/ListView'),
 		DetailView = require('ui/common/jobfair/DetailView');
