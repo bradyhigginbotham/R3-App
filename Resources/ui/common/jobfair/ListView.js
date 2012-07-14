@@ -1,4 +1,4 @@
-function ListView() {
+function ListView(exhibitor) {
 	var self = Ti.UI.createView({
 		backgroundColor:'white'
 	});
@@ -8,10 +8,10 @@ function ListView() {
 	var results = [];
 
     //Get sponsors from database
-    var resultSet = db.execute('SELECT * FROM sponsors ORDER BY name ASC');
+    var resultSet = db.execute('SELECT * FROM sponsors WHERE exhibitor = ' + exhibitor + ' ORDER BY name ASC');
     while (resultSet.isValidRow()) {
 		results.push({
-		    id: resultSet.fieldByName('rowid'),
+		    //id: resultSet.fieldByName('rowid'),
 			title: resultSet.fieldByName('name'),
 			details: resultSet.fieldByName('details'),
 			hasChild: true,
@@ -31,8 +31,7 @@ function ListView() {
 	//add behavior
 	table.addEventListener('click', function(e) {
 		self.fireEvent('itemSelected', {
-			name:e.rowData.title,
-			position:e.rowData.position
+		data: e.rowData
 		});
 	});
 	
