@@ -37,15 +37,15 @@ function MapsWindow() {
 	var annotations = [];
 
     //Get annotations from database
-    var annotationsSet = db.execute('SELECT * FROM annotations ORDER BY time ASC');
+    var annotationsSet = db.execute('SELECT * FROM annotations');
     while (annotationsSet.isValidRow()) {
-		results.push(
+		annotations.push(
 			Ti.Map.createAnnotation({
-		    	latitude: resultSet.fieldByName('latitude'),
-		    	longitude: resultSet.fieldByName('longitude'),
-				title: resultSet.fieldByName('title'),
-				subtitle: resultSet.fieldByName('subtitle'),
-				pincolor: resultSet.fieldByName('pincolor'),
+		    	latitude: annotationsSet.fieldByName('latitude'),
+		    	longitude: annotationsSet.fieldByName('longitude'),
+				title: annotationsSet.fieldByName('title'),
+				subtitle: annotationsSet.fieldByName('subtitle'),
+				pincolor: Ti.Map.ANNOTATION_GREEN,
 				className: 'annotation',
 			})	
 		);
