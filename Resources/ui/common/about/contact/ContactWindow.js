@@ -15,6 +15,15 @@ function ContactWindow(navGroup)
 	
 	self.add(listView);
 	
+	var homeButton = Ti.UI.createButton({
+		title: 'Home'
+	});
+	self.leftNavButton = homeButton;
+	
+	homeButton.addEventListener('click', function(){
+		navGroup.close(self.tabGroup);
+	});
+	
 	return self;
 }
 
