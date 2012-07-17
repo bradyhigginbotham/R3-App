@@ -237,6 +237,7 @@ function HomeWindow() {
 		var TabGroup = require('ui/common/twitter/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);   	
+	});
    	
     // tabs
 	var eventsTab = Ti.UI.createButton({
