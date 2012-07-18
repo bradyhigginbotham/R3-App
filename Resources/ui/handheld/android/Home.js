@@ -197,7 +197,7 @@ function HomeWindow() {
 	});
 	
 	mapsIcon.addEventListener('click', function(e){
-		var MapsWindow = require('ui/common/maps/MapsWindow');
+		var MapsWindow = require('ui/common/maps/campusMap/MapsWindow');
 		var mapsWindow = new MapsWindow();
 		navGroup.open(mapsWindow, {animated:true});
 	});
@@ -232,6 +232,11 @@ function HomeWindow() {
 		var TabGroup = require('ui/common/jobfair/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
+	});
+	twitterIcon.addEventListener('click', function(e){
+		var TabGroup = require('ui/common/twitter/TabGroup');
+		var tabGroup = new TabGroup(navGroup);
+		navGroup.open(tabGroup);   	
 	});
    	
     // tabs

@@ -1,12 +1,16 @@
 //Photos Window Component Constructor
 function PhotosWindow() {
 	//ACS Cloud module
-	var Cloud = require('ti.cloud');
+	if(Ti.Platform.osname === "android"){
+		var Cloud = require('ti.cloudpush');
+	} else {
+		var Cloud = require('ti.cloud');		
+	}
 		
 	//create object instance
 	var self = Ti.UI.createWindow({
 		backgroundColor:'#5C728B',
-		title: 'Announcements',
+		title: 'Photo Upload',
 		navBarHidden: false
 	});
 	
