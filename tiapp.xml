@@ -3,9 +3,9 @@
     <property name="acs-oauth-secret-production" type="string">fhXiiDeGaMuWgvSrOM7w6LcphhlLCnhr</property>
     <property name="acs-oauth-key-production" type="string">R2NOlc559hX65pQxRNzA6KiZ7VBpBKHn</property>
     <property name="acs-api-key-production" type="string">UYYt4A2Tiw9DUjOxzJYQwIna2F325YTo</property>
-    <property name="acs-oauth-secret-development" type="string">Czt63UgBOj5psLyACWYFtLcEnueRbiwh</property>
-    <property name="acs-oauth-key-development" type="string">tZwr3LxhZzOlAW6TODRIjqyvX41DKohq</property>
-    <property name="acs-api-key-development" type="string">OCGTUmTKqVBMz0HYy0I88SQOt8RTaTFA</property>
+    <property name="acs-oauth-secret-development" type="string">jQA3V4n9C0ak5I4EoM7uF168997Fveoh</property>
+    <property name="acs-oauth-key-development" type="string">rP4TbrYxuxa5Yn4xNorP62SxVCqc09Qi</property>
+    <property name="acs-api-key-development" type="string">m5CAI8omUqUmm3Sw1Z8AtPpjzGr07Rww</property>
     <deployment-targets>
         <target device="mobileweb">false</target>
         <target device="iphone">true</target>
@@ -13,7 +13,7 @@
         <target device="android">true</target>
         <target device="blackberry">false</target>
     </deployment-targets>
-    <sdk-version>2.0.2.GA</sdk-version>
+    <sdk-version>2.1.0.GA</sdk-version>
     <id>com.bradyhigginbotham.r3</id>
     <name>AITP R3</name>
     <version>1.0</version>
@@ -52,6 +52,7 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-        <module platform="commonjs" version="2.0.1">ti.cloud</module>
+        <module platform="commonjs" version="">ti.cloud</module>
+        <module platform="android" version="2.0.5">ti.cloudpush</module>
     </modules>
 </ti:app>

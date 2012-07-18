@@ -16,6 +16,9 @@ function HomeWindow() {
 	});
 
 	// Announcements view
+	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
+    var resultSet = db.execute('SELECT * FROM announcements ORDER BY id DESC LIMIT 1');
+	
 	var announcementRow = Ti.UI.createTableViewRow({
 		backgroundColor: 'transparent',
 		hasChild: true,
@@ -31,12 +34,12 @@ function HomeWindow() {
 		height: 25
 	});
 	var subtitle = Ti.UI.createLabel({
-		text: 'LATEST: Most recent announcement.',
+		text: 'LATEST: ' + resultSet.fieldByName('announcement'),
 		color: '#6A737D',
 		font: {fontSize: 12},
-		top: 25,
+		top: 28,
 		left: 10,
-		height: 25
+		height: 40
 	});
 	announcementRow.add(header);
 	announcementRow.add(subtitle);
@@ -49,105 +52,190 @@ function HomeWindow() {
 		className: 'announcements'
 	});
 	announcements.appendRow(announcementRow);
+	
+	announcements.addEventListener('click', function(){
+		var AnnouncementsWindow = require('ui/common/announcements/AnnouncementsWindow');
+		var announcementsWindow = new AnnouncementsWindow(navGroup);
+		navGroup.open(announcementsWindow, {animated:true});
+	});
 
-	/*---- Home Icons ----*/
+	/*---- Icon Views ----*/
 	var eventIcons = Ti.UI.createView({
 		backgroundImage: 'NONE',
 		top: 0,
 		height: 150,
 		layout: 'horizontal'
-	})
-	var collegesButton = Ti.UI.createButton({
-		title: "Colleges",
-		height: iconHeight,
-		width: iconWidth,
-		top: iconTop,
-		left: iconLeft
-	})
-	eventIcons.add(collegesButton);
+	});
 	
-	var schedulesButton = Ti.UI.createButton({
+	var resourceIcons = Ti.UI.createView({
+		backgroundImage: 'NONE',
+		top: 0,
+		height: 150,
+		layout: 'horizontal'
+	});	
+
+	/*---- Event Icons ----*/
+	var schedulesIcon = Ti.UI.createButton({
 		title: "Schedule",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
 		left: iconLeft
-	})
-	eventIcons.add(schedulesButton);
+	});
+	eventIcons.add(schedulesIcon);
 	
-	var mapsButton = Ti.UI.createButton({
-		title: "Maps",
-		height: iconHeight,
-		width: iconWidth,
-		top: iconTop,
-		left: iconLeft
-	})
-	eventIcons.add(mapsButton);
-	
-	var presentationsButton = Ti.UI.createButton({
+	var presentationsIcon = Ti.UI.createButton({
 		title: "Sessions",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
 		left: iconLeft
-	})
-	eventIcons.add(presentationsButton);
+	});
+	eventIcons.add(presentationsIcon);
 	
-	var competitionsButton = Ti.UI.createButton({
-		title: "Competitions",
+	var competitionsIcon = Ti.UI.createButton({
+		title: "Contests",
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
+	});
+	eventIcons.add(competitionsIcon);
+	
+	var certificationsIcon = Ti.UI.createButton({
+		title: "Certs",
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
+	});
+	eventIcons.add(certificationsIcon);
+	
+	var jobFairIcon = Ti.UI.createButton({
+		title: "Job Fair",
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
+	});
+	eventIcons.add(jobFairIcon);
+	
+	var festivalIcon = Ti.UI.createButton({
+		title: "Festival",
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
+	});
+	eventIcons.add(festivalIcon);
+	
+	/*---- Event Icons ----*/
+	var mapsIcon = Ti.UI.createButton({
+		title: "Maps",
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
+	});
+	resourceIcons.add(mapsIcon);
+	
+	var photosIcon = Ti.UI.createButton({
+		title: "Photos",
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
+	});
+	resourceIcons.add(photosIcon);
+	
+	var facebookIcon = Ti.UI.createButton({
+		title: "Facebook",
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
+	});
+	resourceIcons.add(facebookIcon);
+	
+	var collegesIcon = Ti.UI.createButton({
+		title: "Colleges",
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: iconLeft
+	});
+	resourceIcons.add(collegesIcon);
+	
+	var aboutIcon = Ti.UI.createButton({
+		title: "About",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
 		left: iconLeft
 	})
-	eventIcons.add(competitionsButton);
+	resourceIcons.add(aboutIcon);
 	
-	var certificationsButton = Ti.UI.createButton({
-		title: "Certifications",
+	var twitterIcon = Ti.UI.createButton({
+		title: "Twitter",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
 		left: iconLeft
-	})
-	eventIcons.add(certificationsButton);
+	});
+	resourceIcons.add(twitterIcon);
 	
 	/*---- Icon EventListeners ----*/
-	collegesButton.addEventListener('click', function(e){
+	collegesIcon.addEventListener('click', function(e){
 		var CollegesWindow = require('ui/common/colleges/CollegesWindow');
 		var collegesWindow = new CollegesWindow(navGroup);
 		navGroup.open(collegesWindow, {animated:true});
 	});
 	
-	schedulesButton.addEventListener('click', function(e){
+	schedulesIcon.addEventListener('click', function(e){
 		var SchedulesWindow = require('ui/common/schedules/SchedulesWindow');
 		var schedulesWindow = new SchedulesWindow(navGroup);
 		navGroup.open(schedulesWindow, {animated:true});
 	});
 	
-	mapsButton.addEventListener('click', function(e){
-		var MapsWindow = require('ui/common/maps/MapsWindow');
+	mapsIcon.addEventListener('click', function(e){
+		var MapsWindow = require('ui/common/maps/campusMap/MapsWindow');
 		var mapsWindow = new MapsWindow();
 		navGroup.open(mapsWindow, {animated:true});
 	});
 	
-	presentationsButton.addEventListener('click', function(e){
+	presentationsIcon.addEventListener('click', function(e){
 		var TabGroup = require('ui/common/presentations/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
 	});
 	
-	competitionsButton.addEventListener('click', function(e){
-		var TabGroup = require('ui/common/competitions/CompetitionsWindow');
-		var tabGroup = new TabGroup(navGroup);
-		navGroup.open(tabGroup);
+	competitionsIcon.addEventListener('click', function(e){
+		var CompetitionsWindow = require('ui/common/competitions/CompetitionsWindow');
+		var competitionsWindow = new CompetitionsWindow(navGroup);
+		navGroup.open(competitionsWindow);
 	});	
-	certificationsButton.addEventListener('click', function(e){
-		var TabGroup = require('ui/common/certifications/CertificationsWindow');
+	certificationsIcon.addEventListener('click', function(e){
+		var CertificationsWindow = require('ui/common/certifications/CertificationsWindow');
+		var certificationsWindow = new CertificationsWindow(navGroup);
+		navGroup.open(certificationsWindow);
+	});
+	photosIcon.addEventListener('click', function(e){
+		var PhotosWindow = require('ui/common/photos/PhotosWindow');
+		var photosWindow = new PhotosWindow();
+		navGroup.open(photosWindow, {animated:true});
+	});
+	aboutIcon.addEventListener('click', function(e){
+		var TabGroup = require('ui/common/about/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
-	})
+	});
+	jobFairIcon.addEventListener('click', function(e){
+		var TabGroup = require('ui/common/jobfair/TabGroup');
+		var tabGroup = new TabGroup(navGroup);
+		navGroup.open(tabGroup);
+	});
     	
-    	// tabs
+    // tabs
 	var eventsTab = Ti.UI.createButton({
 		backgroundImage: 'NONE',
 		color: tabColor,
@@ -171,10 +259,6 @@ function HomeWindow() {
 	});
 	mainNavWindow.add(resourcesTab);
 	
-	var resourceIcons = Ti.UI.createView({ backgroundImage:'NONE' });
-	var label = Ti.UI.createLabel({text: 'Resources'});
-	resourceIcons.add(label);
-	
 	var scrollableView = Ti.UI.createScrollableView({
 	  views:[eventIcons,resourceIcons],
 	  showPagingControl: true,
@@ -188,7 +272,7 @@ function HomeWindow() {
 		scrollableView.scrollToView(eventIcons);
 	});
 	
-	resourcesTab.addEventListener('click', function(){
+	resourcesTab.addEventListener('click', function(e){
 		scrollableView.scrollToView(resourceIcons);
 	});
 	

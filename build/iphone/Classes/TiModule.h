@@ -66,6 +66,12 @@
 -(void)suspend:(id)sender;
 
 /**
+ AITPR3 Platform calls this method on entering background.
+ @param sender The sender of the event.
+ */
+-(void)paused:(id)sender;
+
+/**
  AITPR3 Platform calls this method on resume.
  @param sender The sender of the event.
  */

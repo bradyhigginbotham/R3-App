@@ -1,1 +1,1 @@
-/Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/presentations/sessions/ListView.js
+/Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/ui/common/presentations/sessions/ListView.js
