@@ -1,5 +1,5 @@
 //Floor Plans Window Component Constructor
-function SessionsWindow(navGroup) {
+function FloorPlansWindow() {
 	//load component dependencies
 	var ListView = require('ui/common/maps/floorPlans/ListView'),
 		DetailView = require('ui/common/maps/floorPlans/DetailView');
@@ -11,7 +11,7 @@ function SessionsWindow(navGroup) {
 		navBarHidden: false
 	});
 		
-	//construct UI
+	construct UI
 	var listView = new ListView(),
 		detailView = new DetailView();
 	
@@ -46,4 +46,4 @@ function SessionsWindow(navGroup) {
 }
 
 //make constructor function the public component interface
-module.exports = FloorPLansWindow;
+module.exports = FloorPlansWindow;
