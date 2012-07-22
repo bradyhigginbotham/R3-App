@@ -19,6 +19,33 @@ function FloorPlansWindow() {
 		navGroup.close(self.tabGroup);
 	});
 	
+	
+	//image switcher
+		var floorPlans = Ti.UI.createImageView({
+		image: '/floorplan/FGMouton.png',
+		width: (Ti.Platform.displayCaps.platformHeight - 100) * 1.875,
+		height: Ti.Platform.displayCaps.platformHeight - 100,
+		top: 0,
+		left: 0
+	});
+
+
+	   var scrollView = Titanium.UI.createScrollView({
+    	scrollType: 'horizontal',
+        contentWidth: floorPlans.width,
+        contentHeight: floorPlans.height,
+        left:0,
+        top:0,          
+        showHorizontalScrollIndicator: true,
+        showVerticalScrollIndicator:false,
+        verticalBounce: false,
+        maxZoomScale:10,
+        minZoomScale:1.0,
+        backgroundColor:"#5C728B",      
+	});  
+    scrollView.add(floorPlans);
+	self.add(scrollView);
+	
 	//creating buttons
 		var moutonIcon = Ti.UI.createButton({
 		title: "F.G. Mouton",
@@ -38,14 +65,6 @@ function FloorPlansWindow() {
 	});
 	self.add(moodyIcon);
 	
-	//image switcher
-		var floorPlans = Ti.UI.createImageView({
-		image: '/Resources/floorplan/FGMouton.png',
-		width: (Ti.Platform.displayCaps.platformHeight - 100) * 1.875,
-		height: Ti.Platform.displayCaps.platformHeight - 100,
-		top: 0,
-		left: 0
-	});
 	
 	return self;
 }
