@@ -20,7 +20,11 @@ function SearchWindow() {
 	self.add(listView);
 		
 	//add behavior for master view
-	listView.addEventListener('itemSelected', function(e){});
+	listView.addEventListener('itemSelected', function(e){
+		Ti.App.fireEvent('annotationSelected', {
+			message: 'good luck'
+		});
+	});
 	
 	var homeButton = Ti.UI.createButton({
 		title: 'Home'

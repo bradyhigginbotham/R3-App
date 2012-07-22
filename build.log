@@ -1,20 +1,31 @@
 Logfile initialized
+<<<<<<< HEAD
 [INFO] logfile = C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build.log
 [DEBUG] C:\Users\Dustin\AppData\Roaming\Titanium\mobilesdk\win32\2.1.0.GA\android\builder.py simulator AITP R3 C:\Program Files (x86)\Android\android-sdk C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3 com.bradyhigginbotham.r3 2 HVGA
+=======
+[INFO] logfile = C:\Users\Joe\Desktop\R3-App\build.log
+[DEBUG] C:\Users\Joe\AppData\Roaming\Titanium\mobilesdk\win32\2.1.0.GA\android\builder.py simulator AITP R3 C:\Program Files (x86)\Android\android-sdk C:\Users\Joe\Desktop\R3-App com.bradyhigginbotham.r3 2 HVGA
+>>>>>>> 6c59e1049768044f53aad6e8303887194e1bcaf1
 [INFO] Building AITP R3 for Android ... one moment
 [INFO] Titanium SDK version: 2.1.0 (06/28/12 12:16 6e3cab6)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
+<<<<<<< HEAD
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 15 seconds)
 [DEBUG] waited 15.056000 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
+=======
+[DEBUG] Device connected... (waited 0 seconds)
+[DEBUG] waited 0.015000 seconds on emulator to get ready
+>>>>>>> 6c59e1049768044f53aad6e8303887194e1bcaf1
 [DEBUG] com.bradyhigginbotham.r3 installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
+<<<<<<< HEAD
 [TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\ui\common\maps\floorPlans\FloorPlansWindow.js => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\ui\common\maps\floorPlans\FloorPlansWindow.js
 [TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\ui\common\maps\search\ListView.js => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\ui\common\maps\search\ListView.js
 [TRACE] COPYING MODIFIED FILE: C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\Resources\ui\common\maps\search\SearchWindow.js => C:\Users\Dustin\My Documents\Titanium Studio Workspace\AITP R3\build\android\bin\assets\Resources\ui\common\maps\search\SearchWindow.js
@@ -132,3 +143,29 @@ Logfile initialized
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.bradyhigginbotham.r3/.AitpR3Activity }
 
 [INFO] Deployed AITP R3 ... Application should be running.
+=======
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\maps\campusMap\MapsWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\maps\campusMap\MapsWindow.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\maps\floorPlans\FloorPlansWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\maps\floorPlans\FloorPlansWindow.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\maps\search\ListView.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\maps\search\ListView.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\maps\search\SearchWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\maps\search\SearchWindow.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\maps\TabGroup.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\maps\TabGroup.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\twitter\example\TwitterWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\twitter\example\TwitterWindow.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\handheld\iphone\Home.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\handheld\iphone\Home.js
+[INFO] Tiapp.xml unchanged, skipping class generation
+[DEBUG] Processing Android resource drawables
+[DEBUG] found drawable-long-land-hdpi splash screen at C:\Users\Joe\Desktop\R3-App\Resources\android\images\res-long-land-hdpi\default.png
+[DEBUG] found drawable-long-land-ldpi splash screen at C:\Users\Joe\Desktop\R3-App\Resources\android\images\res-long-land-ldpi\default.png
+[DEBUG] found drawable-long-port-hdpi splash screen at C:\Users\Joe\Desktop\R3-App\Resources\android\images\res-long-port-hdpi\default.png
+[DEBUG] found drawable-long-port-ldpi splash screen at C:\Users\Joe\Desktop\R3-App\Resources\android\images\res-long-port-ldpi\default.png
+[DEBUG] found drawable-notlong-land-hdpi splash screen at C:\Users\Joe\Desktop\R3-App\Resources\android\images\res-notlong-land-hdpi\default.png
+[DEBUG] found drawable-notlong-land-ldpi splash screen at C:\Users\Joe\Desktop\R3-App\Resources\android\images\res-notlong-land-ldpi\default.png
+[DEBUG] found drawable-notlong-land-mdpi splash screen at C:\Users\Joe\Desktop\R3-App\Resources\android\images\res-notlong-land-mdpi\default.png
+[DEBUG] found drawable-notlong-port-hdpi splash screen at C:\Users\Joe\Desktop\R3-App\Resources\android\images\res-notlong-port-hdpi\default.png
+[DEBUG] found drawable-notlong-port-ldpi splash screen at C:\Users\Joe\Desktop\R3-App\Resources\android\images\res-notlong-port-ldpi\default.png
+[DEBUG] found drawable-notlong-port-mdpi splash screen at C:\Users\Joe\Desktop\R3-App\Resources\android\images\res-notlong-port-mdpi\default.png
+[INFO] Waiting for SDCard to become available..
+[INFO] Re-launching application ... AITP R3
+[INFO] Launching application ... AITP R3
+[TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.bradyhigginbotham.r3/.AitpR3Activity }
+
+>>>>>>> 6c59e1049768044f53aad6e8303887194e1bcaf1

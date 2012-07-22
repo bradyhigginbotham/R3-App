@@ -33,6 +33,16 @@ function TabGroup(){
 	self.addTab(mapsTab);
 	self.addTab(floorPlansTab);
 	self.addTab(searchTab);
+	
+	Ti.App.addEventListener('annotationSelected', function(e){
+		self.setActiveTab(mapsTab);
+	});
+	
+	self.addEventListener('close', function(){
+		Ti.App.removeEventListener('annotationSelected', function(e){
+			self.setActiveTab(mapsTab);
+		});
+	});
 		
 	return self;
 };

@@ -197,9 +197,15 @@ function HomeWindow() {
 	});
 	
 	mapsIcon.addEventListener('click', function(e){
+<<<<<<< HEAD
 		var MapsWindow = require('ui/common/maps/TabGroup');
 		var mapsWindow = new MapsWindow();
 		navGroup.open(mapsWindow, {animated:true});
+=======
+		var TabGroup = require('ui/common/maps/TabGroup');
+		var tabGroup = new TabGroup();
+		navGroup.open(tabGroup, {animated:true});
+>>>>>>> 6c59e1049768044f53aad6e8303887194e1bcaf1
 	});
 	
 	presentationsIcon.addEventListener('click', function(e){

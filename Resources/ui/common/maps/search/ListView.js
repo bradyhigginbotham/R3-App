@@ -19,9 +19,21 @@ function ListView() {
     	resultSet.next();
     }
     resultSet.close();
+    
+	//add search bar
+	var searchBar = Titanium.UI.createSearchBar({
+    	barColor:'#000', 
+    	showCancel:true,
+    	height:43,
+    	top:0,
+    	hintText:'Search',
+    });
 	
 	var table = Ti.UI.createTableView({
-		data: results
+		data: results,
+		search: searchBar,
+		searchHidden: false,
+		filterAttribute: 'title'
 	});
 	
 	self.add(table);
@@ -29,18 +41,11 @@ function ListView() {
 	//add behavior
 	table.addEventListener('click', function(e) {
 		self.fireEvent('itemSelected', {
-			name:e.rowData.title,
+			title:e.rowData.title,
 		});
 	});
 	
-	
-	//add search bar
-	var search = Titanium.UI.createSearchBar({
-    barColor:'#000', 
-    showCancel:true,
-    height:43,
-    top:0,
-});
+	//self.add(search);
 	
 	return self;
 };

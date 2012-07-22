@@ -10,7 +10,7 @@ function SearchWindow() {
 		navBarHidden: false
 	});
 		
-	construct UI
+	//construct UI
 	var listView = new ListView();
 	
 	//create list view container
@@ -20,7 +20,11 @@ function SearchWindow() {
 	self.add(listView);
 		
 	//add behavior for master view
-	listView.addEventListener('itemSelected', function(e){});
+	listView.addEventListener('itemSelected', function(e){
+		Ti.App.fireEvent('annotationSelected', {
+			title: e.title
+		});
+	});
 	
 	var homeButton = Ti.UI.createButton({
 		title: 'Home'
