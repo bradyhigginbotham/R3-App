@@ -8,10 +8,10 @@ function ListView() {
 	var results = [];
 
     //Get locations from database
-    var resultSet = db.execute('SELECT * FROM annotations ORDER BY name ASC');
+    var resultSet = db.execute('SELECT * FROM annotations ORDER BY title ASC');
     while (resultSet.isValidRow()) {
 		results.push({
-
+            title: resultSet.fieldByName('title'),
 			hasChild: true,
 			className: 'annotations',
 			height: 40
@@ -29,8 +29,7 @@ function ListView() {
 	//add behavior
 	table.addEventListener('click', function(e) {
 		self.fireEvent('itemSelected', {
-			//name:e.rowData.title,
-			//position:e.rowData.position
+			name:e.rowData.title,
 		});
 	});
 	
