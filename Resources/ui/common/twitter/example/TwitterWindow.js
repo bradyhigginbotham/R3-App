@@ -32,7 +32,7 @@
         }, {
             title: '@codestrong',
             view: createTwitterTable('@codestrong'),
-            url: 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=codestrong&count=' + tweetCount,
+            url: 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=r3aitpconf' + tweetCount,
             isSearch: false
         }
 
