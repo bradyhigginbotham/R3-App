@@ -10,7 +10,7 @@ function SearchWindow() {
 		navBarHidden: false
 	});
 		
-	construct UI
+	//construct UI
 	var listView = new ListView();
 	
 	//create list view container
