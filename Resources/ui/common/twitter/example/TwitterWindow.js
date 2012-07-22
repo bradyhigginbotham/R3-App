@@ -82,6 +82,7 @@
                         	tweets.push({
                         		title: results[c].text,
                         		user: results[c].user.screen_name,
+                        		leftImage: results[c].user.profile_image_url,
                         		hasChild: true
                         	});
                         }

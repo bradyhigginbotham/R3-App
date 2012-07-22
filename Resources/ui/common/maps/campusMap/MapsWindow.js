@@ -40,7 +40,6 @@ function MapsWindow() {
     //Get annotations from database
     var annotationsSet = db.execute('SELECT * FROM annotations');
     while (annotationsSet.isValidRow()) {
-    	pincolor = annotationsSet.fieldByName('pincolor');
 		annotations.push(
 			Ti.Map.createAnnotation({
 		    	latitude: annotationsSet.fieldByName('latitude'),
@@ -55,7 +54,6 @@ function MapsWindow() {
     }
     annotationsSet.close();
 	
-	alert(pincolor);
 	
 /*	
 	// map annotations
