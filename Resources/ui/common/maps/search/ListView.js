@@ -21,8 +21,7 @@ function ListView() {
     resultSet.close();
 	
 	var table = Ti.UI.createTableView({
-		data: results,
-		search: search
+		data: results
 	});
 	
 	self.add(table);
