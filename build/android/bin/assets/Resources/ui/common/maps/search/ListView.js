@@ -21,7 +21,8 @@ function ListView() {
     resultSet.close();
 	
 	var table = Ti.UI.createTableView({
-		data: results
+		data: results,
+		search: title
 	});
 	
 	self.add(table);
@@ -32,6 +33,18 @@ function ListView() {
 			name:e.rowData.title,
 		});
 	});
+	
+	
+	  //add search bar
+	  var search = Titanium.UI.createSearchBar({
+      barColor:'#000', 
+      showCancel:true,
+      height:43,
+      top:0,
+      hintText:'Search',
+    });
+	
+	//self.add(search);
 	
 	return self;
 };
