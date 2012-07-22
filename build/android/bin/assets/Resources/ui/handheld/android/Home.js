@@ -197,7 +197,7 @@ function HomeWindow() {
 	});
 	
 	mapsIcon.addEventListener('click', function(e){
-		var MapsWindow = require('ui/common/maps/campusMap/MapsWindow');
+		var MapsWindow = require('ui/common/maps/TabGroup');
 		var mapsWindow = new MapsWindow();
 		navGroup.open(mapsWindow, {animated:true});
 	});
