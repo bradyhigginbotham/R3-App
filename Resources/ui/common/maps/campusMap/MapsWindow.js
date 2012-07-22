@@ -136,6 +136,9 @@ function MapsWindow() {
 	});
 	
 	self.add(mapview);
+	self.addEventListener('annotationsSelected',function(e){
+		alert('hello');
+	})
 
 	return self;
 };
