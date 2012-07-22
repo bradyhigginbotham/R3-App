@@ -1,5 +1,5 @@
 //Sessions Window Component Constructor
-function SessionsWindow(navGroup) {
+function SearchWindow() {
 	//load component dependencies
 	var ListView = require('ui/common/maps/search/ListView');
 		
@@ -10,7 +10,7 @@ function SessionsWindow(navGroup) {
 		navBarHidden: false
 	});
 		
-	//construct UI
+	construct UI
 	var listView = new ListView();
 	
 	//create list view container

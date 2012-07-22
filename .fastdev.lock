@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"ip": "0.0.0.0", "app_guid": "0d9d8c45-239f-4488-8e63-b375e7efae7a", "port": 50601, "dir": "C:\\Users\\Dustin\\My Documents\\Titanium Studio Workspace\\AITP R3", "app_id": "com.bradyhigginbotham.r3"}
+=======
+{"ip": "0.0.0.0", "app_guid": "0d9d8c45-239f-4488-8e63-b375e7efae7a", "port": 55143, "dir": "C:\\Users\\Joe\\Desktop\\R3-App", "app_id": "com.bradyhigginbotham.r3"}
+>>>>>>> 9e25374aa63346a8382a5c2c0e6fdcab9971be64
