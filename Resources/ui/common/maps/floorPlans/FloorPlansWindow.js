@@ -41,7 +41,7 @@ function FloorPlansWindow() {
         verticalBounce: false,
         maxZoomScale:10,
         minZoomScale:1.0,
-        backgroundColor:"#5C728B",      
+        backgroundColor:"white",      
 	});  
     scrollView.add(floorPlans);
 	self.add(scrollView);
@@ -51,7 +51,7 @@ function FloorPlansWindow() {
 		title: "F.G. Mouton",
 		height: 50,
 		width: 100,
-		bottom: 0,
+		bottom: 10,
 		left: 10
 	});
 	self.add(moutonIcon);
@@ -60,7 +60,7 @@ function FloorPlansWindow() {
 		title: "Moody",
 		height: 50,
 		width: 100,
-		bottom: 0,
+		bottom: 10,
 		right: 10
 	});
 	self.add(moodyIcon);
