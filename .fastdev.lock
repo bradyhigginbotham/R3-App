@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-{"ip": "0.0.0.0", "app_guid": "0d9d8c45-239f-4488-8e63-b375e7efae7a", "port": 63442, "dir": "C:\\Users\\Joe\\Desktop\\R3-App", "app_id": "com.bradyhigginbotham.r3"}
-=======
-{"ip": "0.0.0.0", "app_guid": "0d9d8c45-239f-4488-8e63-b375e7efae7a", "port": 63190, "dir": "/Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3", "app_id": "com.bradyhigginbotham.r3"}
->>>>>>> 00401ad5e35322062cb5c9cc747d151b5e42216c
-=======
-{"ip": "0.0.0.0", "app_guid": "0d9d8c45-239f-4488-8e63-b375e7efae7a", "port": 53851, "dir": "C:\\Users\\Dustin\\My Documents\\Titanium Studio Workspace\\AITP R3", "app_id": "com.bradyhigginbotham.r3"}
->>>>>>> ba72430e66da20f2c45a55cda1e12f2dbc6807f1

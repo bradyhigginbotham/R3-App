@@ -33,6 +33,15 @@ function ListView() {
 		});
 	});
 	
+	
+	//add search bar
+	var search = Titanium.UI.createSearchBar({
+    barColor:'#000', 
+    showCancel:true,
+    height:43,
+    top:0,
+});
+	
 	return self;
 };
 
