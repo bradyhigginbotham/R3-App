@@ -65,6 +65,14 @@ function FloorPlansWindow() {
 	});
 	self.add(moodyIcon);
 	
+	moutonIcon.addEventListener('click', function (){
+		floorPlans.image='/floorplan/FGMouton.png'
+	})
+	
+	moodyIcon.addEventListener('click', function (){
+		floorPlans.image='/floorplan/Moody.png'
+	})
+	
 	
 	return self;
 }

@@ -41,7 +41,7 @@ function ListView() {
 	//add behavior
 	table.addEventListener('click', function(e) {
 		self.fireEvent('itemSelected', {
-			name:e.rowData.title,
+			title:e.rowData.title,
 		});
 	});
 	

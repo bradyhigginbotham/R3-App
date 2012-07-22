@@ -5,8 +5,12 @@ Logfile initialized
 [INFO] Titanium SDK version: 2.1.0 (06/28/12 12:16 6e3cab6)
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.015000 seconds on emulator to get ready
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 15 seconds)
+[DEBUG] waited 15.065000 seconds on emulator to get ready
+[INFO] Waiting for the Android Emulator to become available
 [DEBUG] com.bradyhigginbotham.r3 installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
@@ -15,9 +19,6 @@ Logfile initialized
 [TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\maps\floorPlans\FloorPlansWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\maps\floorPlans\FloorPlansWindow.js
 [TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\maps\search\ListView.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\maps\search\ListView.js
 [TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\maps\search\SearchWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\maps\search\SearchWindow.js
-[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\maps\TabGroup.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\maps\TabGroup.js
-[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\common\twitter\example\TwitterWindow.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\common\twitter\example\TwitterWindow.js
-[TRACE] COPYING MODIFIED FILE: C:\Users\Joe\Desktop\R3-App\Resources\ui\handheld\iphone\Home.js => C:\Users\Joe\Desktop\R3-App\build\android\bin\assets\Resources\ui\handheld\iphone\Home.js
 [INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
 [DEBUG] found drawable-long-land-hdpi splash screen at C:\Users\Joe\Desktop\R3-App\Resources\android\images\res-long-land-hdpi\default.png
@@ -35,3 +36,4 @@ Logfile initialized
 [INFO] Launching application ... AITP R3
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.bradyhigginbotham.r3/.AitpR3Activity }
 
+[INFO] Relaunched AITP R3 ... Application should be running.

@@ -134,9 +134,16 @@ function MapsWindow() {
 	});
 	
 	self.add(mapview);
-	self.addEventListener('annotationsSelected',function(e){
-		alert('hello');
-	})
+	Ti.App.addEventListener('annotationSelected', function(e){
+		var annoSelected;
+		for (var i=0;i < annotations.length;i++){
+			if(annotations[i].title==e.title)
+			{
+				annoSelected= annotations[i];
+			};
+		};
+		mapview.selectAnnotation(annoSelected);
+	});
 
 	return self;
 };
