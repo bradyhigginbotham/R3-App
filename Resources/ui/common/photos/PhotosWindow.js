@@ -1,5 +1,7 @@
 //Photos Window Component Constructor
 function PhotosWindow() {
+    var uploadProgress, selectPhoto, takePhoto;
+
 	//ACS Cloud module
 	if(Ti.Platform.osname === "android"){
 		var Cloud = require('ti.cloudpush');
@@ -10,7 +12,7 @@ function PhotosWindow() {
 	//create object instance
 	var self = Ti.UI.createWindow({
 		backgroundColor:'#5C728B',
-		title: 'Announcements',
+		title: 'Photo Upload',
 		navBarHidden: false
 	});
 	
@@ -22,10 +24,9 @@ function PhotosWindow() {
 		height: 220
 	});
 	self.add(imageView);
-		
-	//construct UI
+    
     if (Ti.UI.createProgressBar) {
-        var uploadProgress = Ti.UI.createProgressBar({
+        uploadProgress = Ti.UI.createProgressBar({
             bottom: 60, right: 10, left: 10,
             max: 1, min: 0, value: 0,
             height: 25
@@ -37,7 +38,7 @@ function PhotosWindow() {
     var photo;
 
     if (Ti.Media.openPhotoGallery) {
-        var selectPhoto = Ti.UI.createButton({
+        selectPhoto = Ti.UI.createButton({
             title: 'Gallery',
             bottom: 95, left: 40,
             width: 110,
@@ -54,7 +55,7 @@ function PhotosWindow() {
         self.add(selectPhoto);
     }
     if (Ti.Media.showCamera) {
-        var takePhoto = Ti.UI.createButton({
+        takePhoto = Ti.UI.createButton({
             title: 'Camera',
             bottom: 95, right: 40,
             width: 110,
@@ -126,6 +127,21 @@ function PhotosWindow() {
 				alert('An error occurred during upload.');
 		    }
 		});	
+	});
+	
+	self.addEventListener('close', function(){
+		self.remove(imageView);
+		self.remove(uploadProgress);
+		self.remove(selectPhoto);
+		self.remove(takePhoto);
+		self.remove(uploadButton);
+		
+		imageView = null;
+		uploadProgress = null;
+		selectPhoto = null;
+		takePhoto = null;
+		uploadButton = null;
+		self = null;
 	});
 	
 	return self;
