@@ -19,10 +19,21 @@ function ListView() {
     	resultSet.next();
     }
     resultSet.close();
+    
+	//add search bar
+	var searchBar = Titanium.UI.createSearchBar({
+    	barColor:'#000', 
+    	showCancel:true,
+    	height:43,
+    	top:0,
+    	hintText:'Search',
+    });
 	
 	var table = Ti.UI.createTableView({
 		data: results,
-		search: search
+		search: searchBar,
+		searchHidden: false,
+		filterAttribute: 'title'
 	});
 	
 	self.add(table);
@@ -33,16 +44,6 @@ function ListView() {
 			name:e.rowData.title,
 		});
 	});
-	
-	
-	  //add search bar
-	  var search = Titanium.UI.createSearchBar({
-      barColor:'#000', 
-      showCancel:true,
-      height:43,
-      top:0,
-      hintText:'Search',
-    });
 	
 	//self.add(search);
 	

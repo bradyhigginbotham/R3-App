@@ -70,116 +70,25 @@
                 xhr.open("GET", entry.url);
 
                 xhr.onerror = function () {
-                    loadedViews.push(entry.view);
-                    if (loadedViews.length >= data.length) {
-                        loadedViews = [];
-                        Codestrong.ui.activityIndicator.hideModal();
-                    }
+					alert(e.error);
                 };
 
+				var tweets = [];
                 xhr.onload = function () {
                     try {
                         var json = eval('(' + this.responseText + ')');
-                        var tweets = entry.isSearch ? json.results : json;
+                        var results = json.results;
                         for (var c = 0; c < tweets.length; c++) {
-                            var tweet = tweets[c].text;
-                            var user = entry.isSearch ? tweets[c].from_user : tweets[c].user.screen_name;
-                            var avatarWidth = 48;
-                            var avatar;
-                            if (single == true && !entry.isSearch) {
-                                avatar = tweets[1].user.profile_image_url;
-                            } else {
-                                avatar = entry.isSearch ? tweets[c].profile_image_url : tweets[c].user.profile_image_url;
-
-                            }
-
-                            var created_at = Codestrong.datetime.getTwitterInterval(tweets[c].created_at);
-                            var bgcolor = (c % 2) === 0 ? '#fff' : '#eee';
-
-                            var row = Ti.UI.createTableViewRow({
-                                hasChild: true,
-                                className: 'twitterRow',
-                                backgroundColor: bgcolor,
-                                height: 'auto',
-                                date: created_at,
-                                user: user,
-                                tweet: tweet
-                            });
-
-                            // Create a vertical layout view to hold all the info labels and images for each tweet
-                            var post_view = Ti.UI.createView({
-                                height: 15,
-                                left: 64,
-                                top: 10,
-                                right: 5
-                            });
-
-                            var av = Ti.UI.createImageView({
-                                image: avatar,
-                                left: 10,
-                                top: 10,
-                                height: 48,
-                                width: avatarWidth
-                            });
-                            row.add(av);
-
-                            var user_label = Ti.UI.createLabel({
-                                text: user,
-                                left: 0,
-                                width: 120,
-                                top: -3,
-                                height: 20,
-                                textAlign: 'left',
-                                color: '#444444',
-                                font: {
-                                    fontFamily: 'Trebuchet MS',
-                                    fontSize: 14,
-                                    fontWeight: 'bold'
-                                }
-                            });
-                            post_view.add(user_label);
-
-                            var date_label = Ti.UI.createLabel({
-                                text: created_at,
-                                right: 20,
-                                top: -2,
-                                height: 20,
-                                textAlign: 'right',
-                                width: 110,
-                                color: '#444444',
-                                font: {
-                                    fontFamily: 'Trebuchet MS',
-                                    fontSize: 12
-                                }
-                            });
-                            post_view.add(date_label);
-                            row.add(post_view);
-
-                            var tweet_text = Ti.UI.createLabel({
-                                text: tweet,
-                                left: 64,
-                                top: 30,
-                                right: 20,
-                                color: '#333',
-                                height: 'auto',
-                                textAlign: 'left',
-                                bottom: 10,
-                                font: {
-                                    fontSize: 14
-                                }
-                            });
-
-                            // Add the tweet to the view
-                            row.add(tweet_text);
-                            tvData[c] = row;
+                        	tweets.push({
+                        		title: results[c].text,
+                        		user: results[c].user.screen_name,
+                        		hasChild: true
+                        	});
                         }
-
-                        entry.view.setData(tvData);
-                        loadedViews.push(entry.view);
-                        if (loadedViews.length >= data.length) {
-                            loadedViews = [];
-                            Codestrong.ui.activityIndicator.hideModal();
-                        }
+                        
+                        var tweetList = Ti.UI.createTableView({
+                        	data: tweets
+                        });
                     } catch (e) {
                         Ti.API.info(e);
                     }

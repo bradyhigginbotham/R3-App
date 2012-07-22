@@ -1,4 +1,5 @@
 function MapsWindow() {
+	var pincolor;
 	// Geolocation default settings
 	Ti.Geolocation.purpose = "Recieve User Location";
 	Titanium.Geolocation.accuracy = Titanium.Geolocation.ACCURACY_BEST;
@@ -39,13 +40,14 @@ function MapsWindow() {
     //Get annotations from database
     var annotationsSet = db.execute('SELECT * FROM annotations');
     while (annotationsSet.isValidRow()) {
+    	pincolor = annotationsSet.fieldByName('pincolor');
 		annotations.push(
 			Ti.Map.createAnnotation({
 		    	latitude: annotationsSet.fieldByName('latitude'),
 		    	longitude: annotationsSet.fieldByName('longitude'),
 				title: annotationsSet.fieldByName('title'),
 				subtitle: annotationsSet.fieldByName('subtitle'),
-				pincolor: Ti.Map.ANNOTATION_GREEN,
+				pincolor: Ti.Map.ANNOTATION_PURPLE,
 				className: 'annotation',
 			})	
 		);
@@ -53,7 +55,7 @@ function MapsWindow() {
     }
     annotationsSet.close();
 	
-	
+	alert(pincolor);
 	
 /*	
 	// map annotations
