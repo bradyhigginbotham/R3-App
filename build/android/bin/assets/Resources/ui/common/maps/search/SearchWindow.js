@@ -22,7 +22,7 @@ function SearchWindow() {
 	//add behavior for master view
 	listView.addEventListener('itemSelected', function(e){
 		Ti.App.fireEvent('annotationSelected', {
-			message: 'good luck'
+			title: e.title
 		});
 	});
 	
