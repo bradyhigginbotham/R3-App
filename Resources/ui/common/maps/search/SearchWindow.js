@@ -1,5 +1,5 @@
 //Sessions Window Component Constructor
-function SessionsWindow(navGroup) {
+function SearchWindow() {
 	//load component dependencies
 	var ListView = require('ui/common/maps/search/ListView');
 		
@@ -20,7 +20,11 @@ function SessionsWindow(navGroup) {
 	self.add(listView);
 		
 	//add behavior for master view
-	listView.addEventListener('itemSelected', function(e){});
+	listView.addEventListener('itemSelected', function(e){
+		Ti.App.fireEvent('annotationSelected', {
+			title: e.title
+		});
+	});
 	
 	var homeButton = Ti.UI.createButton({
 		title: 'Home'

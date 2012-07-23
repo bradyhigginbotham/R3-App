@@ -1,4 +1,5 @@
 function MapsWindow() {
+	var pincolor;
 	// Geolocation default settings
 	Ti.Geolocation.purpose = "Recieve User Location";
 	Titanium.Geolocation.accuracy = Titanium.Geolocation.ACCURACY_BEST;
@@ -45,14 +46,13 @@ function MapsWindow() {
 		    	longitude: annotationsSet.fieldByName('longitude'),
 				title: annotationsSet.fieldByName('title'),
 				subtitle: annotationsSet.fieldByName('subtitle'),
-				pincolor: Ti.Map.ANNOTATION_GREEN,
+				pincolor: Ti.Map.ANNOTATION_PURPLE,
 				className: 'annotation',
 			})	
 		);
     	annotationsSet.next();
     }
     annotationsSet.close();
-	
 	
 	
 /*	
@@ -134,6 +134,16 @@ function MapsWindow() {
 	});
 	
 	self.add(mapview);
+	Ti.App.addEventListener('annotationSelected', function(e){
+		var annoSelected;
+		for (var i=0;i < annotations.length;i++){
+			if(annotations[i].title==e.title)
+			{
+				annoSelected= annotations[i];
+			};
+		};
+		mapview.selectAnnotation(annoSelected);
+	});
 
 	return self;
 };

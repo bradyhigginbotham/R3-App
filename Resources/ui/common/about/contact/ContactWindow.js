@@ -20,8 +20,26 @@ function ContactWindow(navGroup)
 	});
 	self.leftNavButton = homeButton;
 	
+	//homeButton.addEventListener('click', function(){
+	//	navGroup.close(self.tabGroup);
+	//});
+	
 	homeButton.addEventListener('click', function(){
-		navGroup.close(self.tabGroup);
+		Ti.App.fireEvent('closeAbout');
+	});
+	
+	function removeIt(){
+		self.remove(listView);
+		listView = null;
+		self.leftNavButton = null;
+		homeButton = null;
+	};
+	
+	Ti.App.addEventListener('closeAbout', removeIt);
+	
+	self.addEventListener('close', function(){
+		Ti.App.removeEventListener('closeAbout', removeIt);
+		alert('Close');
 	});
 	
 	return self;
