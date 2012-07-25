@@ -4,36 +4,47 @@ function ConferenceView() {
 	});
 	
 	var conferenceTweet = Ti.UI.createLabel({
-		text: 'Certification Title',
+		text: 'Tweet Details',
 		height:'auto',
 		width:'auto',
-		top: 10
+		top: 20,
+		left: 15,
+		right: 15,
+		bottom: 5
 	});
-	self.add(certification);
+	self.add(conferenceTweet);
 	
-	var date = Ti.UI.createLabel({
-		text: 'Certification Date',
+	var user = Ti.UI.createLabel({
+		text: 'Posted By',
 		height: 'auto',
 		width: 'auto',
-		top: 60
+		top: 110,
+		left: 15,
+		right: 15,
+		bottom: 5
 	});
-	self.add(date);	
+	self.add(user);	
+	
+	var date = Ti.UI.createLabel({
+		text: 'Tweet Date',
+		height: 'auto',
+		width: 'auto',
+		top: 130,
+		left: 15,
+		right: 15,
+	});
+	self.add(date);
+	
 	
 	self.addEventListener('itemSelected', function(e) {
-		certification.text = e.data.desc;
+		conferenceTweet.text = e.data.tweet;
+		user.text = 'Posted by: ' + e.data.user;
+		date.text = 'Date: ' + e.data.date;
 		
-		var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
-	
-		var resultSet = db.execute('SELECT * FROM schedules WHERE id = ?', e.data.schedule_id);
-	    while (resultSet.isValidRow()) {
-			date.text = resultSet.fieldByName('day') + ', ' + resultSet.fieldByName('date');
-	    	resultSet.next();
-	    }
-	    resultSet.close();
 	});
 	
 	return self;
 	
 };
 
-module.exports = DetailView;
+module.exports = ConferenceView;
