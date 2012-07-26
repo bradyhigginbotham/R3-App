@@ -17,28 +17,28 @@ function HashtagsWindow(navGroup){
 	// Retrieve tweets via client 
     var xhr = Ti.Network.createHTTPClient();
         
-    xhr.open("GET", 'http://search.twitter.com/search.json?q=%23R3AITP');
+   // xhr.open("GET", 'http://search.twitter.com/search.json?q=%23R3AITP');
 
+    xhr.open("GET", 'http://search.twitter.com/search.json?q=%23aitp');
 
     xhr.onerror = function () {
 		alert(e.error);
 	};
 					
-
 	var tweets = [];
     xhr.onload = function () {
        	var results = eval('(' + this.responseText + ')');
-       	for (var c = 0; c < results.length; c++) {
+       	for (var c = 0; c < results["results"].length; c++) {
            	var row = Ti.UI.createTableViewRow({
-           		user: results[c].user.screen_name,
-           		date: results[c].created_at,
-           		tweet: results[c].text,
+           		user: results["results"][c].from_user_name,
+           		date: results["results"][c].created_at,
+           		tweet: results["results"][c].text,
            		hasChild: true,
            		height: 56
 			});
 			
 			var tweet = Ti.UI.createLabel({
-				text: results[c].text,
+				text: results["results"][c].text,
 				left: 60,
 				right: 15,
 				top: 10,
@@ -48,7 +48,7 @@ function HashtagsWindow(navGroup){
 			row.add(tweet);
 			
 			var avatar = Ti.UI.createImageView({
-				image: results[c].user.profile_image_url,
+				image: results["results"][c].profile_image_url,
 				height: 40,
 				width: 40,
 				top: 8,
