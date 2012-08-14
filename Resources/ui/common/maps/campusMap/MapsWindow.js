@@ -1,4 +1,4 @@
-function MapsWindow() {
+function MapsWindow(navGroup) {
 	var pincolor;
 	// Geolocation default settings
 	Ti.Geolocation.purpose = "Recieve User Location";
@@ -9,6 +9,16 @@ function MapsWindow() {
 	var self = Ti.UI.createWindow({
 		title: "Conference Map",
 		navBarHidden: false
+	});
+	
+	// top buttons
+	var homeButton = Ti.UI.createButton({
+		title: 'Home'
+	});
+	self.leftNavButton = homeButton;
+	
+	homeButton.addEventListener('click', function(){
+		navGroup.close(self.tabGroup);
 	});
 	
 	var refreshButton = Ti.UI.createButton({

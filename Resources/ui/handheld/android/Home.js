@@ -1,7 +1,7 @@
 //Home Window Component Constructor
 function HomeWindow() {
 	//load component dependencies
-	var MainView = require('ui/common/MainView'), navGroup = undefined;
+	var navGroup = undefined;
 	
 	// constants
 	var iconHeight = 50, iconWidth = 90, iconTop = 10, iconLeft = 10,

@@ -33,7 +33,6 @@ function TabGroup(navGroup)
 		self.removeTab(conferenceTab);
 		self.removeTab(hashtagsTab);
 
-		
 		navGroup.close(self);
 
 		// empty out proxy properties
@@ -57,8 +56,6 @@ function TabGroup(navGroup)
 	self.addEventListener('close', function(){
 		Ti.App.removeEventListener('closeTwitter', removeAll);
 	});
-		
-	
 	
 	return self;
 };

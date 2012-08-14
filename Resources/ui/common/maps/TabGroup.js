@@ -1,11 +1,11 @@
-function TabGroup(){
+function TabGroup(navGroup){
 	var MapsWindow = require('ui/common/maps/campusMap/MapsWindow'),
 		FloorPlansWindow = require('ui/common/maps/floorPlans/floorPlansWindow'),
 		SearchWindow = require('ui/common/maps/search/SearchWindow');
 	
-	var mapsWindow = new MapsWindow(),
-	    floorPlansWindow = new FloorPlansWindow(),
-		searchWindow = new SearchWindow();
+	var mapsWindow = new MapsWindow(navGroup),
+	    floorPlansWindow = new FloorPlansWindow(navGroup),
+		searchWindow = new SearchWindow(navGroup);
 
 	var self = Ti.UI.createTabGroup();
 	

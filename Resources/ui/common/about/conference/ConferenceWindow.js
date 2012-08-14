@@ -35,8 +35,7 @@ function ConferenceWindow(navGroup)
 	Ti.App.addEventListener('closeAbout', removeIt);
 	
 	self.addEventListener('close', function(){
-		alert('Conference');
-		//Ti.App.removeEventListener('closeAbout', removeIt);
+		Ti.App.removeEventListener('closeAbout', removeIt);
 	});
 	
 	return self;

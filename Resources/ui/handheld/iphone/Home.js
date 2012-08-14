@@ -1,7 +1,7 @@
 //Home Window Component Constructor
 function HomeWindow() {
 	//load component dependencies
-	var MainView = require('ui/common/MainView'), navGroup = undefined;
+	var navGroup = undefined;
 	
 	// constants
 	var iconHeight = 64, iconWidth = 64, iconTop = 10, iconLeft = 10, middleLeft = 50,
@@ -186,63 +186,58 @@ function HomeWindow() {
 	resourceIcons.add(twitterIcon);
 	
 	/*---- Icon EventListeners ----*/
-	collegesIcon.addEventListener('click', function(e){
+	collegesIcon.addEventListener('click', function(){
 		var CollegesWindow = require('ui/common/colleges/CollegesWindow');
 		var collegesWindow = new CollegesWindow(navGroup);
 		navGroup.open(collegesWindow, {animated:true});
 	});
 	
-	schedulesIcon.addEventListener('click', function(e){
+	schedulesIcon.addEventListener('click', function(){
 		var SchedulesWindow = require('ui/common/schedules/SchedulesWindow');
 		var schedulesWindow = new SchedulesWindow(navGroup);
 		navGroup.open(schedulesWindow, {animated:true});
 	});
 	
-	mapsIcon.addEventListener('click', function(e){
-<<<<<<< HEAD
-		var MapsWindow = require('ui/common/maps/TabGroup');
-		var mapsWindow = new MapsWindow();
-		navGroup.open(mapsWindow, {animated:true});
-=======
+	mapsIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/maps/TabGroup');
-		var tabGroup = new TabGroup();
-		navGroup.open(tabGroup, {animated:true});
->>>>>>> ef231390aa5ae323624b580a4b2d9fbd94d3dae0
+		var tabGroup = new TabGroup(navGroup);
+		navGroup.open(tabGroup);
+		tabGroup = null;
 	});
 	
-	presentationsIcon.addEventListener('click', function(e){
+	presentationsIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/presentations/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
 	});
 	
-	competitionsIcon.addEventListener('click', function(e){
+	competitionsIcon.addEventListener('click', function(){
 		var CompetitionsWindow = require('ui/common/competitions/CompetitionsWindow');
 		var competitionsWindow = new CompetitionsWindow(navGroup);
 		navGroup.open(competitionsWindow);
 	});	
-	certificationsIcon.addEventListener('click', function(e){
+	certificationsIcon.addEventListener('click', function(){
 		var CertificationsWindow = require('ui/common/certifications/CertificationsWindow');
 		var certificationsWindow = new CertificationsWindow(navGroup);
 		navGroup.open(certificationsWindow);
 	});
-	photosIcon.addEventListener('click', function(e){
+	photosIcon.addEventListener('click', function(){
 		var PhotosWindow = require('ui/common/photos/PhotosWindow');
 		var photosWindow = new PhotosWindow();
 		navGroup.open(photosWindow, {animated:true});
 	});
-	aboutIcon.addEventListener('click', function(e){
+	aboutIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/about/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
 		tabGroup = null;
 	});
-	jobFairIcon.addEventListener('click', function(e){
+	jobFairIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/jobfair/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
 	});
-	twitterIcon.addEventListener('click', function(e){
+	twitterIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/twitter/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);   	

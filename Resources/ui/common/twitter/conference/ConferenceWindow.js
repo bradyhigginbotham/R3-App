@@ -1,34 +1,37 @@
 function ConferenceWindow(navGroup){
-	
+	// load dependencies
 	var ConferenceView = require ('ui/common/twitter/conference/ConferenceView');
-	
+	var conferenceView = new ConferenceView(), row, tweet, avatar, table;
 		
 	self = Ti.UI.createWindow({
 		backgroundColor:'#ffffff',
 		title: 'Conference Twitter Feed',
 		navBarHidden: false
 	});
-
-
-	var conferenceView = new ConferenceView();
 	
-		
+	var loading = Titanium.UI.createActivityIndicator({
+	    height:50,
+	    style:Titanium.UI.iPhone.ActivityIndicatorStyle.PLAIN,
+	    font: {fontFamily:'Helvetica Neue', fontSize:16,fontWeight:'bold'},
+	    color: '#000000',
+	    message: 'Loading...',
+	    width: 210
+	});
 
 	// Retrieve tweets via client 
     var xhr = Ti.Network.createHTTPClient();
         
     xhr.open("GET", 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=r3aitpconf&result_type=recent&count=11');
 
-    xhr.onerror = function () {
+    xhr.onerror = function(){
 		alert(e.error);
 	};
 					
-
 	var tweets = [];
-    xhr.onload = function () {
+    xhr.onload = function(){
        	var results = eval('(' + this.responseText + ')');
        	for (var c = 0; c < results.length; c++) {
-           	var row = Ti.UI.createTableViewRow({
+           	row = Ti.UI.createTableViewRow({
            		user: results[c].user.screen_name,
            		date: results[c].created_at,
            		tweet: results[c].text,
@@ -36,7 +39,7 @@ function ConferenceWindow(navGroup){
            		height: 56
 			});
 			
-			var tweet = Ti.UI.createLabel({
+			tweet = Ti.UI.createLabel({
 				text: results[c].text,
 				left: 60,
 				right: 15,
@@ -46,7 +49,7 @@ function ConferenceWindow(navGroup){
 			});
 			row.add(tweet);
 			
-			var avatar = Ti.UI.createImageView({
+			avatar = Ti.UI.createImageView({
 				image: results[c].user.profile_image_url,
 				height: 40,
 				width: 40,
@@ -58,22 +61,24 @@ function ConferenceWindow(navGroup){
 			tweets.push(row);
 		};
 		
-		var table = Ti.UI.createTableView({
+		table = Ti.UI.createTableView({
 			data: tweets
 		});
-	
-		self.add(table); 
-		
+		self.add(table);
+				
 		//add event listener
 		table.addEventListener('click', function(e) {
 			self.fireEvent('itemSelected', {
 				data:e.rowData				
 			});
-		});            
-
+		});
+		
+		loading.hide();          
 	};
-              
-    xhr.send();                 
+
+	loading.show();
+	self.add(loading);
+    xhr.send();    
 
 
 	// Detail Container
@@ -87,7 +92,6 @@ function ConferenceWindow(navGroup){
 		conferenceView.fireEvent('itemSelected',e);
 		navGroup.open(detailContainerWindow);
 	});
-	
 
     return self;
 };

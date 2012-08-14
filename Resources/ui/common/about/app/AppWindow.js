@@ -28,7 +28,7 @@ function AppWindow(navGroup)
 		self.remove(listView);
 		listView = null;
 		self.leftNavButton = null;
-		homeButton = null;		
+		homeButton = null;
 	};
 	
 	Ti.App.addEventListener('closeAbout', removeIt);

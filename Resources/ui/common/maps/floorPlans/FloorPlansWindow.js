@@ -21,7 +21,7 @@ function FloorPlansWindow() {
 	
 	
 	//image switcher
-		var floorPlans = Ti.UI.createImageView({
+	var floorPlans = Ti.UI.createImageView({
 		image: '/floorplan/FGMouton.png',
 		width: (Ti.Platform.displayCaps.platformHeight - 100) * 1.875,
 		height: Ti.Platform.displayCaps.platformHeight - 100,
@@ -30,7 +30,7 @@ function FloorPlansWindow() {
 	});
 
 
-	   var scrollView = Titanium.UI.createScrollView({
+	var scrollView = Titanium.UI.createScrollView({
     	scrollType: 'horizontal',
         contentWidth: floorPlans.width,
         contentHeight: floorPlans.height,
@@ -47,7 +47,7 @@ function FloorPlansWindow() {
 	self.add(scrollView);
 	
 	//creating buttons
-		var moutonIcon = Ti.UI.createButton({
+	var moutonIcon = Ti.UI.createButton({
 		title: "F.G. Mouton",
 		height: 50,
 		width: 100,
@@ -56,7 +56,7 @@ function FloorPlansWindow() {
 	});
 	self.add(moutonIcon);
 
-   		var moodyIcon = Ti.UI.createButton({
+	var moodyIcon = Ti.UI.createButton({
 		title: "Moody",
 		height: 50,
 		width: 100,
@@ -67,11 +67,11 @@ function FloorPlansWindow() {
 	
 	moutonIcon.addEventListener('click', function (){
 		floorPlans.image='/floorplan/FGMouton.png'
-	})
+	});
 	
 	moodyIcon.addEventListener('click', function (){
 		floorPlans.image='/floorplan/Moody.png'
-	})
+	});
 	
 	
 	return self;

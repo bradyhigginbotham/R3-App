@@ -39,7 +39,6 @@ function ContactWindow(navGroup)
 	
 	self.addEventListener('close', function(){
 		Ti.App.removeEventListener('closeAbout', removeIt);
-		alert('Close');
 	});
 	
 	return self;

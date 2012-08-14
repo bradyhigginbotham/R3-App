@@ -1,18 +1,13 @@
 function HashtagsWindow(navGroup){
 	
 	var HashtagsView = require ('ui/common/twitter/hashtags/HashtagsView');
-	
+	var hashtagsView = new HashtagsView();	
 		
 	self = Ti.UI.createWindow({
 		backgroundColor:'#ffffff',
 		title: 'R3AITP Twitter Feed',
 		navBarHidden: false
 	});
-
-
-	var hashtagsView = new HashtagsView();
-	
-		
 
 	// Retrieve tweets via client 
     var xhr = Ti.Network.createHTTPClient();
