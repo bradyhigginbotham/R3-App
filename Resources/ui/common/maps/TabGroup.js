@@ -1,11 +1,11 @@
-function TabGroup(navGroup){
+function TabGroup(){
 	var MapsWindow = require('ui/common/maps/campusMap/MapsWindow'),
 		FloorPlansWindow = require('ui/common/maps/floorPlans/floorPlansWindow'),
-		SearchWindow = require('ui/common/maps/search/SearchWindow'),
+		SearchWindow = require('ui/common/maps/search/SearchWindow');
 	
-	var mapsWindow = new MapsWindow(navGroup),
-	    floorPlansWindow = new FloorPlansWindow(navGroup),
-		searchWindow = new SearchWindow(navGroup);
+	var mapsWindow = new MapsWindow(),
+	    floorPlansWindow = new FloorPlansWindow(),
+		searchWindow = new SearchWindow();
 
 	var self = Ti.UI.createTabGroup();
 	
@@ -19,7 +19,7 @@ function TabGroup(navGroup){
 	var floorPlansTab = Ti.UI.createTab({
 		title: 'Floor Plans',
 		icon: 'KS_nav_views.png',
-		window: floorPLansWindow
+		window: floorPlansWindow
 	});
 	floorPlansWindow.parentTab = floorPlansTab;
 	
@@ -33,6 +33,16 @@ function TabGroup(navGroup){
 	self.addTab(mapsTab);
 	self.addTab(floorPlansTab);
 	self.addTab(searchTab);
+	
+	Ti.App.addEventListener('annotationSelected', function(e){
+		self.setActiveTab(mapsTab);
+	});
+	
+	self.addEventListener('close', function(){
+		Ti.App.removeEventListener('annotationSelected', function(e){
+			self.setActiveTab(mapsTab);
+		});
+	});
 		
 	return self;
 };

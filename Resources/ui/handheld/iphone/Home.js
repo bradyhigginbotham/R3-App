@@ -199,9 +199,15 @@ function HomeWindow() {
 	});
 	
 	mapsIcon.addEventListener('click', function(e){
+<<<<<<< HEAD
 		var MapsWindow = require('ui/common/maps/TabGroup');
 		var mapsWindow = new MapsWindow();
 		navGroup.open(mapsWindow, {animated:true});
+=======
+		var TabGroup = require('ui/common/maps/TabGroup');
+		var tabGroup = new TabGroup();
+		navGroup.open(tabGroup, {animated:true});
+>>>>>>> ef231390aa5ae323624b580a4b2d9fbd94d3dae0
 	});
 	
 	presentationsIcon.addEventListener('click', function(e){
@@ -235,6 +241,11 @@ function HomeWindow() {
 		var TabGroup = require('ui/common/jobfair/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
+	});
+	twitterIcon.addEventListener('click', function(e){
+		var TabGroup = require('ui/common/twitter/TabGroup');
+		var tabGroup = new TabGroup(navGroup);
+		navGroup.open(tabGroup);   	
 	});
     	
     // tabs
