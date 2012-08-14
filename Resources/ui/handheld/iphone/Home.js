@@ -61,8 +61,7 @@ function HomeWindow() {
 
 	/*---- Icon Views ----*/
 	var eventIcons = Ti.UI.createView({
-		//backgroundImage: 'NONE',
-		backgroundColor: 'red',
+		backgroundImage: 'NONE',
 		top: 0,
 		height: 156,
 		layout: 'horizontal'
@@ -77,7 +76,7 @@ function HomeWindow() {
 
 	/*---- Event Icons ----*/
 	var schedulesIcon = Ti.UI.createButton({
-		title: "Schedule",
+		backgroundImage: "/icons/schedule_64.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -90,7 +89,7 @@ function HomeWindow() {
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: iconLeft
+		left: middleLeft
 	});
 	eventIcons.add(presentationsIcon);
 	
@@ -99,12 +98,12 @@ function HomeWindow() {
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: iconLeft
+		left: middleLeft
 	});
 	eventIcons.add(competitionsIcon);
 	
 	var certificationsIcon = Ti.UI.createButton({
-		title: "Certs",
+		backgroundImage: "/icons/certifications_64.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -117,7 +116,7 @@ function HomeWindow() {
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: iconLeft
+		left: middleLeft
 	});
 	eventIcons.add(jobFairIcon);
 	
@@ -126,7 +125,7 @@ function HomeWindow() {
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: iconLeft
+		left: middleLeft
 	});
 	eventIcons.add(festivalIcon);
 	
