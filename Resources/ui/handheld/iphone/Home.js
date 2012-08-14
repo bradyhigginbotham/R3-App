@@ -4,13 +4,13 @@ function HomeWindow() {
 	var MainView = require('ui/common/MainView'), navGroup = undefined;
 	
 	// constants
-	var iconHeight = 50, iconWidth = 90, iconTop = 10, iconLeft = 10,
+	var iconHeight = 64, iconWidth = 64, iconTop = 10, iconLeft = 10, middleLeft = 50,
 		tabColor = 'white', tabHeight = 70, tabWidth = 160;
 		
 	//create component instance
 	var self = Ti.UI.createWindow();
 	var mainNavWindow = Ti.UI.createWindow({
-		backgroundImage:'images/main.png',
+		backgroundImage:'images/main_updated.png',
 		title: 'Home',
 		navBarHidden: true
 	});
@@ -47,7 +47,7 @@ function HomeWindow() {
 	var announcements = Ti.UI.createTableView({
 		backgroundColor: 'transparent',
 		separatorColor: 'transparent',
-		top: 145,
+		top: 137,
 		height: 72,
 		className: 'announcements'
 	});
@@ -61,16 +61,17 @@ function HomeWindow() {
 
 	/*---- Icon Views ----*/
 	var eventIcons = Ti.UI.createView({
-		backgroundImage: 'NONE',
+		//backgroundImage: 'NONE',
+		backgroundColor: 'red',
 		top: 0,
-		height: 150,
+		height: 156,
 		layout: 'horizontal'
 	});
 	
 	var resourceIcons = Ti.UI.createView({
 		backgroundImage: 'NONE',
 		top: 0,
-		height: 150,
+		height: 156,
 		layout: 'horizontal'
 	});	
 
@@ -129,9 +130,9 @@ function HomeWindow() {
 	});
 	eventIcons.add(festivalIcon);
 	
-	/*---- Event Icons ----*/
+	/*---- Resource Icons ----*/
 	var mapsIcon = Ti.UI.createButton({
-		title: "Maps",
+		backgroundImage: '/icons/maps_64.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -140,25 +141,25 @@ function HomeWindow() {
 	resourceIcons.add(mapsIcon);
 	
 	var photosIcon = Ti.UI.createButton({
-		title: "Photos",
+		backgroundImage: '/icons/photos_64.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: iconLeft
+		left: middleLeft
 	});
 	resourceIcons.add(photosIcon);
 	
 	var facebookIcon = Ti.UI.createButton({
-		title: "Facebook",
+		backgroundImage: '/icons/facebook_round_64.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: iconLeft
+		left: middleLeft
 	});
 	resourceIcons.add(facebookIcon);
 	
 	var collegesIcon = Ti.UI.createButton({
-		title: "Colleges",
+		backgroundImage: '/icons/colleges_64.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -167,20 +168,20 @@ function HomeWindow() {
 	resourceIcons.add(collegesIcon);
 	
 	var aboutIcon = Ti.UI.createButton({
-		title: "About",
+		title: 'About',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: iconLeft
+		left: middleLeft
 	})
 	resourceIcons.add(aboutIcon);
 	
 	var twitterIcon = Ti.UI.createButton({
-		title: "Twitter",
+		backgroundImage: '/icons/twitter_round_64.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: iconLeft
+		left: middleLeft
 	});
 	resourceIcons.add(twitterIcon);
 	
@@ -198,7 +199,7 @@ function HomeWindow() {
 	});
 	
 	mapsIcon.addEventListener('click', function(e){
-		var MapsWindow = require('ui/common/maps/campusMap/MapsWindow');
+		var MapsWindow = require('ui/common/maps/TabGroup');
 		var mapsWindow = new MapsWindow();
 		navGroup.open(mapsWindow, {animated:true});
 	});
@@ -261,11 +262,11 @@ function HomeWindow() {
 	mainNavWindow.add(resourcesTab);
 	
 	var scrollableView = Ti.UI.createScrollableView({
-	  views:[eventIcons,resourceIcons],
-	  showPagingControl: true,
-	  pagingControlColor: '#E5EAEF',
-	  bottom: 70,
-	  height: 150
+		views:[eventIcons,resourceIcons],
+		showPagingControl: false,
+		pagingControlColor: '#E5EAEF',
+		bottom: 70,
+		height: 156
 	});
 	
 	// tab event listeners
