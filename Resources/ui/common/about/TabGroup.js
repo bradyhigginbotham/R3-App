@@ -14,7 +14,7 @@ function TabGroup(navGroup) // changed from 'AboutWindow' to 'TabGroup'
 	var self = Ti.UI.createTabGroup();
 	
 	var appTab = Ti.UI.createTab({
-		title: 'App',
+		title: 'R3 App',
 		icon: '/icons/tabs/info.png',
 		window: appWindow
 	});
@@ -28,15 +28,15 @@ function TabGroup(navGroup) // changed from 'AboutWindow' to 'TabGroup'
 	conferenceWindow.parentTab = conferenceTab;
 	
 	var contactTab = Ti.UI.createTab({
-		title: 'Contacts',
-		icon: 'KS_nav_ui.png',
+		title: 'Contact',
+		icon: '/icons/tabs/phone.png',
 		window: contactWindow
 	});
 	contactWindow.parentTab = contactTab;
 	
 	var ullTab = Ti.UI.createTab({
 		title: 'UL @ Lafayette',
-		icon: 'KS_nav_ui.png',
+		icon: '/icons/tabs/ull.png',
 		window: ullWindow
 	});
 	UllWindow.parentTab = ullTab;

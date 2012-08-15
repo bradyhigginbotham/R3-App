@@ -1,5 +1,5 @@
 //Floor Plans Window Component Constructor
-function FloorPlansWindow() {
+function FloorPlansWindow(navGroup) {
 
 		
 	//create object instance

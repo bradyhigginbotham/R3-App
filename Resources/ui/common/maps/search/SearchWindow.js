@@ -1,5 +1,5 @@
 //Sessions Window Component Constructor
-function SearchWindow() {
+function SearchWindow(navGroup) {
 	//load component dependencies
 	var ListView = require('ui/common/maps/search/ListView');
 		

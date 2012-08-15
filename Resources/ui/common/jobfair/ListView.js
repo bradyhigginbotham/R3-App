@@ -13,6 +13,7 @@ function ListView(exhibitor) {
 		results.push({
 		    //id: resultSet.fieldByName('rowid'),
 			title: resultSet.fieldByName('name'),
+			site: resultSet.fieldByName('site'),
 			details: resultSet.fieldByName('details'),
 			hasChild: true,
 			className: 'sponsor',

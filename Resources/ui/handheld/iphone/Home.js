@@ -94,7 +94,7 @@ function HomeWindow() {
 	eventIcons.add(presentationsIcon);
 	
 	var competitionsIcon = Ti.UI.createButton({
-		title: "Contests",
+		backgroundImage: "/icons/home/contests_64_title.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -112,7 +112,7 @@ function HomeWindow() {
 	eventIcons.add(certificationsIcon);
 	
 	var jobFairIcon = Ti.UI.createButton({
-		backgroundImage: "/icons/home/job_fair_64_title.png",
+		backgroundImage: "/icons/home/briefcase_64_title.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -121,7 +121,7 @@ function HomeWindow() {
 	eventIcons.add(jobFairIcon);
 	
 	var festivalIcon = Ti.UI.createButton({
-		title: "Festival",
+		backgroundImage: "/icons/home/festival_64_title.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -235,6 +235,15 @@ function HomeWindow() {
 		var TabGroup = require('ui/common/jobfair/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
+	});
+	festivalIcon.addEventListener('click', function(){
+		var festivalPage = Ti.UI.createWebView({url: 'http://www.festivalsacadiens.com/index1.html'});
+		var festivalWindow = Ti.UI.createWindow({
+			title: 'Festival Acadiens 2012',
+			navBarHidden: false
+		});
+		festivalWindow.add(festivalPage);
+		navGroup.open(festivalWindow);
 	});
 	twitterIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/twitter/TabGroup');

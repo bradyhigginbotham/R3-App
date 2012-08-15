@@ -23,7 +23,8 @@ function SponsorsWindow(navGroup) {
 	
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({
-		title:'Sponsor Details'
+		title:'Sponsor Details',
+		backgroundColor: '#5B718B'
 	});
 	detailContainerWindow.add(detailView);
 	
