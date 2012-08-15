@@ -15,14 +15,14 @@ function TabGroup(navGroup) // changed from 'AboutWindow' to 'TabGroup'
 	
 	var appTab = Ti.UI.createTab({
 		title: 'App',
-		icon: 'KS_nav_ui.png',
+		icon: '/icons/tabs/info.png',
 		window: appWindow
 	});
 	appWindow.parentTab = appTab;
 	
 	var conferenceTab = Ti.UI.createTab({
 		title: 'Conference',
-		icon: 'KS_nav_ui.png',
+		icon: '/icons/tabs/star.png',
 		window: conferenceWindow
 	});
 	conferenceWindow.parentTab = conferenceTab;

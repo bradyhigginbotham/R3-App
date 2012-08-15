@@ -9,7 +9,7 @@ function ContactWindow(navGroup)
 		backgroundColor:'#ffffff',
 		title: 'App Overview',
 		navBarHidden: false
-	})
+	});
 	
 	var listView = new ListView();	
 	

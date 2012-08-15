@@ -11,7 +11,7 @@ function TabGroup(navGroup)
 	var self = Ti.UI.createTabGroup();
 	
 	var conferenceTab = Ti.UI.createTab({
-		title: 'Conference Feeds',
+		title: 'Conference Feed',
 		icon: 'KS_nav_ui.png',
 		window: conferenceWindow
 	});
@@ -25,8 +25,7 @@ function TabGroup(navGroup)
 	hashtagsWindow.parentTab = hashtagsTab;
 	
 	self.addTab(conferenceTab);
-	self.addTab(hashtagsTab);
-	
+	self.addTab(hashtagsTab);	
 	
 	function removeAll(){
 		// remove all tabs

@@ -1,9 +1,9 @@
 function HashtagsWindow(navGroup){
-	
+	// load dependencies
 	var HashtagsView = require ('ui/common/twitter/hashtags/HashtagsView');
 	var hashtagsView = new HashtagsView();	
 		
-	self = Ti.UI.createWindow({
+	var self = Ti.UI.createWindow({
 		backgroundColor:'#ffffff',
 		title: 'R3AITP Twitter Feed',
 		navBarHidden: false
@@ -26,8 +26,10 @@ function HashtagsWindow(navGroup){
        	for (var c = 0; c < results["results"].length; c++) {
            	var row = Ti.UI.createTableViewRow({
            		user: results["results"][c].from_user_name,
+           		username: results["results"][c].from_user,
            		date: results["results"][c].created_at,
            		tweet: results["results"][c].text,
+           		avatar: results["results"][c].profile_image_url,
            		hasChild: true,
            		height: 56
 			});
@@ -74,14 +76,25 @@ function HashtagsWindow(navGroup){
 
 	// Detail Container
 	var detailContainerWindow = Ti.UI.createWindow({
-		title:'Conference Feed Details'
+		title:'Conference Feed Details',
+		backButtonTitle: '#r3aitp',
+		backgroundColor: '#DCECF4'
 	});
 	detailContainerWindow.add(hashtagsView);
 
 	//add behavior for master view
 	self.addEventListener('itemSelected', function(e) {
 		hashtagsView.fireEvent('itemSelected',e);
-		navGroup.open(detailContainerWindow);
+		self.parentTab.open(detailContainerWindow);
+	});
+	
+	var homeButton = Ti.UI.createButton({
+		title: 'Home'
+	});
+	self.leftNavButton = homeButton;
+	
+	homeButton.addEventListener('click', function(){
+		navGroup.close(self.tabGroup);
 	});
 	
 

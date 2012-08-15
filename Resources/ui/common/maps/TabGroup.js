@@ -11,21 +11,21 @@ function TabGroup(navGroup){
 	
 	var mapsTab = Ti.UI.createTab({
 		title: 'Campus Map',
-		icon: 'KS_nav_ui.png',
+		icon: '/icons/tabs/pin.png',
 		window: mapsWindow
 	});
 	mapsWindow.parentTab = mapsTab;
 	
 	var floorPlansTab = Ti.UI.createTab({
 		title: 'Floor Plans',
-		icon: 'KS_nav_views.png',
+		icon: '/icons/tabs/building.png',
 		window: floorPlansWindow
 	});
 	floorPlansWindow.parentTab = floorPlansTab;
 	
 	var searchTab = Ti.UI.createTab({
 		title: 'Search',
-		icon: 'KS_nav_views.png',
+		icon: Ti.UI.iPhone.SystemIcon.SEARCH,
 		window: searchWindow
 	});
 	searchWindow.parentTab = searchTab;	

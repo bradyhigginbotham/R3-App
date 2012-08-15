@@ -3,19 +3,11 @@ function ConferenceWindow(navGroup){
 	var ConferenceView = require ('ui/common/twitter/conference/ConferenceView');
 	var conferenceView = new ConferenceView(), row, tweet, avatar, table;
 		
-	self = Ti.UI.createWindow({
+	var self = Ti.UI.createWindow({
 		backgroundColor:'#ffffff',
 		title: 'Conference Twitter Feed',
+		backButtonTitle: '@r3aitp',
 		navBarHidden: false
-	});
-	
-	var loading = Titanium.UI.createActivityIndicator({
-	    height:50,
-	    style:Titanium.UI.iPhone.ActivityIndicatorStyle.PLAIN,
-	    font: {fontFamily:'Helvetica Neue', fontSize:16,fontWeight:'bold'},
-	    color: '#000000',
-	    message: 'Loading...',
-	    width: 210
 	});
 
 	// Retrieve tweets via client 
@@ -32,9 +24,11 @@ function ConferenceWindow(navGroup){
        	var results = eval('(' + this.responseText + ')');
        	for (var c = 0; c < results.length; c++) {
            	row = Ti.UI.createTableViewRow({
-           		user: results[c].user.screen_name,
+           		user: results[c].user.name,
+           		username: results[c].user.screen_name,
            		date: results[c].created_at,
            		tweet: results[c].text,
+           		avatar: results[c].user.profile_image_url,
            		hasChild: true,
            		height: 56
 			});
@@ -73,24 +67,32 @@ function ConferenceWindow(navGroup){
 			});
 		});
 		
-		loading.hide();          
 	};
 
-	loading.show();
-	self.add(loading);
     xhr.send();    
 
 
 	// Detail Container
 	var detailContainerWindow = Ti.UI.createWindow({
-		title:'Conference Feed Details'
+		title:'Tweet Details',
+		backButtonTitle: '@r3aitp',
+		backgroundColor: '#DCECF4'
 	});
 	detailContainerWindow.add(conferenceView);
 
 	//add behavior for master view
 	self.addEventListener('itemSelected', function(e) {
 		conferenceView.fireEvent('itemSelected',e);
-		navGroup.open(detailContainerWindow);
+		self.parentTab.open(detailContainerWindow);
+	});
+	
+	var homeButton = Ti.UI.createButton({
+		title: 'Home'
+	});
+	self.leftNavButton = homeButton;
+	
+	homeButton.addEventListener('click', function(){
+		navGroup.close(self.tabGroup);
 	});
 
     return self;
