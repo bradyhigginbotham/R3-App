@@ -45,6 +45,7 @@ extern NSString * AITPR3$ModuleRequireFormat;
 	NSDictionary *preload;
 	NSMutableDictionary *modules;
 	AITPR3Object *_aitpr3;
+    KrollObject* console;
 	BOOL shutdown;
     BOOL evaluationError;
 	//NOTE: Do NOT treat registeredProxies like a mutableDictionary; mutable dictionaries copy keys,

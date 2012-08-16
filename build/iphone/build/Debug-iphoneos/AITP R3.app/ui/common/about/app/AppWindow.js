@@ -1,1 +1,1 @@
-/Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/app/AppWindow.js
+/Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/ui/common/about/app/AppWindow.js
