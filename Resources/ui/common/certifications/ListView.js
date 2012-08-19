@@ -36,7 +36,7 @@ function ListView() {
 	
 	//add event listener
 	table.addEventListener('click', function(e) {
-		self.fireEvent('itemSelected', {
+		self.fireEvent('certificationSelected', {
 			data:e.rowData				
 		});
 	});

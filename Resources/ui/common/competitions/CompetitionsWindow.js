@@ -28,8 +28,8 @@ function CompetitionsWindow(navGroup) {
 	detailContainerWindow.add(detailView);	
 	
 	//add behavior for master view
-	listView.addEventListener('itemSelected', function(e) {
-		detailView.fireEvent('itemSelected',e);
+	listView.addEventListener('competitionSelected', function(e) {
+		detailView.fireEvent('competitionSelected',e);
 		navGroup.open(detailContainerWindow);
 	});
 	

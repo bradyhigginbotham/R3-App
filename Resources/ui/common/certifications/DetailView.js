@@ -19,7 +19,7 @@ function DetailView() {
 	});
 	self.add(date);	
 	
-	self.addEventListener('itemSelected', function(e) {
+	self.addEventListener('certificationSelected', function(e) {
 		certification.text = e.data.desc;
 		
 		var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');

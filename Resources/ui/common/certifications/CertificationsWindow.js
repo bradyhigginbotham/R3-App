@@ -24,8 +24,8 @@ function CertificationsWindow(navGroup)
 	detailContainerWindow.add(detailView);
 	
 	//add behavior for master view
-	listView.addEventListener('itemSelected', function(e) {
-		detailView.fireEvent('itemSelected',e);
+	listView.addEventListener('certificationSelected', function(e) {
+		detailView.fireEvent('certificationSelected',e);
 		navGroup.open(detailContainerWindow);
 	});
 	

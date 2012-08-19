@@ -32,8 +32,37 @@ function SchedulesWindow(navGroup) {
 	//add behavior for master view
 	listView.addEventListener('itemSelected', function(e) {
 		detailView.fireEvent('itemSelected',e);
-		detailContainerWindow.title = e.name;
+		detailContainerWindow.title = e.data.title;
 		navGroup.open(detailContainerWindow);
+	});
+	
+	detailContainerWindow.addEventListener('scheduleItemSelected', function(e){
+		switch(e.data.type){
+			case "contest":
+				var CompetitionView = require('ui/common/competitions/DetailView');
+				
+				competitionView = new CompetitionView();
+				competitionView.fireEvent('competitionSelected', e);
+				var competitionWindow = Ti.UI.createWindow({
+					title: e.data.title,
+					backButtonTitle: 'Back'
+				});
+				competitionWindow.add(competitionView);
+				navGroup.open(competitionWindow);
+				break;
+			case "cert":
+				var CertificationView = require('ui/common/certifications/DetailView');
+				
+				certificationView = new CertificationView();
+				certificationView.fireEvent('certificationSelected', e);
+				var certificationWindow = Ti.UI.createWindow({
+					title: e.data.title,
+					backButtonTitle: 'Back'
+				});
+				certificationWindow.add(certificationView);
+				navGroup.open(certificationWindow);
+		//	case "session":
+		}		
 	});
 		
 	return self;

@@ -31,7 +31,7 @@ function ListView() {
 	
 	//add behavior
 	table.addEventListener('click', function(e) {
-		self.fireEvent('itemSelected', {
+		self.fireEvent('competitionSelected', {
 			data: e.rowData
 		//	schedule_id: e.rowData.schedule_id
 		});

@@ -20,7 +20,7 @@ function DetailView()
 	});
 	self.add(date);	
 	
-	self.addEventListener('itemSelected', function(e) {
+	self.addEventListener('competitionSelected', function(e) {
 		competition.text = e.data.title;
 		
 		var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');

@@ -5,7 +5,7 @@ function ListView() {
 	
 	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
 
-	var results = [], header = '';
+	var results = [], header = "";
 
     //Get colleges from database
     var resultSet = db.execute('SELECT * FROM colleges ORDER BY state ASC');
