@@ -1,15 +1,12 @@
 //Home Window Component Constructor - Android
 function HomeWindow() {
 	//load component dependencies
-	var Settings = require('settings'),
-		navGroup = undefined;
-		
-	var settings = new Settings.Settings(Ti.Platform.displayCaps.platformHeight);
+	var navGroup = undefined;
 		
 	// constants
 	var iconHeight = 74, iconWidth = 64, iconTop = 5, iconLeft = 10, middleLeft = 50,
-		tabColor = 'white', tabHeight = settings.tabHeight, tabWidth = '50%';
-				
+		tabColor = 'white', tabHeight = 70, tabWidth = 160;
+		
 	//create component instance
 	var self = Ti.UI.createWindow();
 	var mainNavWindow = Ti.UI.createWindow({
@@ -25,32 +22,32 @@ function HomeWindow() {
 	var announcementRow = Ti.UI.createTableViewRow({
 		backgroundColor: 'transparent',
 		hasChild: true,
-		height: settings.rowHeight
+		height: '74dp'
 	});
 	
 	var header = Ti.UI.createLabel({
 		text: 'Announcements',
 		color: '#7C0606',
-		font: {fontSize: settings.headerFontSize, fontWeight: 'bold'},
-		top: settings.headerTop,
+		font: {fontSize: 24, fontWeight: 'bold'},
+		top: '4dp',
 		left: '10dp',
-		height: settings.headerHeight
+		height: '28dp'
 	});
 	var subtitle = Ti.UI.createLabel({
 		text: 'LATEST: ' + resultSet.fieldByName('announcement'),
 		color: '#6A737D',
-		font: {fontSize: settings.subtitleFontSize},
-		top: settings.subtitleTop,
+		font: {fontSize: 12},
+		top: '34dp',
 		left: '10dp',
-		height: settings.subtitleHeight
+		height: '30dp'
 	});
 	announcementRow.add(header);
 	announcementRow.add(subtitle);
 	
 	var announcements = Ti.UI.createTableView({
 		backgroundColor: 'transparent',
-		top: settings.rowTop,
-		height: settings.rowHeight,
+		top: '126dp',
+		height: '74dp',
 		className: 'announcements'
 	});
 	announcements.appendRow(announcementRow);
@@ -267,6 +264,7 @@ function HomeWindow() {
 		title: 'Resources',
 		bottom: 0,
 		right: 0,
+		height: 70,
 		height: tabHeight,
 		width: tabWidth
 	});

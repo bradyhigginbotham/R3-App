@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
+    <property name="ti.android.runtime">v8</property>
     <property name="acs-oauth-secret-production" type="string">fhXiiDeGaMuWgvSrOM7w6LcphhlLCnhr</property>
     <property name="acs-oauth-key-production" type="string">R2NOlc559hX65pQxRNzA6KiZ7VBpBKHn</property>
     <property name="acs-api-key-production" type="string">UYYt4A2Tiw9DUjOxzJYQwIna2F325YTo</property>
@@ -19,7 +20,7 @@
     <version>1.0</version>
     <publisher>Stick</publisher>
     <url>http://bradyhigginbotham.com</url>
-    <description>not specified</description>
+    <description>Mobile app for Region 3 Student Conference</description>
     <copyright>2012 by Stick</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
