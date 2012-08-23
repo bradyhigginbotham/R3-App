@@ -1,4 +1,4 @@
-//Home Window Component Constructor
+//Home Window Component Constructor - iPhone
 function HomeWindow() {
 	//load component dependencies
 	var navGroup = undefined;
@@ -190,20 +190,17 @@ function HomeWindow() {
 		var collegesWindow = new CollegesWindow(navGroup);
 		navGroup.open(collegesWindow, {animated:true});
 	});
-	
 	schedulesIcon.addEventListener('click', function(){
 		var SchedulesWindow = require('ui/common/schedules/SchedulesWindow');
 		var schedulesWindow = new SchedulesWindow(navGroup);
 		navGroup.open(schedulesWindow, {animated:true});
 	});
-	
 	mapsIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/maps/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
 		tabGroup = null;
 	});
-	
 	presentationsIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/presentations/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
@@ -295,25 +292,11 @@ function HomeWindow() {
 	mainNavWindow.add(scrollableView);
     mainNavWindow.add(announcements);
     
-    // handle cross-platform navigation
-    if (Ti.Platform.osname == 'android') {
-        navGroup = {
-            open: function (win, obj) {
-                win.open(obj);
-            },
-            close: function (win, obj) {
-                win.close(obj);
-            }
-        };
-        self = mainNavWindow;
-        self.exitOnClose = true;
-        mainNavWindow = null;
-    } else {
-		navGroup = Ti.UI.iPhone.createNavigationGroup({
-			window: mainNavWindow
-		});
-		self.add(navGroup);
-    }
+    // handle iPhone navigation
+	navGroup = Ti.UI.iPhone.createNavigationGroup({
+		window: mainNavWindow
+	});
+	self.add(navGroup);
 
 	return self;
 
