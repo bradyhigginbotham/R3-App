@@ -6,7 +6,7 @@ function Settings(height){
 			this.iconHeight = 74;
 			break;
 		case 480:
-			this.rowTop = 126;
+			this.rowTop = 116;
 			this.headerTop = 4;
 			this.subtitleTop = 34;
 			this.rowHeight = 74;
@@ -16,6 +16,8 @@ function Settings(height){
 			this.iconHeight = 74;
 			this.headerFontSize = 24;
 			this.subtitleFontSize = 12;
+			this.scrollableBottom = 72;
+			this.scrollableHeight = 165;
 			break;
 		case 800:
 		case 854:
@@ -29,6 +31,8 @@ function Settings(height){
 			this.iconHeight = 74;
 			this.headerFontSize = 36;
 			this.subtitleFontSize = 16;
+			this.scrollableBottom = 72;
+			this.scrollableHeight = 165;
 			break;
 	};
 	

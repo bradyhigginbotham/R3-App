@@ -65,14 +65,14 @@ function HomeWindow() {
 	var eventIcons = Ti.UI.createView({
 		backgroundImage: 'NONE',
 		top: 0,
-		height: '155dp',
+		height: settings.scrollableHeight,
 		layout: 'horizontal'
 	});
 	
 	var resourceIcons = Ti.UI.createView({
 		backgroundImage: 'NONE',
 		top: 0,
-		height: 172,
+		height: settings.scrollableHeight,
 		layout: 'horizontal'
 	});	
 
@@ -273,10 +273,11 @@ function HomeWindow() {
 	mainNavWindow.add(resourcesTab);
 	
 	var scrollableView = Ti.UI.createScrollableView({
+		
 		views:[eventIcons,resourceIcons],
 		showPagingControl: false,
-		bottom: '72dp',
-		height: '155dp'
+		bottom: settings.scrollableBottom,
+		height: settings.scrollableHeight
 	});
 	mainNavWindow.add(scrollableView);
 	
