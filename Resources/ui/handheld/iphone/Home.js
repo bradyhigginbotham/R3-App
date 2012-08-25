@@ -76,7 +76,7 @@ function HomeWindow() {
 
 	/*---- Event Icons ----*/
 	var schedulesIcon = Ti.UI.createButton({
-		backgroundImage: "/icons/home/schedule_64_title.png",
+		backgroundImage: "/icons/home/schedule.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -85,7 +85,7 @@ function HomeWindow() {
 	eventIcons.add(schedulesIcon);
 	
 	var presentationsIcon = Ti.UI.createButton({
-		backgroundImage: "/icons/home/sessions_64_title.png",
+		backgroundImage: "/icons/home/sessions.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -94,7 +94,7 @@ function HomeWindow() {
 	eventIcons.add(presentationsIcon);
 	
 	var competitionsIcon = Ti.UI.createButton({
-		backgroundImage: "/icons/home/contests_64_title.png",
+		backgroundImage: "/icons/home/competitions.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -103,7 +103,7 @@ function HomeWindow() {
 	eventIcons.add(competitionsIcon);
 	
 	var certificationsIcon = Ti.UI.createButton({
-		backgroundImage: "/icons/home/certifications_64_title.png",
+		backgroundImage: "/icons/home/certifications.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -112,7 +112,7 @@ function HomeWindow() {
 	eventIcons.add(certificationsIcon);
 	
 	var jobFairIcon = Ti.UI.createButton({
-		backgroundImage: "/icons/home/briefcase_64_title.png",
+		backgroundImage: "/icons/home/briefcase.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -121,7 +121,7 @@ function HomeWindow() {
 	eventIcons.add(jobFairIcon);
 	
 	var festivalIcon = Ti.UI.createButton({
-		backgroundImage: "/icons/home/festival_64_title.png",
+		backgroundImage: "/icons/home/festival.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -131,7 +131,7 @@ function HomeWindow() {
 	
 	/*---- Resource Icons ----*/
 	var mapsIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/maps_64_title.png',
+		backgroundImage: '/icons/home/maps.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -140,7 +140,7 @@ function HomeWindow() {
 	resourceIcons.add(mapsIcon);
 	
 	var photosIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/photos_64_title.png',
+		backgroundImage: '/icons/home/camera.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -149,7 +149,7 @@ function HomeWindow() {
 	resourceIcons.add(photosIcon);
 	
 	var facebookIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/facebook_round_64_title.png',
+		backgroundImage: '/icons/home/facebook.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -158,7 +158,7 @@ function HomeWindow() {
 	resourceIcons.add(facebookIcon);
 	
 	var collegesIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/colleges_64_title.png',
+		backgroundImage: '/icons/home/colleges.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -167,7 +167,7 @@ function HomeWindow() {
 	resourceIcons.add(collegesIcon);
 	
 	var aboutIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/about_blue_64_title.png',
+		backgroundImage: '/icons/home/about.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -176,7 +176,7 @@ function HomeWindow() {
 	resourceIcons.add(aboutIcon);
 	
 	var twitterIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/twitter_round_64_title.png',
+		backgroundImage: '/icons/home/twitter.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,

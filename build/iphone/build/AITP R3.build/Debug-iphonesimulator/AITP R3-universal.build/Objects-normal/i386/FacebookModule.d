@@ -1,56 +1,56 @@
 dependencies: \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/FacebookModule.m \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/FacebookModule.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiModule.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiUtils.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiColor.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiProxy.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiBase.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiThreading.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiPublicAPI.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiEvaluator.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/KrollContext.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/headers/TiCore/TiCore.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/FacebookModule.m \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/FacebookModule.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiModule.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUtils.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiColor.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiProxy.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiBase.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiThreading.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiPublicAPI.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiEvaluator.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/KrollContext.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/headers/TiCore/TiCore.h \
   headers/TiCore/Ti.h headers/TiCore/TiBase.h \
   headers/TiCore/TiContextRef.h headers/TiCore/TiObjectRef.h \
   headers/TiCore/TiValueRef.h headers/TiCore/WebKitAvailability.h \
   headers/TiCore/TiStringRef.h headers/TiCore/TiStringRefCF.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/headers/TiCore/TiContextRefPrivate.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/KrollCallback.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/KrollObject.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiDimension.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/WebFont.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiFile.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiBuffer.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiBlob.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/FBConnect/Facebook.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/FBConnect/FBLoginDialog.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/FBConnect/FBDialog.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/FBConnect/FBRequest.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiHost.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/Bridge.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiStylesheet.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiApp.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/KrollBridge.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/XHRBridge.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiRootViewController.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiRootController.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiWindowProxy.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiViewProxy.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiUIView.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiAnimation.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiPoint.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/ListenerEntry.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/LayoutConstraint.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiGradient.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiRect.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiTab.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiTabGroup.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiUIWindow.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiViewController.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiFacebookRequest.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiFacebookDialogRequest.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiFacebookLoginButtonProxy.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/TiFacebookLoginButton.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/FBConnect/FBLoginButton.h \
-  /Users/Brady/Documents/Titanium_Studio_Workspace/AITP\ R3/build/iphone/Classes/SBJSON.h
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/headers/TiCore/TiContextRefPrivate.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/KrollCallback.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/KrollObject.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiDimension.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/WebFont.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiFile.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiBuffer.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiBlob.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/FBConnect/Facebook.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/FBConnect/FBLoginDialog.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/FBConnect/FBDialog.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/FBConnect/FBRequest.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiHost.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/Bridge.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiStylesheet.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiApp.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/KrollBridge.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/XHRBridge.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiRootViewController.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiRootController.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiWindowProxy.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiViewProxy.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIView.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiAnimation.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiPoint.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/ListenerEntry.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/LayoutConstraint.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiGradient.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiRect.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiTab.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiTabGroup.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIWindow.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiViewController.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiFacebookRequest.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiFacebookDialogRequest.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiFacebookLoginButtonProxy.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiFacebookLoginButton.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/FBConnect/FBLoginButton.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/SBJSON.h

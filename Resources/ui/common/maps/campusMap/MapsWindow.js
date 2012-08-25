@@ -56,7 +56,7 @@ function MapsWindow(navGroup) {
 		    	longitude: annotationsSet.fieldByName('longitude'),
 				title: annotationsSet.fieldByName('title'),
 				subtitle: annotationsSet.fieldByName('subtitle'),
-				pincolor: Ti.Map.ANNOTATION_PURPLE,
+				pincolor: annotationsSet.fieldByName('pincolor'), // 0 = RED, 1 = GREEN, 2 = PURPLE
 				className: 'annotation',
 			})	
 		);

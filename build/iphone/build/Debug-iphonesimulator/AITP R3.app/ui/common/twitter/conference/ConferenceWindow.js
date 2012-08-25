@@ -1,1 +1,1 @@
-/Users/Brady/Documents/Titanium_Studio_Workspace/AITP R3/Resources/ui/common/twitter/conference/ConferenceWindow.js
+/Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/twitter/conference/ConferenceWindow.js

@@ -3068,7 +3068,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"/Users/Brady/Library/Application Support/Titanium/mobilesdk/osx/2.1.0.GA/iphone/builder.py\" xcode\nexit $?";
+			shellScript = "\"/Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.0.GA/iphone/builder.py\" xcode\nexit $?";
                 };
 		24CA8D03111169070084E2DE /* Post-Compile */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3096,7 +3096,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"/Users/Brady/Library/Application Support/Titanium/mobilesdk/osx/2.1.0.GA/iphone/builder.py\" xcode\nexit $?";
+			shellScript = "\"/Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.0.GA/iphone/builder.py\" xcode\nexit $?";
                 };
 		24D8E4AD119B9D8A00F8CAA6 /* Post-Compile */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3124,7 +3124,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"/Users/Brady/Library/Application Support/Titanium/mobilesdk/osx/2.1.0.GA/iphone/builder.py\" xcode\nexit $?";
+			shellScript = "\"/Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.0.GA/iphone/builder.py\" xcode\nexit $?";
                 };
 		DABB37B812E8CB280026A6EA /* Post-Compile */ = {
 			isa = PBXShellScriptBuildPhase;
