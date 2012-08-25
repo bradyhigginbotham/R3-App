@@ -1,15 +1,12 @@
-//Home Window Component Constructor - Android
+//Home Window Component Constructor - iPhone
 function HomeWindow() {
 	//load component dependencies
-	var Settings = require('settings'),
-		navGroup = undefined;
-		
-	var settings = new Settings.Settings(Ti.Platform.displayCaps.platformHeight);
-		
+	var navGroup = undefined;
+	
 	// constants
-	var iconHeight = settings.iconHeight, iconWidth = settings.iconWidth, iconTop = 5, iconLeft = 10, middleLeft = settings.middleLeft,
-		tabColor = 'white', tabHeight = settings.tabHeight, tabWidth = '50%';
-				
+	var iconHeight = 74, iconWidth = 64, iconTop = 10, iconLeft = 10, middleLeft = 50,
+		tabColor = 'white', tabHeight = 70, tabWidth = 160;
+		
 	//create component instance
 	var self = Ti.UI.createWindow();
 	var mainNavWindow = Ti.UI.createWindow({
@@ -21,36 +18,37 @@ function HomeWindow() {
 	// Announcements view
 	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
     var resultSet = db.execute('SELECT * FROM announcements ORDER BY id DESC LIMIT 1');
-    
+	
 	var announcementRow = Ti.UI.createTableViewRow({
 		backgroundColor: 'transparent',
 		hasChild: true,
-		height: settings.rowHeight
+		height: 72
 	});
 	
 	var header = Ti.UI.createLabel({
 		text: 'Announcements',
 		color: '#7C0606',
-		font: {fontSize: settings.headerFontSize, fontWeight: 'bold'},
-		top: settings.headerTop,
-		left: '10dp',
-		height: settings.headerHeight
+		font: {fontSize: 24, fontWeight: 'bold'},
+		top: 10,
+		left: 10,
+		height: 25
 	});
 	var subtitle = Ti.UI.createLabel({
 		text: 'LATEST: ' + resultSet.fieldByName('announcement'),
 		color: '#6A737D',
-		font: {fontSize: settings.subtitleFontSize},
-		top: settings.subtitleTop,
-		left: '10dp',
-		height: settings.subtitleHeight
+		font: {fontSize: 12},
+		top: 28,
+		left: 10,
+		height: 40
 	});
 	announcementRow.add(header);
 	announcementRow.add(subtitle);
 	
 	var announcements = Ti.UI.createTableView({
 		backgroundColor: 'transparent',
-		top: settings.rowTop,
-		height: settings.rowHeight,
+		separatorColor: 'transparent',
+		top: 121,
+		height: 72,
 		className: 'announcements'
 	});
 	announcements.appendRow(announcementRow);
@@ -65,20 +63,20 @@ function HomeWindow() {
 	var eventIcons = Ti.UI.createView({
 		backgroundImage: 'NONE',
 		top: 0,
-		height: settings.scrollableHeight,
+		height: 172,
 		layout: 'horizontal'
 	});
 	
 	var resourceIcons = Ti.UI.createView({
 		backgroundImage: 'NONE',
 		top: 0,
-		height: settings.scrollableHeight,
+		height: 172,
 		layout: 'horizontal'
 	});	
 
 	/*---- Event Icons ----*/
 	var schedulesIcon = Ti.UI.createButton({
-		backgroundImage: "/icons/home/schedule.png",
+		backgroundImage: "/icons/home/schedule_64_title.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -87,7 +85,7 @@ function HomeWindow() {
 	eventIcons.add(schedulesIcon);
 	
 	var presentationsIcon = Ti.UI.createButton({
-		backgroundImage: "/icons/home/sessions.png",
+		backgroundImage: "/icons/home/sessions_64_title.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -96,7 +94,7 @@ function HomeWindow() {
 	eventIcons.add(presentationsIcon);
 	
 	var competitionsIcon = Ti.UI.createButton({
-		backgroundImage: "/icons/home/competitions.png",
+		backgroundImage: "/icons/home/contests_64_title.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -105,7 +103,7 @@ function HomeWindow() {
 	eventIcons.add(competitionsIcon);
 	
 	var certificationsIcon = Ti.UI.createButton({
-		backgroundImage: "/icons/home/certifications.png",
+		backgroundImage: "/icons/home/certifications_64_title.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -114,7 +112,7 @@ function HomeWindow() {
 	eventIcons.add(certificationsIcon);
 	
 	var jobFairIcon = Ti.UI.createButton({
-		backgroundImage: "/icons/home/briefcase.png",
+		backgroundImage: "/icons/home/briefcase_64_title.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -123,7 +121,7 @@ function HomeWindow() {
 	eventIcons.add(jobFairIcon);
 	
 	var festivalIcon = Ti.UI.createButton({
-		backgroundImage: "/icons/home/festival.png",
+		backgroundImage: "/icons/home/festival_64_title.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -133,7 +131,7 @@ function HomeWindow() {
 	
 	/*---- Resource Icons ----*/
 	var mapsIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/maps.png',
+		backgroundImage: '/icons/home/maps_64_title.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -142,7 +140,7 @@ function HomeWindow() {
 	resourceIcons.add(mapsIcon);
 	
 	var photosIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/camera.png',
+		backgroundImage: '/icons/home/photos_64_title.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -151,7 +149,7 @@ function HomeWindow() {
 	resourceIcons.add(photosIcon);
 	
 	var facebookIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/facebook.png',
+		backgroundImage: '/icons/home/facebook_round_64_title.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -160,7 +158,7 @@ function HomeWindow() {
 	resourceIcons.add(facebookIcon);
 	
 	var collegesIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/colleges.png',
+		backgroundImage: '/icons/home/colleges_64_title.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -169,7 +167,7 @@ function HomeWindow() {
 	resourceIcons.add(collegesIcon);
 	
 	var aboutIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/about.png',
+		backgroundImage: '/icons/home/about_blue_64_title.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -178,7 +176,7 @@ function HomeWindow() {
 	resourceIcons.add(aboutIcon);
 	
 	var twitterIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/twitter.png',
+		backgroundImage: '/icons/home/twitter_round_64_title.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -208,6 +206,7 @@ function HomeWindow() {
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
 	});
+	
 	competitionsIcon.addEventListener('click', function(){
 		var CompetitionsWindow = require('ui/common/competitions/CompetitionsWindow');
 		var competitionsWindow = new CompetitionsWindow(navGroup);
@@ -248,7 +247,7 @@ function HomeWindow() {
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);   	
 	});
-   	
+    	
     // tabs
 	var eventsTab = Ti.UI.createButton({
 		backgroundImage: 'NONE',
@@ -267,6 +266,7 @@ function HomeWindow() {
 		title: 'Resources',
 		bottom: 0,
 		right: 0,
+		height: 70,
 		height: tabHeight,
 		width: tabWidth
 	});
@@ -275,34 +275,28 @@ function HomeWindow() {
 	var scrollableView = Ti.UI.createScrollableView({
 		views:[eventIcons,resourceIcons],
 		showPagingControl: false,
-		bottom: settings.scrollableBottom,
-		height: settings.scrollableHeight
+		pagingControlColor: '#E5EAEF',
+		bottom: 70,
+		height: 172
 	});
-	mainNavWindow.add(scrollableView);
 	
 	// tab event listeners
 	eventsTab.addEventListener('click', function(){
 		scrollableView.scrollToView(eventIcons);
 	});
 	
-	resourcesTab.addEventListener('click', function(){
+	resourcesTab.addEventListener('click', function(e){
 		scrollableView.scrollToView(resourceIcons);
 	});
 	
+	mainNavWindow.add(scrollableView);
     mainNavWindow.add(announcements);
     
-    // handle Android navigation
-    navGroup = {
-        open: function (win, obj) {
-            win.open(obj);
-        },
-        close: function (win, obj) {
-            win.close(obj);
-        }
-    };
-    self = mainNavWindow;
-    self.exitOnClose = true;
-    mainNavWindow = null;
+    // handle iPhone navigation
+	navGroup = Ti.UI.iPhone.createNavigationGroup({
+		window: mainNavWindow
+	});
+	self.add(navGroup);
 
 	return self;
 

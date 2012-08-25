@@ -28,7 +28,11 @@ if (Ti.version < 1.8 ) {
 	
 	var MainWindow;
 	if (isTablet) {
-		MainWindow = require('ui/tablet/ApplicationWindow');
+		if (osname === 'android') {
+			MainWindow = require('ui/tablet/android/Home');
+		} else {
+			MainWindow = require('ui/tablet/ipad/Home');
+		}
 	}
 	else {
 		if (osname === 'android') {

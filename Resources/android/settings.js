@@ -18,6 +18,7 @@ function Settings(height){
 			this.subtitleFontSize = 12;
 			this.scrollableBottom = 72;
 			this.scrollableHeight = 165;
+			this.middleLeft = 50;
 			break;
 		case 800:
 		case 854:
@@ -27,12 +28,13 @@ function Settings(height){
 			this.rowHeight = 123;
 			this.headerHeight = 56;
 			this.subtitleHeight = 40;
-			this.iconWidth = 64;
-			this.iconHeight = 74;
+			this.iconWidth = 106;
+			this.iconHeight = 122;
 			this.headerFontSize = 36;
 			this.subtitleFontSize = 16;
-			this.scrollableBottom = 72;
-			this.scrollableHeight = 165;
+			this.scrollableBottom = 120;
+			this.scrollableHeight = 260;
+			this.middleLeft = 70;
 			break;
 	};
 	

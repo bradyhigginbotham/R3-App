@@ -35,12 +35,11 @@
     <iphone>
         <orientations device="iphone">
             <orientation>Ti.UI.PORTRAIT</orientation>
+            <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
         </orientations>
         <orientations device="ipad">
             <orientation>Ti.UI.PORTRAIT</orientation>
             <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
-            <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
-            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
         </orientations>
     </iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android"/>
@@ -56,4 +55,14 @@
         <module platform="commonjs" version="">ti.cloud</module>
         <module platform="android" version="2.0.5">ti.cloudpush</module>
     </modules>
+    
+    <!-- Properies -->
+    <property name="ti.android.runtime">v8</property>
+    <property name="acs-oauth-secret-production" type="string">fhXiiDeGaMuWgvSrOM7w6LcphhlLCnhr</property>
+    <property name="acs-oauth-key-production" type="string">R2NOlc559hX65pQxRNzA6KiZ7VBpBKHn</property>
+    <property name="acs-api-key-production" type="string">UYYt4A2Tiw9DUjOxzJYQwIna2F325YTo</property>
+    <property name="acs-oauth-secret-development" type="string">jQA3V4n9C0ak5I4EoM7uF168997Fveoh</property>
+    <property name="acs-oauth-key-development" type="string">rP4TbrYxuxa5Yn4xNorP62SxVCqc09Qi</property>
+    <property name="acs-api-key-development" type="string">m5CAI8omUqUmm3Sw1Z8AtPpjzGr07Rww</property>
+    <property name="ti.android.google.map.api.key">0QBaSyW6VtpKwIri7ESeXIGvcjrJll11N9BtEag</property>
 </ti:app>
