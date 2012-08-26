@@ -1,6 +1,6 @@
 function TabGroup(navGroup){
 	var MapsWindow = require('ui/common/maps/campusMap/MapsWindow'),
-		FloorPlansWindow = require('ui/common/maps/floorPlans/floorPlansWindow'),
+		FloorPlansWindow = require('ui/common/maps/floorPlans/FloorPlansWindow'),
 		SearchWindow = require('ui/common/maps/search/SearchWindow');
 	
 	var mapsWindow = new MapsWindow(navGroup),
@@ -25,7 +25,7 @@ function TabGroup(navGroup){
 	
 	var searchTab = Ti.UI.createTab({
 		title: 'Search',
-		icon: Ti.UI.iPhone.SystemIcon.SEARCH,
+		icon: (Ti.Platform.osname === 'android') ? 'icons/tabs/search.png' : Ti.UI.iPhone.SystemIcon.SEARCH,
 		window: searchWindow
 	});
 	searchWindow.parentTab = searchTab;	
