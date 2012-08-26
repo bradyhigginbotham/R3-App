@@ -36,6 +36,21 @@ function Settings(height){
 			this.scrollableHeight = 260;
 			this.middleLeft = 70;
 			break;
+		default:
+			this.rowTop = 212;
+			this.headerTop = 6;
+			this.subtitleTop = 60;
+			this.rowHeight = 123;
+			this.headerHeight = 56;
+			this.subtitleHeight = 40;
+			this.iconWidth = 106;
+			this.iconHeight = 122;
+			this.headerFontSize = 36;
+			this.subtitleFontSize = 16;
+			this.scrollableBottom = 120;
+			this.scrollableHeight = 260;
+			this.middleLeft = 70;
+			break;
 	};
 	
 	this.tabHeight = '15.5%';
