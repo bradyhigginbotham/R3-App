@@ -14,7 +14,7 @@
         <target device="android">true</target>
         <target device="blackberry">false</target>
     </deployment-targets>
-    <sdk-version>2.1.0.GA</sdk-version>
+    <sdk-version>2.0.2.GA</sdk-version>
     <id>com.bradyhigginbotham.r3</id>
     <name>AITP R3</name>
     <version>1.0</version>
@@ -55,7 +55,6 @@
         <module platform="commonjs" version="">ti.cloud</module>
         <module platform="android" version="2.0.5">ti.cloudpush</module>
     </modules>
-    
     <!-- Properies -->
     <property name="ti.android.runtime">v8</property>
     <property name="acs-oauth-secret-production" type="string">fhXiiDeGaMuWgvSrOM7w6LcphhlLCnhr</property>
@@ -64,5 +63,5 @@
     <property name="acs-oauth-secret-development" type="string">jQA3V4n9C0ak5I4EoM7uF168997Fveoh</property>
     <property name="acs-oauth-key-development" type="string">rP4TbrYxuxa5Yn4xNorP62SxVCqc09Qi</property>
     <property name="acs-api-key-development" type="string">m5CAI8omUqUmm3Sw1Z8AtPpjzGr07Rww</property>
-    <property name="ti.android.google.map.api.key">0QBaSyW6VtpKwIri7ESeXIGvcjrJll11N9BtEag</property>
+    <property name="ti.android.google.map.api.key" type="string">0QBaSyW6VtpKwIri7ESeXIGvcjrJll11N9BtEag</property>
 </ti:app>

@@ -63,7 +63,8 @@ function HomeWindow() {
 
 	/*---- Icon Views ----*/
 	var eventIcons = Ti.UI.createView({
-		backgroundImage: 'NONE',
+		//backgroundImage: 'NONE',
+		backgroundColor: '#ffffff',
 		top: 0,
 		height: settings.scrollableHeight,
 		layout: 'horizontal'
@@ -273,6 +274,7 @@ function HomeWindow() {
 	mainNavWindow.add(resourcesTab);
 	
 	var scrollableView = Ti.UI.createScrollableView({
+		backgroundColor: 'yellow',
 		views:[eventIcons,resourceIcons],
 		showPagingControl: false,
 		bottom: settings.scrollableBottom,
