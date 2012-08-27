@@ -60,6 +60,9 @@ function HomeWindow(osname) {
 		var announcementsWindow = new AnnouncementsWindow(navGroup);
 		navGroup.open(announcementsWindow, {animated:true});
 	});
+	
+	// close db
+	resultSet.close();
 
 	/*---- Icon Views ----*/
 	var eventIcons = Ti.UI.createView({
@@ -194,7 +197,7 @@ function HomeWindow(osname) {
 	});
 	schedulesIcon.addEventListener('click', function(){
 		var SchedulesWindow = require('ui/common/schedules/SchedulesWindow');
-		var schedulesWindow = new SchedulesWindow(navGroup);
+		var schedulesWindow = new SchedulesWindow(navGroup, osname);
 		navGroup.open(schedulesWindow, {animated:true});
 	});
 	mapsIcon.addEventListener('click', function(){
@@ -292,7 +295,14 @@ function HomeWindow(osname) {
     mainNavWindow.add(announcements);
     
     // handle Android navigation
-    navGroup = {
+	var NavigationController = require('NavigationController'),
+	navGroup = new NavigationController();
+    self = mainNavWindow;
+    self.exitOnClose = true;
+    mainNavWindow = null;
+
+/*
+	navGroup = {
         open: function (win, obj) {
             win.open(obj);
         },
@@ -303,6 +313,7 @@ function HomeWindow(osname) {
     self = mainNavWindow;
     self.exitOnClose = true;
     mainNavWindow = null;
+*/
 
 	return self;
 

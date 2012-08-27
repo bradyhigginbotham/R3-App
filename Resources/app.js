@@ -46,6 +46,7 @@ if (Ti.version < 1.8 ) {
 	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
     var resultSet = db.execute('SELECT COUNT(*) AS rows FROM announcements WHERE read = 0');
 	Titanium.UI.iPhone.appBadge = resultSet.fieldByName('rows');
+	resultSet.close();
 	
 	// lengthen splash screen display time
 	setTimeout(function(){

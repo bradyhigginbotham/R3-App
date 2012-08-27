@@ -35,13 +35,13 @@ function PhotosWindow() {
 	
     // progress bar
     uploadProgress = Ti.UI.createProgressBar({
-        bottom: uploadButton.bottom + uploadButton.height,
+        bottom: uploadButton.bottom + uploadButton.height + 10,
         right: 40,
         left: 40,
         max: 1,
         min: 0,
         value: 0,
-        height: 100,
+        height: 40,
         style: Ti.UI.iPhone.ProgressBarStyle.BAR
     });
     self.add(uploadProgress);

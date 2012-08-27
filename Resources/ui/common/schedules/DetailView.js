@@ -1,4 +1,4 @@
-function DetailView() {
+function DetailView(osname) {
 	var table = undefined;
 	
 	var query = 'SELECT * FROM (SELECT competition AS title, details, start, end, schedule_id, "contest" AS type FROM competitions ' + 
@@ -8,7 +8,8 @@ function DetailView() {
 				'SELECT title, details, start, end, schedule_id, "session" AS type FROM sessions) WHERE schedule_id = ? ORDER BY start ASC';
 				
 	var self = Ti.UI.createView({
-		backgroundColor:'white'
+		backgroundColor:'white',
+		table: ''
 	});
 	
 	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
@@ -35,7 +36,8 @@ function DetailView() {
 					schedule_id: resultSet.fieldByName('schedule_id'),
 					header: header,
 					hasChild: true,
-					height: 40
+					height: 40,
+					className: 'schedule'
 				});
 			} else{
 				results.push({
@@ -45,7 +47,8 @@ function DetailView() {
 					type: resultSet.fieldByName('type'),
 					schedule_id: resultSet.fieldByName('schedule_id'),
 					hasChild: true,
-					height: 40
+					height: 40,
+					className: 'schedule'
 				});			
 			}		
 		    resultSet.next();
@@ -55,12 +58,13 @@ function DetailView() {
 		// Thursday dinner notice
 		if (title == 'October 11, 2012'){
 			results.push({title: '*Dinner on your own', height: 40, hasChild: false});
-		};
+		}; 
 		
 		table = Ti.UI.createTableView ({
 			data: results
 		});
 		self.add(table);
+		self.table = table;
 		
 		table.addEventListener('click', function(e){
 			self.fireEvent('scheduleItemSelected', {
@@ -92,6 +96,15 @@ function DetailView() {
 	
 	self.addEventListener('itemSelected', function(e) {
 		listSchedule(e.data.title, e.data.id);
+	});
+	
+	self.addEventListener('close', function(){
+		alert('close');
+	});
+	
+	Ti.App.addEventListener('removeTable', function(){
+		self.remove(table);
+		table = null;
 	});
 	
 	function formatTime(passedDate){		
