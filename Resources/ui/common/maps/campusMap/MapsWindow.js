@@ -45,21 +45,22 @@ function MapsWindow(navGroup) {
 	
 	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
 
-	var annotations = [];
+	var annotations = [], pincolor;
 
     //Get annotations from database
     var annotationsSet = db.execute('SELECT * FROM annotations');
     while (annotationsSet.isValidRow()) {
+    	pincolor = annotationsSet.fieldByName('pincolor');
 		annotations.push(
 			Ti.Map.createAnnotation({
 		    	latitude: annotationsSet.fieldByName('latitude'),
 		    	longitude: annotationsSet.fieldByName('longitude'),
 				title: annotationsSet.fieldByName('title'),
 				subtitle: annotationsSet.fieldByName('subtitle'),
-				pincolor: annotationsSet.fieldByName('pincolor'), // 0 = RED, 1 = GREEN, 2 = PURPLE
+				pincolor: annotationsSet.fieldByName('pincolor'), // RED, GREEN, PURPLE
 				className: 'annotation',
 			})	
-		);
+		)
     	annotationsSet.next();
     }
     annotationsSet.close();

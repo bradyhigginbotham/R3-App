@@ -1,5 +1,5 @@
 //Home Window Component Constructor - Android
-function HomeWindow() {
+function HomeWindow(osname) {
 	//load component dependencies
 	var Settings = require('settings'),
 		navGroup = undefined;
@@ -63,8 +63,7 @@ function HomeWindow() {
 
 	/*---- Icon Views ----*/
 	var eventIcons = Ti.UI.createView({
-		//backgroundImage: 'NONE',
-		backgroundColor: '#ffffff',
+		backgroundImage: 'NONE',
 		top: 0,
 		height: settings.scrollableHeight,
 		layout: 'horizontal'
@@ -274,7 +273,6 @@ function HomeWindow() {
 	mainNavWindow.add(resourcesTab);
 	
 	var scrollableView = Ti.UI.createScrollableView({
-		backgroundColor: 'yellow',
 		views:[eventIcons,resourceIcons],
 		showPagingControl: false,
 		bottom: settings.scrollableBottom,

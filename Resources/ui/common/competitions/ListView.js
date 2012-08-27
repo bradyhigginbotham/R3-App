@@ -33,7 +33,6 @@ function ListView() {
 	table.addEventListener('click', function(e) {
 		self.fireEvent('competitionSelected', {
 			data: e.rowData
-		//	schedule_id: e.rowData.schedule_id
 		});
 	});
 	

@@ -1,9 +1,11 @@
 function DetailView() {
-	var query = 'SELECT * FROM (SELECT competition AS title, time, schedule_id, "contest" AS type FROM competitions ' + 
+	var table = undefined;
+	
+	var query = 'SELECT * FROM (SELECT competition AS title, details, start, end, schedule_id, "contest" AS type FROM competitions ' + 
 				'UNION ' +
-				'SELECT name AS title, time, schedule_id, "cert" AS type FROM certifications ' +
+				'SELECT name AS title, details, start, end, schedule_id, "cert" AS type FROM certifications ' +
 				'UNION ' +
-				'SELECT title, time, schedule_id, "session" AS type FROM sessions) WHERE schedule_id = ? ORDER BY time ASC';
+				'SELECT title, details, start, end, schedule_id, "session" AS type FROM sessions) WHERE schedule_id = ? ORDER BY start ASC';
 				
 	var self = Ti.UI.createView({
 		backgroundColor:'white'
@@ -11,30 +13,35 @@ function DetailView() {
 	
 	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
 
-	var results = [], header = "", hour = "", newHeader;
+	function listSchedule(title, id){
+		var results = [{title: title, backgroundColor: '#5B718B', color: '#ffffff', height: 50, hasChild: false}], 
+			tempStart, startTime = "", endTime;
 
-	function listSchedule(id){
 	    //Get schedules from database
 	    var resultSet = db.execute(query, id);
 	    while (resultSet.isValidRow()) {
-	    	hour = grabHour(resultSet.fieldByName('time'));
+	    	tempStart = formatTime(resultSet.fieldByName('start'));
+	    	endTime = formatTime(resultSet.fieldByName('end'));
 	    	
-	    	if(header != hour) { // new hour
-	    		header = hour;
-	    		newHeader = (header > 12) ? ((header - 12).toString() + ":00pm") : header.toString() + ":00am";
+	    	if(startTime != tempStart) { // new hour
+	    		startTime = tempStart;
+	    		header = startTime + " - " + endTime;
 				results.push({
 					title: resultSet.fieldByName('title'),
-					time: formatTime(resultSet.fieldByName('time')),
+					details: resultSet.fieldByName('details'),
+					start: startTime,
+					end: endTime,
 					type: resultSet.fieldByName('type'),
 					schedule_id: resultSet.fieldByName('schedule_id'),
-					header: newHeader,
+					header: header,
 					hasChild: true,
 					height: 40
 				});
 			} else{
 				results.push({
 					title: resultSet.fieldByName('title'),
-					time: formatTime(resultSet.fieldByName('time')),
+					start: startTime,
+					end: endTime,
 					type: resultSet.fieldByName('type'),
 					schedule_id: resultSet.fieldByName('schedule_id'),
 					hasChild: true,
@@ -45,7 +52,12 @@ function DetailView() {
 	    }
 		resultSet.close();
 		
-		var table = Ti.UI.createTableView ({
+		// Thursday dinner notice
+		if (title == 'October 11, 2012'){
+			results.push({title: '*Dinner on your own', height: 40, hasChild: false});
+		};
+		
+		table = Ti.UI.createTableView ({
 			data: results
 		});
 		self.add(table);
@@ -79,7 +91,7 @@ function DetailView() {
 	});
 	
 	self.addEventListener('itemSelected', function(e) {
-		listSchedule(e.data.id);
+		listSchedule(e.data.title, e.data.id);
 	});
 	
 	function formatTime(passedDate){		
@@ -88,13 +100,7 @@ function DetailView() {
 		var newTime = new Date(Date.parse(date)).toLocaleTimeString();
 		return newTime.replace(/:[0-9][0-9] (AM|PM) CDT/g, ' $1');
 	};
-	
-	function grabHour(passedDate){		
-		var date = passedDate.replace('/(\+\S+) (.*)/', '$2 $1');
-		var newTime = new Date(Date.parse(date));
-		return newTime.getHours();
-	};
-	
+
 	return self;
 };
 

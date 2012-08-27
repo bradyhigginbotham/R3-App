@@ -28,8 +28,9 @@ function SessionsWindow(navGroup) {
 	detailContainerWindow.add(detailView);
 	
 	//add behavior for master view
-	listView.addEventListener('itemSelected', function(e) {
-		detailView.fireEvent('itemSelected',e);
+	listView.addEventListener('sessionSelected', function(e) {
+		detailContainerWindow.title = e.data.title;
+		detailView.fireEvent('sessionSelected',e);
 		self.parentTab.open(detailContainerWindow);
 	});
 	

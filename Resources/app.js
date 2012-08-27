@@ -27,7 +27,7 @@ if (Ti.version < 1.8 ) {
 	var isTablet = osname === 'ipad' || (osname === 'android' && (width > 899 || height > 899));
 	
 	var MainWindow;
-	if (isTablet) {
+	if (isTablet) { // tablets
 		if (osname === 'android') {
 			MainWindow = require('ui/tablet/android/Home');
 		} else {
@@ -35,11 +35,11 @@ if (Ti.version < 1.8 ) {
 		}
 	}
 	else {
-		if (osname === 'android') {
-			MainWindow = require('ui/handheld/android/Home');
+		if (osname === 'android') { // phones
+			HomeWindow = require('ui/handheld/android/Home');
 		}
 		else {
-			MainWindow = require('ui/handheld/iphone/Home');
+			HomeWindow = require('ui/handheld/iphone/Home');
 		}
 	}
 
@@ -49,6 +49,6 @@ if (Ti.version < 1.8 ) {
 	
 	// lengthen splash screen display time
 	setTimeout(function(){
-		new MainWindow().open();	
+		new HomeWindow(osname).open();	
 	}, 2000);
 })();

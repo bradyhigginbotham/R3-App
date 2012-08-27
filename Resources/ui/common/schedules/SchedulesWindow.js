@@ -32,7 +32,7 @@ function SchedulesWindow(navGroup) {
 	//add behavior for master view
 	listView.addEventListener('itemSelected', function(e) {
 		detailView.fireEvent('itemSelected',e);
-		detailContainerWindow.title = e.data.title;
+		detailContainerWindow.title = e.data.day;
 		navGroup.open(detailContainerWindow);
 	});
 	
@@ -61,7 +61,17 @@ function SchedulesWindow(navGroup) {
 				});
 				certificationWindow.add(certificationView);
 				navGroup.open(certificationWindow);
-		//	case "session":
+			case "session":
+				var SessionView = require('ui/common/presentations/sessions/DetailView');
+				
+				sessionView = new SessionView();
+				sessionView.fireEvent('sessionSelected', e);
+				var sessionWindow = Ti.UI.createWindow({
+					title: e.data.title,
+					backButtonTitle: 'Back'
+				});
+				sessionWindow.add(sessionView);
+				navGroup.open(sessionWindow);
 		}		
 	});
 		

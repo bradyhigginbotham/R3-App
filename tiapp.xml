@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <property name="ti.android.runtime">v8</property>
-    <property name="acs-oauth-secret-production" type="string">fhXiiDeGaMuWgvSrOM7w6LcphhlLCnhr</property>
-    <property name="acs-oauth-key-production" type="string">R2NOlc559hX65pQxRNzA6KiZ7VBpBKHn</property>
-    <property name="acs-api-key-production" type="string">UYYt4A2Tiw9DUjOxzJYQwIna2F325YTo</property>
+    <property name="acs-oauth-secret-production" type="string">iMwrxyAMSdGdkad3tp1YPa1yp33aWLW3</property>
+    <property name="acs-oauth-key-production" type="string">FKHbSarL7UotD94UehnSYMh9FmnzBh5p</property>
+    <property name="acs-api-key-production" type="string">32SLtJU2qWPi2y3PLiIFNP0S6caurXnp</property>
     <property name="acs-oauth-secret-development" type="string">jQA3V4n9C0ak5I4EoM7uF168997Fveoh</property>
     <property name="acs-oauth-key-development" type="string">rP4TbrYxuxa5Yn4xNorP62SxVCqc09Qi</property>
     <property name="acs-api-key-development" type="string">m5CAI8omUqUmm3Sw1Z8AtPpjzGr07Rww</property>

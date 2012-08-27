@@ -1,5 +1,5 @@
 //Home Window Component Constructor - Android
-function HomeWindow() {
+function HomeWindow(osname) {
 	//load component dependencies
 	var Settings = require('settings'),
 		navGroup = undefined;

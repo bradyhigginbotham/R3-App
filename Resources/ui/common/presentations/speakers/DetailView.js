@@ -7,7 +7,9 @@ function DetailView() {
 		text:'Speaker',
 		height:'auto',
 		width:'auto',
-		color:'#000'
+		color:'#000',
+		top: 10,
+		left: 10
 	});
 	self.add(lbl);
 	

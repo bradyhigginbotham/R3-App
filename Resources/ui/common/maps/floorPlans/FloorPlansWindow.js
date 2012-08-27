@@ -5,7 +5,7 @@ function FloorPlansWindow(navGroup) {
 	//create object instance
 	var self = Ti.UI.createWindow({
 		backgroundColor:'#ffffff',
-		title: 'Sessions',
+		title: 'F.G. Mouton',
 		navBarHidden: false
 	});
 		
@@ -66,11 +66,13 @@ function FloorPlansWindow(navGroup) {
 	self.add(moodyIcon);
 	
 	moutonIcon.addEventListener('click', function (){
-		floorPlans.image='/floorplan/FGMouton.png'
+		floorPlans.image = '/floorplan/FGMouton.png';
+		self.title = 'F.G. Mouton';
 	});
 	
 	moodyIcon.addEventListener('click', function (){
-		floorPlans.image='/floorplan/Moody.png'
+		floorPlans.image = '/floorplan/Moody.png';
+		self.title = 'B.I. Moody';
 	});
 	
 	

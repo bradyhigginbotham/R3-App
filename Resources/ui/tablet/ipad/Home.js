@@ -1,5 +1,5 @@
 //Home Window Component Constructor - iPhone
-function HomeWindow() {
+function HomeWindow(osname) {
 	//load component dependencies
 	var navGroup = undefined;
 	

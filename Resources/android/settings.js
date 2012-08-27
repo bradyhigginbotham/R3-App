@@ -22,19 +22,19 @@ function Settings(height){
 			break;
 		case 800:
 		case 854:
-			this.rowTop = 212;
+			this.rowTop = height * 0.265;
 			this.headerTop = 6;
 			this.subtitleTop = 60;
-			this.rowHeight = 123;
+			this.rowHeight = height * 0.15375;
 			this.headerHeight = 56;
 			this.subtitleHeight = 40;
 			this.iconWidth = 106;
 			this.iconHeight = 122;
 			this.headerFontSize = 36;
 			this.subtitleFontSize = 16;
-			this.scrollableBottom = '15.5%';
-			this.scrollableHeight = '32.5%';
-			this.middleLeft = 70;
+			this.scrollableBottom = height * 0.15;
+			this.scrollableHeight = height * 0.325;
+			this.middleLeft = height * 0.0875;
 			break;
 		default:
 			this.rowTop = height * 0.265;

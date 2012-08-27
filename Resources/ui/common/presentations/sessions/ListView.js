@@ -8,12 +8,14 @@ function ListView() {
 	var results = [];
 
     //Get colleges from database
-    var resultSet = db.execute('SELECT * FROM sessions ORDER BY time ASC');
+    var resultSet = db.execute('SELECT * FROM sessions ORDER BY start ASC');
     while (resultSet.isValidRow()) {
 		results.push({
 		    id: resultSet.fieldByName('id'),
 			title: resultSet.fieldByName('title'),
-			time: resultSet.fieldByName('time'),
+			details: resultSet.fieldByName('details'),
+			start: formatTime(resultSet.fieldByName('start')),
+			end: formatTime(resultSet.fieldByName('end')),
 			hasChild: true,
 			className: 'session',
 			height: 40
@@ -30,11 +32,17 @@ function ListView() {
 	
 	//add behavior
 	table.addEventListener('click', function(e) {
-		self.fireEvent('itemSelected', {
-			title: e.rowData.title,
-			time: e.rowData.time
+		self.fireEvent('sessionSelected', {
+			data: e.rowData
 		});
 	});
+	
+	function formatTime(passedDate){		
+		var date = passedDate.replace('/(\+\S+) (.*)/', '$2 $1');
+		//var newDate = new Date(Date.parse(date)).toLocaleDateString();
+		var newTime = new Date(Date.parse(date)).toLocaleTimeString();
+		return newTime.replace(/:[0-9][0-9] (AM|PM) CDT/g, ' $1');
+	};
 	
 	return self;
 };

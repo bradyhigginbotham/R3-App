@@ -6,12 +6,11 @@ function CertificationsWindow(navGroup)
 		DetailView = require('ui/common/certifications/DetailView');
 		
 	//Create object instance
-	var self = Ti.UI.createWindow
-	({
+	var self = Ti.UI.createWindow({
 		backgroundColor:'#ffffff',
 		title: 'Certifications',
 		navBarHidden: false
-	})
+	});
 	
 	//Construct UI
 	var listView = new ListView(),

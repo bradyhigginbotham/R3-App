@@ -1,5 +1,4 @@
-function DetailView()
-{
+function DetailView(){
 	var self = Ti.UI.createView({
 		backgroundColor:'white'
 	});
