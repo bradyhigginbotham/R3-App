@@ -52,4 +52,11 @@ if (Ti.version < 1.8 ) {
 	setTimeout(function(){
 		new HomeWindow(osname).open();	
 	}, 2000);
+	
+	//Push Notifications
+	if(osname === 'android'){
+		Ti.include('android/notifications.js');
+	} else {
+		Ti.include('iphone/notifications.js');
+	};
 })();
