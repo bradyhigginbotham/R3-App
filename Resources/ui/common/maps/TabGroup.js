@@ -1,9 +1,9 @@
-function TabGroup(navGroup){
+function TabGroup(navGroup, osname){
 	var MapsWindow = require('ui/common/maps/campusMap/MapsWindow'),
 		FloorPlansWindow = require('ui/common/maps/floorPlans/FloorPlansWindow'),
 		SearchWindow = require('ui/common/maps/search/SearchWindow');
 	
-	var mapsWindow = new MapsWindow(navGroup),
+	var mapsWindow = new MapsWindow(navGroup, osname),
 	    floorPlansWindow = new FloorPlansWindow(navGroup),
 		searchWindow = new SearchWindow(navGroup);
 

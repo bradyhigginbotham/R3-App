@@ -202,7 +202,7 @@ function HomeWindow(osname) {
 	});
 	mapsIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/maps/TabGroup');
-		var tabGroup = new TabGroup(navGroup);
+		var tabGroup = new TabGroup(navGroup, osname);
 		navGroup.open(tabGroup);
 		tabGroup = null;
 	});

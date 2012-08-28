@@ -1,4 +1,4 @@
-function DetailView(osname) {
+function DetailView() {
 	var table = undefined;
 	
 	var query = 'SELECT * FROM (SELECT competition AS title, details, start, end, schedule_id, "contest" AS type FROM competitions ' + 
@@ -64,7 +64,6 @@ function DetailView(osname) {
 			data: results
 		});
 		self.add(table);
-		self.table = table;
 		
 		table.addEventListener('click', function(e){
 			self.fireEvent('scheduleItemSelected', {
@@ -72,27 +71,6 @@ function DetailView(osname) {
 			});
 		});
 	}
-	
-	var festivalLink = Ti.UI.createLabel({
-		text: 'Festival Acadienne',
-		color: '#0645AD',
-		bottom: 10
-	});
-	self.add(festivalLink);
-	
-	festivalLink.addEventListener('click', function(){
-		var festivalPage = Ti.UI.createWebView({url: 'http://www.festivalsacadiens.com/index1.html'});
-		var festivalWindow = Ti.UI.createWindow();
-		
-		var closeButton = Ti.UI.createButton({title: 'Close'});
-		closeButton.addEventListener('click', function(){
-			festivalWindow.close();
-		});
-		
-		festivalWindow.rightNavButton = closeButton;
-		festivalWindow.add(festivalPage);
-		festivalWindow.open({modal: true});
-	});
 	
 	self.addEventListener('itemSelected', function(e) {
 		listSchedule(e.data.title, e.data.id);
@@ -102,10 +80,10 @@ function DetailView(osname) {
 		alert('close');
 	});
 	
-	Ti.App.addEventListener('removeTable', function(){
+/*	Ti.App.addEventListener('removeTable', function(){
 		self.remove(table);
 		table = null;
-	});
+}); */
 	
 	function formatTime(passedDate){		
 		var date = passedDate.replace('/(\+\S+) (.*)/', '$2 $1');

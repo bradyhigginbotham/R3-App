@@ -23,7 +23,8 @@ function ExhibitorsWindow(navGroup) {
 	
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({
-		title:'Exhibitor Details'
+		title:'Exhibitor Details',
+		backgroundColor: '#5B718B'
 	});
 	detailContainerWindow.add(detailView);
 	
