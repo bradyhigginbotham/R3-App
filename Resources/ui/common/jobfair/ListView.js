@@ -8,7 +8,11 @@ function ListView(exhibitor) {
 	var results = [];
 
     //Get sponsors from database
-    var resultSet = db.execute('SELECT * FROM sponsors WHERE exhibitor = ' + exhibitor + ' ORDER BY name ASC');
+    if (exhibitor){
+    	var resultSet = db.execute('SELECT * FROM sponsors WHERE exhibitor = ' + exhibitor + ' ORDER BY name ASC'); // exhibitors
+    } else {
+    	var resultSet = db.execute('SELECT * FROM sponsors ORDER BY name ASC'); // all sponsors
+    }
     while (resultSet.isValidRow()) {
 		results.push({
 		    //id: resultSet.fieldByName('rowid'),

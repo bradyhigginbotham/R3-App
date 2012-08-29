@@ -34,7 +34,7 @@ function grabDeviceToken(){
 		    registerForPush();
 		},
 		error: function(e){
-		    alert("Error: "+e.message);
+		    alert("Device Token Error: "+e.message);
 		},
 		callback: function(e){
 		    alert("Push notification received"+JSON.stringify(e.data));
