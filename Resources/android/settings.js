@@ -49,7 +49,7 @@ function Settings(height){
 			this.subtitleFontSize = 16;
 			this.scrollableBottom = height * 0.155;
 			this.scrollableHeight = height * 0.325;
-			this.middleLeft = height * 0.875;
+			this.middleLeft = 70;
 			break;
 	};
 	
