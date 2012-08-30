@@ -22,6 +22,9 @@ if (Ti.version < 1.8 ) {
 		height = Ti.Platform.displayCaps.platformHeight,
 		width = Ti.Platform.displayCaps.platformWidth,
 		HomeWindow, navGroup;
+		
+	// Install database
+	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
 	
 	//considering tablet to have one dimension over 900px - this is imperfect, so you should feel free to decide
 	//yourself what you consider a tablet form factor for android
@@ -58,7 +61,7 @@ if (Ti.version < 1.8 ) {
 		CloudPush.addEventListener('callback', function (evt) {
 	        var notification = JSON.parse(evt.payload);
 			var db = Titanium.Database.open('r3.sqlite');
-		    db.execute("INSERT INTO announcements (title, announcement) VALUES ('" + notification.android.title + "', '" + notification.android.alert + "')");
+		    db.execute("INSERT INTO announcements (title, announcement, read) VALUES ('" + notification.android.title + "', '" + notification.android.alert + "', 0)");
 		    db.close();
 	    });
 	} else {

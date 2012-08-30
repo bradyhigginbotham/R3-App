@@ -80,7 +80,8 @@ function PhotosWindow() {
     takePhoto.addEventListener('click', function (evt) {
         Ti.Media.showCamera({
             success: function (e) {
-                photo = e.media;
+				photo = e.media;
+				imageView.image = photo;
             },
 			saveToPhotoGallery:false,
 			allowEditing:true,

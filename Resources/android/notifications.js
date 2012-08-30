@@ -15,7 +15,6 @@ function subscribeToNotifications(){
 	function grabDeviceToken(){
 		CloudPush.retrieveDeviceToken({
 			success: function deviceTokenSuccess(e) {
-				alert('Device Token: ' + e.deviceToken);
 				deviceToken = e.deviceToken;
 				userLogin();
 			},
@@ -32,7 +31,6 @@ function subscribeToNotifications(){
 			password: 'r3AITPconference!'
 		}, function (e) {
 			if (e.success) {
-				alert("login success");
 				registerForPush();
 			} else {
 				alert('Error: ' +((e.error && e.message) || JSON.stringify(e)));
