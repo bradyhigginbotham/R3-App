@@ -38,6 +38,7 @@ function grabDeviceToken(){
 		},
 		callback: function(e){
 		    alert("Push notification received"+JSON.stringify(e.data));
+			Ti.UI.iPhone.appBadge = Ti.UI.iPhone.getAppBadge() + 1;
 		}
 	});
 }

@@ -20,7 +20,8 @@ if (Ti.version < 1.8 ) {
 	var osname = Ti.Platform.osname,
 		version = Ti.Platform.version,
 		height = Ti.Platform.displayCaps.platformHeight,
-		width = Ti.Platform.displayCaps.platformWidth;
+		width = Ti.Platform.displayCaps.platformWidth,
+		HomeWindow, navGroup;
 	
 	//considering tablet to have one dimension over 900px - this is imperfect, so you should feel free to decide
 	//yourself what you consider a tablet form factor for android
@@ -36,27 +37,32 @@ if (Ti.version < 1.8 ) {
 	}
 	else {
 		if (osname === 'android') { // phones
+			// handle Android navigation
+			var NavigationController = require('NavigationController'),
+			navGroup = new NavigationController();
 			HomeWindow = require('ui/handheld/android/Home');
 		}
 		else {
 			HomeWindow = require('ui/handheld/iphone/Home');
 		}
 	}
-
-	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
-    var resultSet = db.execute('SELECT COUNT(*) AS rows FROM announcements WHERE read = 0');
-	Titanium.UI.iPhone.appBadge = resultSet.fieldByName('rows');
-	resultSet.close();
 	
 	// lengthen splash screen display time
 	setTimeout(function(){
-		new HomeWindow(osname).open();	
+		navGroup.open(new HomeWindow(navGroup, osname));	
 	}, 2000);
 	
 	//Push Notifications
 	if(osname === 'android'){
-		Ti.include('android/notifications.js');
+		var CloudPush = require('ti.cloudpush');
+		CloudPush.addEventListener('callback', function (evt) {
+	        var notification = JSON.parse(evt.payload);
+			var db = Titanium.Database.open('r3.sqlite');
+		    db.execute("INSERT INTO announcements (title, announcement) VALUES ('" + notification.android.title + "', '" + notification.android.alert + "')");
+		    db.close();
+	    });
 	} else {
-		Ti.include('iphone/notifications.js');
+	//	Ti.include('iphone/notifications.js');
 	};
+
 })();

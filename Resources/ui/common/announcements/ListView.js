@@ -12,7 +12,9 @@ function ListView() {
     while (resultSet.isValidRow()) {
 		results.push({
 		    id: resultSet.fieldByName('id'),
-			title: resultSet.fieldByName('announcement'),
+			title: (!resultSet.fieldByName('read')) ? "*" + resultSet.fieldByName('title') : resultSet.fieldByName('title'),
+			defaultTitle: resultSet.fieldByName('title'),
+			announcement: resultSet.fieldByName('announcement'),
 			hasChild: true,
 			height: 40
 		});

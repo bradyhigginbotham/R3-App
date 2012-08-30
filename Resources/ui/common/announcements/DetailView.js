@@ -3,17 +3,35 @@ function DetailView() {
 		backgroundColor:'white'
 	});
 	
-	var lbl = Ti.UI.createLabel({
+	var title = Ti.UI.createLabel({
+		text:'Title',
+		height:'auto',
+		width:'auto',
+		color:'#000',
+		font:{fontWeight: 'bold'},
+		top: 10,
+		left: 10
+	});
+	self.add(title);
+	
+	var announcement = Ti.UI.createLabel({
 		text:'Announcement',
 		height:'auto',
 		width:'auto',
 		color:'#000',
-		top: 10
+		top: 40,
+		left: 10
 	});
-	self.add(lbl);
+	self.add(announcement);
 	
 	self.addEventListener('itemSelected', function(e) {
-		lbl.text = e.data.title;
+		title.text = e.data.defaultTitle;
+		announcement.text = e.data.announcement;
+		
+		// update database
+		var db = Titanium.Database.open('r3.sqlite');
+	    db.execute('UPDATE announcements SET read = 1 WHERE id = "' + e.data.id + '"');
+	    db.close();
 	});
 	
 	return self;
