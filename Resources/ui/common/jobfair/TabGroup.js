@@ -9,14 +9,14 @@ function TabGroup(navGroup){
 	
 	var exhibitorsTab = Ti.UI.createTab({
 		title: 'Exhibitors',
-		icon: 'KS_nav_ui.png',
+		icon: '/icons/tabs/suitcase.png',
 		window: exhibitorsWindow
 	});
 	exhibitorsWindow.parentTab = exhibitorsTab;
 	
 	var sponsorsTab = Ti.UI.createTab({
 		title: 'Sponsors',
-		icon: 'KS_nav_views.png',
+		icon: '/icons/tabs/heart.png',
 		window: sponsorsWindow
 	});
 	sponsorsWindow.parentTab = sponsorsTab;

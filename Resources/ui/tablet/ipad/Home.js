@@ -4,13 +4,13 @@ function HomeWindow(osname) {
 	var navGroup = undefined;
 	
 	// constants
-	var iconHeight = 74, iconWidth = 64, iconTop = 10, iconLeft = 10, middleLeft = 50,
-		tabColor = 'white', tabHeight = 70, tabWidth = 160;
+	var iconHeight = 122, iconWidth = 106, iconTop = 30, iconLeft = 50, middleLeft = 170,
+		tabColor = 'white', tabHeight = 155, tabWidth = '50%';
 		
 	//create component instance
 	var self = Ti.UI.createWindow();
 	var mainNavWindow = Ti.UI.createWindow({
-		backgroundImage:'images/main_updated.png',
+		backgroundImage:'images/main.png',
 		title: 'Home',
 		navBarHidden: true
 	});
@@ -22,24 +22,24 @@ function HomeWindow(osname) {
 	var announcementRow = Ti.UI.createTableViewRow({
 		backgroundColor: 'transparent',
 		hasChild: true,
-		height: 72
+		height: 153
 	});
 	
 	var header = Ti.UI.createLabel({
 		text: 'Announcements',
 		color: '#7C0606',
-		font: {fontSize: 24, fontWeight: 'bold'},
+		font: {fontSize: 42, fontWeight: 'bold'},
 		top: 10,
-		left: 10,
-		height: 25
+		left: 30,
+		height: 90
 	});
 	var subtitle = Ti.UI.createLabel({
 		text: 'LATEST: ' + resultSet.fieldByName('announcement'),
 		color: '#6A737D',
-		font: {fontSize: 12},
-		top: 28,
-		left: 10,
-		height: 40
+		font: {fontSize: 24},
+		top: 60,
+		left: 30,
+		height: 70
 	});
 	announcementRow.add(header);
 	announcementRow.add(subtitle);
@@ -47,8 +47,8 @@ function HomeWindow(osname) {
 	var announcements = Ti.UI.createTableView({
 		backgroundColor: 'transparent',
 		separatorColor: 'transparent',
-		top: 121,
-		height: 72,
+		top: 264,
+		height: 153,
 		className: 'announcements'
 	});
 	announcements.appendRow(announcementRow);
@@ -63,14 +63,14 @@ function HomeWindow(osname) {
 	var eventIcons = Ti.UI.createView({
 		backgroundImage: 'NONE',
 		top: 0,
-		height: 172,
+		height: 370,
 		layout: 'horizontal'
 	});
 	
 	var resourceIcons = Ti.UI.createView({
 		backgroundImage: 'NONE',
 		top: 0,
-		height: 172,
+		height: 370,
 		layout: 'horizontal'
 	});	
 
@@ -148,14 +148,15 @@ function HomeWindow(osname) {
 	});
 	resourceIcons.add(photosIcon);
 	
-	var facebookIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/facebook.png',
+	var subscribeIcon = Ti.UI.createButton({
+		backgroundImage: '/icons/home/subscribe.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: middleLeft
+		left: middleLeft,
+		subscribed: false
 	});
-	resourceIcons.add(facebookIcon);
+	resourceIcons.add(subscribeIcon);
 	
 	var collegesIcon = Ti.UI.createButton({
 		backgroundImage: '/icons/home/colleges.png',
@@ -247,6 +248,18 @@ function HomeWindow(osname) {
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);   	
 	});
+	subscribeIcon.addEventListener('click', function(){
+		//var Notifications = require('notifications');
+		//Notifications.subscribeToNotifications();
+		
+		if (subscribeIcon.subscribed){
+			subscribeIcon.backgroundImage = "/icons/home/subscribe.png";
+			subscribeIcon.subscribed = false;
+		} else {
+			subscribeIcon.backgroundImage = '/icons/home/unsubscribe.png';
+			subscribeIcon.subscribed = true;
+		}
+	});
     	
     // tabs
 	var eventsTab = Ti.UI.createButton({
@@ -266,7 +279,6 @@ function HomeWindow(osname) {
 		title: 'Resources',
 		bottom: 0,
 		right: 0,
-		height: 70,
 		height: tabHeight,
 		width: tabWidth
 	});
@@ -274,10 +286,10 @@ function HomeWindow(osname) {
 	
 	var scrollableView = Ti.UI.createScrollableView({
 		views:[eventIcons,resourceIcons],
-		showPagingControl: false,
+		showPagingControl: true,
 		pagingControlColor: '#E5EAEF',
-		bottom: 70,
-		height: 172
+		bottom: 155,
+		height: 370
 	});
 	
 	// tab event listeners

@@ -11,7 +11,7 @@ function HomeWindow(navGroup, osname) {
 				
 	//create component instance
 	var self = Ti.UI.createWindow({
-		backgroundImage:'images/main_updated.png',
+		backgroundImage:'images/main.png',
 		title: 'Home',
 		navBarHidden: true,
 		exitOnClose: true
@@ -157,7 +157,8 @@ function HomeWindow(navGroup, osname) {
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: middleLeft
+		left: middleLeft,
+		subscribed: false
 	});
 	resourceIcons.add(subscribeIcon);
 	
@@ -251,8 +252,16 @@ function HomeWindow(navGroup, osname) {
 		navGroup.open(tabGroup);   	
 	});
 	subscribeIcon.addEventListener('click', function(){
-		var Notifications = require('notifications');
-		Notifications.subscribeToNotifications();
+		//var Notifications = require('notifications');
+		//Notifications.subscribeToNotifications();
+		
+		if (subscribeIcon.subscribed){
+			subscribeIcon.backgroundImage = "/icons/home/subscribe.png";
+			subscribeIcon.subscribed = false;
+		} else {
+			subscribeIcon.backgroundImage = '/icons/home/unsubscribe.png';
+			subscribeIcon.subscribed = true;
+		}
 	});
    	
     // tabs

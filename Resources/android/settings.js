@@ -43,7 +43,7 @@ function Settings(height){
 			this.headerFontSize = 36;
 			this.subtitleFontSize = 16;
 			this.scrollableBottom = height * 0.15;
-			this.scrollableHeight = height * 0.312;
+			this.scrollableHeight = height * 0.325;
 			this.middleLeft = height * 0.0875;
 			break;
 		default:

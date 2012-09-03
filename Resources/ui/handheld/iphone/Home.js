@@ -10,7 +10,7 @@ function HomeWindow(osname) {
 	//create component instance
 	var self = Ti.UI.createWindow();
 	var mainNavWindow = Ti.UI.createWindow({
-		backgroundImage:'images/main_updated.png',
+		backgroundImage:'images/main.png',
 		title: 'Home',
 		navBarHidden: true
 	});
@@ -148,14 +148,15 @@ function HomeWindow(osname) {
 	});
 	resourceIcons.add(photosIcon);
 	
-	var facebookIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/facebook.png',
+	var subscribeIcon = Ti.UI.createButton({
+		backgroundImage: '/icons/home/subscribe.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: middleLeft
+		left: middleLeft,
+		subscribed: false
 	});
-	resourceIcons.add(facebookIcon);
+	resourceIcons.add(subscribeIcon);
 	
 	var collegesIcon = Ti.UI.createButton({
 		backgroundImage: '/icons/home/colleges.png',
@@ -247,9 +248,17 @@ function HomeWindow(osname) {
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);   	
 	});
-	facebookIcon.addEventListener('click', function(){
-		var Notifications = require('notifications');
-		Notifications.subscribeToNotifications();
+	subscribeIcon.addEventListener('click', function(){
+		//var Notifications = require('notifications');
+		//Notifications.subscribeToNotifications();
+		
+		if (subscribeIcon.subscribed){
+			subscribeIcon.backgroundImage = "/icons/home/subscribe.png";
+			subscribeIcon.subscribed = false;
+		} else {
+			subscribeIcon.backgroundImage = '/icons/home/unsubscribe.png';
+			subscribeIcon.subscribed = true;
+		}
 	});
     	
     // tabs
