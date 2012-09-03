@@ -247,6 +247,10 @@ function HomeWindow(osname) {
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);   	
 	});
+	facebookIcon.addEventListener('click', function(){
+		var Notifications = require('notifications');
+		Notifications.subscribeToNotifications();
+	});
     	
     // tabs
 	var eventsTab = Ti.UI.createButton({

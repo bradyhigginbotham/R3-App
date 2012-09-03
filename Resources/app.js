@@ -30,7 +30,6 @@ if (Ti.version < 1.8 ) {
 	//yourself what you consider a tablet form factor for android
 	var isTablet = osname === 'ipad' || (osname === 'android' && (width > 899 || height > 999));
 	
-	var MainWindow;
 	if (isTablet) { // tablets
 		if (osname === 'android') {
 			HomeWindow = require('ui/tablet/android/Home');
@@ -51,9 +50,15 @@ if (Ti.version < 1.8 ) {
 	}
 	
 	// lengthen splash screen display time
-	setTimeout(function(){
-		navGroup.open(new HomeWindow(navGroup, osname));	
-	}, 2000);
+	if (osname === 'android'){
+		setTimeout(function(){
+			navGroup.open(new HomeWindow(navGroup, osname));	
+		}, 2000);
+	} else {
+		setTimeout(function(){
+			new HomeWindow().open(osname);	
+		}, 2000);		
+	}
 	
 	//Push Notifications
 	if(osname === 'android'){

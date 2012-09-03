@@ -1,11 +1,21 @@
 function Settings(height){
 	switch (height) {
-		case 320:
-			this.headerTop = 5;
-			this.iconWidth = 64;
-			this.iconHeight = 74;
+		case 320: // QVGA
+			this.rowTop = height * 0.265;
+			this.headerTop = 6;
+			this.subtitleTop = 60;
+			this.rowHeight = height * 0.15375;
+			this.headerHeight = 56;
+			this.subtitleHeight = 40;
+			this.iconWidth = 128;
+			this.iconHeight = 142;
+			this.headerFontSize = 36;
+			this.subtitleFontSize = 16;
+			this.scrollableBottom = height * 0.155;
+			this.scrollableHeight = height * 0.325;
+			this.middleLeft = 30;
 			break;
-		case 480:
+		case 480: // HVGA
 			this.rowTop = 116;
 			this.headerTop = 4;
 			this.subtitleTop = 34;
@@ -21,7 +31,7 @@ function Settings(height){
 			this.middleLeft = 50;
 			break;
 		case 800:
-		case 854:
+		case 854: // WVGA
 			this.rowTop = height * 0.265;
 			this.headerTop = 6;
 			this.subtitleTop = 60;
@@ -33,7 +43,7 @@ function Settings(height){
 			this.headerFontSize = 36;
 			this.subtitleFontSize = 16;
 			this.scrollableBottom = height * 0.15;
-			this.scrollableHeight = height * 0.325;
+			this.scrollableHeight = height * 0.312;
 			this.middleLeft = height * 0.0875;
 			break;
 		default:

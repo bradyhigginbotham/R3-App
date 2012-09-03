@@ -38,6 +38,7 @@ Logfile initialized
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/maps.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/maps.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/maps_64.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/maps_64.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/maps_64_title.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/maps_64_title.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/notifications_256.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/notifications_256.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/photos2_64.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/photos2_64.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/photos2_64_title.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/photos2_64_title.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/photos_64.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/photos_64.png
@@ -49,6 +50,7 @@ Logfile initialized
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/sessions_64.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/sessions_64.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/sessions_64_title.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/sessions_64_title.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/sessions_color_64.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/sessions_color_64.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/subscribe.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/subscribe.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/twitter.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/twitter.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/twitter_round_64.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/twitter_round_64.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/twitter_round_64_title.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/twitter_round_64_title.png
@@ -125,21 +127,17 @@ Logfile initialized
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-land-hdpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-hdpi/main_updated.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-land-hdpi/main_updated_ec62f99ada.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-ldpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-land-ldpi/main_6d5dd0e3ac.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/default_old.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-hdpi/default_old_0e5a672238.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-hdpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/main_updated.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-hdpi/main_updated_ec62f99ada.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-ldpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-ldpi/main_6d5dd0e3ac.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-hdpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-hdpi/main_updated.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-hdpi/main_updated_ec62f99ada.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-ldpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-ldpi/main_6d5dd0e3ac.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-mdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-mdpi/main_6d5dd0e3ac.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/main_updated.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/main_updated_ec62f99ada.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/main_updated_854.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/main_updated_854_f503acee06.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/main_854.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/main_854_59c6726b9d.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-ldpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-ldpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-mdpi/main_updated.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-mdpi/main_updated_ec62f99ada.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-mdpi/main_updated_old.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-mdpi/main_updated_old_1e4241e57e.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-mdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-mdpi/main_6d5dd0e3ac.png
 [DEBUG] app stylesheet => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/gen/com/bradyhigginbotham/r3/ApplicationStylesheet.java
 [DEBUG] copying app icon: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/appicon.png
 [DEBUG] generating theme.xml
@@ -202,6 +200,7 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/icons/home/maps.png
 [DEBUG] from resource zip => assets/Resources/icons/home/maps_64.png
 [DEBUG] from resource zip => assets/Resources/icons/home/maps_64_title.png
+[DEBUG] from resource zip => assets/Resources/icons/home/notifications_256.png
 [DEBUG] from resource zip => assets/Resources/icons/home/photos2_64.png
 [DEBUG] from resource zip => assets/Resources/icons/home/photos2_64_title.png
 [DEBUG] from resource zip => assets/Resources/icons/home/photos_64.png
@@ -213,6 +212,7 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/icons/home/sessions_64.png
 [DEBUG] from resource zip => assets/Resources/icons/home/sessions_64_title.png
 [DEBUG] from resource zip => assets/Resources/icons/home/sessions_color_64.png
+[DEBUG] from resource zip => assets/Resources/icons/home/subscribe.png
 [DEBUG] from resource zip => assets/Resources/icons/home/twitter.png
 [DEBUG] from resource zip => assets/Resources/icons/home/twitter_round_64.png
 [DEBUG] from resource zip => assets/Resources/icons/home/twitter_round_64_title.png
@@ -242,30 +242,26 @@ Logfile initialized
 [DEBUG] from resource zip => resources.arsc
 [DEBUG] from resource zip => res/drawable-long-land-hdpi/background.png
 [DEBUG] from resource zip => res/drawable-long-land-hdpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-long-land-hdpi/main_updated_ec62f99ada.png
 [DEBUG] from resource zip => res/drawable-long-land-ldpi/background.png
 [DEBUG] from resource zip => res/drawable-long-land-ldpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-long-port-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-long-port-hdpi/default_old_0e5a672238.png
 [DEBUG] from resource zip => res/drawable-long-port-hdpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-long-port-hdpi/main_updated_ec62f99ada.png
 [DEBUG] from resource zip => res/drawable-long-port-ldpi/background.png
 [DEBUG] from resource zip => res/drawable-long-port-ldpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-notlong-land-hdpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-land-hdpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-notlong-land-hdpi/main_updated_ec62f99ada.png
 [DEBUG] from resource zip => res/drawable-notlong-land-ldpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-land-ldpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-notlong-land-mdpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-land-mdpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-notlong-port-hdpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-port-hdpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-notlong-port-hdpi/main_updated_854_f503acee06.png
-[DEBUG] from resource zip => res/drawable-notlong-port-hdpi/main_updated_ec62f99ada.png
+[DEBUG] from resource zip => res/drawable-notlong-port-hdpi/main_854_59c6726b9d.png
 [DEBUG] from resource zip => res/drawable-notlong-port-ldpi/background.png
 [DEBUG] from resource zip => res/drawable-notlong-port-ldpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-notlong-port-mdpi/background.png
-[DEBUG] from resource zip => res/drawable-notlong-port-mdpi/main_updated_ec62f99ada.png
-[DEBUG] from resource zip => res/drawable-notlong-port-mdpi/main_updated_old_1e4241e57e.png
+[DEBUG] from resource zip => res/drawable-notlong-port-mdpi/main_6d5dd0e3ac.png
 [DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/build.properties
 [DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/background.png
 [DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png

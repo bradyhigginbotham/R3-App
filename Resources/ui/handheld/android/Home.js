@@ -152,14 +152,14 @@ function HomeWindow(navGroup, osname) {
 	});
 	resourceIcons.add(photosIcon);
 	
-	var facebookIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/facebook.png',
+	var subscribeIcon = Ti.UI.createButton({
+		backgroundImage: '/icons/home/subscribe.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
 		left: middleLeft
 	});
-	resourceIcons.add(facebookIcon);
+	resourceIcons.add(subscribeIcon);
 	
 	var collegesIcon = Ti.UI.createButton({
 		backgroundImage: '/icons/home/colleges.png',
@@ -250,7 +250,7 @@ function HomeWindow(navGroup, osname) {
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);   	
 	});
-	facebookIcon.addEventListener('click', function(){
+	subscribeIcon.addEventListener('click', function(){
 		var Notifications = require('notifications');
 		Notifications.subscribeToNotifications();
 	});

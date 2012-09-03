@@ -46,11 +46,29 @@ function subscribeToNotifications(){
 		    type: 'android'
 		}, function (e){
 		    if (e.success) {
-		       alert('Subscribed for Push Notification!');
+		       alert('You have subscribed to the R3 Conference notification system!');
 		    }else{
 		        alert('Error:' +((e.error && e.message) || JSON.stringify(e)));
 		    }
 		});
 	}
 }
+
+function unsubscribeToNotifications(){
+	Cloud.PushNotifications.unsubscribe({
+	    channel: 'r3aitp',
+	    device_token: deviceToken,
+	    type: 'android'
+	}, function (e) {
+	    if (e.success) {
+	        alert('You have been unsubscribed and will not longer receive conference notifications.');
+	    } else {
+	        alert('Error:\\n' +
+	            ((e.error && e.message) || JSON.stringify(e)));
+	    }
+	});
+}
+
+// Exports
 exports.subscribeToNotifications = subscribeToNotifications;
+exports.unsubscribeToNotifications = unsubscribeToNotifications;
