@@ -1,11 +1,11 @@
-function TabGroup(navGroup)
-{
+function TabGroup(navGroup){
 	var ConferenceWindow = require('ui/common/twitter/conference/ConferenceWindow'),
-		HashtagsWindow = require('ui/common/twitter/hashtags/HashtagsWindow');
+		HashtagsWindow = require('ui/common/twitter/hashtags/HashtagsWindow'),
+		osname = Ti.Platform.osname, height = Ti.Platform.displayCaps.platformHeight;
 		
 	
-	var conferenceWindow = new ConferenceWindow(navGroup),
-		hashtagsWindow = new HashtagsWindow(navGroup);
+	var conferenceWindow = new ConferenceWindow(navGroup, osname, height),
+		hashtagsWindow = new HashtagsWindow(navGroup, osname, height);
 		
 		
 	var self = Ti.UI.createTabGroup();

@@ -2,12 +2,11 @@
 function HomeWindow(navGroup, osname) {
 	//load component dependencies
 	var Settings = require('settings');
-		
 	var settings = new Settings.Settings(Ti.Platform.displayCaps.platformHeight);
 		
 	// constants
-	var iconHeight = settings.iconHeight, iconWidth = settings.iconWidth, iconTop = 5, iconLeft = 10, middleLeft = settings.middleLeft,
-		tabColor = 'white', tabHeight = settings.tabHeight, tabWidth = '50%';
+	var iconHeight = settings.iconHeight, iconWidth = settings.iconWidth, iconTop = settings.iconTop, iconLeft = settings.iconLeft,
+		middleLeft = settings.middleLeft, tabColor = 'white', tabHeight = settings.tabHeight, tabWidth = '50%';
 				
 	//create component instance
 	var self = Ti.UI.createWindow({
@@ -152,13 +151,16 @@ function HomeWindow(navGroup, osname) {
 	});
 	resourceIcons.add(photosIcon);
 	
+	// get stored 'subscribed' property
+	var user = db.execute("SELECT * FROM user WHERE username = 'default'");
+	var subscribed = user.fieldByName('subscribed');
+	
 	var subscribeIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/subscribe.png',
+		backgroundImage: (subscribed) ? '/icons/home/unsubscribe.png' : '/icons/home/subscribe.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: middleLeft,
-		subscribed: false
+		left: middleLeft
 	});
 	resourceIcons.add(subscribeIcon);
 	
@@ -252,15 +254,13 @@ function HomeWindow(navGroup, osname) {
 		navGroup.open(tabGroup);   	
 	});
 	subscribeIcon.addEventListener('click', function(){
-		//var Notifications = require('notifications');
-		//Notifications.subscribeToNotifications();
+		var Notifications = require('notifications');
 		
-		if (subscribeIcon.subscribed){
-			subscribeIcon.backgroundImage = "/icons/home/subscribe.png";
-			subscribeIcon.subscribed = false;
+		// check if subscribed
+		if (subscribed){
+			Notifications.unsubscribeToNotifications(subscribeIcon);
 		} else {
-			subscribeIcon.backgroundImage = '/icons/home/unsubscribe.png';
-			subscribeIcon.subscribed = true;
+			Notifications.subscribeToNotifications(subscribeIcon);
 		}
 	});
    	

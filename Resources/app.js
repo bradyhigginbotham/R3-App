@@ -32,6 +32,8 @@ if (Ti.version < 1.8 ) {
 	
 	if (isTablet) { // tablets
 		if (osname === 'android') {
+			var NavigationController = require('NavigationController'),
+			navGroup = new NavigationController();
 			HomeWindow = require('ui/tablet/android/Home');
 		} else {
 			HomeWindow = require('ui/tablet/ipad/Home');

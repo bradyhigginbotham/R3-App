@@ -1,6 +1,6 @@
 Logfile initialized
 [INFO] logfile = /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build.log
-[DEBUG] /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/builder.py simulator AITP R3 /Android/android-sdk-macosx /Users/Stick/Documents/Titanium Studio Workspace/AITP R3 com.bradyhigginbotham.r3 6 WVGA800 
+[DEBUG] /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/builder.py simulator AITP R3 /Android/android-sdk-macosx /Users/Stick/Documents/Titanium Studio Workspace/AITP R3 com.bradyhigginbotham.r3 10 HVGA 
 [INFO] Building AITP R3 for Android ... one moment
 [INFO] Titanium SDK version: 2.1.1 (07/27/12 14:01 0fd84a2)
 [DEBUG] Waiting for device to be ready ...
@@ -9,345 +9,35 @@ Logfile initialized
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 15 seconds)
-[DEBUG] waited 15.084125 seconds on emulator to get ready
+[DEBUG] waited 15.088889 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
 [DEBUG] com.bradyhigginbotham.r3 installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[INFO] Detected change in tiapp.xml, or assets deleted. Forcing full re-build...
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/appicon.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/appicon.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/NavigationController.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/NavigationController.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/notifications.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/notifications.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/settings.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/settings.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/app.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/app.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/cloudpush.jar => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/cloudpush.jar
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/db/r3.sqlite => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/db/r3.sqlite
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/floorplan/FGMouton.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/floorplan/FGMouton.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/floorplan/Moody.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/floorplan/Moody.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/about.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/about.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/briefcase.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/briefcase.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/camera.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/camera.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/certifications.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/certifications.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/colleges.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/colleges.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/competitions.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/competitions.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/facebook.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/facebook.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/festival.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/festival.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/maps.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/maps.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/notifications_256.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/notifications_256.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/schedule.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/schedule.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/sessions.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/sessions.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/subscribe.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/subscribe.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/twitter.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/twitter.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/unsubscribe.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/unsubscribe.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/building.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/building.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/heart.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/heart.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/info.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/info.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/phone.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/phone.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/pin.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/pin.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/search.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/search.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/sessions.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/sessions.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/speakers.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/speakers.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/star.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/star.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/suitcase.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/suitcase.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/ull.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/ull.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/KS_nav_ui.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/KS_nav_ui.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/KS_nav_views.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/KS_nav_views.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ti.cloud.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ti.cloud.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/app/app.html => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/app/app.html
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/app/AppWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/app/AppWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/app/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/app/ListView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/conference/conference.html => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/conference/conference.html
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/conference/ConferenceWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/conference/ConferenceWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/conference/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/conference/ListView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/contact/contact.html => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/contact/contact.html
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/contact/ContactWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/contact/ContactWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/contact/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/contact/ListView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/TabGroup.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/TabGroup.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/ull/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/ull/ListView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/ull/UllWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/ull/UllWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/announcements/AnnouncementsWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/announcements/AnnouncementsWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/announcements/DetailView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/announcements/DetailView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/announcements/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/announcements/ListView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/certifications/CertificationsWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/certifications/CertificationsWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/certifications/DetailView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/certifications/DetailView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/certifications/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/certifications/ListView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/colleges/CollegesWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/colleges/CollegesWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/colleges/DetailView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/colleges/DetailView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/colleges/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/colleges/ListView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/competitions/CompetitionsWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/competitions/CompetitionsWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/competitions/DetailView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/competitions/DetailView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/competitions/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/competitions/ListView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/jobfair/DetailView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/jobfair/DetailView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/jobfair/exhibitors/ExhibitorsWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/jobfair/exhibitors/ExhibitorsWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/jobfair/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/jobfair/ListView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/jobfair/sponsors/SponsorsWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/jobfair/sponsors/SponsorsWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/jobfair/TabGroup.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/jobfair/TabGroup.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/maps/campusMap/MapsWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/maps/campusMap/MapsWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/maps/floorPlans/FloorPlansWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/maps/floorPlans/FloorPlansWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/maps/search/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/maps/search/ListView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/maps/search/SearchWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/maps/search/SearchWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/maps/TabGroup.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/maps/TabGroup.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/photos/PhotosWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/photos/PhotosWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/presentations/sessions/DetailView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/presentations/sessions/DetailView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/presentations/sessions/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/presentations/sessions/ListView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/presentations/sessions/SessionsWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/presentations/sessions/SessionsWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/presentations/speakers/DetailView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/presentations/speakers/DetailView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/presentations/speakers/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/presentations/speakers/ListView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/presentations/speakers/SpeakersWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/presentations/speakers/SpeakersWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/presentations/TabGroup.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/presentations/TabGroup.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/schedules/DetailView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/schedules/DetailView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/schedules/DetailView_old.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/schedules/DetailView_old.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/schedules/DetailWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/schedules/DetailWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/schedules/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/schedules/ListView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/schedules/SchedulesWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/schedules/SchedulesWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/schedules/SchedulesWindow_old.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/schedules/SchedulesWindow_old.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/twitter/conference/ConferenceView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/twitter/conference/ConferenceView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/twitter/conference/ConferenceWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/twitter/conference/ConferenceWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/twitter/hashtags/HashtagsView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/twitter/hashtags/HashtagsView.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/twitter/hashtags/HashtagsWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/twitter/hashtags/HashtagsWindow.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/twitter/TabGroup.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/twitter/TabGroup.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/handheld/android/Home.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/handheld/android/Home.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/handheld/android/Home_old.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/handheld/android/Home_old.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/handheld/iphone/Home.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/handheld/iphone/Home.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/tablet/android/Home.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/tablet/android/Home.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/tablet/ipad/Home.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/tablet/ipad/Home.js
-[TRACE] Generating Java Classes
+[TRACE] COPYING MODIFIED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/notifications.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/notifications.js
+[TRACE] COPYING MODIFIED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/settings.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/settings.js
+[TRACE] COPYING MODIFIED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/db/r3.sqlite => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/db/r3.sqlite
+[TRACE] COPYING MODIFIED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/twitter/conference/ConferenceWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/twitter/conference/ConferenceWindow.js
+[TRACE] COPYING MODIFIED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/twitter/hashtags/HashtagsWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/twitter/hashtags/HashtagsWindow.js
+[TRACE] COPYING MODIFIED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/handheld/android/Home.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/handheld/android/Home.js
+[TRACE] COPYING MODIFIED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/tablet/android/Home.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/tablet/android/Home.js
+[INFO] Tiapp.xml unchanged, skipping class generation
 [DEBUG] Processing Android resource drawables
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-hdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-land-hdpi/default_d44e27d97b.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-land-hdpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-ldpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-land-ldpi/default_d44e27d97b.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-ldpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-land-ldpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-hdpi/default_d44e27d97b.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/default_old.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-hdpi/default_old_0e5a672238.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-hdpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-ldpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-ldpi/default_d44e27d97b.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-ldpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-ldpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-hdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-hdpi/default_d44e27d97b.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-hdpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-ldpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-ldpi/default_d44e27d97b.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-ldpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-ldpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-mdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-mdpi/default_d44e27d97b.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-mdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-mdpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/default_d44e27d97b.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/main_854.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/main_854_59c6726b9d.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-ldpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-ldpi/default_d44e27d97b.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-ldpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-ldpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-mdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-mdpi/default_d44e27d97b.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-mdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-mdpi/main_6d5dd0e3ac.png
-[DEBUG] app stylesheet => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/gen/com/bradyhigginbotham/r3/ApplicationStylesheet.java
-[DEBUG] copying app icon: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/appicon.png
-[DEBUG] generating theme.xml
 [DEBUG] found drawable-long-land-hdpi splash screen at /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-hdpi/default.png
-[DEBUG] copying /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-hdpi/default.png splash screen to /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-land-hdpi/background.png
 [DEBUG] found drawable-long-land-ldpi splash screen at /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-ldpi/default.png
-[DEBUG] copying /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-land-ldpi/default.png splash screen to /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-land-ldpi/background.png
 [DEBUG] found drawable-long-port-hdpi splash screen at /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/default.png
-[DEBUG] copying /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/default.png splash screen to /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-hdpi/background.png
 [DEBUG] found drawable-long-port-ldpi splash screen at /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-ldpi/default.png
-[DEBUG] copying /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-ldpi/default.png splash screen to /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-ldpi/background.png
 [DEBUG] found drawable-notlong-land-hdpi splash screen at /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-hdpi/default.png
-[DEBUG] copying /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-hdpi/default.png splash screen to /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-hdpi/background.png
 [DEBUG] found drawable-notlong-land-ldpi splash screen at /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-ldpi/default.png
-[DEBUG] copying /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-ldpi/default.png splash screen to /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-ldpi/background.png
 [DEBUG] found drawable-notlong-land-mdpi splash screen at /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-mdpi/default.png
-[DEBUG] copying /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-land-mdpi/default.png splash screen to /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-land-mdpi/background.png
 [DEBUG] found drawable-notlong-port-hdpi splash screen at /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/default.png
-[DEBUG] copying /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/default.png splash screen to /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/background.png
 [DEBUG] found drawable-notlong-port-ldpi splash screen at /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-ldpi/default.png
-[DEBUG] copying /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-ldpi/default.png splash screen to /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-ldpi/background.png
 [DEBUG] found drawable-notlong-port-mdpi splash screen at /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-mdpi/default.png
-[DEBUG] copying /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-mdpi/default.png splash screen to /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-mdpi/background.png
-[DEBUG] copying default splash screen
-[TRACE] Writing out AndroidManifest.xml
-[DEBUG] adding /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/gen/com/bradyhigginbotham/r3/AitpR3Activity.java to javac build list
-[DEBUG] adding /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/gen/com/bradyhigginbotham/r3/AitpR3AppInfo.java to javac build list
-[DEBUG] adding /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/gen/com/bradyhigginbotham/r3/AitpR3Application.java to javac build list
-[DEBUG] adding /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/gen/com/bradyhigginbotham/r3/ApplicationStylesheet.java to javac build list
-[DEBUG] adding /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/gen/com/bradyhigginbotham/r3/R.java to javac build list
-[DEBUG] Building Java Sources: "/Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/gen/com/bradyhigginbotham/r3/AitpR3Activity.java" "/Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/gen/com/bradyhigginbotham/r3/AitpR3AppInfo.java" "/Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/gen/com/bradyhigginbotham/r3/AitpR3Application.java" "/Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/gen/com/bradyhigginbotham/r3/ApplicationStylesheet.java" "/Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/gen/com/bradyhigginbotham/r3/R.java"
 [INFO] Waiting for SDCard to become available..
-[INFO] Compiling Android Resources... This could take some time
-[DEBUG] Android classes.dex built
-[DEBUG] creating unsigned apk: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/app-unsigned.apk
-[DEBUG] from resource zip => assets/Resources/db/r3.sqlite
-[DEBUG] from resource zip => assets/Resources/floorplan/FGMouton.png
-[DEBUG] from resource zip => assets/Resources/floorplan/Moody.png
-[DEBUG] from resource zip => assets/Resources/icons/home/about.png
-[DEBUG] from resource zip => assets/Resources/icons/home/briefcase.png
-[DEBUG] from resource zip => assets/Resources/icons/home/camera.png
-[DEBUG] from resource zip => assets/Resources/icons/home/certifications.png
-[DEBUG] from resource zip => assets/Resources/icons/home/colleges.png
-[DEBUG] from resource zip => assets/Resources/icons/home/competitions.png
-[DEBUG] from resource zip => assets/Resources/icons/home/facebook.png
-[DEBUG] from resource zip => assets/Resources/icons/home/festival.png
-[DEBUG] from resource zip => assets/Resources/icons/home/maps.png
-[DEBUG] from resource zip => assets/Resources/icons/home/notifications_256.png
-[DEBUG] from resource zip => assets/Resources/icons/home/schedule.png
-[DEBUG] from resource zip => assets/Resources/icons/home/sessions.png
-[DEBUG] from resource zip => assets/Resources/icons/home/subscribe.png
-[DEBUG] from resource zip => assets/Resources/icons/home/twitter.png
-[DEBUG] from resource zip => assets/Resources/icons/home/unsubscribe.png
-[DEBUG] from resource zip => assets/Resources/icons/tabs/building.png
-[DEBUG] from resource zip => assets/Resources/icons/tabs/heart.png
-[DEBUG] from resource zip => assets/Resources/icons/tabs/info.png
-[DEBUG] from resource zip => assets/Resources/icons/tabs/phone.png
-[DEBUG] from resource zip => assets/Resources/icons/tabs/pin.png
-[DEBUG] from resource zip => assets/Resources/icons/tabs/search.png
-[DEBUG] from resource zip => assets/Resources/icons/tabs/sessions.png
-[DEBUG] from resource zip => assets/Resources/icons/tabs/speakers.png
-[DEBUG] from resource zip => assets/Resources/icons/tabs/star.png
-[DEBUG] from resource zip => assets/Resources/icons/tabs/suitcase.png
-[DEBUG] from resource zip => assets/Resources/icons/tabs/ull.png
-[DEBUG] from resource zip => assets/Resources/ui/common/about/app/AppWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/about/app/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/about/app/app.html
-[DEBUG] from resource zip => assets/Resources/ui/common/about/conference/ConferenceWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/about/conference/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/about/conference/conference.html
-[DEBUG] from resource zip => assets/Resources/ui/common/about/contact/ContactWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/about/contact/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/about/contact/contact.html
-[DEBUG] from resource zip => assets/Resources/ui/common/about/ull/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/about/ull/UllWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/about/TabGroup.js
-[DEBUG] from resource zip => assets/Resources/ui/common/announcements/AnnouncementsWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/announcements/DetailView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/announcements/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/certifications/CertificationsWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/certifications/DetailView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/certifications/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/colleges/CollegesWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/colleges/DetailView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/colleges/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/competitions/CompetitionsWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/competitions/DetailView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/competitions/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/jobfair/exhibitors/ExhibitorsWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/jobfair/sponsors/SponsorsWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/jobfair/DetailView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/jobfair/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/jobfair/TabGroup.js
-[DEBUG] from resource zip => assets/Resources/ui/common/maps/campusMap/MapsWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/maps/floorPlans/FloorPlansWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/maps/search/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/maps/search/SearchWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/maps/TabGroup.js
-[DEBUG] from resource zip => assets/Resources/ui/common/photos/PhotosWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/presentations/sessions/DetailView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/presentations/sessions/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/presentations/sessions/SessionsWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/presentations/speakers/DetailView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/presentations/speakers/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/presentations/speakers/SpeakersWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/presentations/TabGroup.js
-[DEBUG] from resource zip => assets/Resources/ui/common/schedules/DetailView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/schedules/DetailView_old.js
-[DEBUG] from resource zip => assets/Resources/ui/common/schedules/DetailWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/schedules/ListView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/schedules/SchedulesWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/schedules/SchedulesWindow_old.js
-[DEBUG] from resource zip => assets/Resources/ui/common/twitter/conference/ConferenceView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/twitter/conference/ConferenceWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/twitter/hashtags/HashtagsView.js
-[DEBUG] from resource zip => assets/Resources/ui/common/twitter/hashtags/HashtagsWindow.js
-[DEBUG] from resource zip => assets/Resources/ui/common/twitter/TabGroup.js
-[DEBUG] from resource zip => assets/Resources/ui/handheld/android/Home.js
-[DEBUG] from resource zip => assets/Resources/ui/handheld/android/Home_old.js
-[DEBUG] from resource zip => assets/Resources/ui/handheld/iphone/Home.js
-[DEBUG] from resource zip => assets/Resources/ui/tablet/android/Home.js
-[DEBUG] from resource zip => assets/Resources/ui/tablet/ipad/Home.js
-[DEBUG] from resource zip => assets/Resources/KS_nav_ui.png
-[DEBUG] from resource zip => assets/Resources/KS_nav_views.png
-[DEBUG] from resource zip => assets/Resources/NavigationController.js
-[DEBUG] from resource zip => assets/Resources/app.js
-[DEBUG] from resource zip => assets/Resources/appicon.png
-[DEBUG] from resource zip => assets/Resources/cloudpush.jar
-[DEBUG] from resource zip => assets/Resources/notifications.js
-[DEBUG] from resource zip => assets/Resources/settings.js
-[DEBUG] from resource zip => assets/Resources/ti.cloud.js
-[DEBUG] from resource zip => assets/app.json
-[DEBUG] from resource zip => assets/index.json
-[DEBUG] from resource zip => assets/tiapp.xml
-[DEBUG] from resource zip => res/drawable/appicon.png
-[DEBUG] from resource zip => res/drawable/background.png
-[DEBUG] from resource zip => res/drawable/close.png
-[DEBUG] from resource zip => res/drawable/facebook_login.png
-[DEBUG] from resource zip => res/drawable/facebook_login_down.png
-[DEBUG] from resource zip => res/drawable/facebook_login_wide.png
-[DEBUG] from resource zip => res/drawable/facebook_login_wide_down.png
-[DEBUG] from resource zip => res/drawable/facebook_logout.png
-[DEBUG] from resource zip => res/drawable/facebook_logout_down.png
-[DEBUG] from resource zip => res/layout/titanium_tabgroup.xml
-[DEBUG] from resource zip => AndroidManifest.xml
-[DEBUG] from resource zip => resources.arsc
-[DEBUG] from resource zip => res/drawable-hdpi/close.png
-[DEBUG] from resource zip => res/drawable-ldpi/close.png
-[DEBUG] from resource zip => res/drawable-long-land-hdpi/background.png
-[DEBUG] from resource zip => res/drawable-long-land-hdpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-long-land-hdpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-long-land-ldpi/background.png
-[DEBUG] from resource zip => res/drawable-long-land-ldpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-long-land-ldpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-long-port-hdpi/background.png
-[DEBUG] from resource zip => res/drawable-long-port-hdpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-long-port-hdpi/default_old_0e5a672238.png
-[DEBUG] from resource zip => res/drawable-long-port-hdpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-long-port-ldpi/background.png
-[DEBUG] from resource zip => res/drawable-long-port-ldpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-long-port-ldpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-notlong-land-hdpi/background.png
-[DEBUG] from resource zip => res/drawable-notlong-land-hdpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-notlong-land-hdpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-notlong-land-ldpi/background.png
-[DEBUG] from resource zip => res/drawable-notlong-land-ldpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-notlong-land-ldpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-notlong-land-mdpi/background.png
-[DEBUG] from resource zip => res/drawable-notlong-land-mdpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-notlong-land-mdpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-notlong-port-hdpi/background.png
-[DEBUG] from resource zip => res/drawable-notlong-port-hdpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-notlong-port-hdpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-notlong-port-hdpi/main_854_59c6726b9d.png
-[DEBUG] from resource zip => res/drawable-notlong-port-ldpi/background.png
-[DEBUG] from resource zip => res/drawable-notlong-port-ldpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-notlong-port-ldpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-notlong-port-mdpi/background.png
-[DEBUG] from resource zip => res/drawable-notlong-port-mdpi/default_d44e27d97b.png
-[DEBUG] from resource zip => res/drawable-notlong-port-mdpi/main_6d5dd0e3ac.png
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/build.properties
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/background.png
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on.png
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_18.png
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_check_buttonless_on_48.png
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more.png
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_18.png
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_more_48.png
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_normal.9.png
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_pressed.9.png
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/btn_picker_selected.9.png
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/default_icon.png
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/titanium.jar => org/appcelerator/titanium/res/drawable/photoDefault.png
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.min.js
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/json2.js
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.js
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/polling.min.js
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/modules/titanium-facebook.jar => ti/modules/titanium/facebook/LICENSE
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/thirdparty.jar => org/apache/Commons-NOTICE.txt
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/thirdparty.jar => org/apache/HttpComponents-NOTICE.txt
-[DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.1.GA/android/thirdparty.jar => org/apache/mime4j-NOTICE.txt
-[DEBUG] installing native lib: /Users/Stick/Library/Application Support/Titanium/modules/android/ti.cloudpush/2.0.5/libs/armeabi/libti.cloudpush.so
-[DEBUG] installing native lib: /Users/Stick/Library/Application Support/Titanium/modules/android/ti.cloudpush/2.0.5/libs/armeabi-v7a/libti.cloudpush.so
-[DEBUG] installing native SDK libs
-[DEBUG] Waiting for device to be ready ...
-[TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.022810 seconds on emulator to get ready
-[INFO] Installing application on emulator
+[INFO] Re-launching application ... AITP R3
 [INFO] Launching application ... AITP R3
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.bradyhigginbotham.r3/.AitpR3Activity }
 
-[INFO] Deployed AITP R3 ... Application should be running.
+[INFO] Relaunched AITP R3 ... Application should be running.
 [INFO] Android Emulator has exited

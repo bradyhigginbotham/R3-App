@@ -1,21 +1,19 @@
 //Home Window Component Constructor - Android
-function HomeWindow(osname) {
+function HomeWindow(navGroup, osname) {
 	//load component dependencies
-	var Settings = require('settings'),
-		navGroup = undefined;
-		
+	var Settings = require('settings');
 	var settings = new Settings.Settings(Ti.Platform.displayCaps.platformHeight);
 		
 	// constants
-	var iconHeight = settings.iconHeight, iconWidth = settings.iconWidth, iconTop = 5, iconLeft = 10, middleLeft = settings.middleLeft,
-		tabColor = 'white', tabHeight = settings.tabHeight, tabWidth = '50%';
+	var iconHeight = settings.iconHeight, iconWidth = settings.iconWidth, iconTop = settings.iconTop, iconLeft = settings.iconLeft,
+		middleLeft = settings.middleLeft, tabColor = 'white', tabHeight = settings.tabHeight, tabWidth = '50%';
 				
 	//create component instance
-	var self = Ti.UI.createWindow();
-	var mainNavWindow = Ti.UI.createWindow({
-		backgroundImage:'images/main_updated.png',
+	var self = Ti.UI.createWindow({
+		backgroundImage:'images/main.png',
 		title: 'Home',
-		navBarHidden: true
+		navBarHidden: true,
+		exitOnClose: true
 	});
 
 	// Announcements view
@@ -153,14 +151,15 @@ function HomeWindow(osname) {
 	});
 	resourceIcons.add(photosIcon);
 	
-	var facebookIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/facebook.png',
+	var subscribeIcon = Ti.UI.createButton({
+		backgroundImage: '/icons/home/subscribe.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: middleLeft
+		left: middleLeft,
+		subscribed: false
 	});
-	resourceIcons.add(facebookIcon);
+	resourceIcons.add(subscribeIcon);
 	
 	var collegesIcon = Ti.UI.createButton({
 		backgroundImage: '/icons/home/colleges.png',
@@ -251,6 +250,14 @@ function HomeWindow(osname) {
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);   	
 	});
+	subscribeIcon.addEventListener('click', function(){
+		var Notifications = require('notifications');
+		if (subscribeIcon.subscribed){
+			Notifications.unsubscribeToNotifications(subscribeIcon);
+		} else {
+			Notifications.subscribeToNotifications(subscribeIcon);
+		}
+	});
    	
     // tabs
 	var eventsTab = Ti.UI.createButton({
@@ -262,7 +269,7 @@ function HomeWindow(osname) {
 		height: tabHeight,
 		width: tabWidth
 	});
-	mainNavWindow.add(eventsTab);
+	self.add(eventsTab);
 	
 	var resourcesTab = Ti.UI.createButton({
 		backgroundImage: 'NONE',
@@ -273,7 +280,7 @@ function HomeWindow(osname) {
 		height: tabHeight,
 		width: tabWidth
 	});
-	mainNavWindow.add(resourcesTab);
+	self.add(resourcesTab);
 	
 	var scrollableView = Ti.UI.createScrollableView({
 		views:[eventIcons,resourceIcons],
@@ -281,7 +288,7 @@ function HomeWindow(osname) {
 		bottom: settings.scrollableBottom,
 		height: settings.scrollableHeight
 	});
-	mainNavWindow.add(scrollableView);
+	self.add(scrollableView);
 	
 	// tab event listeners
 	eventsTab.addEventListener('click', function(){
@@ -292,14 +299,7 @@ function HomeWindow(osname) {
 		scrollableView.scrollToView(resourceIcons);
 	});
 	
-    mainNavWindow.add(announcements);
-    
-    // handle Android navigation
-	var NavigationController = require('NavigationController'),
-	navGroup = new NavigationController();
-    self = mainNavWindow;
-    self.exitOnClose = true;
-    mainNavWindow = null;
+    self.add(announcements);
 
 /*
 	navGroup = {

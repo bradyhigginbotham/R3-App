@@ -1,4 +1,4 @@
-function ConferenceWindow(navGroup){
+function ConferenceWindow(navGroup, osname, height){
 	// load dependencies
 	var ConferenceView = require ('ui/common/twitter/conference/ConferenceView');
 	var conferenceView = new ConferenceView(), row, tweet, avatar, table;
@@ -12,13 +12,46 @@ function ConferenceWindow(navGroup){
 
 	// Retrieve tweets via client 
     var xhr = Ti.Network.createHTTPClient();
-        
-    xhr.open("GET", 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=r3aitpconf&result_type=recent&count=11');
+    
+    // set number of tweets
+    if (osname === 'ipad' || height > 899) { // tablet
+	    xhr.open("GET", 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=r3aitpconf&result_type=recent&count=20');
+    } else if (height > 499) {
+	    xhr.open("GET", 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=r3aitpconf&result_type=recent&count=15');	
+    } else {
+	    xhr.open("GET", 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=r3aitpconf&result_type=recent&count=11');	
+    }
+    
+    // set row and label heights for tableview
+    var rowHeight, tweetHeight, avatarTop;
+    if (osname === 'android') {
+    	if (height < 450) { // low-res phones
+    		rowHeight = 45;
+    		tweetHeight = 30;
+    		avatarTop = 2;
+    	} else if (height > 450 && height <= 499) { // mid-res phones
+    		rowHeight = 56;
+    		tweetHeight = 36;
+    		avatarTop = 8;
+    	} else if (height > 499 && height <= 999) { // hi-res phones
+    		rowHeight = 70;
+    		tweetHeight = 54;
+    		avatarTop = 12;
+    	} else if (height > 999) { // tablets
+    		rowHeight = 100;
+    		tweetHeight = 70;
+    		avatarTop = 20;
+    	}
+    } else { // iOS
+    	rowHeight = 56;
+    	tweetHeight = 36;
+    	avatarTop = 8;
+    }
 
     xhr.onerror = function(){
 		alert(e.error);
 	};
-					
+						
 	var tweets = [];
     xhr.onload = function(){
        	var results = eval('(' + this.responseText + ')');
@@ -30,7 +63,7 @@ function ConferenceWindow(navGroup){
            		tweet: results[c].text,
            		avatar: results[c].user.profile_image_url,
            		hasChild: true,
-           		height: 56
+           		height: rowHeight
 			});
 			
 			tweet = Ti.UI.createLabel({
@@ -39,7 +72,7 @@ function ConferenceWindow(navGroup){
 				right: 15,
 				top: 10,
 				bottom: 10,
-				height: 36
+				height: tweetHeight
 			});
 			row.add(tweet);
 			
@@ -47,7 +80,7 @@ function ConferenceWindow(navGroup){
 				image: results[c].user.profile_image_url,
 				height: 40,
 				width: 40,
-				top: 8,
+				top: avatarTop,
 				left: 10,
 				bottom: 8,
 			});
