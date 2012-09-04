@@ -27,7 +27,7 @@ function HomeWindow(navGroup, osname) {
 	});
 	
 	var header = Ti.UI.createLabel({
-		text: 'Announcements',
+		text: Ti.Platform.displayCaps.platformHeight,
 		color: '#7C0606',
 		font: {fontSize: settings.headerFontSize, fontWeight: 'bold'},
 		top: settings.headerTop,
@@ -151,13 +151,16 @@ function HomeWindow(navGroup, osname) {
 	});
 	resourceIcons.add(photosIcon);
 	
+	// get stored 'subscribed' property
+	var user = db.execute("SELECT * FROM user WHERE username = 'default'");
+	var subscribed = user.fieldByName('subscribed');
+	
 	var subscribeIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/subscribe.png',
+		backgroundImage: (subscribed) ? '/icons/home/unsubscribe.png' : '/icons/home/subscribe.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: middleLeft,
-		subscribed: false
+		left: middleLeft
 	});
 	resourceIcons.add(subscribeIcon);
 	
@@ -252,7 +255,13 @@ function HomeWindow(navGroup, osname) {
 	});
 	subscribeIcon.addEventListener('click', function(){
 		var Notifications = require('notifications');
-		if (subscribeIcon.subscribed){
+		
+		// get stored 'subscribed' property
+		var user = db.execute("SELECT * FROM user WHERE username = 'default'");
+		var subscribed = user.fieldByName('subscribed');
+
+		// check if subscribed
+		if (subscribed){
 			Notifications.unsubscribeToNotifications(subscribeIcon);
 		} else {
 			Notifications.subscribeToNotifications(subscribeIcon);

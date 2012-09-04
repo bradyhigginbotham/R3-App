@@ -27,7 +27,7 @@ function HomeWindow(navGroup, osname) {
 	});
 	
 	var header = Ti.UI.createLabel({
-		text: 'Announcements',
+		text: Ti.Platform.displayCaps.platformHeight,
 		color: '#7C0606',
 		font: {fontSize: settings.headerFontSize, fontWeight: 'bold'},
 		top: settings.headerTop,
@@ -256,6 +256,10 @@ function HomeWindow(navGroup, osname) {
 	subscribeIcon.addEventListener('click', function(){
 		var Notifications = require('notifications');
 		
+		// get stored 'subscribed' property
+		var user = db.execute("SELECT * FROM user WHERE username = 'default'");
+		var subscribed = user.fieldByName('subscribed');
+
 		// check if subscribed
 		if (subscribed){
 			Notifications.unsubscribeToNotifications(subscribeIcon);
