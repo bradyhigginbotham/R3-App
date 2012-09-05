@@ -25,6 +25,7 @@
 	NSString *purpose;
 	BOOL trackingHeading;
 	BOOL trackingLocation;
+    BOOL trackSignificantLocationChange;
 	
 	NSRecursiveLock* lock;
 }

@@ -1,6 +1,6 @@
 //Floor Plans Window Component Constructor
-function FloorPlansWindow(navGroup) {
-
+function FloorPlansWindow(navGroup, osname) {
+	var imageHeight = Ti.Platform.displayCaps.platformHeight;
 		
 	//create object instance
 	var self = Ti.UI.createWindow({
@@ -21,14 +21,23 @@ function FloorPlansWindow(navGroup) {
 	
 	
 	//image switcher
-	var floorPlans = Ti.UI.createImageView({
-		image: '/floorplan/FGMouton.png',
-		width: (Ti.Platform.displayCaps.platformHeight - 100) * 1.875,
-		height: Ti.Platform.displayCaps.platformHeight - 100,
-		top: 0,
-		left: 0
-	});
-
+	if (osname === 'android'){
+		var floorPlans = Ti.UI.createImageView({
+			image: '/floorplan/FGMouton.png',
+			width: (imageHeight - 100) * 1.875,
+			height: imageHeight - (imageHeight * 0.25),
+			top: 0,
+			left: 0
+		});	
+	} else {
+		var floorPlans = Ti.UI.createImageView({
+			image: '/floorplan/FGMouton.png',
+			width: (imageHeight - 100) * 1.875,
+			height: imageHeight - 100,
+			top: 0,
+			left: 0
+		});
+	}
 
 	var scrollView = Titanium.UI.createScrollView({
     	scrollType: 'horizontal',
@@ -39,9 +48,10 @@ function FloorPlansWindow(navGroup) {
         showHorizontalScrollIndicator: true,
         showVerticalScrollIndicator:false,
         verticalBounce: false,
-        maxZoomScale:10,
-        minZoomScale:1.0,
-        backgroundColor:"white",      
+        maxZoomScale: 10,
+        minZoomScale: 1.0,
+//		canScale: true,
+        backgroundColor: "white",      
 	});  
     scrollView.add(floorPlans);
 	self.add(scrollView);
@@ -66,13 +76,18 @@ function FloorPlansWindow(navGroup) {
 	self.add(moodyIcon);
 	
 	moutonIcon.addEventListener('click', function (){
-		floorPlans.image = 'floorplan/FGMouton.png';
+		floorPlans.image = '/floorplan/FGMouton.png';
 		self.title = 'F.G. Mouton';
 	});
 	
 	moodyIcon.addEventListener('click', function (){
-		floorPlans.image = 'floorplan/Moody.png';
+		floorPlans.image = '/floorplan/Moody.png';
 		self.title = 'B.I. Moody';
+	});
+	
+	self.addEventListener('close', function(){
+		self.remove(floorPlans);
+		floorPlans = null;
 	});
 	
 	

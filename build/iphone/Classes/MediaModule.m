@@ -440,10 +440,10 @@ static NSDictionary* TI_filterableItemProperties;
 				[view performSelector:@selector(setTouchEnabled_:) withObject:NUMBOOL(NO)];
 			}
 			[TiUtils setView:view positionRect:[picker view].bounds];
-			[cameraView layoutChildren:NO];
             [cameraView windowWillOpen];
 			[picker setCameraOverlayView:view];
             [cameraView windowDidOpen];
+            [cameraView layoutChildren:NO];
 			[picker setWantsFullScreenLayout:YES];
 		}
 		

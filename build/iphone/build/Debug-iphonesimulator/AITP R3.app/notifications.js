@@ -64,4 +64,3 @@ function subscribeToNotifications(){
 	}
 }
 exports.subscribeToNotifications = subscribeToNotifications;
-

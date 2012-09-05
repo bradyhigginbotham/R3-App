@@ -1252,7 +1252,7 @@
 	{
 		UIView * ourView = [self viewForKeyboardAccessory];
         CGRect rect = [ourView convertRect:endFrame fromView:nil];
-		CGFloat keyboardHeight = rect.origin.y + rect.size.height;
+		CGFloat keyboardHeight = rect.origin.y;
         if (keyboardHeight > 0) {
             UIView * possibleScrollView = [scrolledView superview];
             UIView<TiScrolling> * confirmedScrollView = nil;

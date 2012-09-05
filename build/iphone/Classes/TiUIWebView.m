@@ -422,7 +422,7 @@ static NSString * const kAITPR3Javascript = @"Ti.App={};Ti.API={};Ti.App._listen
 
 -(void)setScrollsToTop_:(id)value
 {
-	BOOL scrollsToTop = [TiUtils boolValue:value];
+	BOOL scrollsToTop = [TiUtils boolValue:value def:YES];
 	[[self scrollview] setScrollsToTop:scrollsToTop];
 }
 

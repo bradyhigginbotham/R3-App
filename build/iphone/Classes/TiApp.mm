@@ -109,6 +109,7 @@ TI_INLINE void waitForMemoryPanicCleared();   //WARNING: This must never be run 
 }
 
 @synthesize window, remoteNotificationDelegate, controller;
+@synthesize disableNetworkActivityIndicator;
 
 +(void)initialize
 {
@@ -145,21 +146,26 @@ TI_INLINE void waitForMemoryPanicCleared();   //WARNING: This must never be run 
 -(void)startNetwork
 {
 	ENSURE_UI_THREAD_0_ARGS;
-	networkActivityCount ++;
-	if (networkActivityCount == 1)
+	if (OSAtomicIncrement32(&networkActivityCount) == 1)
 	{
-		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:!disableNetworkActivityIndicator];
 	}
 }
 
 -(void)stopNetwork
 {
 	ENSURE_UI_THREAD_0_ARGS;
-	networkActivityCount --;
-	if (networkActivityCount == 0)
+	if (OSAtomicDecrement32(&networkActivityCount) == 0)
 	{
 		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 	}
+}
+
+- (void)setDisableNetworkActivityIndicator:(BOOL)value
+{
+	disableNetworkActivityIndicator = value;
+	[ASIHTTPRequest setShouldUpdateNetworkActivityIndicator: !disableNetworkActivityIndicator];
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:(!disableNetworkActivityIndicator && (networkActivityCount > 0))];
 }
 
 -(NSDictionary*)launchOptions
@@ -214,7 +220,7 @@ TI_INLINE void waitForMemoryPanicCleared();   //WARNING: This must never be run 
 
 - (void)boot
 {
-	DebugLog(@"[INFO] %@/%@ (%s.0fd84a2)",TI_APPLICATION_NAME,TI_APPLICATION_VERSION,TI_VERSION_STR);
+	DebugLog(@"[INFO] %@/%@ (%s.ed7f777)",TI_APPLICATION_NAME,TI_APPLICATION_VERSION,TI_VERSION_STR);
 	
 	sessionId = [[TiUtils createUUID] retain];
 	TITANIUM_VERSION = [[NSString stringWithCString:TI_VERSION_STR encoding:NSUTF8StringEncoding] retain];

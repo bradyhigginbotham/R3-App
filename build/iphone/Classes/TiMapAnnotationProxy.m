@@ -261,6 +261,17 @@
 	}
 }
 
+-(void)setImage:(id)image
+{
+	id current = [self valueForUndefinedKey:@"image"];
+	[self replaceValue:image forKey:@"image" notification:NO];
+	if ([current isEqual: image] == NO)
+	{
+		[self setNeedsRefreshingWithSelection:YES];
+	}
+}
+
+
 -(int)tag
 {
 	return tag;

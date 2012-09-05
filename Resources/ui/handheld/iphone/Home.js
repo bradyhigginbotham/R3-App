@@ -102,7 +102,7 @@ function HomeWindow(osname) {
 	});
 	eventIcons.add(competitionsIcon);
 	
-	var certificationsIcon = Ti.UI.createButton({
+/*	var certificationsIcon = Ti.UI.createButton({
 		backgroundImage: "/icons/home/certifications.png",
 		height: iconHeight,
 		width: iconWidth,
@@ -110,13 +110,14 @@ function HomeWindow(osname) {
 		left: iconLeft
 	});
 	eventIcons.add(certificationsIcon);
+*/
 	
 	var jobFairIcon = Ti.UI.createButton({
 		backgroundImage: "/icons/home/briefcase.png",
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: middleLeft
+		left: iconLeft
 	});
 	eventIcons.add(jobFairIcon);
 	
@@ -128,6 +129,19 @@ function HomeWindow(osname) {
 		left: middleLeft
 	});
 	eventIcons.add(festivalIcon);
+	
+	// get stored 'subscribed' property
+	var user = db.execute("SELECT * FROM user WHERE username = 'default'");
+	var subscribed = user.fieldByName('subscribed');
+	
+	var subscribeIcon = Ti.UI.createButton({
+		backgroundImage: '/icons/home/subscribe.png',
+		height: iconHeight,
+		width: iconWidth,
+		top: iconTop,
+		left: middleLeft
+	});
+	eventIcons.add(subscribeIcon);
 	
 	/*---- Resource Icons ----*/
 	var mapsIcon = Ti.UI.createButton({
@@ -148,15 +162,14 @@ function HomeWindow(osname) {
 	});
 	resourceIcons.add(photosIcon);
 	
-	var subscribeIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/subscribe.png',
+	var twitterIcon = Ti.UI.createButton({
+		backgroundImage: '/icons/home/twitter.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
-		left: middleLeft,
-		subscribed: false
+		left: middleLeft
 	});
-	resourceIcons.add(subscribeIcon);
+	resourceIcons.add(twitterIcon);
 	
 	var collegesIcon = Ti.UI.createButton({
 		backgroundImage: '/icons/home/colleges.png',
@@ -176,14 +189,14 @@ function HomeWindow(osname) {
 	})
 	resourceIcons.add(aboutIcon);
 	
-	var twitterIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/twitter.png',
+	var facebookIcon = Ti.UI.createButton({
+		backgroundImage: '/icons/home/facebook.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
 		left: middleLeft
 	});
-	resourceIcons.add(twitterIcon);
+	resourceIcons.add(facebookIcon);
 	
 	/*---- Icon EventListeners ----*/
 	collegesIcon.addEventListener('click', function(){
@@ -213,11 +226,11 @@ function HomeWindow(osname) {
 		var competitionsWindow = new CompetitionsWindow(navGroup);
 		navGroup.open(competitionsWindow);
 	});	
-	certificationsIcon.addEventListener('click', function(){
+/*	certificationsIcon.addEventListener('click', function(){
 		var CertificationsWindow = require('ui/common/certifications/CertificationsWindow');
 		var certificationsWindow = new CertificationsWindow(navGroup);
 		navGroup.open(certificationsWindow);
-	});
+	}); */
 	photosIcon.addEventListener('click', function(){
 		var PhotosWindow = require('ui/common/photos/PhotosWindow');
 		var photosWindow = new PhotosWindow();
@@ -249,16 +262,27 @@ function HomeWindow(osname) {
 		navGroup.open(tabGroup);   	
 	});
 	subscribeIcon.addEventListener('click', function(){
-		//var Notifications = require('notifications');
-		//Notifications.subscribeToNotifications();
+		var Notifications = require('notifications');
 		
-		if (subscribeIcon.subscribed){
-			subscribeIcon.backgroundImage = "/icons/home/subscribe.png";
-			subscribeIcon.subscribed = false;
+		// get stored 'subscribed' property
+		var user = db.execute("SELECT * FROM user WHERE username = 'default'");
+		var subscribed = user.fieldByName('subscribed');
+
+		// check if subscribed
+		if (subscribed){
+		//	Notifications.unsubscribeToNotifications(subscribeIcon);
 		} else {
-			subscribeIcon.backgroundImage = '/icons/home/unsubscribe.png';
-			subscribeIcon.subscribed = true;
+		//	Notifications.subscribeToNotifications(subscribeIcon);
 		}
+	});
+	facebookIcon.addEventListener('click', function(){
+		var facebookPage = Ti.UI.createWebView({url: 'https://www.facebook.com/AITPRegion3StudentConference'});
+		var facebookWindow = Ti.UI.createWindow({
+			title: 'R3 Facebook',
+			navBarHidden: false
+		});
+		facebookWindow.add(facebookPage);
+		navGroup.open(facebookWindow);
 	});
     	
     // tabs
