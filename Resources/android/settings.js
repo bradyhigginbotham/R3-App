@@ -54,6 +54,7 @@ function Settings(height){
 			this.middleLeft = height * 0.0875;
 			break;
 		case 1184:
+		case 1232:
 		case 1280: // WXGA
 			this.rowTop = height * 0.265;
 			this.rowHeight = height * 0.15375;
