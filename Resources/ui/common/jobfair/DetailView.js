@@ -11,13 +11,9 @@ function DetailView() {
 	siteWindow.add(website);
 
 	var self = Ti.UI.createView({
-		backgroundColor:'white',
-		layout: 'vertical',
-		top: 20,
-		left: 15,
-		right: 15,
-		height: '90%',
-		borderRadius: 10
+		backgroundImage: 'images/bg_bigTex.png',
+		backgroundColor: 'transparent',
+		layout: 'vertical'
 	});
 		
 	self.addEventListener('itemSelected', function(e) {
@@ -30,14 +26,16 @@ function DetailView() {
 	
 	var name = Ti.UI.createLabel({
 		text:'Sponsor',
+		color: '#ffffff',
 		top: 10,
-		left: 10
+		left: 10,
+		font: {fontWeight: 'bold'}
 	});
 	self.add(name);
 	
 	var site = Ti.UI.createLabel({
 		text: 'Website',
-		color: 'blue',
+		color: 'red',
 		top: 0,
 		left: 10
 	});
@@ -45,8 +43,10 @@ function DetailView() {
 
 	var details = Ti.UI.createLabel({
 		text: 'Sponsor Details',
+		color: '#ffffff',
 		top: 20,
-		left: 10
+		left: 10,
+		right: 10
 	});
 	self.add(details);
 

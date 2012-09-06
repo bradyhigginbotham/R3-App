@@ -1,13 +1,14 @@
 function DetailView() {
 	var self = Ti.UI.createView({
-		backgroundColor:'white'
+		backgroundImage: 'images/bg_bigTex.png',
+		backgroundColor: 'transparent'
 	});
 	
 	var lbl = Ti.UI.createLabel({
 		text:'Speaker',
 		height:'auto',
 		width:'auto',
-		color:'#000',
+		color:'#ffffff',
 		top: 10,
 		left: 10
 	});

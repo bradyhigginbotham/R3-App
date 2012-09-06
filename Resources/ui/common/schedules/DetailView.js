@@ -3,8 +3,6 @@ function DetailView() {
 	
 	var query = 'SELECT * FROM (SELECT competition AS title, details, start, end, schedule_id, "contest" AS type FROM competitions ' + 
 				'UNION ' +
-				'SELECT name AS title, details, start, end, schedule_id, "cert" AS type FROM certifications ' +
-				'UNION ' +
 				'SELECT title, details, start, end, schedule_id, "session" AS type FROM sessions) WHERE schedule_id = ? ORDER BY start ASC';
 				
 	var self = Ti.UI.createView({

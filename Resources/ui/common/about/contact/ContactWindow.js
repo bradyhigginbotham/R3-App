@@ -7,7 +7,7 @@ function ContactWindow(navGroup)
 	//Create object instance
 	var self = Ti.UI.createWindow({
 		backgroundColor:'#ffffff',
-		title: 'App Overview',
+		title: 'Contact',
 		navBarHidden: false
 	});
 	

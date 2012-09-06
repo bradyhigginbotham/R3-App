@@ -1,13 +1,14 @@
 function DetailView() {
 	var self = Ti.UI.createView({
-		backgroundColor:'white'
+		backgroundImage: 'images/bg_bigTex.png',
+		backgroundColor: 'transparent'
 	});
 	
 	var title = Ti.UI.createLabel({
 		text:'Title',
 		height:'auto',
 		width:'auto',
-		color:'#000',
+		color:'#ffffff',
 		font:{fontWeight: 'bold'},
 		top: 10,
 		left: 10
@@ -18,7 +19,7 @@ function DetailView() {
 		text:'Announcement',
 		height:'auto',
 		width:'auto',
-		color:'#000',
+		color:'#ffffff',
 		top: 40,
 		left: 10
 	});

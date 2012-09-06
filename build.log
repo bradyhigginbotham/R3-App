@@ -1,6 +1,6 @@
 Logfile initialized
 [INFO] logfile = /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build.log
-[DEBUG] /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.2.GA/android/builder.py simulator AITP R3 /Android/android-sdk-macosx /Users/Stick/Documents/Titanium Studio Workspace/AITP R3 com.bradyhigginbotham.r3 6 WVGA800 
+[DEBUG] /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.2.GA/android/builder.py simulator AITP R3 /Android/android-sdk-macosx /Users/Stick/Documents/Titanium Studio Workspace/AITP R3 com.bradyhigginbotham.r3 6 HVGA 
 [INFO] Building AITP R3 for Android ... one moment
 [INFO] Titanium SDK version: 2.1.2 (08/24/12 14:46 ed7f777)
 [DEBUG] Waiting for device to be ready ...
@@ -8,8 +8,13 @@ Logfile initialized
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
 [TRACE] adb devices returned 1 devices/emulators
-[DEBUG] Device connected... (waited 15 seconds)
-[DEBUG] waited 15.076951 seconds on emulator to get ready
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[TRACE] adb devices returned 1 devices/emulators
+[DEBUG] Device connected... (waited 40 seconds)
+[DEBUG] waited 40.183868 seconds on emulator to get ready
 [INFO] Waiting for the Android Emulator to become available
 [DEBUG] com.bradyhigginbotham.r3 installed? True
 [INFO] Fastdev server running, deploying in Fastdev mode
@@ -17,8 +22,6 @@ Logfile initialized
 [INFO] Copying project resources..
 [INFO] Detected change in tiapp.xml, or assets deleted. Forcing full re-build...
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/appicon.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/appicon.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/appicon_gloss.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/appicon_gloss.png
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/appicon_white.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/appicon_white.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/NavigationController.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/NavigationController.js
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/notifications.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/notifications.js
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/settings.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/settings.js
@@ -66,6 +69,7 @@ Logfile initialized
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/contact/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/contact/ListView.js
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/TabGroup.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/TabGroup.js
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/ull/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/ull/ListView.js
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/ull/ull.html => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/ull/ull.html
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/ull/UllWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/ull/UllWindow.js
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/announcements/AnnouncementsWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/announcements/AnnouncementsWindow.js
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/announcements/DetailView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/announcements/DetailView.js
@@ -112,15 +116,19 @@ Logfile initialized
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/tablet/ipad/Home.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/tablet/ipad/Home.js
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/bg_bigTex.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-hdpi/bg_bigtex_bf6d9f6e52.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-hdpi/default_d44e27d97b.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-hdpi/main_6d5dd0e3ac.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-ldpi/bg_bigTex.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-ldpi/bg_bigtex_bf6d9f6e52.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-ldpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-ldpi/default_d44e27d97b.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-long-port-ldpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-long-port-ldpi/main_6d5dd0e3ac.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/bg_bigTex.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/bg_bigtex_bf6d9f6e52.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/default_d44e27d97b.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/main_6d5dd0e3ac.png
-[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-hdpi/main_854.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-hdpi/main_854_59c6726b9d.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-ldpi/bg_bigTex.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-ldpi/bg_bigtex_bf6d9f6e52.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-ldpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-ldpi/default_d44e27d97b.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-ldpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-ldpi/main_6d5dd0e3ac.png
+[TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-mdpi/bg_bigTex.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-mdpi/bg_bigtex_bf6d9f6e52.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-mdpi/default.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-mdpi/default_d44e27d97b.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-mdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-mdpi/main_6d5dd0e3ac.png
 [DEBUG] found special platform files dir = /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/platform/android
@@ -191,6 +199,7 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/ui/common/about/contact/contact.html
 [DEBUG] from resource zip => assets/Resources/ui/common/about/ull/ListView.js
 [DEBUG] from resource zip => assets/Resources/ui/common/about/ull/UllWindow.js
+[DEBUG] from resource zip => assets/Resources/ui/common/about/ull/ull.html
 [DEBUG] from resource zip => assets/Resources/ui/common/about/TabGroup.js
 [DEBUG] from resource zip => assets/Resources/ui/common/announcements/AnnouncementsWindow.js
 [DEBUG] from resource zip => assets/Resources/ui/common/announcements/DetailView.js
@@ -238,8 +247,6 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/NavigationController.js
 [DEBUG] from resource zip => assets/Resources/app.js
 [DEBUG] from resource zip => assets/Resources/appicon.png
-[DEBUG] from resource zip => assets/Resources/appicon_gloss.png
-[DEBUG] from resource zip => assets/Resources/appicon_white.png
 [DEBUG] from resource zip => assets/Resources/cloudpush.jar
 [DEBUG] from resource zip => assets/Resources/notifications.js
 [DEBUG] from resource zip => assets/Resources/settings.js
@@ -262,19 +269,23 @@ Logfile initialized
 [DEBUG] from resource zip => res/drawable-hdpi/close.png
 [DEBUG] from resource zip => res/drawable-ldpi/close.png
 [DEBUG] from resource zip => res/drawable-long-port-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-long-port-hdpi/bg_bigtex_bf6d9f6e52.png
 [DEBUG] from resource zip => res/drawable-long-port-hdpi/default_d44e27d97b.png
 [DEBUG] from resource zip => res/drawable-long-port-hdpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-long-port-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-long-port-ldpi/bg_bigtex_bf6d9f6e52.png
 [DEBUG] from resource zip => res/drawable-long-port-ldpi/default_d44e27d97b.png
 [DEBUG] from resource zip => res/drawable-long-port-ldpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-notlong-port-hdpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-port-hdpi/bg_bigtex_bf6d9f6e52.png
 [DEBUG] from resource zip => res/drawable-notlong-port-hdpi/default_d44e27d97b.png
 [DEBUG] from resource zip => res/drawable-notlong-port-hdpi/main_6d5dd0e3ac.png
-[DEBUG] from resource zip => res/drawable-notlong-port-hdpi/main_854_59c6726b9d.png
 [DEBUG] from resource zip => res/drawable-notlong-port-ldpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-port-ldpi/bg_bigtex_bf6d9f6e52.png
 [DEBUG] from resource zip => res/drawable-notlong-port-ldpi/default_d44e27d97b.png
 [DEBUG] from resource zip => res/drawable-notlong-port-ldpi/main_6d5dd0e3ac.png
 [DEBUG] from resource zip => res/drawable-notlong-port-mdpi/background.png
+[DEBUG] from resource zip => res/drawable-notlong-port-mdpi/bg_bigtex_bf6d9f6e52.png
 [DEBUG] from resource zip => res/drawable-notlong-port-mdpi/default_d44e27d97b.png
 [DEBUG] from resource zip => res/drawable-notlong-port-mdpi/main_6d5dd0e3ac.png
 [DEBUG] from JAR /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.2.GA/android/modules/titanium-ui.jar => ti/modules/titanium/ui/widget/webview/binding.js
@@ -305,7 +316,7 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.016216 seconds on emulator to get ready
+[DEBUG] waited 0.020945 seconds on emulator to get ready
 [INFO] Installing application on emulator
 [INFO] Launching application ... AITP R3
 [TRACE] Launch output: Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.bradyhigginbotham.r3/.AitpR3Activity }

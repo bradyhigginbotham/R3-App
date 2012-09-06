@@ -6,7 +6,7 @@ function CompetitionsWindow(navGroup) {
 		
 	//create object instance
 	var self = Ti.UI.createWindow({
-		backgroundColor:'#ffffff',
+		backgroundImage: 'images/bg_bigTex.png',
 		title: 'Competitions',
 		navBarHidden: false
 	});

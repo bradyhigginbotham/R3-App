@@ -42,7 +42,6 @@
 	<array>
 		<string>appicon.png</string>
 		<string>appicon@2x.png</string>
-		<string>appicon-72.png</string>
 	</array>
 
 	<key>UISupportedInterfaceOrientations~ipad</key>

@@ -79,6 +79,8 @@ function Settings(height){
 			this.rowHeight = height * 0.15375;
 			this.headerHeight = 56;
 			this.subtitleHeight = 40;
+			this.iconTop = 5;
+			this.iconLeft = 10;
 			this.iconWidth = 106;
 			this.iconHeight = 122;
 			this.headerFontSize = 36;

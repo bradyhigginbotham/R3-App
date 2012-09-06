@@ -31,7 +31,7 @@ function DetailWindow(navGroup, e) {
 				competitionWindow.add(competitionView);
 				navGroup.open(competitionWindow);
 				break;
-			case "cert":
+		/*	case "cert":
 				var CertificationView = require('ui/common/certifications/DetailView');
 				
 				certificationView = new CertificationView();
@@ -41,7 +41,7 @@ function DetailWindow(navGroup, e) {
 					backButtonTitle: 'Back'
 				});
 				certificationWindow.add(certificationView);
-				navGroup.open(certificationWindow);
+				navGroup.open(certificationWindow); */
 			case "session":
 				var SessionView = require('ui/common/presentations/sessions/DetailView');
 				

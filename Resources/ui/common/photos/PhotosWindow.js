@@ -7,7 +7,8 @@ function PhotosWindow() {
 		
 	//create object instance
 	var self = Ti.UI.createWindow({
-		backgroundColor:'#5C728B',
+		backgroundImage: 'images/bg_bigTex.png',
+		backgroundColor: 'transparent',
 		title: 'Photo Upload',
 		navBarHidden: false
 	});

@@ -1,12 +1,14 @@
 function DetailView() {
 	var self = Ti.UI.createView({
-		backgroundColor:'white'
+		backgroundImage: 'images/bg_bigTex.png',
+		backgroundColor: 'transparent'
 	});
 	
 	var details = Ti.UI.createLabel({
 		text: 'Details',
 		height: 'auto',
 		width: 'auto',
+		color:'#ffffff',
 		top: 10,
 		left: 10
 	});
@@ -16,6 +18,7 @@ function DetailView() {
 		text: 'Time of Session',
 		height: 'auto',
 		width: 'auto',
+		color:'#ffffff',
 		top: 50,
 		left: 10
 	});

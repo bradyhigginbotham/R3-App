@@ -7,7 +7,7 @@ function ConferenceWindow(navGroup)
 	//Create object instance
 	var self = Ti.UI.createWindow({
 		backgroundColor:'#ffffff',
-		title: 'App Overview',
+		title: 'R3 Conference',
 		navBarHidden: false
 	})
 	

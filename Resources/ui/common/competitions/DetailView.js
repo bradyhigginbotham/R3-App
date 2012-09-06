@@ -1,12 +1,13 @@
 function DetailView(){
 	var self = Ti.UI.createView({
-		backgroundColor:'white'
+		backgroundImage: 'images/bg_bigTex.png'
 	});
 	
 	var competition = Ti.UI.createLabel({
 		text: 'Competition Title',
 		height:'auto',
 		width:'auto',
+		color:'#ffffff',
 		top: 10
 	});
 	self.add(competition);
@@ -15,6 +16,7 @@ function DetailView(){
 		text: 'Competition Date',
 		height: 'auto',
 		width: 'auto',
+		color:'#ffffff',
 		top: 30
 	});
 	self.add(date);	

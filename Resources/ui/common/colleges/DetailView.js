@@ -1,13 +1,14 @@
 function DetailView() {
 	var self = Ti.UI.createView({
-		backgroundColor:'white'
+		backgroundImage: 'images/bg_bigTex.png',
+		backgroundColor: 'transparent'
 	});
 	
 	var lbl = Ti.UI.createLabel({
 		text:'College',
 		height:'auto',
 		width:'auto',
-		color:'#000'
+		color: '#ffffff',
 	});
 	self.add(lbl);
 	

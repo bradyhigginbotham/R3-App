@@ -13,7 +13,6 @@ function subscribeToNotifications(icon){
 		}, function (e) {
 			if (e.success) {
 				var user = e.users[0];
-				alert("Login successfully");
 				grabDeviceToken();
 		    } else {
 		        alert("Error :"+e.message);
