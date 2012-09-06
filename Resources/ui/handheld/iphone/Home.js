@@ -4,7 +4,7 @@ function HomeWindow(osname) {
 	var navGroup = undefined;
 	
 	// constants
-	var iconHeight = 74, iconWidth = 64, iconTop = 10, iconLeft = 10, middleLeft = 50,
+	var iconHeight = 74, iconWidth = 64, iconTop = 5, iconLeft = 10, middleLeft = 50,
 		tabColor = 'white', tabHeight = 70, tabWidth = 160;
 		
 	//create component instance
@@ -270,9 +270,9 @@ function HomeWindow(osname) {
 
 		// check if subscribed
 		if (subscribed){
-		//	Notifications.unsubscribeToNotifications(subscribeIcon);
+			Notifications.unsubscribeToNotifications(subscribeIcon);
 		} else {
-		//	Notifications.subscribeToNotifications(subscribeIcon);
+			Notifications.subscribeToNotifications(subscribeIcon);
 		}
 	});
 	facebookIcon.addEventListener('click', function(){
@@ -311,8 +311,9 @@ function HomeWindow(osname) {
 	
 	var scrollableView = Ti.UI.createScrollableView({
 		views:[eventIcons,resourceIcons],
-		showPagingControl: false,
-		pagingControlColor: '#E5EAEF',
+		showPagingControl: true,
+		pagingControlHeight: 18,
+		pagingControlColor: 'transparent',
 		bottom: 70,
 		height: 172
 	});

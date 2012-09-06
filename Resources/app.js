@@ -72,7 +72,7 @@ if (Ti.version < 1.8 ) {
 		    db.close();
 	    });
 	} else {
-	//	Ti.include('iphone/notifications.js');
-	};
+		Ti.UI.iPhone.appBadge = 0;
+	}
 
 })();
