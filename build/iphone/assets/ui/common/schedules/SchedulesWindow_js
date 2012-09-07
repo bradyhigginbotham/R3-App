@@ -1,0 +1,3 @@
+function SchedulesWindow(navGroup,osname){var ListView=require('ui/common/schedules/ListView')
+DetailWindow=require('ui/common/schedules/DetailWindow');var self=Ti.UI.createWindow({backgroundColor:'#ffffff',title:'Conference Schedule',navBarHidden:false});var listView=new ListView();var listContainerWindow=Ti.UI.createWindow({title:'Conference Schedule'});self.add(listView);listView.addEventListener('itemSelected',function(e){var detailWindow=new DetailWindow(navGroup,e);navGroup.open(detailWindow);});return self;}
+module.exports=SchedulesWindow;

@@ -53,8 +53,24 @@ function Settings(height){
 			this.scrollableHeight = height * 0.325;
 			this.middleLeft = height * 0.0875;
 			break;
-		case 1184:
 		case 1232:
+			this.rowTop = 400;
+			this.rowHeight = height * 0.15375;
+			this.headerTop = 20;
+			this.headerHeight = 80;
+			this.headerFontSize = 56;
+			this.subtitleTop = 90;
+			this.subtitleHeight = 70;
+			this.subtitleFontSize = 24;
+			this.iconTop = 30;
+			this.iconLeft = 40;
+			this.iconWidth = 106;
+			this.iconHeight = 122;
+			this.middleLeft = 100;
+			this.scrollableBottom = height * 0.15;
+			this.scrollableHeight = height * 0.325;
+			break;
+		case 1184:
 		case 1280: // WXGA
 			this.rowTop = height * 0.265;
 			this.rowHeight = height * 0.15375;

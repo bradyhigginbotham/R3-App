@@ -135,7 +135,7 @@ function HomeWindow(osname) {
 	var subscribed = user.fieldByName('subscribed');
 	
 	var subscribeIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/subscribe.png',
+		backgroundImage: (subscribed) ? '/icons/home/unsubscribe.png' : '/icons/home/subscribe.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,

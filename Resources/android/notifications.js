@@ -19,7 +19,7 @@ function subscribeToNotifications(icon){
 				userLogin();
 			},
 			error: function deviceTokenError(e) {
-				alert('Failed to register for push! ' + e.error);
+				alert('Failed to register for push notifications! Please check your network or data connection.');
 			}
 		});
 	}
@@ -33,7 +33,7 @@ function subscribeToNotifications(icon){
 			if (e.success) {
 				registerForPush();
 			} else {
-				alert('Error: ' +((e.error && e.message) || JSON.stringify(e)));
+				alert('Failed to register for push notifications! Please check your network or data connection.');
 			}
 		});
 	}
@@ -54,7 +54,7 @@ function subscribeToNotifications(icon){
 			    db.execute("UPDATE user SET subscribed = 1 WHERE username = 'default'");
 			    db.close();
 		    }else{
-		        alert('Error:' +((e.error && e.message) || JSON.stringify(e)));
+				alert('Failed to register for push notifications! Please check your network or data connection.');
 		    }
 		});
 	}
@@ -80,7 +80,7 @@ function unsubscribeToNotifications(icon){
 				userLogin();
 			},
 			error: function deviceTokenError(e) {
-				alert('Failed to register for push! ' + e.error);
+				alert('Failed to unsubscribe to push notifications! Please check your network or data connection.');
 			}
 		});
 	}
@@ -94,7 +94,7 @@ function unsubscribeToNotifications(icon){
 			if (e.success) {
 				unregisterForPush();
 			} else {
-				alert('Error: ' +((e.error && e.message) || JSON.stringify(e)));
+				alert('Failed to unsubscribe to push notifications! Please check your network or data connection.');
 			}
 		});
 	}
@@ -114,7 +114,7 @@ function unsubscribeToNotifications(icon){
 			    db.execute("UPDATE user SET subscribed = 0 WHERE username = 'default'");
 			    db.close();
 		    } else {
-		        alert('Error:\\n' + ((e.error && e.message) || JSON.stringify(e)));
+				alert('Failed to unsubscribe to push notifications! Please check your network or data connection.');
 		    }
 		});
 	}
