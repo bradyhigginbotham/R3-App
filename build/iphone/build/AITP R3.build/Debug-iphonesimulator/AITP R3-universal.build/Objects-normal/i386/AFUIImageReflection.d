@@ -1,3 +1,2 @@
 dependencies: \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/AFOpenFlow/AFUIImageReflection.m \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/AFOpenFlow/AFUIImageReflection.h
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/AFOpenFlow/AFUIImageReflection.m

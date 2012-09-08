@@ -2,7 +2,7 @@
 function SpeakersWindow(navGroup) {
 	//load component dependencies
 	var ListView = require('ui/common/presentations/speakers/ListView'),
-		DetailView = require('ui/common/presentations/speakers/DetailView');
+		DetailWindow = require('ui/common/presentations/speakers/DetailWindow');
 		
 	//create object instance
 	var self = Ti.UI.createWindow({
@@ -12,8 +12,7 @@ function SpeakersWindow(navGroup) {
 	});
 		
 	//construct UI
-	var listView = new ListView(),
-		detailView = new DetailView();
+	var listView = new ListView();
 	
 	//create list view container
 	var listContainerWindow = Ti.UI.createWindow({
@@ -21,16 +20,10 @@ function SpeakersWindow(navGroup) {
 	});
 	self.add(listView);
 	
-	//create detail view container
-	var detailContainerWindow = Ti.UI.createWindow({
-		title:'Speaker Details'
-	});
-	detailContainerWindow.add(detailView);
-	
 	//add behavior for master view
-	listView.addEventListener('itemSelected', function(e) {
-		detailView.fireEvent('itemSelected',e);
-		self.parentTab.open(detailContainerWindow);
+	listView.addEventListener('speakerSelected', function(e) {		
+		var detailWindow = new DetailWindow(self.parentTab, e);
+		self.parentTab.open(detailWindow);
 	});
 	
 	var homeButton = Ti.UI.createButton({

@@ -2,7 +2,7 @@
 function SessionsWindow(navGroup) {
 	//load component dependencies
 	var ListView = require('ui/common/presentations/sessions/ListView'),
-		DetailView = require('ui/common/presentations/sessions/DetailView');
+		DetailWindow = require('ui/common/presentations/sessions/DetailWindow');
 		
 	//create object instance
 	var self = Ti.UI.createWindow({
@@ -12,8 +12,7 @@ function SessionsWindow(navGroup) {
 	});
 		
 	//construct UI
-	var listView = new ListView(),
-		detailView = new DetailView();
+	var listView = new ListView();
 	
 	//create list view container
 	var listContainerWindow = Ti.UI.createWindow({
@@ -21,17 +20,10 @@ function SessionsWindow(navGroup) {
 	});
 	self.add(listView);
 	
-	//create detail view container
-	var detailContainerWindow = Ti.UI.createWindow({
-		title:'Session Details'
-	});
-	detailContainerWindow.add(detailView);
-	
 	//add behavior for master view
 	listView.addEventListener('sessionSelected', function(e) {
-		detailContainerWindow.title = e.data.title;
-		detailView.fireEvent('sessionSelected',e);
-		self.parentTab.open(detailContainerWindow);
+		var detailWindow = new DetailWindow(self.parentTab, e);
+		self.parentTab.open(detailWindow);
 	});
 	
 	var homeButton = Ti.UI.createButton({

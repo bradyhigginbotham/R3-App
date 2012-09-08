@@ -1,13 +1,12 @@
 dependencies: \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/MGSplitView/MGSplitView.m \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/MGSplitView/MGSplitView.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/MGSplitView/MGSplitViewController.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiBase.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiThreading.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiPublicAPI.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiApp.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiHost.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiProxy.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiBase.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiThreading.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiPublicAPI.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiEvaluator.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/KrollContext.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/headers/TiCore/TiCore.h \

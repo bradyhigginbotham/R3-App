@@ -24,34 +24,7 @@ dependencies: \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiBuffer.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiBlob.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIAlertDialogProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/Ti2DMatrix.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/Ti3DMatrix.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiAnimation.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiPoint.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/ListenerEntry.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/LayoutConstraint.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIiPhoneProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIiPadProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIiPadPopoverProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiViewProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIView.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiGradient.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiRect.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiViewController.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIiPadSplitWindowProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiWindowProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiTab.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiTabGroup.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIWindow.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIiPadDocumentViewerProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIiOSProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIiOSAdViewProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIViewProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIClipboardProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIiOSCoverFlowViewProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIiOSToolbarProxy.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiToolbar.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIiOSTabbedBarProxy.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiApp.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiHost.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/Bridge.h \
@@ -60,6 +33,19 @@ dependencies: \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/XHRBridge.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiRootViewController.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiRootController.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiWindowProxy.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiViewProxy.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIView.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiAnimation.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiPoint.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/ListenerEntry.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/LayoutConstraint.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiGradient.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiRect.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiTab.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiTabGroup.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUIWindow.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiViewController.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/ImageLoader.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/ASI/ASIHTTPRequest.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/ASI/ASIHTTPRequestConfig.h \

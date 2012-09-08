@@ -14,6 +14,7 @@ function ListView() {
 		    id: resultSet.fieldByName('id'),
 			title: resultSet.fieldByName('name'),
 			position: resultSet.fieldByName('title'),
+			bio: resultSet.fieldByName('bio'),
 			hasChild: true,
 			className: 'speaker',
 			height: 40
@@ -30,9 +31,8 @@ function ListView() {
 	
 	//add behavior
 	table.addEventListener('click', function(e) {
-		self.fireEvent('itemSelected', {
-			name:e.rowData.title,
-			position:e.rowData.position
+		self.fireEvent('speakerSelected', {
+			data: e.rowData
 		});
 	});
 	

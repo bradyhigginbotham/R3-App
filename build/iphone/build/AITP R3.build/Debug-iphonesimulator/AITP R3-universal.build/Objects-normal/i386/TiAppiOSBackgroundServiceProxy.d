@@ -15,9 +15,6 @@ dependencies: \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/headers/TiCore/TiContextRefPrivate.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/KrollCallback.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/KrollObject.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/KrollBridge.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/Bridge.h \
-  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiModule.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiUtils.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiColor.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiDimension.h \
@@ -27,7 +24,10 @@ dependencies: \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiBlob.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiApp.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiHost.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/Bridge.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiStylesheet.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/KrollBridge.h \
+  /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiModule.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/XHRBridge.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiRootViewController.h \
   /Users/Stick/Documents/Titanium\ Studio\ Workspace/AITP\ R3/build/iphone/Classes/TiRootController.h \

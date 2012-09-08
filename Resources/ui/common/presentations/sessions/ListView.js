@@ -8,7 +8,7 @@ function ListView() {
 	var results = [];
 
     //Get colleges from database
-    var resultSet = db.execute('SELECT * FROM sessions ORDER BY start ASC');
+    var resultSet = db.execute('SELECT * FROM sessions ORDER BY title ASC');
     while (resultSet.isValidRow()) {
 		results.push({
 		    id: resultSet.fieldByName('id'),
@@ -16,6 +16,8 @@ function ListView() {
 			details: resultSet.fieldByName('details'),
 			start: formatTime(resultSet.fieldByName('start')),
 			end: formatTime(resultSet.fieldByName('end')),
+			speaker_id: resultSet.fieldByName('speaker_id'),
+			location: resultSet.fieldByName('location'),
 			hasChild: true,
 			className: 'session',
 			height: 40

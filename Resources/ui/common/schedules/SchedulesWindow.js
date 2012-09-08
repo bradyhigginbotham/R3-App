@@ -1,7 +1,7 @@
 //Scheduls Window Component Constructor
 function SchedulesWindow(navGroup, osname) {
 	//load component dependencies
-	var ListView = require('ui/common/schedules/ListView')
+	var ListView = require('ui/common/schedules/ListView'),
 		DetailWindow = require('ui/common/schedules/DetailWindow');
 		
 	//create object instance

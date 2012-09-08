@@ -10,7 +10,7 @@ function DetailView() {
 	var website = Ti.UI.createWebView({url: ''});
 	siteWindow.add(website);
 
-	var self = Ti.UI.createView({
+	var self = Ti.UI.createScrollView({
 		backgroundImage: 'images/bg_bigTex.png',
 		backgroundColor: 'transparent',
 		layout: 'vertical'
@@ -29,7 +29,7 @@ function DetailView() {
 		color: '#ffffff',
 		top: 10,
 		left: 10,
-		font: {fontWeight: 'bold'}
+		font: {fontSize: 24, fontWeight: 'bold'},
 	});
 	self.add(name);
 	

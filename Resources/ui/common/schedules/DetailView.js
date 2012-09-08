@@ -1,9 +1,9 @@
 function DetailView() {
-	var table = undefined;
+	var table = undefined, item;
 	
-	var query = 'SELECT * FROM (SELECT competition AS title, details, start, end, schedule_id, "contest" AS type FROM competitions ' + 
+	var query = 'SELECT * FROM (SELECT competition AS title, details, start, end, location, schedule_id, sponsor_id AS specific, "contest" AS type FROM competitions ' + 
 				'UNION ' +
-				'SELECT title, details, start, end, schedule_id, "session" AS type FROM sessions) WHERE schedule_id = ? ORDER BY start ASC';
+				'SELECT title, details, start, end, location, schedule_id, speaker_id AS specific, "session" AS type FROM sessions) WHERE schedule_id = ? ORDER BY start ASC';
 				
 	var self = Ti.UI.createView({
 		backgroundColor:'white',
@@ -22,39 +22,42 @@ function DetailView() {
 	    	tempStart = formatTime(resultSet.fieldByName('start'));
 	    	endTime = formatTime(resultSet.fieldByName('end'));
 	    	
+	    	// create row item
+			var item = {
+				title: resultSet.fieldByName('title'),
+				details: resultSet.fieldByName('details'),
+				start: startTime,
+				end: endTime,
+				type: resultSet.fieldByName('type'),
+				location: resultSet.fieldByName('location'),
+				schedule_id: resultSet.fieldByName('schedule_id'),
+				hasChild: true,
+				height: 40,
+				className: 'schedule'
+			};
+	    	
+	    	// add header and start time if new
 	    	if(startTime != tempStart) { // new hour
 	    		startTime = tempStart;
 	    		header = startTime + " - " + endTime;
-				results.push({
-					title: resultSet.fieldByName('title'),
-					details: resultSet.fieldByName('details'),
-					start: startTime,
-					end: endTime,
-					type: resultSet.fieldByName('type'),
-					schedule_id: resultSet.fieldByName('schedule_id'),
-					header: header,
-					hasChild: true,
-					height: 40,
-					className: 'schedule'
-				});
-			} else{
-				results.push({
-					title: resultSet.fieldByName('title'),
-					start: startTime,
-					end: endTime,
-					type: resultSet.fieldByName('type'),
-					schedule_id: resultSet.fieldByName('schedule_id'),
-					hasChild: true,
-					height: 40,
-					className: 'schedule'
-				});			
-			}		
+	    		item.start = startTime;
+	    		item.header = header;
+			}
+			
+    		// add properties for specific types
+    		if (item.type == "contest"){
+				item.sponsor_id = resultSet.fieldByName('specific');
+    		} else { // session
+				item.speaker_id = resultSet.fieldByName('specific');
+			};
+
+			results.push(item);
 		    resultSet.next();
 	    }
 		resultSet.close();
 		
 		// Thursday dinner notice
-		if (title == 'October 11, 2012'){
+		if (title == 'October 12, 2012'){
 			results.push({title: '*Dinner on your own', height: 40, hasChild: false});
 		}; 
 		

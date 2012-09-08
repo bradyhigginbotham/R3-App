@@ -45,7 +45,7 @@ function DetailWindow(navGroup, e) {
 			case "session":
 				var SessionView = require('ui/common/presentations/sessions/DetailView');
 				
-				sessionView = new SessionView();
+				sessionView = new SessionView(navGroup);
 				sessionView.fireEvent('sessionSelected', e);
 				var sessionWindow = Ti.UI.createWindow({
 					title: e.data.title,

@@ -5,7 +5,7 @@ function HomeWindow(osname) {
 	
 	// constants
 	var iconHeight = 74, iconWidth = 64, iconTop = 5, iconLeft = 10, middleLeft = 50,
-		tabColor = 'white', tabHeight = 70, tabWidth = 160;
+		tabColor = 'white', tabSelectedColor = '#A5B5C4', tabActiveColor = '#79FAFB', tabHeight = 70, tabWidth = 160;
 		
 	//create component instance
 	var self = Ti.UI.createWindow();
@@ -289,6 +289,7 @@ function HomeWindow(osname) {
 	var eventsTab = Ti.UI.createButton({
 		backgroundImage: 'NONE',
 		color: tabColor,
+		selectedColor: tabSelectedColor,
 		title: 'Events',
 		bottom: 0,
 		left: 0,
@@ -300,6 +301,7 @@ function HomeWindow(osname) {
 	var resourcesTab = Ti.UI.createButton({
 		backgroundImage: 'NONE',
 		color: tabColor,
+		selectedColor: tabSelectedColor,
 		title: 'Resources',
 		bottom: 0,
 		right: 0,
@@ -321,11 +323,19 @@ function HomeWindow(osname) {
 	// tab event listeners
 	eventsTab.addEventListener('click', function(){
 		scrollableView.scrollToView(eventIcons);
+	//	eventsTab.color = tabActiveColor;
+	//	resourcesTab.color = tabColor;
 	});
 	
 	resourcesTab.addEventListener('click', function(e){
 		scrollableView.scrollToView(resourceIcons);
+	//	resourcesTab.color = tabActiveColor;
+	//	eventsTab.color = tabColor;
 	});
+	
+/*	eventIcons.addEventListener('touchmove', function(){
+		alert('Here');
+}); */
 	
 	mainNavWindow.add(scrollableView);
     mainNavWindow.add(announcements);
