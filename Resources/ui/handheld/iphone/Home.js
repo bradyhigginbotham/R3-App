@@ -272,7 +272,7 @@ function HomeWindow(osname) {
 		if (subscribed){
 			Notifications.unsubscribeToNotifications(subscribeIcon);
 		} else {
-			Notifications.subscribeToNotifications(subscribeIcon);
+			Notifications.subscribeToNotifications(subscribeIcon, subtitle);
 		}
 	});
 	facebookIcon.addEventListener('click', function(){

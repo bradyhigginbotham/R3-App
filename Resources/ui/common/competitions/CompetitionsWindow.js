@@ -23,7 +23,8 @@ function CompetitionsWindow(navGroup) {
 	
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({
-		title:'Competition Details'
+		title:'Competition Details',
+		backgroundImage: 'images/bg_bigTex.png'
 	});
 	detailContainerWindow.add(detailView);	
 	

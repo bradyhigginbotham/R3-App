@@ -11,8 +11,6 @@ function DetailView() {
 	siteWindow.add(website);
 
 	var self = Ti.UI.createScrollView({
-		backgroundImage: 'images/bg_bigTex.png',
-		backgroundColor: 'transparent',
 		layout: 'vertical'
 	});
 		

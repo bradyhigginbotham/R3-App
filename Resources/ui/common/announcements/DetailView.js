@@ -1,8 +1,5 @@
 function DetailView() {
-	var self = Ti.UI.createView({
-		backgroundImage: 'images/bg_bigTex.png',
-		backgroundColor: 'transparent'
-	});
+	var self = Ti.UI.createView({});
 	
 	var title = Ti.UI.createLabel({
 		text:'Title',

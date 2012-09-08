@@ -6,7 +6,7 @@ function UllWindow(navGroup)
 	
 	//Create object instance
 	var self = Ti.UI.createWindow({
-		backgroundColor:'#ffffff',
+		backgroundImage: 'images/bg_bigTex.png',
 		title: 'Conference Host',
 		navBarHidden: false
 	})

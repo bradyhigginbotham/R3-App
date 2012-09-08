@@ -1,5 +1,5 @@
 /*------- Push Notifications - iPhone -------*/
-function subscribeToNotifications(icon){
+function subscribeToNotifications(icon, latest){
 	var Cloud = require('ti.cloud'),
 		deviceToken;
 		
@@ -38,8 +38,10 @@ function subscribeToNotifications(icon){
 			callback: function(e){
 				var data = JSON.stringify(e.data);
 				var notification = JSON.parse(data);
-				alert('Message received.');
-				alert(notification.alert);
+				alert('Message received. Please check the announcements');
+				latest.text = "Latest: " + notification.alert;
+				
+				// save notification to database
 				var db = Titanium.Database.open('r3.sqlite');
 			    db.execute("INSERT INTO announcements (title, announcement, read) VALUES ('" + notification.title + "', '" + notification.alert + "', 0)");
 			    db.close();

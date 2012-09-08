@@ -26,7 +26,8 @@ function DetailWindow(navGroup, e) {
 				competitionView.fireEvent('competitionSelected', e);
 				var competitionWindow = Ti.UI.createWindow({
 					title: e.data.title,
-					backButtonTitle: 'Back'
+					backButtonTitle: 'Back',
+					backgroundImage: 'images/bg_bigTex.png'
 				});
 				competitionWindow.add(competitionView);
 				navGroup.open(competitionWindow);
@@ -49,7 +50,8 @@ function DetailWindow(navGroup, e) {
 				sessionView.fireEvent('sessionSelected', e);
 				var sessionWindow = Ti.UI.createWindow({
 					title: e.data.title,
-					backButtonTitle: 'Back'
+					backButtonTitle: 'Back',
+					backgroundImage: 'images/bg_bigTex.png'
 				});
 				sessionWindow.add(sessionView);
 				navGroup.open(sessionWindow);

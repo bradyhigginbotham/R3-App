@@ -8,7 +8,7 @@ function DetailWindow(navGroup, e) {
 		title: 'Speaker Details',
 		layout: 'vertical',
 		backButtonTitle: 'Speakers',
-		backgroundColor:'#ffffff',
+		backgroundImage: 'images/bg_bigTex.png',
 		navBarHidden: false
 	});
 		

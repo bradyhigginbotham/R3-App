@@ -6,7 +6,7 @@ function AppWindow(navGroup)
 	
 	//Create object instance
 	var self = Ti.UI.createWindow({
-		backgroundColor:'#ffffff',
+		backgroundImage: 'images/bg_bigTex.png',
 		title: 'App Overview',
 		navBarHidden: false
 	})

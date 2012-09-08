@@ -6,7 +6,7 @@ function SponsorsWindow(navGroup) {
 		
 	//create object instance
 	var self = Ti.UI.createWindow({
-		backgroundColor:'#ffffff',
+		backgroundImage: 'images/bg_bigTex.png',
 		title: 'Sponsors',
 		navBarHidden: false
 	});
@@ -24,7 +24,7 @@ function SponsorsWindow(navGroup) {
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({
 		title:'Sponsor Details',
-		backgroundColor: '#5B718B'
+		backgroundImage: 'images/bg_bigTex.png'
 	});
 	detailContainerWindow.add(detailView);
 	

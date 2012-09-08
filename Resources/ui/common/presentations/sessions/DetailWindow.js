@@ -8,7 +8,7 @@ function DetailWindow(navGroup, e) {
 		title: 'Session Details',
 		layout: 'vertical',
 		backButtonTitle: 'Sessions',
-		backgroundColor:'#ffffff',
+		backgroundImage: 'images/bg_bigTex.png',
 		navBarHidden: false
 	});
 		

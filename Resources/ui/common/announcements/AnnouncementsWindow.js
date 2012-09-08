@@ -17,7 +17,8 @@ function AnnouncementsWindow(navGroup) {
 	
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({
-		title:'Details'
+		title:'Details',
+		backgroundImage: 'images/bg_bigTex.png'
 	});
 	detailContainerWindow.add(detailView);
 	

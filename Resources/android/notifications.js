@@ -16,11 +16,34 @@ function subscribeToNotifications(icon){
 		CloudPush.retrieveDeviceToken({
 			success: function deviceTokenSuccess(e) {
 				deviceToken = e.deviceToken;
-				userLogin();
+				registerForPush();
 			},
 			error: function deviceTokenError(e) {
 				alert('Failed to register for push notifications! Please check your network or data connection.');
 			}
+		});
+	}
+	
+	// Subscribe to channel and register
+	function registerForPush(){
+		Cloud.PushNotifications.subscribe({
+		    channel: 'r3aitp', // "alert" is channel name
+		    device_token: deviceToken,
+		    type: 'android'
+		}, function (e){
+		    if (e.success) {
+				alert('You have subscribed to the R3 Conference notification system!');
+				icon.backgroundImage = '/icons/home/unsubscribe.png';
+				
+				// save property
+				var db = Titanium.Database.open('r3.sqlite');
+			    db.execute("UPDATE user SET subscribed = 1 WHERE username = 'default'");
+			    db.close();
+			    
+				userLogin();
+		    }else{
+				alert('Failed to register for push notifications! Please check your network or data connection.');
+		    }
 		});
 	}
 	
@@ -31,31 +54,9 @@ function subscribeToNotifications(icon){
 			password: 'r3AITPconference!'
 		}, function (e) {
 			if (e.success) {
-				registerForPush();
 			} else {
-				alert('Failed to register for push notifications! Please check your network or data connection.');
+				alert('Failed to fully register. You may want to unsubscribe and try again.');
 			}
-		});
-	}
-	
-	// Subscribe to channel
-	function registerForPush(){
-		Cloud.PushNotifications.subscribe({
-		    channel: 'r3aitp', // "alert" is channel name
-		    device_token: deviceToken,
-		    type: 'android'
-		}, function (e){
-		    if (e.success) {
-		       alert('You have subscribed to the R3 Conference notification system!');
-				icon.backgroundImage = '/icons/home/unsubscribe.png';
-				
-				// save property
-				var db = Titanium.Database.open('r3.sqlite');
-			    db.execute("UPDATE user SET subscribed = 1 WHERE username = 'default'");
-			    db.close();
-		    }else{
-				alert('Failed to register for push notifications! Please check your network or data connection.');
-		    }
 		});
 	}
 }

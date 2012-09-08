@@ -1,8 +1,7 @@
 function DetailView(){
 	var self = Ti.UI.createScrollView({
 		layout: 'vertical',
-		backgroundImage: 'images/bg_bigTex.png',
-		backgroundColor: 'transparent'
+		scrollType: 'vertical'
 	});
 	
 	// Title, time, and location

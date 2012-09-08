@@ -6,7 +6,7 @@ function ExhibitorsWindow(navGroup) {
 		
 	//create object instance
 	var self = Ti.UI.createWindow({
-		backgroundColor:'#ffffff',
+		backgroundImage: 'images/bg_bigTex.png',
 		title: 'Exhibitors',
 		navBarHidden: false
 	});
@@ -24,7 +24,7 @@ function ExhibitorsWindow(navGroup) {
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({
 		title:'Exhibitor Details',
-		backgroundColor: '#5B718B'
+		backgroundImage: 'images/bg_bigTex.png'
 	});
 	detailContainerWindow.add(detailView);
 	

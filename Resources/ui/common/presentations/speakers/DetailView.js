@@ -3,8 +3,7 @@ function DetailView(navGroup) {
 	
 	var self = Ti.UI.createScrollView({
 		layout: 'vertical',
-		backgroundImage: 'images/bg_bigTex.png',
-		backgroundColor: 'transparent'
+		scrollType: 'vertical'
 	});
 	
 	var speaker = Ti.UI.createLabel({
@@ -93,7 +92,8 @@ function DetailView(navGroup) {
 		
 		var sessionWindow = Ti.UI.createWindow({
 			title: 'Session Details',
-			backButtonTitle: 'Back'
+			backButtonTitle: 'Back',
+			backgroundImage: 'images/bg_bigTex.png'
 		});
 		sessionWindow.add(sessionView);
 		navGroup.open(sessionWindow);		

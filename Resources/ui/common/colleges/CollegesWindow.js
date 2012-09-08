@@ -17,7 +17,8 @@ function CollegesWindow(navGroup) {
 	
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({
-		title:'College Details'
+		title:'College Details',
+		backgroundImage: 'images/bg_bigTex.png'
 	});
 	detailContainerWindow.add(detailView);
 	
