@@ -33,11 +33,18 @@ function DetailView() {
 	
 	var site = Ti.UI.createLabel({
 		text: 'Website',
-		color: 'red',
+		color: '#EFCD2D',
 		top: 0,
 		left: 10
 	});
 	self.add(site);
+	
+	var underline = Ti.UI.createLabel({
+		text: "(click for more info)",
+		top: 0,
+		left: 10
+	});
+	self.add(underline);
 
 	var details = Ti.UI.createLabel({
 		text: 'Sponsor Details',

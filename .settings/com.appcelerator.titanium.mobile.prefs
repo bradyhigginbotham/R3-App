@@ -1,6 +1,6 @@
 android/alias=r3keystore
-android/keystore=/Users/Stick/Desktop/Android Distribution/r3_keystore
-android/output_location=/Users/Stick/Desktop/Android Distribution
-android/recent_output=/Users/Stick/Desktop/Android Distribution
+android/keystore=/Users/Stick/Desktop/The App/Android Distribution/r3_keystore
+android/output_location=/Users/Stick/Desktop/The App/Android Distribution
+android/recent_output=/Users/Stick/Desktop/The App/Android Distribution,/Users/Stick/Desktop/Android Distribution
 android/sdk=Google APIs Android 2.3.3
 eclipse.preferences.version=1

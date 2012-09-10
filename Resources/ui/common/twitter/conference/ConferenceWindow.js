@@ -48,7 +48,7 @@ function ConferenceWindow(navGroup, osname, height){
     	avatarTop = 8;
     }
 
-    xhr.onerror = function(){
+    xhr.onerror = function(e){
 		alert(e.error);
 	};
 						

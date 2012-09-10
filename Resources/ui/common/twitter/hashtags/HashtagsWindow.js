@@ -47,7 +47,7 @@ function HashtagsWindow(navGroup, osname, height){
     	avatarTop = 8;
     }
 
-    xhr.onerror = function () {
+    xhr.onerror = function (e) {
 		alert(e.error);
 	};
 					
@@ -62,7 +62,7 @@ function HashtagsWindow(navGroup, osname, height){
            		tweet: results["results"][c].text,
            		avatar: results["results"][c].profile_image_url,
            		hasChild: true,
-           		height: (osname === "android" && height > 499) ? 70 : 56
+           		height: rowHeight
 			});
 			
 			tweet = Ti.UI.createLabel({
@@ -71,7 +71,7 @@ function HashtagsWindow(navGroup, osname, height){
 				right: 15,
 				top: 10,
 				bottom: 10,
-				height: (osname === "android" && height > 499) ? 54 : 36
+				height: tweetHeight
 			});
 			row.add(tweet);
 			

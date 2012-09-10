@@ -12,14 +12,14 @@ function TabGroup(navGroup){
 	
 	var conferenceTab = Ti.UI.createTab({
 		title: 'Conference Feed',
-		icon: 'KS_nav_ui.png',
+		icon: 'icons/tabs/at_twitter.png',
 		window: conferenceWindow
 	});
 	conferenceWindow.parentTab = conferenceTab;
 
 	var hashtagsTab = Ti.UI.createTab({
 		title: '#R3AITP',
-		icon: 'KS_nav_ui.png',
+		icon: 'icons/tabs/hashtag_twitter.png',
 		window: hashtagsWindow
 	});
 	hashtagsWindow.parentTab = hashtagsTab;

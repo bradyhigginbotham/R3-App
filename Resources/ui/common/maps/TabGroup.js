@@ -5,7 +5,7 @@ function TabGroup(navGroup, osname){
 	
 	var mapsWindow = new MapsWindow(navGroup, osname),
 	    floorPlansWindow = new FloorPlansWindow(navGroup, osname),
-		searchWindow = new SearchWindow(navGroup);
+		searchWindow = new SearchWindow(navGroup, osname);
 
 	var self = Ti.UI.createTabGroup();
 	

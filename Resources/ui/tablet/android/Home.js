@@ -234,7 +234,7 @@ function HomeWindow(navGroup, osname) {
 		navGroup.open(certificationsWindow);
 	}); */
 	photosIcon.addEventListener('click', function(){
-		var PhotosWindow = require('ui/common/photos/PhotosWindow');
+		var PhotosWindow = require('ui/common/photos/android/PhotosWindow');
 		var photosWindow = new PhotosWindow();
 		navGroup.open(photosWindow, {animated:true});
 	});

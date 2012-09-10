@@ -1,6 +1,6 @@
 Logfile initialized
 [INFO] logfile = /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build.log
-[DEBUG] /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.2.GA/android/builder.py distribute AITP R3 /Android/android-sdk-macosx /Users/Stick/Documents/Titanium Studio Workspace/AITP R3 com.bradyhigginbotham.r3 /Users/Stick/Desktop/Android Distribution/r3_keystore saints4r3keystore r3keystore /Users/Stick/Desktop/Android Distribution 6
+[DEBUG] /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.2.GA/android/builder.py distribute AITP R3 /Android/android-sdk-macosx /Users/Stick/Documents/Titanium Studio Workspace/AITP R3 com.bradyhigginbotham.r3 /Users/Stick/Desktop/The App/Android Distribution/r3_keystore saints4r3keystore r3keystore /Users/Stick/Desktop/The App/Android Distribution 6
 [INFO] Titanium SDK version: 2.1.2 (08/24/12 14:46 ed7f777)
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
@@ -30,16 +30,30 @@ Logfile initialized
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/subscribe.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/subscribe.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/twitter.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/twitter.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/home/unsubscribe.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/home/unsubscribe.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/at_twitter.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/at_twitter.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/at_twitter@2x.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/at_twitter@2x.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/building.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/building.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/building@2x.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/building@2x.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/hashtag_twitter.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/hashtag_twitter.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/hashtag_twitter@2x.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/hashtag_twitter@2x.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/heart.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/heart.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/heart@2x.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/heart@2x.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/info.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/info.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/info@2x.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/info@2x.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/phone.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/phone.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/phone@2x.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/phone@2x.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/pin.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/pin.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/pin@2x.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/pin@2x.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/search.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/search.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/search@2x.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/search@2x.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/sessions.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/sessions.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/sessions@2x.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/sessions@2x.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/speakers.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/speakers.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/speakers@2x.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/speakers@2x.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/star.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/star.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/star@2x.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/star@2x.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/suitcase.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/suitcase.png
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/suitcase@2x.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/suitcase@2x.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/icons/tabs/ull.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/icons/tabs/ull.png
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ti.cloud.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ti.cloud.js
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/about/app/app.html => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/about/app/app.html
@@ -77,7 +91,8 @@ Logfile initialized
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/maps/search/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/maps/search/ListView.js
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/maps/search/SearchWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/maps/search/SearchWindow.js
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/maps/TabGroup.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/maps/TabGroup.js
-[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/photos/PhotosWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/photos/PhotosWindow.js
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/photos/android/PhotosWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/photos/android/PhotosWindow.js
+[TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/photos/iphone/PhotosWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/photos/iphone/PhotosWindow.js
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/presentations/sessions/DetailView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/presentations/sessions/DetailView.js
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/presentations/sessions/DetailWindow.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/presentations/sessions/DetailWindow.js
 [TRACE] COPYING CREATED FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/ui/common/presentations/sessions/ListView.js => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/ui/common/presentations/sessions/ListView.js
@@ -113,6 +128,7 @@ Logfile initialized
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-mdpi/bg_bigTex.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-mdpi/bg_bigtex_bf6d9f6e52.png
 [TRACE] COPYING FILE: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/Resources/android/images/res-notlong-port-mdpi/main.png => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/res/drawable-notlong-port-mdpi/main_6d5dd0e3ac.png
 [DEBUG] found special platform files dir = /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/platform/android
+[INFO] Copying platform-specific files ...
 [DEBUG] app stylesheet => /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/gen/com/bradyhigginbotham/r3/ApplicationStylesheet.java
 [DEBUG] copying app icon: /Users/Stick/Documents/Titanium Studio Workspace/AITP R3/build/android/bin/assets/Resources/appicon.png
 [DEBUG] generating theme.xml
@@ -158,16 +174,30 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/icons/home/subscribe.png
 [DEBUG] from resource zip => assets/Resources/icons/home/twitter.png
 [DEBUG] from resource zip => assets/Resources/icons/home/unsubscribe.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/at_twitter.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/at_twitter@2x.png
 [DEBUG] from resource zip => assets/Resources/icons/tabs/building.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/building@2x.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/hashtag_twitter.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/hashtag_twitter@2x.png
 [DEBUG] from resource zip => assets/Resources/icons/tabs/heart.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/heart@2x.png
 [DEBUG] from resource zip => assets/Resources/icons/tabs/info.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/info@2x.png
 [DEBUG] from resource zip => assets/Resources/icons/tabs/phone.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/phone@2x.png
 [DEBUG] from resource zip => assets/Resources/icons/tabs/pin.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/pin@2x.png
 [DEBUG] from resource zip => assets/Resources/icons/tabs/search.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/search@2x.png
 [DEBUG] from resource zip => assets/Resources/icons/tabs/sessions.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/sessions@2x.png
 [DEBUG] from resource zip => assets/Resources/icons/tabs/speakers.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/speakers@2x.png
 [DEBUG] from resource zip => assets/Resources/icons/tabs/star.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/star@2x.png
 [DEBUG] from resource zip => assets/Resources/icons/tabs/suitcase.png
+[DEBUG] from resource zip => assets/Resources/icons/tabs/suitcase@2x.png
 [DEBUG] from resource zip => assets/Resources/icons/tabs/ull.png
 [DEBUG] from resource zip => assets/Resources/ui/common/about/app/app.html
 [DEBUG] from resource zip => assets/Resources/ui/common/about/conference/conference.html
@@ -180,6 +210,7 @@ Logfile initialized
 [DEBUG] from resource zip => assets/tiapp.xml
 [DEBUG] from resource zip => res/drawable/appicon.png
 [DEBUG] from resource zip => res/drawable/background.png
+[DEBUG] from resource zip => res/drawable/pushicon.png
 [DEBUG] from resource zip => res/layout/titanium_tabgroup.xml
 [DEBUG] from resource zip => AndroidManifest.xml
 [DEBUG] from resource zip => resources.arsc

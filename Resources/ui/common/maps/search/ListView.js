@@ -1,4 +1,11 @@
-function ListView() {
+function ListView(osname) {
+	if (osname === 'android'){
+		var searchHeight = Ti.Platform.displayCaps.platformHeight * (43/480);
+	} else {
+		var searchHeight = 43;
+	}
+
+	var searchHeight = (osname === 'android') ? Ti.Platform.displayCaps.platformHeight * (43/480) : 43;
 	var self = Ti.UI.createView({
 		backgroundColor:'white'
 	});
@@ -24,7 +31,7 @@ function ListView() {
 	var searchBar = Titanium.UI.createSearchBar({
     	barColor:'#000', 
     	showCancel:true,
-    	height:43,
+    	height: searchHeight,
     	top:0,
     	hintText:'Search',
     });
@@ -44,8 +51,6 @@ function ListView() {
 			title:e.rowData.title,
 		});
 	});
-	
-	//self.add(search);
 	
 	return self;
 };
