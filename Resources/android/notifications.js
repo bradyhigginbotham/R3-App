@@ -58,32 +58,36 @@ function subscribeToNotifications(icon){
 		    type: 'android'
 		}, function (e){
 		    if (e.success) {
-				Cloud.Users.login({
-					login: 'default',
-					password: 'r3AITPconference!'
-				}, function (e) {
-					if (e.success) {
-						loading.hide();
-						loading = null;
-						
-						alert('You have subscribed to the R3 Conference notification system!');
-						icon.backgroundImage = '/icons/home/unsubscribe.png';
-						
-						// save property
-						var db = Titanium.Database.open('r3.sqlite');
-					    db.execute("UPDATE user SET subscribed = 1 WHERE username = 'default'");
-					    db.close();					
-					} else {
-						loading.hide();
-						loading = null;
-						alert('Failed to fully register. You may want to unsubscribe and try again.');
-					}
-				});
+				loginAgain();
 		    }else{
 				loading.hide();
 				loading = null;
 				alert('Failed to register for push notifications! Please check your network or data connection.');
 		    }
+		});
+	}
+	
+	function loginAgain(){
+		Cloud.Users.login({
+			login: 'default',
+			password: 'r3AITPconference!'
+		}, function (e) {
+			if (e.success) {
+				loading.hide();
+				loading = null;
+				
+				alert('You have subscribed to the R3 Conference notification system!');
+				icon.backgroundImage = '/icons/home/unsubscribe.png';
+				
+				// save property
+				var db = Titanium.Database.open('r3.sqlite');
+			    db.execute("UPDATE user SET subscribed = 1 WHERE username = 'default'");
+			    db.close();					
+			} else {
+				loading.hide();
+				loading = null;
+				alert('Failed to fully register. You may want to unsubscribe and try again.');
+			}
 		});
 	}
 }
