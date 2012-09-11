@@ -27,33 +27,12 @@ function TabGroup(navGroup){
 	self.addTab(conferenceTab);
 	self.addTab(hashtagsTab);	
 	
-	function removeAll(){
-		// remove all tabs
+	self.addEventListener('close', function(){		
 		self.removeTab(conferenceTab);
 		self.removeTab(hashtagsTab);
 
-		navGroup.close(self);
-
-		// empty out proxy properties
-		conferenceWindow.parentTab = null;
-		hashtagsWindow.parentTab = null;
-
 		conferenceTab.window = null;
 		hashtagsTab.window = null;
-				
-		// null out tabs	
-		conferenceTab = null;
-		hashtagsTab = null;
-		
-		// null out windows
-		conferenceWindow = null;
-		hashtagsWindow = null;
-	};
-	
-	Ti.App.addEventListener('closeTwitter', removeAll);
-	
-	self.addEventListener('close', function(){
-		Ti.App.removeEventListener('closeTwitter', removeAll);
 	});
 	
 	return self;

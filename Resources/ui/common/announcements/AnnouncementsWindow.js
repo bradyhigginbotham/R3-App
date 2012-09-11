@@ -1,5 +1,5 @@
 //Announcements Window Component Constructor
-function AnnouncementsWindow(navGroup) {
+function AnnouncementsWindow(navGroup, osname) {
 	//load component dependencies
 	var ListView = require('ui/common/announcements/ListView'),
 		DetailView = require('ui/common/announcements/DetailView');
@@ -13,7 +13,7 @@ function AnnouncementsWindow(navGroup) {
 		
 	//construct UI
 	var listView = new ListView(),
-		detailView = new DetailView();
+		detailView = new DetailView(osname);
 	
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({

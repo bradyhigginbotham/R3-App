@@ -5,7 +5,7 @@ function HomeWindow(osname) {
 	
 	// constants
 	var iconHeight = 122, iconWidth = 106, iconTop = 30, iconLeft = 50, middleLeft = 170,
-		tabColor = 'white', tabHeight = 155, tabWidth = '50%';
+		tabColor = 'white', tabSelectedColor = '#A5B5C4', tabActiveColor = '#79FAFB', tabHeight = 155, tabWidth = '50%';
 		
 	//create component instance
 	var self = Ti.UI.createWindow();
@@ -55,7 +55,7 @@ function HomeWindow(osname) {
 	
 	announcements.addEventListener('click', function(){
 		var AnnouncementsWindow = require('ui/common/announcements/AnnouncementsWindow');
-		var announcementsWindow = new AnnouncementsWindow(navGroup);
+		var announcementsWindow = new AnnouncementsWindow(navGroup, osname);
 		navGroup.open(announcementsWindow, {animated:true});
 	});
 
@@ -135,7 +135,7 @@ function HomeWindow(osname) {
 	var subscribed = user.fieldByName('subscribed');
 	
 	var subscribeIcon = Ti.UI.createButton({
-		backgroundImage: '/icons/home/subscribe.png',
+		backgroundImage: (subscribed) ? '/icons/home/unsubscribe.png' : '/icons/home/subscribe.png',
 		height: iconHeight,
 		width: iconWidth,
 		top: iconTop,
@@ -213,7 +213,6 @@ function HomeWindow(osname) {
 		var TabGroup = require('ui/common/maps/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
-		tabGroup = null;
 	});
 	presentationsIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/presentations/TabGroup');
@@ -232,7 +231,7 @@ function HomeWindow(osname) {
 		navGroup.open(certificationsWindow);
 	}); */
 	photosIcon.addEventListener('click', function(){
-		var PhotosWindow = require('ui/common/photos/iphone/PhotosWindow');
+		var PhotosWindow = require('ui/common/photos/ipad/PhotosWindow');
 		var photosWindow = new PhotosWindow();
 		navGroup.open(photosWindow, {animated:true});
 	});
@@ -240,7 +239,6 @@ function HomeWindow(osname) {
 		var TabGroup = require('ui/common/about/TabGroup');
 		var tabGroup = new TabGroup(navGroup);
 		navGroup.open(tabGroup);
-		tabGroup = null;
 	});
 	jobFairIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/jobfair/TabGroup');
@@ -248,13 +246,17 @@ function HomeWindow(osname) {
 		navGroup.open(tabGroup);
 	});
 	festivalIcon.addEventListener('click', function(){
-		var festivalPage = Ti.UI.createWebView({url: 'http://www.festivalsacadiens.com/index1.html'});
-		var festivalWindow = Ti.UI.createWindow({
-			title: 'Festival Acadiens 2012',
-			navBarHidden: false
-		});
-		festivalWindow.add(festivalPage);
-		navGroup.open(festivalWindow);
+		if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
+			alert("The webpage could not be loaded. Please check your network or data connection.");
+		} else {
+			var festivalPage = Ti.UI.createWebView({url: 'http://www.festivalsacadiens.com/index1.html'});
+			var festivalWindow = Ti.UI.createWindow({
+				title: 'Festival Acadiens 2012',
+				navBarHidden: false
+			});
+			festivalWindow.add(festivalPage);
+			navGroup.open(festivalWindow);
+		}
 	});
 	twitterIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/twitter/TabGroup');
@@ -270,25 +272,30 @@ function HomeWindow(osname) {
 
 		// check if subscribed
 		if (subscribed){
-			Notifications.unsubscribeToNotifications(subscribeIcon);
+			Notifications.unsubscribeToNotifications(subscribeIcon, subtitle);
 		} else {
 			Notifications.subscribeToNotifications(subscribeIcon);
 		}
 	});
 	facebookIcon.addEventListener('click', function(){
-		var facebookPage = Ti.UI.createWebView({url: 'https://www.facebook.com/AITPRegion3StudentConference'});
-		var facebookWindow = Ti.UI.createWindow({
-			title: 'R3 Facebook',
-			navBarHidden: false
-		});
-		facebookWindow.add(facebookPage);
-		navGroup.open(facebookWindow);
+		if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
+			alert("The webpage could not be loaded. Please check your network or data connection.");
+		} else {
+			var facebookPage = Ti.UI.createWebView({url: 'https://www.facebook.com/AITPRegion3StudentConference'});
+			var facebookWindow = Ti.UI.createWindow({
+				title: 'R3 Facebook Page',
+				navBarHidden: false
+			});
+			facebookWindow.add(facebookPage);
+			navGroup.open(facebookWindow);
+		}
 	});
     	
     // tabs
 	var eventsTab = Ti.UI.createButton({
 		backgroundImage: 'NONE',
 		color: tabColor,
+		selectedColor: tabSelectedColor,
 		title: 'Events',
 		bottom: 0,
 		left: 0,
@@ -301,6 +308,7 @@ function HomeWindow(osname) {
 	var resourcesTab = Ti.UI.createButton({
 		backgroundImage: 'NONE',
 		color: tabColor,
+		selectedColor: tabSelectedColor,
 		title: 'Resources',
 		bottom: 0,
 		right: 0,

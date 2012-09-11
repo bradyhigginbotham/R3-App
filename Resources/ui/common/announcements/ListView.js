@@ -33,6 +33,9 @@ function ListView() {
 		self.fireEvent('itemSelected', {
 			data:e.rowData
 		});
+		
+		// update title
+		e.source.title = e.source.defaultTitle;
 	});
 	
 	return self;

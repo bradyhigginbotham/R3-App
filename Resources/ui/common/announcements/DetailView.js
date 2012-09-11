@@ -1,5 +1,5 @@
-function DetailView() {
-	var self = Ti.UI.createView({});
+function DetailView(osname) {
+	var self = Ti.UI.createView();
 	
 	var title = Ti.UI.createLabel({
 		text:'Title',
@@ -30,6 +30,14 @@ function DetailView() {
 		var db = Titanium.Database.open('r3.sqlite');
 	    db.execute('UPDATE announcements SET read = 1 WHERE id = "' + e.data.id + '"');
 	    db.close();
+	    
+		// update app's badge number
+	    if (osname != 'android'){
+			var db = Titanium.Database.open('r3.sqlite');
+		    var resultSet = db.execute('SELECT COUNT(*) AS badge_number FROM announcements WHERE read = 0');
+		    Ti.UI.iPhone.appBadge = resultSet.fieldByName('badge_number');
+			db.close();
+	    }
 	});
 	
 	return self;

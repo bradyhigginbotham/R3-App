@@ -81,6 +81,8 @@ function DetailView(navGroup) {
  		
  		if (e.data.speaker_id){
 			listSpeakers(e.data.speaker_id);
+		} else {
+			table.height = 0;
 		}
 	});
 	

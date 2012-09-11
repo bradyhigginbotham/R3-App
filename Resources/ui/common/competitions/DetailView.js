@@ -99,14 +99,18 @@ function DetailView(){
  		time.text = e.data.start + " - " + e.data.end; // + ",\n" + e.data.location;
  		
  		// get sponsor
-		var db = Titanium.Database.open('r3.sqlite');
-		var resultSet = db.execute('SELECT name FROM sponsors WHERE rowid = ?', e.data.sponsor_id);
-	    while (resultSet.isValidRow()) {
-			sponsor.text = resultSet.fieldByName('name');
-	    	resultSet.next();
-	    }
-	    resultSet.close();
-	    db.close();
+ 		if (e.data.sponsor_id){
+			var db = Titanium.Database.open('r3.sqlite');
+			var resultSet = db.execute('SELECT name FROM sponsors WHERE rowid = ?', e.data.sponsor_id);
+		    while (resultSet.isValidRow()) {
+				sponsor.text = resultSet.fieldByName('name');
+		    	resultSet.next();
+		    }
+		    resultSet.close();
+		    db.close();
+		} else {
+			sponsor.text = "N/A";
+		}
 	});
 	
 	return self;

@@ -5,7 +5,6 @@ function ListView(osname) {
 		var searchHeight = 43;
 	}
 
-	var searchHeight = (osname === 'android') ? Ti.Platform.displayCaps.platformHeight * (43/480) : 43;
 	var self = Ti.UI.createView({
 		backgroundColor:'white'
 	});

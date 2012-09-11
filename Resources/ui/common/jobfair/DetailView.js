@@ -7,7 +7,7 @@ function DetailView() {
 		siteWindow.close();
 	});
 	
-	var website = Ti.UI.createWebView({url: ''});
+	var website = Ti.UI.createWebView({url: ""});
 	siteWindow.add(website);
 
 	var self = Ti.UI.createScrollView({
@@ -39,12 +39,12 @@ function DetailView() {
 	});
 	self.add(site);
 	
-	var underline = Ti.UI.createLabel({
+/*	var moreInfo = Ti.UI.createLabel({
 		text: "(click for more info)",
 		top: 0,
 		left: 10
 	});
-	self.add(underline);
+	self.add(moreInfo); */
 
 	var details = Ti.UI.createLabel({
 		text: 'Sponsor Details',
@@ -55,8 +55,12 @@ function DetailView() {
 	});
 	self.add(details);
 
-	site.addEventListener('click', function(e){		
-		siteWindow.open({modal: true});
+	site.addEventListener('click', function(e){
+		if (Titanium.Network.networkType === Titanium.Network.NETWORK_NONE) {
+			alert("The webpage could not be loaded. Please check your network or data connection.");
+		} else {
+			siteWindow.open({modal: true});
+		}
 	});
 		
 	return self;

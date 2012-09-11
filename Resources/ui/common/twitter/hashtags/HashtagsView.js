@@ -89,7 +89,7 @@ function HashtagsView() {
 		var date = twitterDate.replace('/(\+\S+) (.*)/', '$2 $1');
 		var newDate = new Date(Date.parse(date)).toLocaleDateString();
 		var newTime = new Date(Date.parse(date)).toLocaleTimeString();
-		return newDate + ' • ' + newTime.replace('CDT', '');
+		return newDate + ' • ' + newTime.replace(/:[0-9][0-9] (AM|PM) CDT/g, ' $1');
 	};
 	
 };

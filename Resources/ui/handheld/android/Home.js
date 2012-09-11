@@ -55,7 +55,7 @@ function HomeWindow(navGroup, osname) {
 	
 	announcements.addEventListener('click', function(){
 		var AnnouncementsWindow = require('ui/common/announcements/AnnouncementsWindow');
-		var announcementsWindow = new AnnouncementsWindow(navGroup);
+		var announcementsWindow = new AnnouncementsWindow(navGroup, osname);
 		navGroup.open(announcementsWindow, {animated:true});
 	});
 	

@@ -1,5 +1,14 @@
 /*------- Push Notifications - iPhone -------*/
 function subscribeToNotifications(icon, latest){
+	// Loading...
+	var loading = Titanium.UI.createActivityIndicator({
+		height: 50,
+		width: 50,
+		message: 'Subscribing...',
+		style: Titanium.UI.iPhone.ActivityIndicatorStyle.BIG
+	});
+	loading.show();
+
 	var Cloud = require('ti.cloud'),
 		deviceToken;
 		
@@ -15,6 +24,8 @@ function subscribeToNotifications(icon, latest){
 				var user = e.users[0];
 				grabDeviceToken();
 		    } else {
+				loading.hide();
+				loading = null;
 				alert('Failed to register for push notifications! Please check your network or data connection.');
 		    }
 		});
@@ -33,12 +44,14 @@ function subscribeToNotifications(icon, latest){
 			    registerForPush();
 			},
 			error: function(e){
-				alert('Failed to register for push notifications! Please check your network or data connection.');
+				loading.hide();
+				loading = null;
+				alert('Failed to register device for push notifications! Please check your network or data connection.');
 			},
 			callback: function(e){
 				var data = JSON.stringify(e.data);
 				var notification = JSON.parse(data);
-				alert('Message received. Please check the announcements');
+				alert('Message received. Please check the announcements.');
 				latest.text = "Latest: " + notification.alert;
 				
 				// save notification to database
@@ -58,6 +71,9 @@ function subscribeToNotifications(icon, latest){
 		    type:'ios',
 		}, function (e) {
 		    if (e.success) {
+				loading.hide();
+				loading = null;
+
 				alert('You have subscribed to the R3 Conference notification system!');
 				icon.backgroundImage = '/icons/home/unsubscribe.png';
 				
@@ -66,6 +82,8 @@ function subscribeToNotifications(icon, latest){
 			    db.execute("UPDATE user SET subscribed = 1 WHERE username = 'default'");
 			    db.close();
 		    } else {
+				loading.hide();
+				loading = null;
 				alert('Failed to register for push notifications! Please check your network or data connection.');
 		    }
 		});
@@ -73,6 +91,15 @@ function subscribeToNotifications(icon, latest){
 }
 
 function unsubscribeToNotifications(icon){
+	// Loading...
+	var loading = Titanium.UI.createActivityIndicator({
+		height: 50,
+		width: 50,
+		message: 'Unsubscribing...',
+		style: Titanium.UI.iPhone.ActivityIndicatorStyle.BIG
+	});
+	loading.show();
+
 	var Cloud = require('ti.cloud'),
 		deviceToken;
 		
@@ -88,6 +115,8 @@ function unsubscribeToNotifications(icon){
 				var user = e.users[0];
 				grabDeviceToken();
 		    } else {
+				loading.hide();
+				loading = null;
 				alert('Failed to unsubscribe to push notifications! Please check your network or data connection.');
 		    }
 		});
@@ -106,6 +135,8 @@ function unsubscribeToNotifications(icon){
 			    registerForPush();
 			},
 			error: function(e){
+				loading.hide();
+				loading = null;
 				alert('Failed to unsubscribe to push notifications! Please check your network or data connection.');
 			}
 		});
@@ -119,6 +150,9 @@ function unsubscribeToNotifications(icon){
 		    type:'ios',
 		}, function (e) {
 		    if (e.success) {
+				loading.hide();
+				loading = null;
+
 		        alert('You have been unsubscribed and will no longer receive conference notifications.');
 				icon.backgroundImage = '/icons/home/subscribe.png';
 				
@@ -127,6 +161,8 @@ function unsubscribeToNotifications(icon){
 			    db.execute("UPDATE user SET subscribed = 0 WHERE username = 'default'");
 			    db.close();
 		    } else {
+				loading.hide();
+				loading = null;
 				alert('Failed to unsubscribe to push notifications! Please check your network or data connection.');
 		    }
 		});

@@ -131,6 +131,11 @@ function MapsWindow(navGroup, osname) {
 	        longitudeDelta : delta
 	    });
 	});
+	
+	self.addEventListener('close', function(){
+		self.rightNavButton = null;
+		refreshButton = null;
+	});
 
 	return self;
 };

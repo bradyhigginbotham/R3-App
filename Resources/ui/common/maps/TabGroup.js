@@ -39,6 +39,16 @@ function TabGroup(navGroup, osname){
 	});
 	
 	self.addEventListener('close', function(){
+		self.removeTab(mapsTab);
+		self.removeTab(floorPlansTab);
+		self.removeTab(searchTab);
+
+		self.activeTab = null;
+		mapsTab.window = null;
+		floorPlansTab.window = null;
+		searchTab.window = null;
+		searchTab.icon = null;
+
 		Ti.App.removeEventListener('annotationSelected', function(e){
 			self.setActiveTab(mapsTab);
 		});

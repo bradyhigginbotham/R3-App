@@ -49,7 +49,7 @@ function ConferenceWindow(navGroup, osname, height){
     }
 
     xhr.onerror = function(e){
-		alert(e.error);
+		alert("The conference twitter feed could not be loaded. Please check your network or data connection.");
 	};
 						
 	var tweets = [];

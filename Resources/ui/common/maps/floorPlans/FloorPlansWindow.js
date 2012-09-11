@@ -86,8 +86,10 @@ function FloorPlansWindow(navGroup, osname) {
 	});
 	
 	self.addEventListener('close', function(){
-		self.remove(floorPlans);
-		floorPlans = null;
+		self.remove(moutonIcon);
+		self.remove(moodyIcon);
+		moutonIcon = null;
+		moodyIcon = null;
 	});
 	
 	

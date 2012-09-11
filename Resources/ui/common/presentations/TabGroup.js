@@ -23,6 +23,14 @@ function TabGroup(navGroup){
 	
 	self.addTab(speakersTab);
 	self.addTab(sessionsTab);
+	
+	self.addEventListener('close', function(){		
+		self.removeTab(speakersTab);
+		self.removeTab(sessionsTab);
+
+		speakersTab.window = null;
+		sessionsTab.window = null;
+	});
 		
 	return self;
 };

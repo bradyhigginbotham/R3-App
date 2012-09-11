@@ -1,5 +1,7 @@
 //Photos Window Component Constructor
 function PhotosWindow() {
+	var deviceHeight = Ti.Platform.displayCaps.platformHeight;
+	var deviceWidth = Ti.Platform.displayCaps.platformWidth;
     var uploadProgress, selectPhoto, takePhoto;
 
 	//ACS Cloud module
@@ -12,60 +14,77 @@ function PhotosWindow() {
 		navBarHidden: false
 	});
 	
+	var contentView = Ti.UI.createView({
+		layout: 'vertical',
+		top: deviceHeight * 0.0125,
+		bottom: deviceHeight * 0.0125,
+		left: deviceWidth * (40/480),
+		right: deviceWidth * (40/480)
+	});
+	self.add(contentView);
+	
 	// photo placeholder
 	var imageView = Ti.UI.createImageView({
-		top: 30,
-		left: 30,
-		width: 260,
-		height: 220
+		top: 0,
+		left: 0,
+		right: 0,
+		height: deviceHeight * 0.6
 	});
-	self.add(imageView);
-
-    var photo;
-
-	// upload
-	var uploadButton = Ti.UI.createButton({
-		title: 'Upload',
-		bottom: 10,
-		left: 40,
-		right: 40,
-		height: 40
-	});
-	self.add(uploadButton);
+	contentView.add(imageView);
 	
-    // progress bar
-    uploadProgress = Ti.UI.createProgressBar({
-        bottom: uploadButton.bottom + uploadButton.height + 10,
-        right: 40,
-        left: 40,
-        max: 1,
-        min: 0,
-        value: 0,
-        height: 40,
-        style: Ti.UI.iPhone.ProgressBarStyle.BAR
-    });
-    self.add(uploadProgress);
-    uploadProgress.show();
-    
-    // camera button
-    takePhoto = Ti.UI.createButton({
-        title: 'Camera',
-        bottom: uploadProgress.bottom + uploadProgress.height,
-        right: 40,
-        width: 110,
-        height: 40
-    });
-    self.add(takePhoto);
-    
+	var buttonsView = Ti.UI.createView({
+		top: deviceHeight * 0.0375,
+		left: 0,
+		right: 0,
+		height: deviceHeight * 0.0625
+	});
+	contentView.add(buttonsView);
+	
 	// gallery button
     selectPhoto = Ti.UI.createButton({
         title: 'Gallery',
-        bottom: uploadProgress.bottom + uploadProgress.height,
-        left: 40,
-        width: 110,
-        height: 40
+        top: 0,
+        left: 0,
+        width: '45%',
+        height: deviceHeight * 0.0625
     });
-    self.add(selectPhoto);
+    buttonsView.add(selectPhoto);
+
+    // camera button
+    takePhoto = Ti.UI.createButton({
+        title: 'Camera',
+        top: 0,
+        right: 0,
+        width: '45%',
+        height: deviceHeight * 0.0625
+    });
+    buttonsView.add(takePhoto);
+
+    // progress bar
+    uploadProgress = Ti.UI.createProgressBar({
+        top: 0,
+        right: 0,
+        left: 0,
+        max: 1,
+        min: 0,
+        value: 0,
+        height: deviceHeight * 0.075,
+        style: Ti.UI.iPhone.ProgressBarStyle.BAR
+    });
+    contentView.add(uploadProgress);
+    uploadProgress.show();
+    
+	// upload
+	var uploadButton = Ti.UI.createButton({
+		title: 'Upload',
+		top: deviceHeight * 0.0375,
+		left: 0,
+		right: 0,
+		height: deviceHeight * 0.0625
+	});
+	contentView.add(uploadButton);
+
+    var photo;
     
     // event listeners
     selectPhoto.addEventListener('click', function (evt) {
@@ -83,7 +102,7 @@ function PhotosWindow() {
 				photo = e.media;
 				imageView.image = photo;
             },
-			saveToPhotoGallery:false,
+			saveToPhotoGallery:true,
 			allowEditing:true,
 			mediaTypes:[Ti.Media.MEDIA_TYPE_PHOTO]
         });
@@ -131,14 +150,9 @@ function PhotosWindow() {
 	});
 	
 	self.addEventListener('close', function(){
-		self.remove(imageView);
-		self.remove(uploadProgress);
-		self.remove(selectPhoto);
-		self.remove(takePhoto);
-		self.remove(uploadButton);
+		self.remove(contentView);
 		
 		imageView = null;
-		uploadProgress.style = null;
 		uploadProgress = null;
 		selectPhoto = null;
 		takePhoto = null;

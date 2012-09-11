@@ -47,8 +47,8 @@ function HashtagsWindow(navGroup, osname, height){
     	avatarTop = 8;
     }
 
-    xhr.onerror = function (e) {
-		alert(e.error);
+    xhr.onerror = function(e){
+		alert("The conference hashtag feed could not be loaded. Please check your network or data connection.");
 	};
 					
 	var tweets = [];
