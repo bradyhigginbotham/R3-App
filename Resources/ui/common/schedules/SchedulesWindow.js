@@ -22,7 +22,7 @@ function SchedulesWindow(navGroup, osname) {
 	
 	//add behavior for master view
 	listView.addEventListener('itemSelected', function(e) {
-		var detailWindow = new DetailWindow(navGroup, e);
+		var detailWindow = new DetailWindow(navGroup, e, osname);
 		navGroup.open(detailWindow);
 	});
 			

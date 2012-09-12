@@ -1,7 +1,7 @@
 function ConferenceWindow(navGroup, osname, height){
 	// load dependencies
 	var ConferenceView = require ('ui/common/twitter/conference/ConferenceView');
-	var conferenceView = new ConferenceView(), row, tweet, avatar, table;
+	var conferenceView = new ConferenceView(osname), row, tweet, avatar, table;
 		
 	var self = Ti.UI.createWindow({
 		backgroundColor:'#ffffff',

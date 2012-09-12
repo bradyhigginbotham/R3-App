@@ -1,5 +1,5 @@
 //Speakers Window Component Constructor
-function SpeakersWindow(navGroup) {
+function SpeakersWindow(navGroup, osname) {
 	//load component dependencies
 	var ListView = require('ui/common/presentations/speakers/ListView'),
 		DetailWindow = require('ui/common/presentations/speakers/DetailWindow');
@@ -22,7 +22,7 @@ function SpeakersWindow(navGroup) {
 	
 	//add behavior for master view
 	listView.addEventListener('speakerSelected', function(e) {		
-		var detailWindow = new DetailWindow(self.parentTab, e);
+		var detailWindow = new DetailWindow(self.parentTab, e, osname);
 		self.parentTab.open(detailWindow);
 	});
 	

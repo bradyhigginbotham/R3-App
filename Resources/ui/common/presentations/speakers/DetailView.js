@@ -1,4 +1,4 @@
-function DetailView(navGroup) {
+function DetailView(navGroup, e, osname) {
 	var table = undefined, sessions = [];
 	
 	var self = Ti.UI.createScrollView({
@@ -87,7 +87,7 @@ function DetailView(navGroup) {
 	self.addEventListener('sessionItemSelected', function(e){
 		var SessionView = require('ui/common/presentations/sessions/DetailView');
 		
-		var sessionView = new SessionView(navGroup);
+		var sessionView = new SessionView(navGroup, e, osname);
 		sessionView.fireEvent('sessionSelected', e);
 		
 		var sessionWindow = Ti.UI.createWindow({
@@ -99,11 +99,26 @@ function DetailView(navGroup) {
 		navGroup.open(sessionWindow);		
 	});
 	
-	function formatTime(passedDate){		
-		var date = passedDate.replace('/(\+\S+) (.*)/', '$2 $1');
-		//var newDate = new Date(Date.parse(date)).toLocaleDateString();
-		var newTime = new Date(Date.parse(date)).toLocaleTimeString();
-		return newTime.replace(/:[0-9][0-9] (AM|PM) CDT/g, ' $1');
+	function formatTime(passedDate){
+		if(osname === "android"){
+			var newTime = new Date(Date.parse(passedDate));
+			var tempHour = newTime.getHours();
+			if (tempHour > 12) {
+				tempHour = tempHour - 12;
+				newTime = newTime.toLocaleTimeString().replace(/:[0-9][0-9]$/, " PM");
+			} else if (tempHour == 12) {
+				newTime = newTime.toLocaleTimeString().replace(/:[0-9][0-9]$/, " PM");
+			} else {
+				newTime = newTime.toLocaleTimeString().replace(/:[0-9][0-9]$/, " AM");
+			}
+			newTime = newTime.replace(/[0-9][0-9]/i, tempHour.toString());
+			return newTime;
+		} else {
+			var date = passedDate.replace('/(\+\S+) (.*)/', '$2 $1');
+			//var newDate = new Date(Date.parse(date)).toLocaleDateString();
+			var newTime = new Date(Date.parse(date)).toLocaleTimeString();
+			return newTime.replace(/:[0-9][0-9] (AM|PM) CDT/g, ' $1');
+		}
 	};
 		
 	return self;

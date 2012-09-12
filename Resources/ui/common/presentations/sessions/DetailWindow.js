@@ -1,5 +1,5 @@
 //Detail Window Component Constructor
-function DetailWindow(navGroup, e) {
+function DetailWindow(navGroup, e, osname) {
 	//load component dependencies
 	var DetailView = require('ui/common/presentations/sessions/DetailView');
 		
@@ -13,7 +13,7 @@ function DetailWindow(navGroup, e) {
 	});
 		
 	//construct UI
-	var detailView = new DetailView(navGroup);
+	var detailView = new DetailView(navGroup, "", osname);
 	detailView.fireEvent('sessionSelected', e);
 	self.add(detailView);
 		

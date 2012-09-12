@@ -1,7 +1,7 @@
 function HashtagsWindow(navGroup, osname, height){
 	// load dependencies
 	var HashtagsView = require ('ui/common/twitter/hashtags/HashtagsView');
-	var hashtagsView = new HashtagsView(), row, tweet, avatar, table;	
+	var hashtagsView = new HashtagsView(osname), row, tweet, avatar, table;	
 		
 	var self = Ti.UI.createWindow({
 		backgroundColor:'#ffffff',

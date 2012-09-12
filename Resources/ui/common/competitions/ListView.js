@@ -1,4 +1,4 @@
-function ListView() {
+function ListView(osname) {
 	var self = Ti.UI.createView({
 		backgroundColor:'white'
 	});
@@ -39,11 +39,26 @@ function ListView() {
 		});
 	});
 	
-	function formatTime(passedDate){		
-		var date = passedDate.replace('/(\+\S+) (.*)/', '$2 $1');
-		//var newDate = new Date(Date.parse(date)).toLocaleDateString();
-		var newTime = new Date(Date.parse(date)).toLocaleTimeString();
-		return newTime.replace(/:[0-9][0-9] (AM|PM) CDT/g, ' $1');
+	function formatTime(passedDate){
+		if(osname === "android"){
+			var newTime = new Date(Date.parse(passedDate));
+			var tempHour = newTime.getHours();
+			if (tempHour > 12) {
+				tempHour = tempHour - 12;
+				newTime = newTime.toLocaleTimeString().replace(/:[0-9][0-9]$/, " PM");
+			} else if (tempHour == 12) {
+				newTime = newTime.toLocaleTimeString().replace(/:[0-9][0-9]$/, " PM");
+			} else {
+				newTime = newTime.toLocaleTimeString().replace(/:[0-9][0-9]$/, " AM");
+			}
+			newTime = newTime.replace(/[0-9][0-9]/i, tempHour.toString());
+			return newTime;
+		} else {
+			var date = passedDate.replace('/(\+\S+) (.*)/', '$2 $1');
+			//var newDate = new Date(Date.parse(date)).toLocaleDateString();
+			var newTime = new Date(Date.parse(date)).toLocaleTimeString();
+			return newTime.replace(/:[0-9][0-9] (AM|PM) CDT/g, ' $1');
+		}
 	};
 	
 	return self;

@@ -1,4 +1,4 @@
-function DetailView(navGroup) {
+function DetailView(navGroup, e, osname) {
 	var table = undefined, speakers = [];
 
 	var self = Ti.UI.createScrollView({
@@ -89,7 +89,7 @@ function DetailView(navGroup) {
 	self.addEventListener('speakerItemSelected', function(e){
 		var SpeakerView = require('ui/common/presentations/speakers/DetailView');
 		
-		var speakerView = new SpeakerView(navGroup);
+		var speakerView = new SpeakerView(navGroup, e, osname);
 		speakerView.fireEvent('speakerSelected', e);
 		
 		var speakerWindow = Ti.UI.createWindow({

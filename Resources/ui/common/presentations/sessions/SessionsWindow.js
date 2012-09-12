@@ -1,5 +1,5 @@
 //Sessions Window Component Constructor
-function SessionsWindow(navGroup) {
+function SessionsWindow(navGroup, osname) {
 	//load component dependencies
 	var ListView = require('ui/common/presentations/sessions/ListView'),
 		DetailWindow = require('ui/common/presentations/sessions/DetailWindow');
@@ -12,7 +12,7 @@ function SessionsWindow(navGroup) {
 	});
 		
 	//construct UI
-	var listView = new ListView();
+	var listView = new ListView(osname);
 	
 	//create list view container
 	var listContainerWindow = Ti.UI.createWindow({
@@ -22,7 +22,7 @@ function SessionsWindow(navGroup) {
 	
 	//add behavior for master view
 	listView.addEventListener('sessionSelected', function(e) {
-		var detailWindow = new DetailWindow(self.parentTab, e);
+		var detailWindow = new DetailWindow(self.parentTab, e, osname);
 		self.parentTab.open(detailWindow);
 	});
 	

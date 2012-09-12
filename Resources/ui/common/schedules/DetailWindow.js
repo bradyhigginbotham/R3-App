@@ -1,5 +1,5 @@
 //Detail Window Component Constructor
-function DetailWindow(navGroup, e) {
+function DetailWindow(navGroup, e, osname) {
 	//load component dependencies
 	var DetailView = require('ui/common/schedules/DetailView');
 		
@@ -13,7 +13,7 @@ function DetailWindow(navGroup, e) {
 	});
 		
 	//construct UI
-	var detailView = new DetailView();
+	var detailView = new DetailView(osname);
 	detailView.fireEvent('itemSelected', e);
 	self.add(detailView);
 	
@@ -46,7 +46,7 @@ function DetailWindow(navGroup, e) {
 			case "session":
 				var SessionView = require('ui/common/presentations/sessions/DetailView');
 				
-				sessionView = new SessionView(navGroup);
+				sessionView = new SessionView(navGroup, e, osname);
 				sessionView.fireEvent('sessionSelected', e);
 				var sessionWindow = Ti.UI.createWindow({
 					title: e.data.title,

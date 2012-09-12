@@ -220,12 +220,12 @@ function HomeWindow(navGroup, osname) {
 	});
 	presentationsIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/presentations/TabGroup');
-		var tabGroup = new TabGroup(navGroup);
+		var tabGroup = new TabGroup(navGroup, osname);
 		navGroup.open(tabGroup);
 	});
 	competitionsIcon.addEventListener('click', function(){
 		var CompetitionsWindow = require('ui/common/competitions/CompetitionsWindow');
-		var competitionsWindow = new CompetitionsWindow(navGroup);
+		var competitionsWindow = new CompetitionsWindow(navGroup, osname);
 		navGroup.open(competitionsWindow);
 	});	
 /*	certificationsIcon.addEventListener('click', function(){
@@ -328,21 +328,7 @@ function HomeWindow(navGroup, osname) {
 	});
 	
     self.add(announcements);
-
-/*
-	navGroup = {
-        open: function (win, obj) {
-            win.open(obj);
-        },
-        close: function (win, obj) {
-            win.close(obj);
-        }
-    };
-    self = mainNavWindow;
-    self.exitOnClose = true;
-    mainNavWindow = null;
-*/
-
+	
 	return self;
 
 }

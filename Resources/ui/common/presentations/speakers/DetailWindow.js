@@ -1,5 +1,5 @@
 //Detail Window Component Constructor
-function DetailWindow(navGroup, e) {
+function DetailWindow(navGroup, e, osname) {
 	//load component dependencies
 	var DetailView = require('ui/common/presentations/speakers/DetailView');
 		
@@ -13,7 +13,7 @@ function DetailWindow(navGroup, e) {
 	});
 		
 	//construct UI
-	var detailView = new DetailView(navGroup);
+	var detailView = new DetailView(navGroup, e, osname);
 	detailView.fireEvent('speakerSelected', e);
 	self.add(detailView);
 		

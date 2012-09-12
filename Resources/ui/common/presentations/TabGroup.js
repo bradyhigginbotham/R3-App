@@ -1,9 +1,9 @@
-function TabGroup(navGroup){
+function TabGroup(navGroup, osname){
 	var SpeakersWindow = require('ui/common/presentations/speakers/SpeakersWindow'),
 		SessionsWindow = require('ui/common/presentations/sessions/SessionsWindow');
 	
-	var speakersWindow = new SpeakersWindow(navGroup),
-		sessionsWindow = new SessionsWindow(navGroup);
+	var speakersWindow = new SpeakersWindow(navGroup, osname),
+		sessionsWindow = new SessionsWindow(navGroup, osname);
 
 	var self = Ti.UI.createTabGroup();
 	

@@ -1,4 +1,4 @@
-function HashtagsView() {
+function HashtagsView(osname) {
 	var self = Ti.UI.createView({
 		backgroundColor:'white',
 		layout: 'vertical',
@@ -85,11 +85,29 @@ function HashtagsView() {
 	
 	return self;
 	
-	function parseTwitterDate(twitterDate){		
-		var date = twitterDate.replace('/(\+\S+) (.*)/', '$2 $1');
-		var newDate = new Date(Date.parse(date)).toLocaleDateString();
-		var newTime = new Date(Date.parse(date)).toLocaleTimeString();
-		return newDate + ' • ' + newTime.replace(/:[0-9][0-9] (AM|PM) CDT/g, ' $1');
+	function parseTwitterDate(passedDate){
+		if(osname === "android"){
+			var date = passedDate.replace('/(\+\S+) (.*)/', '$2 $1');
+			var newDate = new Date(Date.parse(date)).toLocaleDateString();
+			var newTime = new Date(Date.parse(date));
+
+			var tempHour = newTime.getHours();
+			if (tempHour > 12) {
+				tempHour = tempHour - 12;
+				newTime = newTime.toLocaleTimeString().replace(/:[0-9][0-9]$/, " PM");
+			} else if (tempHour == 12) {
+				newTime = newTime.toLocaleTimeString().replace(/:[0-9][0-9]$/, " PM");
+			} else {
+				newTime = newTime.toLocaleTimeString().replace(/:[0-9][0-9]$/, " AM");
+			}
+			newTime = newTime.replace(/[0-9][0-9]/i, tempHour.toString());
+			return newDate + ' • ' + newTime;
+		} else {
+			var date = passedDate.replace('/(\+\S+) (.*)/', '$2 $1');
+			var newDate = new Date(Date.parse(date)).toLocaleDateString();
+			var newTime = new Date(Date.parse(date)).toLocaleTimeString();
+			return newDate + ' • ' + newTime.replace(/:[0-9][0-9] (AM|PM) CDT/g, ' $1');
+		}
 	};
 	
 };

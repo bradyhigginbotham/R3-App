@@ -1,20 +1,20 @@
-function DetailView() {
+function DetailView(osname) {
 	var table = undefined, item;
 	
 	var query = 'SELECT * FROM (SELECT competition AS title, details, start, end, location, schedule_id, sponsor_id AS specific, "contest" AS type FROM competitions ' + 
 				'UNION ' +
-				'SELECT title, details, start, end, location, schedule_id, speaker_id AS specific, "session" AS type FROM sessions) WHERE schedule_id = ? ORDER BY start ASC';
+				'SELECT title, details, start, end, location, schedule_id, speaker_id AS specific, "session" AS type FROM sessions) WHERE schedule_id = ? ORDER BY start ASC, end ASC';
 				
 	var self = Ti.UI.createView({
 		backgroundColor:'white',
 		table: ''
 	});
 	
-	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
+	var db = Titanium.Database.open('r3.sqlite');
 
 	function listSchedule(title, id){
 		var results = [{title: title, backgroundColor: '#5B718B', color: '#ffffff', height: 50, hasChild: false}], 
-			tempStart, startTime = "", endTime;
+			header = "", tempStart, startTime = "", endTime;
 
 	    //Get schedules from database
 	    var resultSet = db.execute(query, id);
@@ -37,7 +37,7 @@ function DetailView() {
 			};
 	    	
 	    	// add header and start time if new
-	    	if(startTime != tempStart) { // new hour
+	    	if(header != tempStart + " - " + endTime){ //startTime != tempStart) { // new hour
 	    		startTime = tempStart;
 	    		header = startTime + " - " + endTime;
 	    		item.start = startTime;
@@ -55,6 +55,7 @@ function DetailView() {
 		    resultSet.next();
 	    }
 		resultSet.close();
+		db.close();
 		
 		// Thursday dinner notice
 		if (title == 'October 12, 2012'){
@@ -81,16 +82,26 @@ function DetailView() {
 		alert('close');
 	});
 	
-/*	Ti.App.addEventListener('removeTable', function(){
-		self.remove(table);
-		table = null;
-}); */
-	
-	function formatTime(passedDate){		
-		var date = passedDate.replace('/(\+\S+) (.*)/', '$2 $1');
-		//var newDate = new Date(Date.parse(date)).toLocaleDateString();
-		var newTime = new Date(Date.parse(date)).toLocaleTimeString();
-		return newTime.replace(/:[0-9][0-9] (AM|PM) CDT/g, ' $1');
+	function formatTime(passedDate){
+		if(osname === "android"){
+			var newTime = new Date(Date.parse(passedDate));
+			var tempHour = newTime.getHours();
+			if (tempHour > 12) {
+				tempHour = tempHour - 12;
+				newTime = newTime.toLocaleTimeString().replace(/:[0-9][0-9]$/, " PM");
+			} else if (tempHour == 12) {
+				newTime = newTime.toLocaleTimeString().replace(/:[0-9][0-9]$/, " PM");
+			} else {
+				newTime = newTime.toLocaleTimeString().replace(/:[0-9][0-9]$/, " AM");
+			}
+			newTime = newTime.replace(/[0-9][0-9]/i, tempHour.toString());
+			return newTime;
+		} else {
+			var date = passedDate.replace('/(\+\S+) (.*)/', '$2 $1');
+			//var newDate = new Date(Date.parse(date)).toLocaleDateString();
+			var newTime = new Date(Date.parse(date)).toLocaleTimeString();
+			return newTime.replace(/:[0-9][0-9] (AM|PM) CDT/g, ' $1');
+		}
 	};
 
 	return self;

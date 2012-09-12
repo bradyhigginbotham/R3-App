@@ -1,5 +1,5 @@
 //Competitions Window Component Constructor
-function CompetitionsWindow(navGroup) {
+function CompetitionsWindow(navGroup, osname) {
 	//load component dependencies 
 	var ListView = require('ui/common/competitions/ListView'),
 		DetailView = require('ui/common/competitions/DetailView');
@@ -12,7 +12,7 @@ function CompetitionsWindow(navGroup) {
 	});
 
     //construct UI
-	var listView = new ListView(),
+	var listView = new ListView(osname),
 		detailView = new DetailView();
 	
     //create list view container
