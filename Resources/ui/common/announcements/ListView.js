@@ -8,7 +8,7 @@ function ListView() {
 	var results = [];
 
     //Get colleges from database
-    var resultSet = db.execute('SELECT * FROM announcements ORDER BY id DESC LIMIT 10');
+    var resultSet = db.execute('SELECT * FROM announcements ORDER BY id DESC');
     while (resultSet.isValidRow()) {
 		results.push({
 		    id: resultSet.fieldByName('id'),
@@ -35,7 +35,7 @@ function ListView() {
 		});
 		
 		// update title
-		e.source.title = e.source.defaultTitle;
+		e.rowData.title = e.rowData.defaultTitle;
 	});
 	
 	return self;
