@@ -352,6 +352,18 @@ function HomeWindow(osname) {
 	});
 	self.add(navGroup);
 
+	// update database when app resumes
+	var dbSync = function(){
+		var Update = require('db/update');
+		Update.syncLocalDatabase(osname);
+	};
+	Ti.App.addEventListener('resumed', dbSync);
+	
+	self.addEventListener('close', function(){
+		Ti.App.removeEventListener('resumed', dbSync);
+	});
+	
+
 	return self;
 
 }
