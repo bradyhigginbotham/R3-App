@@ -328,6 +328,12 @@ function HomeWindow(navGroup, osname) {
 	});
 	
     self.add(announcements);
+    
+	// update database when app resumes
+	self.addEventListener('open', function(){
+		var Update = require('db/update');
+		Update.syncLocalDatabase(osname);
+	});
 	
 	return self;
 

@@ -15,7 +15,6 @@ function ListView(exhibitor) {
     }
     while (resultSet.isValidRow()) {
 		results.push({
-		    //id: resultSet.fieldByName('rowid'),
 			title: resultSet.fieldByName('name'),
 			site: resultSet.fieldByName('site'),
 			details: resultSet.fieldByName('details'),

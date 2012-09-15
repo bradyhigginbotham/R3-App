@@ -355,7 +355,7 @@ function HomeWindow(osname) {
 	// update database when app resumes
 	var dbSync = function(){
 		var Update = require('db/update');
-		Update.syncLocalDatabase(osname);
+		Update.syncLocalDatabase();
 	};
 	Ti.App.addEventListener('resumed', dbSync);
 	

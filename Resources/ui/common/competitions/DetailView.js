@@ -101,7 +101,7 @@ function DetailView(){
  		// get sponsor
  		if (e.data.sponsor_id){
 			var db = Titanium.Database.open('r3.sqlite');
-			var resultSet = db.execute('SELECT name FROM sponsors WHERE rowid = ?', e.data.sponsor_id);
+			var resultSet = db.execute('SELECT name FROM sponsors WHERE id = ?', e.data.sponsor_id);
 		    while (resultSet.isValidRow()) {
 				sponsor.text = resultSet.fieldByName('name');
 		    	resultSet.next();
