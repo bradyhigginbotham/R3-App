@@ -356,6 +356,8 @@ function HomeWindow(osname) {
 		Ti.App.removeEventListener('resumed', dbSync);
 	});
 
+	self.addEventListener('open', dbSync);
+
 	return self;
 
 }

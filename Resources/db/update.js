@@ -7,7 +7,7 @@ function syncLocalDatabase(){
     xhr.open("GET", 'http://bradysblog.com/r3conference/update.php');
     
     // die silently
-    xhr.onerror = function(e){};
+    xhr.onerror = function(){};
     
     xhr.onload = function(){
     	var response = JSON.parse(this.responseText);
@@ -31,6 +31,12 @@ function syncLocalDatabase(){
 					updateDatabase(response);
 				} else { // no
 					alert('The information will not be added.');
+					
+					// update app's database version
+					var db = Titanium.Database.open('r3.sqlite');
+					db.execute("UPDATE user SET version = " + response.version + " WHERE id = 1");
+					db.close();
+					
 					response = null;
 				}
 			})
@@ -188,7 +194,10 @@ function syncLocalDatabase(){
 			    alert("Your R3 Conference information is now up to date!");
 			} // end update function
 			
-	    } else {} // already up-to-date, do nothing
+	    } else { // already up-to-date, do nothing
+	    	response = null;
+	    	appVersion = null;
+	    }
 	}
 
 	// JSON-formatted header

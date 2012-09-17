@@ -329,19 +329,11 @@ function HomeWindow(osname) {
 	// tab event listeners
 	eventsTab.addEventListener('click', function(){
 		scrollableView.scrollToView(eventIcons);
-	//	eventsTab.color = tabActiveColor;
-	//	resourcesTab.color = tabColor;
 	});
 	
 	resourcesTab.addEventListener('click', function(e){
 		scrollableView.scrollToView(resourceIcons);
-	//	resourcesTab.color = tabActiveColor;
-	//	eventsTab.color = tabColor;
 	});
-	
-/*	eventIcons.addEventListener('touchmove', function(){
-		alert('Here');
-}); */
 	
 	mainNavWindow.add(scrollableView);
     mainNavWindow.add(announcements);
@@ -363,6 +355,7 @@ function HomeWindow(osname) {
 		Ti.App.removeEventListener('resumed', dbSync);
 	});
 	
+	self.addEventListener('open', dbSync);
 
 	return self;
 
