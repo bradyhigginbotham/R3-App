@@ -9,22 +9,34 @@ function ListView(osname) {
 		backgroundColor:'white'
 	});
 	
-	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
+	var db = Titanium.Database.open('r3.sqlite');
 
-	var results = [];
+	var results = [], header;
 
     //Get locations from database
-    var resultSet = db.execute('SELECT * FROM annotations ORDER BY title ASC');
+    var resultSet = db.execute('SELECT * FROM annotations ORDER BY pincolor DESC, title ASC');
     while (resultSet.isValidRow()) {
-		results.push({
-            title: resultSet.fieldByName('title'),
-			hasChild: true,
-			className: 'annotations',
-			height: 40
-		});
+    	if(header != resultSet.fieldByName('header')) { // new header
+    		header = resultSet.fieldByName('header')
+			results.push({
+	            title: resultSet.fieldByName('title'),
+				hasChild: true,
+				header: header,
+				className: 'annotations',
+				height: 40
+			});
+    	} else {
+			results.push({
+	            title: resultSet.fieldByName('title'),
+				hasChild: true,
+				className: 'annotations',
+				height: 40
+			});
+    	}
     	resultSet.next();
     }
     resultSet.close();
+    db.close();
     
 	//add search bar
 	var searchBar = Titanium.UI.createSearchBar({

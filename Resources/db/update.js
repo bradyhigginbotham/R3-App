@@ -156,8 +156,9 @@ function syncLocalDatabase(){
 		       							 	annotations[i].latitude  + '" AS latitude, "'  + 
 		       							 	annotations[i].longitude + '" AS longitude, "' +
 		       							 	annotations[i].title  	 + '" AS title, "'     + 
-		       							 	annotations[i].subtitle  + '" AS subtitle, '  +
-		       							 	annotations[i].pincolor;
+		       							 	annotations[i].subtitle  + '" AS subtitle, '   +
+		       							 	annotations[i].pincolor  + ' AS pincolor, "'   +
+		       							 	annotations[i].header 	 + '" AS header';
 		       		} else {
 		       			annotations_query = annotations_query + ' UNION SELECT ' + 
 		       							 	annotations[i].id 		 + ', "'  +
@@ -165,7 +166,8 @@ function syncLocalDatabase(){
 		       							 	annotations[i].longitude + '", "' +
 		       							 	annotations[i].title  	 + '", "' + 
 		       							 	annotations[i].subtitle  + '", '  +
-		       							 	annotations[i].pincolor;
+		       							 	annotations[i].pincolor	 + ', "'  +
+		       							 	annotations[i].header 	 + '"';
 		       		}
 			    }
 		

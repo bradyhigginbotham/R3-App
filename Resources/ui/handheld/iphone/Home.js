@@ -16,7 +16,7 @@ function HomeWindow(osname) {
 	});
 
 	// Announcements view
-	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
+	var db = Titanium.Database.open('r3.sqlite');
     var resultSet = db.execute('SELECT * FROM announcements ORDER BY id DESC LIMIT 1');
 	
 	var announcementRow = Ti.UI.createTableViewRow({
@@ -58,6 +58,10 @@ function HomeWindow(osname) {
 		var announcementsWindow = new AnnouncementsWindow(navGroup, osname);
 		navGroup.open(announcementsWindow, {animated:true});
 	});
+	
+	// close database
+	resultSet.close();
+	db.close();
 
 	/*---- Icon Views ----*/
 	var eventIcons = Ti.UI.createView({
@@ -131,8 +135,11 @@ function HomeWindow(osname) {
 	eventIcons.add(festivalIcon);
 	
 	// get stored 'subscribed' property
+	var db = Titanium.Database.open('r3.sqlite');
 	var user = db.execute("SELECT * FROM user WHERE username = 'default'");
 	var subscribed = user.fieldByName('subscribed');
+	user.close();
+	db.close();
 	
 	var subscribeIcon = Ti.UI.createButton({
 		backgroundImage: (subscribed) ? '/icons/home/unsubscribe.png' : '/icons/home/subscribe.png',

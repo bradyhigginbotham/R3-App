@@ -56,6 +56,7 @@ function DetailView(navGroup, e, osname) {
 				start: formatTime(resultSet.fieldByName('start')),
 				end: formatTime(resultSet.fieldByName('end')),
 				speaker_id: resultSet.fieldByName('speaker_id'),
+				location: resultSet.fieldByName('location'),
 				hasChild: true,
 				className: 'session',
 				height: 40

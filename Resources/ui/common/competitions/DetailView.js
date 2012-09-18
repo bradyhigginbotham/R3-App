@@ -96,7 +96,7 @@ function DetailView(){
 	self.addEventListener('competitionSelected', function(e) {
 		competition.text = e.data.title;
 		details.text = e.data.details;
- 		time.text = e.data.start + " - " + e.data.end; // + ",\n" + e.data.location;
+ 		time.text = e.data.start + " - " + e.data.end + ",\n" + e.data.location;
  		
  		// get sponsor
  		if (e.data.sponsor_id){

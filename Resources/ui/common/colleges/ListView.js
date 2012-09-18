@@ -3,12 +3,12 @@ function ListView() {
 		backgroundColor:'white'
 	});
 	
-	var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
+	var db = Titanium.Database.open('r3.sqlite');
 
 	var results = [], header = "";
 
     //Get colleges from database
-    var resultSet = db.execute('SELECT * FROM colleges ORDER BY state ASC');
+    var resultSet = db.execute('SELECT * FROM colleges ORDER BY state ASC, name ASC');
     while (resultSet.isValidRow()) {
     	if(header != resultSet.fieldByName('state')) { // new state
     		header = resultSet.fieldByName('state')
@@ -32,6 +32,7 @@ function ListView() {
     	resultSet.next();
     }
     resultSet.close();
+    db.close();
 	
 	var table = Ti.UI.createTableView({
 		data: results

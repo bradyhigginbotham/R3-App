@@ -76,7 +76,7 @@ function DetailView(navGroup, e, osname) {
 	
 	self.addEventListener('sessionSelected', function(e) {
  		session.text = e.data.title;
- 		time.text = e.data.start + " - " + e.data.end;
+ 		time.text = e.data.start + " - " + e.data.end + ",\n" + e.data.location;
  		details.text = e.data.details;
  		
  		if (e.data.speaker_id){
