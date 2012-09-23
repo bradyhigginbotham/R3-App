@@ -62,7 +62,7 @@ function DetailView(){
 	self.add(sponsorTitle);
 	
 	var sponsor = Ti.UI.createLabel({
-		text: 'N/A',
+		text: 'Region 3 Conference',
 		height: 'auto',
 		width: 'auto',
 		color:'#ffffff',
@@ -109,7 +109,7 @@ function DetailView(){
 		    resultSet.close();
 		    db.close();
 		} else {
-			sponsor.text = "N/A";
+			sponsor.text = "Region 3 Conference";
 		}
 	});
 	

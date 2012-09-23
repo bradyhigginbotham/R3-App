@@ -8,7 +8,7 @@ function ListView() {
 	var results = [];
 
     //Get colleges from database
-    var resultSet = db.execute('SELECT * FROM speakers ORDER BY name ASC');
+    var resultSet = db.execute('SELECT * FROM speakers ORDER BY id ASC');
     while (resultSet.isValidRow()) {
 		results.push({
 		    id: resultSet.fieldByName('id'),

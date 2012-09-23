@@ -59,7 +59,7 @@ function DetailView(osname) {
 		
 		// Thursday dinner notice
 		if (title == 'October 12, 2012'){
-			results.push({title: '*Dinner on your own', height: 40, hasChild: false});
+			results.push({title: '*Dinner on your own (6:30 PM)', height: 40, hasChild: false});
 		}; 
 		
 		table = Ti.UI.createTableView ({

@@ -1,5 +1,6 @@
 function MapsWindow(navGroup, osname) {
 	var delta = 0.02;
+
 	// Geolocation default settings
 	Ti.Geolocation.purpose = "Recieve User Location";
 	Titanium.Geolocation.accuracy = Titanium.Geolocation.ACCURACY_BEST;
