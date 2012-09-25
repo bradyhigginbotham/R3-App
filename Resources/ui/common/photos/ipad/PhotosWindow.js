@@ -3,6 +3,27 @@ function PhotosWindow() {
 	var deviceHeight = Ti.Platform.displayCaps.platformHeight;
 	var deviceWidth = Ti.Platform.displayCaps.platformWidth;
     var uploadProgress, selectPhoto, takePhoto;
+    
+	// info window
+	var infoWindow = Ti.UI.createWindow({
+		backgroundImage: 'images/bg_bigTex.png',
+		title: 'Conference Photos'
+	});
+	var closeButton = Ti.UI.createButton({title: 'Close'});
+	infoWindow.rightNavButton = closeButton;
+	closeButton.addEventListener('click', function(){
+		infoWindow.close();
+	});
+	
+	var infoText = Ti.UI.createLabel({
+		text: "The R3 Conference photo upload feature allows you to share your experience with other attendees. " +
+			  "Choose an image from your media gallery or take one using your device's camera and upload it. " +
+			  "Upon approval, your photo will then be added to the image galleries on the conference website for other attendees to view.",
+		color: '#ffffff',
+		top: 10,
+		left: 10
+	});
+	infoWindow.add(infoText);
 
 	//ACS Cloud module
 	var Cloud = require('ti.cloud');		
@@ -12,6 +33,15 @@ function PhotosWindow() {
 		backgroundImage: 'images/bg_bigTex.png',
 		title: 'Photo Upload',
 		navBarHidden: false
+	});
+	
+	var infoButton = Ti.UI.createButton({
+		title: "?"
+	});
+	self.rightNavButton = infoButton;
+	
+	infoButton.addEventListener('click', function(){
+		infoWindow.open({modal: true});
 	});
 	
 	var contentView = Ti.UI.createView({

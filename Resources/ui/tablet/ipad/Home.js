@@ -1,8 +1,8 @@
-//Home Window Component Constructor - iPhone
+//Home Window Component Constructor - iPad
 function HomeWindow(osname) {
 	//load component dependencies
 	var navGroup = undefined;
-	
+
 	// constants
 	var iconHeight = 122, iconWidth = 106, iconTop = 30, iconLeft = 50, middleLeft = 170,
 		tabColor = 'white', tabSelectedColor = '#A5B5C4', tabActiveColor = '#79FAFB', tabHeight = 155, tabWidth = '50%';
@@ -211,7 +211,7 @@ function HomeWindow(osname) {
 	});
 	mapsIcon.addEventListener('click', function(){
 		var TabGroup = require('ui/common/maps/TabGroup');
-		var tabGroup = new TabGroup(navGroup);
+		var tabGroup = new TabGroup(navGroup, osname);
 		navGroup.open(tabGroup);
 	});
 	presentationsIcon.addEventListener('click', function(){

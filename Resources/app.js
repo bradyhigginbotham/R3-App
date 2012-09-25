@@ -58,7 +58,7 @@ if (Ti.version < 1.8 ) {
 		}, 2000);
 	} else {
 		setTimeout(function(){
-			new HomeWindow().open(osname);	
+			new HomeWindow(osname).open();
 		}, 2000);		
 	}
 	

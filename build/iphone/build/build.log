@@ -5,7 +5,7 @@ reporting an issue to help us understand your environment, build settings
 and aid in debugging. Please attach this log to any issue that you report.
 ================================================================================
 
-Starting build at 09/23/12 01:03
+Starting build at 09/25/12 00:26
 
 Build details:
 
@@ -23,7 +23,7 @@ Script arguments:
    com.bradyhigginbotham.r3
    AITP R3
    universal
-   iphone
+   ipad
    
 
 Building from: /Users/Stick/Library/Application Support/Titanium/mobilesdk/osx/2.1.2.GA/iphone

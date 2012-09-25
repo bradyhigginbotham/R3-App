@@ -1,8 +1,16 @@
 function MapsWindow(navGroup, osname) {
-	var delta = 0.02;
+	var delta = 0.03;
+
+	if (osname === "ipad") {
+		var lat = 30.206300;
+		var lng = -92.030777;
+	} else {
+		var lat = 30.210984;
+		var lng = -92.030777;
+	}
 
 	// Geolocation default settings
-	Ti.Geolocation.purpose = "Recieve User Location";
+	Ti.Geolocation.purpose = "Receive User Location";
 	Titanium.Geolocation.accuracy = Titanium.Geolocation.ACCURACY_BEST;
 	Titanium.Geolocation.distanceFilter = 10;
 
@@ -94,7 +102,7 @@ function MapsWindow(navGroup, osname) {
 	
 	var mapview = Titanium.Map.createView({
 	    mapType: Titanium.Map.STANDARD_TYPE,
-	    region: {latitude: 30.215984, longitude: -92.030777,
+	    region: {latitude: lat, longitude: lng,
 	            latitudeDelta: delta, longitudeDelta: delta},    
 	    animate:true,
 	    regionFit:true,
@@ -108,8 +116,8 @@ function MapsWindow(navGroup, osname) {
 	    }
 	
 	    mapview.setLocation({
-	        latitude : 30.215984,
-	        longitude : -92.030777,
+	        latitude : lat,
+	        longitude : lng,
 	        latitudeDelta : delta,
 	        longitudeDelta : delta
 	    });
