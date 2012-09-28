@@ -29,6 +29,7 @@ function DetailView(navGroup, e, osname) {
 	
 	var table = Ti.UI.createTableView({
 		backgroundImage: 'NONE',
+		backgroundColor: 'white',
 		top: 20,
 		height: 40
 	});
@@ -76,7 +77,7 @@ function DetailView(navGroup, e, osname) {
 	
 	self.addEventListener('sessionSelected', function(e) {
  		session.text = e.data.title;
- 		time.text = e.data.start + " - " + e.data.end + ",\n" + e.data.location;
+ 		time.text = e.data.start + " - " + e.data.end + "\n" + e.data.location;
  		details.text = e.data.details;
  		
  		if (e.data.speaker_id){

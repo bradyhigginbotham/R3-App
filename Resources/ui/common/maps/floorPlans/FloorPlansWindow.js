@@ -60,7 +60,7 @@ function FloorPlansWindow(navGroup, osname) {
 	var moutonIcon = Ti.UI.createButton({
 		title: "F.G. Mouton",
 		height: 50,
-		width: 100,
+	//	width: 100,
 		bottom: 10,
 		left: 10
 	});
@@ -69,11 +69,20 @@ function FloorPlansWindow(navGroup, osname) {
 	var moodyIcon = Ti.UI.createButton({
 		title: "Moody",
 		height: 50,
-		width: 100,
+	//	width: 100,
 		bottom: 10,
 		right: 10
 	});
 	self.add(moodyIcon);
+	
+	if (osname === 'android') {
+		var deviceWidth = Ti.Platform.displayCaps.platformWidth;
+		moutonIcon.width = deviceWidth * 0.3;
+		moodyIcon.width = deviceWidth * 0.3;
+	} else {
+		moutonIcon.width = 100;
+		moodyIcon.width = 100;
+	}
 	
 	moutonIcon.addEventListener('click', function (){
 		floorPlans.image = '/floorplan/FGMouton.png';

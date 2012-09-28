@@ -29,6 +29,7 @@ function DetailView(navGroup, e, osname) {
 	
 	var table = Ti.UI.createTableView({
 		backgroundImage: 'NONE',
+		backgroundColor: 'white',
 		top: 20,
 		height: 40
 	});

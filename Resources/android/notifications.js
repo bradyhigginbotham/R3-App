@@ -13,7 +13,6 @@ function subscribeToNotifications(icon){
 	deviceToken;
 
 	// Settings
-	CloudPush.enabled = true;
 	CloudPush.showTrayNotificationsWhenFocused = true;
 	CloudPush.focusAppOnPush = false;
 	
@@ -39,6 +38,7 @@ function subscribeToNotifications(icon){
 	function grabDeviceToken(){
 		CloudPush.retrieveDeviceToken({
 			success: function deviceTokenSuccess(e) {
+				CloudPush.enabled = true;
 				deviceToken = e.deviceToken;
 				registerForPush();
 			},
@@ -106,7 +106,6 @@ function unsubscribeToNotifications(icon){
 	deviceToken;
 
 	// Settings
-	CloudPush.enabled = true;
 	CloudPush.showTrayNotificationsWhenFocused = true;
 	CloudPush.focusAppOnPush = false;
 	
@@ -117,6 +116,7 @@ function unsubscribeToNotifications(icon){
 		CloudPush.retrieveDeviceToken({
 			success: function deviceTokenSuccess(e) {
 				deviceToken = e.deviceToken;
+				CloudPush.enabled = true;
 				userLogin();
 			},
 			error: function deviceTokenError(e) {
