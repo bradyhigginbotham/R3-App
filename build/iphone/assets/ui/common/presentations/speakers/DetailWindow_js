@@ -1,0 +1,2 @@
+function DetailWindow(navGroup,e,osname){var DetailView=require('ui/common/presentations/speakers/DetailView');var self=Ti.UI.createWindow({title:'Speaker Details',layout:'vertical',backButtonTitle:'Speakers',backgroundImage:'images/bg_bigTex.png',navBarHidden:false});var detailView=new DetailView(navGroup,e,osname);detailView.fireEvent('speakerSelected',e);self.add(detailView);return self;}
+module.exports=DetailWindow;

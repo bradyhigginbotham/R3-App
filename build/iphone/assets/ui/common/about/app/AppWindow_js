@@ -1,0 +1,4 @@
+function AppWindow(navGroup)
+{var ListView=require('ui/common/about/app/ListView');var self=Ti.UI.createWindow({backgroundImage:'images/bg_bigTex.png',title:'App Overview',navBarHidden:false})
+var listView=new ListView();self.add(listView);var homeButton=Ti.UI.createButton({title:'Home'});self.leftNavButton=homeButton;homeButton.addEventListener('click',function(){navGroup.close(self.tabGroup);});return self;}
+module.exports=AppWindow;
