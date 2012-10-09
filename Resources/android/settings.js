@@ -1,6 +1,6 @@
 function Settings(height){
-	var knownHeights = [320, 400, 480, 800, 854, 1184, 1232, 1280];
- 
+	var knownHeights = [320, 400, 480, 800, 854, 976, 1184, 1216, 1232, 1280];
+
 	// if device height is tested for
 	if (knownHeights.indexOf(height) != -1) {
 		switch (height) {
@@ -73,6 +73,42 @@ function Settings(height){
 				this.middleLeft = 70;
 				this.scrollableBottom = height * 0.155;
 				this.scrollableHeight = height * 0.325;
+				break;
+			case 976:
+				this.rowTop = 290;
+				this.headerTop = 6;
+				this.subtitleTop = 60;
+				this.rowHeight = height * 0.15375;
+				this.headerHeight = 56;
+				this.subtitleHeight = 40;
+				this.headerFontSize = 42;
+				this.subtitleFontSize = 24;
+				this.iconTop = 10;
+				this.iconLeft = 60;
+				this.iconWidth = 106;
+				this.iconHeight = 122;
+				this.middleLeft = 150;
+				this.scrollableBottom = height * 0.155;
+				this.scrollableHeight = height * 0.325;
+				break;
+			case 1184:
+			case 1216:
+				this.rowTop = 350;
+				this.headerTop = 20;
+				this.subtitleTop = 90;
+				this.rowHeight = height * 0.15375;
+				this.headerHeight = 80;
+				this.subtitleHeight = 70;
+				this.headerFontSize = 56;
+				this.subtitleFontSize = 24;
+				this.iconTop = 40;
+				this.iconLeft = 50;
+				this.iconWidth = 106;
+				this.iconHeight = 122;
+				this.middleLeft = 190;
+				this.scrollableBottom = height * 0.15;
+				this.scrollableHeight = height * 0.325;
+				break;
 			case 1232:
 				this.rowTop = 400;
 				this.headerTop = 20;
@@ -90,7 +126,6 @@ function Settings(height){
 				this.scrollableBottom = height * 0.15;
 				this.scrollableHeight = height * 0.325;
 				break;
-			case 1184:
 			case 1280: // WXGA
 				this.rowTop = height * 0.265;
 				this.headerTop = 20;

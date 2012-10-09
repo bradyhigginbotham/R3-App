@@ -4,7 +4,6 @@ function ListView() {
 	});
 	
 	var db = Titanium.Database.open('r3.sqlite');
-
 	var results = [], header = "";
 
     //Get colleges from database

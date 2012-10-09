@@ -274,8 +274,10 @@ function HomeWindow(osname) {
 		var Notifications = require('notifications');
 		
 		// get stored 'subscribed' property
+		var db = Titanium.Database.open('r3.sqlite');
 		var user = db.execute("SELECT * FROM user WHERE username = 'default'");
 		var subscribed = user.fieldByName('subscribed');
+		db.close();
 
 		// check if subscribed
 		if (subscribed){

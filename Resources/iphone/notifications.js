@@ -50,8 +50,8 @@ function subscribeToNotifications(icon, latest){
 			},
 			callback: function(e){
 				var data = JSON.stringify(e.data);
-				var notification = JSON.parse(data);
 				alert('Message received. Please check the announcements.');
+				var notification = JSON.parse(data);
 				latest.text = "Latest: " + notification.alert;
 				
 				// save notification to database

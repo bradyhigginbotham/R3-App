@@ -1,6 +1,5 @@
 //Certification Window Component Constructor
-function CertificationsWindow(navGroup) 
-{
+function CertificationsWindow(navGroup) {
 	//load component dependencies
 	var ListView = require('ui/common/certifications/ListView'),
 		DetailView = require('ui/common/certifications/DetailView');
@@ -8,7 +7,7 @@ function CertificationsWindow(navGroup)
 	//Create object instance
 	var self = Ti.UI.createWindow({
 		backgroundColor:'#ffffff',
-		title: 'Certifications',
+		title: 'MTA Certifications',
 		navBarHidden: false
 	});
 	
@@ -18,7 +17,8 @@ function CertificationsWindow(navGroup)
 		
 	//create detail view container
 	var detailContainerWindow = Ti.UI.createWindow({
-		title:'Certification Details'
+		title:'Certification Details',
+		backgroundImage: 'images/bg_bigTex.png'
 	});
 	detailContainerWindow.add(detailView);
 	

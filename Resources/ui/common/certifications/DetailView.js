@@ -1,35 +1,45 @@
 function DetailView() {
-	var self = Ti.UI.createView({
-		backgroundColor:'white'
+	var self = Ti.UI.createScrollView({
+		layout: 'vertical',
+		scrollType: 'vertical'
 	});
 	
 	var certification = Ti.UI.createLabel({
 		text: 'Certification Title',
 		height:'auto',
 		width:'auto',
-		top: 10
+		color:'#ffffff',
+		font: {fontSize: 24, fontWeight: 'bold'},
+		top: 10,
+		left: 10
 	});
 	self.add(certification);
 	
-	var date = Ti.UI.createLabel({
-		text: 'Certification Date',
+	var location = Ti.UI.createLabel({
+		text: 'Location',
 		height: 'auto',
 		width: 'auto',
-		top: 30
+		color:'#ffffff',
+		top: 0,
+		left: 10
 	});
-	self.add(date);	
+	self.add(location);
 	
+	var details = Ti.UI.createLabel({
+		text: 'Certification Details',
+		height:'auto',
+		width:'auto',
+		color:'#ffffff',
+		font: {fontSize: 18, fontWeight: 'bold'},
+		top: 20,
+		left: 10
+	});
+	self.add(details);
+
 	self.addEventListener('certificationSelected', function(e) {
-		certification.text = e.data.details;
-		
-		var db = Titanium.Database.install('db/r3.sqlite','r3.sqlite');
-	
-		var resultSet = db.execute('SELECT * FROM schedules WHERE id = ?', e.data.schedule_id);
-	    while (resultSet.isValidRow()) {
-			date.text = resultSet.fieldByName('day') + ', ' + resultSet.fieldByName('date');
-	    	resultSet.next();
-	    }
-	    resultSet.close();
+		certification.text = e.data.title;
+ 		location.text = e.data.start + " - " + e.data.end + "\n" + e.data.location;
+		details.text = e.data.details;
 	});
 	
 	return self;
