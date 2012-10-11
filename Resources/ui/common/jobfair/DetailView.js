@@ -38,13 +38,6 @@ function DetailView() {
 		left: 10
 	});
 	self.add(site);
-	
-/*	var moreInfo = Ti.UI.createLabel({
-		text: "(click for more info)",
-		top: 0,
-		left: 10
-	});
-	self.add(moreInfo); */
 
 	var details = Ti.UI.createLabel({
 		text: 'Sponsor Details',

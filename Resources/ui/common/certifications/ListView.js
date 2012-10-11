@@ -14,6 +14,7 @@ function ListView() {
 	    	results.push({
 	    		id: resultSet.fieldByName('id'),
 	    		title: resultSet.fieldByName('name'), // must be 'title' for certification name to appear in list
+				site: resultSet.fieldByName('site'),
 	    		details: resultSet.fieldByName('details'),
 				start: formatTime(resultSet.fieldByName('start')),
 				end: formatTime(resultSet.fieldByName('end')),
@@ -27,6 +28,7 @@ function ListView() {
 			results.push({
 	    		id: resultSet.fieldByName('id'),
 	    		title: resultSet.fieldByName('name'), // must be 'title' for certification name to appear in list
+				site: resultSet.fieldByName('site'),
 	    		details: resultSet.fieldByName('details'),
 				start: formatTime(resultSet.fieldByName('start')),
 				end: formatTime(resultSet.fieldByName('end')),
